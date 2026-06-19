@@ -2,253 +2,756 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
+<meta name="google-site-verification" content="OIjTbV3rH7Xazv0qjQYDeix4W-D63KeJp04xwGasD8M" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Serdoc — Soluciones RFID y Gestión Documental Llave en Mano | +25 Años</title>
-<meta name="description" content="Implementamos soluciones RFID completas para retail, logística, bibliotecas, residencias y más. Hardware + software a medida + instalación + soporte.">
+<title>Soluciones RFID en Madrid | Serdoc — +25 años de experiencia</title>
+<meta name="description" content="Empresa RFID en Madrid con más de 25 años de experiencia. Soluciones para logística, retail, bibliotecas y hospitales. Consulta gratuita sin compromiso.">
+<meta name="robots" content="index, follow">
 <link rel="canonical" href="https://serdoc.es/">
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="./css/style.css">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"LocalBusiness","name":"Serdoc Informática S.L.","description":"Empresa RFID en Madrid con más de 25 años de experiencia. Soluciones para logística, retail, bibliotecas y hospitales.","url":"https://serdoc.es","telephone":"+34916896573","address":{"@type":"PostalAddress","streetAddress":"Calle del Cobre 11","addressLocality":"Leganés","addressRegion":"Madrid","postalCode":"28914","addressCountry":"ES"},"areaServed":"España","aggregateRating":{"@type":"AggregateRating","ratingValue":"4.8","reviewCount":"12","bestRating":"5"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Qué es el RFID y cómo funciona?","acceptedAnswer":{"@type":"Answer","text":"RFID (identificación por radiofrecuencia) es una tecnología que permite identificar objetos a distancia mediante ondas de radio. Cada artículo lleva una etiqueta con un chip que un lector capta automáticamente, sin necesidad de escanear uno a uno ni de línea de visión directa."}},{"@type":"Question","name":"¿Cuánto cuesta implantar un sistema RFID en una empresa?","acceptedAnswer":{"@type":"Answer","text":"El coste depende del tamaño del proyecto, el número de referencias y el hardware necesario. En Serdoc preparamos presupuestos personalizados sin compromiso. La inversión típica se amortiza en menos de 12 meses."}},{"@type":"Question","name":"¿En qué sectores trabajáis?","acceptedAnswer":{"@type":"Answer","text":"Implementamos RFID en logística, retail, bibliotecas, hospitales, residencias de mayores, lavanderías industriales, hostelería, joyerías, farmacias, eventos y control de accesos. También ofrecemos gestión documental y BPO."}},{"@type":"Question","name":"¿Cuánto tiempo tarda la implantación?","acceptedAnswer":{"@type":"Answer","text":"Depende del alcance. Una tienda de retail se implementa en 1-2 semanas. Un almacén medio en 3-4 semanas. Una red de bibliotecas puede llevar varios meses. El proceso es gradual y no interrumpe tu operación."}},{"@type":"Question","name":"¿Hacéis instalaciones fuera de Madrid?","acceptedAnswer":{"@type":"Answer","text":"Sí. Nuestra sede está en Leganés (Madrid) pero realizamos implantaciones en toda España. Contamos con más de 25 años de experiencia en proyectos a nivel nacional."}}]}
+</script>
+
+<style>
+:root{--navy:#1B2A4A;--navy-deep:#0F1B33;--navy-mid:#243A5E;--teal:#0891B2;--teal-light:#22D3EE;--teal-bg:#ECFEFF;--amber:#F59E0B;--amber-hover:#D97706;--white:#FFFFFF;--bg:#FAFBFC;--bg-warm:#F8F9FB;--g50:#F8FAFC;--g100:#F1F5F9;--g200:#E2E8F0;--g300:#CBD5E1;--g400:#94A3B8;--g500:#64748B;--g600:#475569;--g700:#334155;--g800:#1E293B;--g900:#0F172A;--green:#059669;--green-bg:#ECFDF5;--purple:#7C3AED;--purple-bg:#F3EEFF;--radius:10px;--radius-lg:16px;--shadow:0 4px 16px rgba(15,27,51,.08);--shadow-lg:0 16px 48px rgba(15,27,51,.1)}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Source Sans 3',sans-serif;background:var(--bg);color:var(--g800);line-height:1.65;-webkit-font-smoothing:antialiased;font-size:1.05rem!important}
+p{font-size:1.05rem}
+h1,h2,h3,h4,h5,h6{font-family:'Outfit',sans-serif;line-height:1.2}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+ul,ol{list-style:none}
+button{font-family:inherit;cursor:pointer}
+
+/* ── SUBHEADER ── */
+.subheader{position:fixed;top:0;left:0;right:0;z-index:1001;background:#0F1B33;padding:.35rem 1.5rem;border-bottom:1px solid rgba(255,255,255,.04)}
+.subheader-inner{max-width:1200px;margin:0 auto;display:flex;justify-content:center;align-items:center;gap:1.25rem}
+.subheader a{font-size:.8rem;color:rgba(255,255,255,.5);display:inline-flex;align-items:center;gap:.35rem;font-family:'Outfit',sans-serif;transition:color .15s}
+.subheader a:hover{color:var(--teal-light)}
+.subheader-sep{color:rgba(255,255,255,.15);font-size:.7rem}
+.subheader svg{flex-shrink:0;opacity:.6}
+
+/* ── HEADER ── */
+.header{position:fixed;top:30px;left:0;right:0;z-index:1000;background:rgba(15,27,51,.96);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.06)}
+.header-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:.7rem 1.5rem}
+.logo svg{height:34px;width:auto}
+.nav{display:flex;align-items:center;gap:.15rem}
+.nav-item{color:rgba(255,255,255,.7);font-size:.9rem;font-weight:500;padding:.45rem .7rem;border-radius:6px;transition:all .2s;font-family:'Outfit',sans-serif;background:none;border:none;display:inline-flex;align-items:center;gap:3px}
+.nav-item:hover{color:var(--white);background:rgba(255,255,255,.07)}
+.nav-cta{background:var(--amber)!important;color:var(--navy-deep)!important;font-weight:700!important;border-radius:8px!important;padding:.5rem 1rem!important}
+.nav-cta:hover{background:var(--amber-hover)!important}
+.menu-toggle{display:none;background:none;border:none;color:white;padding:.5rem}
+
+/* ── MEGAMENU ── */
+.mega-parent{position:relative}
+.megamenu{position:absolute;top:100%;left:50%;transform:translateX(-50%);background:var(--white);border:1px solid var(--g200);border-radius:14px;box-shadow:var(--shadow-lg);padding:1.25rem;opacity:0;visibility:hidden;pointer-events:none;transition:all .2s;margin-top:.5rem;z-index:100}
+.mega-parent:hover .megamenu{opacity:1;visibility:visible;pointer-events:auto;margin-top:.25rem}
+.megamenu-cols{display:flex;gap:1.5rem}
+.megamenu-col{min-width:180px}
+.megamenu-col h4{font-size:.7rem;text-transform:uppercase;letter-spacing:.06em;color:var(--g400);margin-bottom:.5rem;font-family:'Outfit',sans-serif;font-weight:700}
+.megamenu-col a{display:flex;align-items:center;gap:.4rem;padding:.4rem .5rem;font-size:.88rem;color:var(--g600);border-radius:6px;font-family:'Outfit',sans-serif;font-weight:500;transition:all .15s}
+.megamenu-col a:hover{background:var(--g100);color:var(--navy)}
+.megamenu-col a svg{flex-shrink:0;color:var(--g400);transition:color .15s}
+.megamenu-col a:hover svg{color:var(--teal)}
+.megamenu-single{min-width:220px}
+.megamenu-photo{min-width:170px;border-left:1px solid var(--g100);padding-left:1.25rem;display:flex;flex-direction:column;gap:.75rem}
+.megamenu-photo img{width:100%;height:100px;object-fit:cover;border-radius:8px;display:block}
+.megamenu-photo-cta{font-size:.82rem;font-weight:700;color:var(--teal);font-family:'Outfit',sans-serif;display:inline-flex;align-items:center;gap:.3rem;transition:gap .2s}
+.megamenu-photo-cta:hover{gap:.5rem}
+
+
+/* ── MOBILE NAV ── */
+.mobile-nav{display:none;position:fixed;top:86px;left:0;right:0;bottom:0;background:var(--navy-deep);z-index:999;overflow-y:auto;padding:1rem 1.5rem 2rem}
+.mobile-nav.open{display:block}
+.mobile-nav a{display:block;padding:.75rem 0;font-size:1rem;color:rgba(255,255,255,.8);font-family:'Outfit',sans-serif;font-weight:500;border-bottom:1px solid rgba(255,255,255,.06)}
+.mobile-nav a:hover{color:var(--teal-light)}
+.mobile-nav .mn-section{font-size:.72rem;text-transform:uppercase;letter-spacing:.06em;color:var(--g400);margin-top:1.25rem;margin-bottom:.25rem;font-family:'Outfit',sans-serif;font-weight:700}
+.mobile-nav .mn-sub a{padding-left:1rem;font-size:.92rem;color:rgba(255,255,255,.55)}
+
+/* ── BUTTONS ── */
+.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.85rem 1.6rem;border-radius:var(--radius);font-size:.95rem;font-weight:700;font-family:'Outfit',sans-serif;transition:all .2s;border:none}
+.btn-primary{background:var(--amber);color:var(--navy-deep)}
+.btn-primary:hover{background:var(--amber-hover);transform:translateY(-1px);box-shadow:0 8px 24px rgba(245,158,11,.25)}
+.btn-ghost{background:transparent;color:var(--white);border:1px solid rgba(255,255,255,.2)}
+.btn-ghost:hover{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.3)}
+.btn-outline{background:var(--white);color:var(--navy);border:1px solid var(--g200)}
+.btn-outline:hover{border-color:var(--teal);color:var(--teal)}
+.arrow-r{transition:transform .2s}
+a:hover .arrow-r,button:hover .arrow-r{transform:translateX(3px)}
+
+/* ── BLOCK 1: HERO ── */
+.hero{position:relative;overflow:hidden;padding:10rem 1.5rem 5.5rem;min-height:92vh;display:flex;align-items:center;background:var(--navy-deep)}
+.hero-bg{position:absolute;inset:0;z-index:0;overflow:hidden}.hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center;display:block;transform:scale(1.05)}.hero-overlay{position:absolute;inset:0;z-index:1;background:rgba(15,27,51,.62)}.hero-overlay-b{position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(15,27,51,.2) 0%,rgba(15,27,51,.75) 100%)}
+.hero-inner{max-width:1200px;margin:0 auto;width:100%;position:relative;z-index:2}
+.hero-text{color:var(--white);max-width:700px}
+.hero h1{font-size:clamp(2.5rem,5vw,4rem);font-weight:800;margin-bottom:1.2rem;letter-spacing:-.02em;line-height:1.12}
+.hero-sub{font-size:1.15rem;color:rgba(255,255,255,.7);max-width:560px;margin-bottom:2.25rem;line-height:1.7}
+.hero-actions{display:flex;gap:.75rem;flex-wrap:wrap}
+
+/* ── TRUST STRIP ── */
+.trust{background:var(--white);border-bottom:1px solid var(--g200);padding:1rem 1.5rem}
+.trust-inner{max-width:1200px;margin:0 auto;display:flex;justify-content:center;flex-wrap:wrap;gap:1.75rem}
+.trust-item{display:flex;align-items:center;gap:.5rem;font-size:.95rem;font-weight:600;color:var(--g500);font-family:'Outfit',sans-serif}
+.trust-item svg{flex-shrink:0;color:var(--teal)}
+
+/* ── BLOCK 2: COUNTERS ── */
+.counters{padding:5rem 1.5rem;background:var(--white);border-bottom:1px solid var(--g200)}
+.counters-inner{max-width:1200px;margin:0 auto;text-align:center}
+.counters h2{font-size:clamp(2rem,3.5vw,2.8rem);font-weight:800;color:var(--navy);margin-bottom:3rem}
+.counters-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem}
+.counter-num{font-family:'Outfit',sans-serif;font-size:clamp(2.5rem,5vw,3.8rem);font-weight:800;color:var(--teal);margin-bottom:.25rem;line-height:1}
+.counter-label{font-size:.95rem;color:var(--g500);max-width:220px;margin:0 auto}
+
+/* ── BLOCK 3: SECTORS ── */
+.sectors{padding:5rem 1.5rem;background:var(--bg-warm)}
+.sectors-inner{max-width:1200px;margin:0 auto}
+.sectors h2{font-size:clamp(2rem,3.5vw,2.8rem);font-weight:800;color:var(--navy);margin-bottom:2.5rem}
+.sectors-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
+.sector-card{display:flex;flex-direction:column;align-items:flex-start;background:var(--white);border:1px solid var(--g200);border-radius:12px;padding:1.5rem;transition:all .25s}
+.sector-card:hover{border-color:var(--teal);transform:translateY(-3px);box-shadow:var(--shadow)}
+.sector-icon{width:44px;height:44px;border-radius:10px;background:var(--g100);color:var(--navy);display:flex;align-items:center;justify-content:center;margin-bottom:.75rem;transition:all .25s}
+.sector-card:hover .sector-icon{background:var(--teal-bg);color:var(--teal)}
+.sector-card h3{font-size:1.15rem;font-weight:700;color:var(--navy);margin-bottom:.5rem}
+.sector-link{font-size:.95rem;font-weight:600;color:var(--teal);display:inline-flex;align-items:center;gap:.3rem;font-family:'Outfit',sans-serif;margin-top:auto}
+.sectors-extra{display:none;margin-top:1rem}
+.sectors-extra.open{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
+.sectors-toggle{display:inline-flex;align-items:center;gap:.4rem;margin-top:1.5rem;background:none;border:1px solid var(--g200);padding:.6rem 1.2rem;border-radius:8px;font-size:.9rem;font-weight:600;font-family:'Outfit',sans-serif;color:var(--navy);transition:all .2s}
+.sectors-toggle:hover{border-color:var(--teal);color:var(--teal)}
+.sectors-toggle svg{transition:transform .3s}
+.sectors-toggle.open svg{transform:rotate(180deg)}
+
+/* ── BLOCK 4: HOW ── */
+.how{padding:5rem 1.5rem;background:var(--white)}
+.how-inner{max-width:1200px;margin:0 auto}
+.how h2{font-size:clamp(2rem,3.5vw,2.8rem);font-weight:800;color:var(--navy);margin-bottom:3rem}
+.how-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:0}
+.how-step{padding:0 2rem;position:relative}
+.how-step:not(:last-child)::after{content:'';position:absolute;top:24px;right:0;width:1px;height:60%;background:var(--g200)}
+.how-step-num{font-family:'Outfit',sans-serif;font-size:3rem;font-weight:800;color:var(--g200);line-height:1;margin-bottom:.75rem}
+.how-step h3{font-size:1.15rem;font-weight:700;color:var(--navy);margin-bottom:.5rem}
+.how-step p{font-size:.95rem;color:var(--g500);line-height:1.6}
+.how-link{display:inline-flex;align-items:center;gap:.4rem;margin-top:2.5rem;font-size:1rem;font-weight:600;color:var(--teal);font-family:'Outfit',sans-serif}
+
+/* ── BLOCK 5: CASES ── */
+.cases{padding:5rem 1.5rem;background:var(--bg-warm)}
+.cases-inner{max-width:1200px;margin:0 auto}
+.cases h2{font-size:clamp(2rem,3.5vw,2.8rem);font-weight:800;color:var(--navy);margin-bottom:2.5rem}
+.cases-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
+.case-card{background:var(--white);border:1px solid var(--g200);border-radius:var(--radius-lg);padding:1.75rem;display:flex;flex-direction:column;transition:all .25s}
+.case-card:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+.case-badge{display:inline-block;font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;padding:.2rem .6rem;border-radius:5px;margin-bottom:1rem;font-family:'Outfit',sans-serif;width:fit-content}
+.case-badge-bib{background:var(--purple-bg);color:var(--purple)}
+.case-badge-uni{background:var(--teal-bg);color:var(--teal)}
+.case-badge-doc{background:var(--green-bg);color:var(--green)}
+.case-client{font-size:1.15rem;font-weight:700;color:var(--navy);margin-bottom:.6rem;font-family:'Outfit'}
+.case-result{font-size:.95rem;color:var(--g500);line-height:1.6;margin-bottom:1.25rem;flex:1}
+.case-link{font-size:.95rem;font-weight:600;color:var(--teal);display:inline-flex;align-items:center;gap:.3rem;font-family:'Outfit'}
+
+/* ── BLOCK 6: REVIEWS ── */
+.reviews{padding:5rem 1.5rem;background:var(--white)}
+.reviews-inner{max-width:1200px;margin:0 auto}
+.reviews h2{font-size:clamp(2rem,3.5vw,2.8rem);font-weight:800;color:var(--navy);margin-bottom:.5rem}
+.reviews-rating{display:flex;align-items:center;gap:.5rem;font-size:.95rem;color:var(--g500);margin-bottom:2.5rem}
+.reviews-stars{display:flex;gap:2px}
+.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
+.review-card{background:var(--g50);border:1px solid var(--g200);border-radius:14px;padding:1.5rem}
+.review-stars{display:flex;gap:2px;margin-bottom:.75rem}
+.review-text{font-size:.95rem;color:var(--g600);margin-bottom:1rem;font-style:italic;line-height:1.6}
+.review-author{font-size:.95rem;font-weight:700;color:var(--navy)}
+.review-role{font-size:.82rem;color:var(--g400)}
+.review-source{font-size:.78rem;color:var(--g400);margin-top:.25rem}
+
+/* ── BLOCK 7: FAQ ── */
+.faq{padding:5rem 1.5rem;background:var(--bg-warm)}
+.faq-inner{max-width:800px;margin:0 auto}
+.faq h2{font-size:clamp(2rem,3.5vw,2.8rem);font-weight:800;color:var(--navy);margin-bottom:2rem;text-align:center}
+.faq-list{border-top:1px solid var(--g200)}
+.faq-item{border-bottom:1px solid var(--g200)}
+.faq-q{width:100%;padding:1.15rem 0;display:flex;justify-content:space-between;align-items:center;background:none;border:none;font-size:1.1rem;font-weight:700;font-family:'Outfit',sans-serif;color:var(--navy);text-align:left;gap:1rem}
+.faq-q:hover{color:var(--teal)}
+.faq-q svg{flex-shrink:0;color:var(--g400);transition:transform .2s}
+.faq-q.open svg{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .3s ease}
+.faq-a-inner{padding:0 0 1.25rem;font-size:.95rem;color:var(--g600);line-height:1.7}
+.faq-bottom{margin-top:2rem;text-align:center}
+
+/* ── BLOCK 8: CTA FORM ── */
+.cta-form-section{padding:0;background:var(--navy-deep);color:var(--white);position:relative;overflow:hidden}
+.cta-form-section::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 60% at 30% 50%,rgba(8,145,178,.08) 0%,transparent 70%)}
+.cta-split{display:grid;grid-template-columns:1fr 1fr;min-height:500px;position:relative;z-index:1}
+.cta-form-side{padding:4rem 3rem;display:flex;flex-direction:column;justify-content:center}
+.cta-form-side h2{font-size:clamp(1.5rem,3vw,2rem);font-weight:800;margin-bottom:.5rem}
+.cta-form-sub{color:rgba(255,255,255,.55);margin-bottom:2rem;font-size:1.05rem}
+.cta-form{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:var(--radius-lg);padding:1.5rem;text-align:left}
+.cta-form-row{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;margin-bottom:.75rem}
+.cta-form input,.cta-form textarea{width:100%;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);border-radius:var(--radius);padding:.75rem 1rem;color:white;font-size:.95rem;font-family:'Source Sans 3',sans-serif;outline:none;transition:border .2s}
+.cta-form input::placeholder,.cta-form textarea::placeholder{color:rgba(255,255,255,.3)}
+.cta-form input:focus,.cta-form textarea:focus{border-color:var(--teal)}
+.cta-form textarea{margin-bottom:.75rem;resize:vertical}
+.cta-map-side{position:relative;min-height:500px;height:100%}
+.cta-map-side iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0;display:block}
+.cta-form-check{display:flex;align-items:flex-start;gap:.5rem;margin-bottom:1rem;font-size:.85rem;color:rgba(255,255,255,.45)}
+.cta-form-check input[type="checkbox"]{margin-top:3px;accent-color:var(--teal)}
+.cta-form-check a{color:var(--teal-light);text-decoration:underline}
+.cta-form .btn-primary{width:100%;justify-content:center}
+
+/* ── FOOTER ── */
+.footer{background:var(--g900);color:rgba(255,255,255,.5);padding:3rem 1.5rem 1.5rem}
+.footer-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:2rem}
+.footer-brand svg{height:40px;width:auto;margin-bottom:1rem}
+.footer-brand p{font-size:.9rem;line-height:1.6;max-width:260px}
+.footer h5{font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;color:rgba(255,255,255,.25);margin-bottom:.75rem;font-family:'Outfit'}
+.footer li{margin-bottom:.4rem}
+.footer a{font-size:.9rem;color:rgba(255,255,255,.45);transition:color .15s}
+.footer a:hover{color:var(--teal-light)}
+.footer-contact p{font-size:.9rem;margin-bottom:.35rem}
+.footer-contact a{color:rgba(255,255,255,.6)}
+.footer-bottom{max-width:1200px;margin:2rem auto 0;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,.06);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.75rem;font-size:.82rem}
+
+/* ── FLOATING BUTTONS ── */
+.float-btns{position:fixed;bottom:1.5rem;right:1.5rem;z-index:990;display:flex;flex-direction:column;gap:.75rem}
+.float-btn{width:56px;height:56px;border-radius:50%;border:none;display:flex;align-items:center;justify-content:center;color:white;transition:all .2s;box-shadow:0 4px 16px rgba(0,0,0,.2)}
+.float-btn:hover{transform:scale(1.08)}
+.float-btn-wa{background:#25D366;box-shadow:0 4px 16px rgba(37,211,102,.35)}
+.float-btn-wa:hover{box-shadow:0 8px 24px rgba(37,211,102,.4)}
+.float-btn-phone{background:var(--navy);box-shadow:0 4px 16px rgba(27,42,74,.35)}
+.float-btn-phone:hover{box-shadow:0 8px 24px rgba(27,42,74,.4)}
+
+/* ── COOKIE BANNER ── */
+.cookie-overlay{position:fixed;inset:0;background:rgba(15,27,51,.45);backdrop-filter:blur(3px);z-index:9998;opacity:0;transition:opacity .3s;pointer-events:none}
+.cookie-overlay.active{opacity:1;pointer-events:auto}
+.cookie-banner{position:fixed;bottom:0;left:0;right:0;z-index:9999;transform:translateY(100%);transition:transform .4s cubic-bezier(.22,.68,0,1)}
+.cookie-banner.active{transform:translateY(0)}
+.cookie-banner-inner{max-width:1200px;margin:0 auto;background:var(--white);border-top:1px solid var(--g200);box-shadow:0 -8px 40px rgba(15,27,51,.1);padding:1.25rem 1.5rem;display:grid;grid-template-columns:1fr auto;gap:1.5rem;align-items:center}
+.cookie-banner-text h3{font-size:.95rem;font-weight:700;color:var(--navy);margin-bottom:.25rem}
+.cookie-banner-text p{font-size:.9rem;color:var(--g500)}
+.cookie-banner-text a{color:var(--teal);text-decoration:underline}
+.cookie-banner-actions{display:flex;gap:.5rem}
+.cb-btn{padding:.6rem 1.1rem;border-radius:8px;font-size:.9rem;font-weight:700;font-family:'Outfit';transition:all .2s;border:none;white-space:nowrap}
+.cb-btn-accept{background:var(--navy);color:var(--white)}
+.cb-btn-accept:hover{background:var(--navy-mid)}
+.cb-btn-reject{background:var(--g100);color:var(--g700);border:1px solid var(--g200)}
+.cb-btn-reject:hover{background:var(--g200)}
+.cb-btn-settings{background:var(--g100);color:var(--g700);border:1px solid var(--g200)}
+.cb-btn-settings:hover{background:var(--g200)}
+
+/* ── COOKIE PREFS ── */
+.cookie-prefs{position:fixed;inset:0;z-index:9999;display:flex;align-items:center;justify-content:center;padding:1.5rem;opacity:0;pointer-events:none;transition:opacity .3s}
+.cookie-prefs.active{opacity:1;pointer-events:auto}
+.cookie-prefs-panel{background:var(--white);border-radius:20px;box-shadow:0 24px 64px rgba(15,27,51,.2);width:100%;max-width:560px;max-height:90vh;display:flex;flex-direction:column;transform:translateY(16px);transition:transform .35s cubic-bezier(.22,.68,0,1)}
+.cookie-prefs.active .cookie-prefs-panel{transform:translateY(0)}
+.cp-header{padding:1.5rem 1.75rem 1rem;border-bottom:1px solid var(--g200)}
+.cp-header-row{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:.5rem}
+.cp-header h2{font-size:1.1rem;font-weight:800;color:var(--navy)}
+.cp-close{width:32px;height:32px;border-radius:8px;border:1px solid var(--g200);background:var(--g100);cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--g400);transition:all .15s;flex-shrink:0}
+.cp-close:hover{background:var(--g200);color:var(--g800)}
+.cp-header p{font-size:.9rem;color:var(--g500);line-height:1.6}
+.cp-body{padding:1rem 1.75rem;overflow-y:auto;flex:1}
+.cp-footer{padding:1rem 1.75rem 1.5rem;border-top:1px solid var(--g200);display:flex;gap:.5rem;justify-content:flex-end}
+.cc{padding:1rem 0;border-bottom:1px solid var(--g100)}
+.cc:last-child{border-bottom:none}
+.cc-header{display:flex;justify-content:space-between;align-items:center;gap:1rem}
+.cc-info{flex:1}
+.cc-title{font-family:'Outfit',sans-serif;font-size:.92rem;font-weight:700;color:var(--navy);display:flex;align-items:center;gap:.5rem}
+.cc-badge{font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;padding:.15rem .45rem;border-radius:4px;background:var(--green-bg);color:var(--green)}
+.cc-desc{font-size:.85rem;color:var(--g500);margin-top:.25rem;line-height:1.5}
+.toggle{position:relative;width:44px;height:24px;display:inline-block}
+.toggle input{opacity:0;width:0;height:0;position:absolute}
+.toggle-track{position:absolute;inset:0;border-radius:99px;background:var(--g300);cursor:pointer;transition:background .2s}
+.toggle-track::after{content:'';position:absolute;top:2px;left:2px;width:20px;height:20px;border-radius:50%;background:var(--white);box-shadow:0 1px 3px rgba(0,0,0,.15);transition:transform .2s}
+.toggle input:checked+.toggle-track{background:var(--teal)}
+.toggle input:checked+.toggle-track::after{transform:translateX(20px)}
+.toggle input:disabled+.toggle-track{background:var(--teal);opacity:.5;cursor:not-allowed}
+.toggle input:disabled:checked+.toggle-track::after{transform:translateX(20px)}
+.cookie-reopen{position:fixed;bottom:1.25rem;left:1.25rem;z-index:990;width:44px;height:44px;border-radius:12px;background:var(--navy);border:1px solid rgba(255,255,255,.1);box-shadow:0 4px 16px rgba(15,27,51,.2);cursor:pointer;display:none;align-items:center;justify-content:center;color:white;transition:all .2s}
+.cookie-reopen.visible{display:flex}
+.cookie-reopen:hover{background:var(--navy-mid);transform:translateY(-2px)}
+
+
+/* ── CLIENTS BAND ── */
+.clients{padding:2rem 1.5rem;background:var(--g50);border-top:1px solid var(--g200);border-bottom:1px solid var(--g200)}
+.clients-inner{max-width:1200px;margin:0 auto}
+.clients-label{text-align:center;font-size:.78rem;text-transform:uppercase;letter-spacing:.1em;color:var(--g400);font-family:'Outfit',sans-serif;font-weight:700;margin-bottom:1.5rem}
+.clients-grid{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:2rem}
+.client-item{display:flex;flex-direction:column;align-items:center;gap:.5rem;color:var(--g400);font-size:.8rem;font-family:'Outfit',sans-serif;font-weight:600;transition:color .2s}
+.client-item:hover{color:var(--navy)}
+.client-item svg{color:var(--g300);transition:color .2s}
+.client-item:hover svg{color:var(--teal)}
+
+/* ── SECTOR CARDS VISUAL UPGRADE ── */
+.sector-icon{width:64px;height:64px;border-radius:14px;background:linear-gradient(135deg,var(--g100),var(--g50));color:var(--navy);display:flex;align-items:center;justify-content:center;margin-bottom:1rem;transition:all .25s;flex-shrink:0}
+.sector-card:hover .sector-icon{background:linear-gradient(135deg,var(--teal-bg),rgba(8,145,178,.05));color:var(--teal)}
+.sector-card{padding:0;overflow:hidden}
+.sector-card-body{padding:1.25rem 1.25rem 1rem;display:flex;flex-direction:column;flex:1}
+.sector-img{height:120px;overflow:hidden;flex-shrink:0}
+.sector-img img{width:100%;height:100%;object-fit:cover;object-position:center;display:block;transition:transform .45s ease}
+.sector-card:hover .sector-img img{transform:scale(1.07)}
+.sector-icon{width:48px;height:48px;border-radius:10px;background:linear-gradient(135deg,var(--g100),var(--g50));color:var(--navy);display:flex;align-items:center;justify-content:center;margin-bottom:.75rem;transition:all .25s}
+.sector-card h3{font-size:1rem;font-weight:700;color:var(--navy);margin-bottom:.4rem}
+
+
+/* ── HOW STEP VISUAL ICONS ── */
+.how-step-icon{width:72px;height:72px;border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:1rem;background:linear-gradient(135deg,var(--teal-bg),rgba(8,145,178,.08));color:var(--teal)}
+.how-step-num{font-family:'Outfit',sans-serif;font-size:2.4rem;font-weight:800;color:var(--g200);line-height:1;margin-bottom:.5rem}
+
+/* ── CASE CARDS VISUAL HEADER ── */
+.case-header{height:80px;border-radius:10px 10px 0 0;margin:-1.75rem -1.75rem 1.25rem;display:flex;align-items:center;justify-content:space-between;padding:0 1.5rem;overflow:hidden;position:relative}
+.case-header-bib{background:linear-gradient(135deg,#7C3AED,#9F5FFF)}
+.case-header-uni{background:linear-gradient(135deg,#0891B2,#22D3EE)}
+.case-header-doc{background:linear-gradient(135deg,#059669,#34D399)}
+.case-header svg{opacity:.4;color:white}
+.case-header-text{color:rgba(255,255,255,.9);font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;font-family:'Outfit',sans-serif}
+.case-card{background:var(--white);border:1px solid var(--g200);border-radius:var(--radius-lg);padding:1.75rem;display:flex;flex-direction:column;transition:all .25s;overflow:hidden}
+.case-img{margin:-1.75rem -1.75rem 1.25rem;height:160px;overflow:hidden;position:relative}
+.case-img img{width:100%;height:100%;object-fit:cover;object-position:center;display:block;transition:transform .45s ease}
+.case-card:hover .case-img img{transform:scale(1.05)}
+.case-img-label{position:absolute;bottom:.6rem;left:.75rem;font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:rgba(255,255,255,.9);background:rgba(15,27,51,.5);backdrop-filter:blur(4px);padding:.2rem .55rem;border-radius:4px;font-family:'Outfit',sans-serif}
+
+
+/* ── REVIEW AVATARS ── */
+.review-footer{display:flex;align-items:center;gap:.75rem;margin-top:auto}
+.review-avatar{width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.85rem;font-weight:800;font-family:'Outfit',sans-serif;color:white;flex-shrink:0}
+.review-avatar-a{background:linear-gradient(135deg,var(--navy),var(--navy-mid))}
+.review-avatar-b{background:linear-gradient(135deg,var(--teal),#0E7490)}
+.review-avatar-c{background:linear-gradient(135deg,var(--amber),var(--amber-hover))}
+.review-meta{flex:1}
+.review-card{background:var(--g50);border:1px solid var(--g200);border-radius:14px;padding:1.5rem;display:flex;flex-direction:column}
+
+/* ── RESPONSIVE ── */
+
+@media(max-width:768px){
+  .nav{display:none}
+  .menu-toggle{display:block}
+  .hero{padding:8rem 1.5rem 3.5rem;min-height:auto}
+  .subheader-inner{gap:.75rem}
+  .subheader .sh-desktop{display:none}
+  .counters-grid{grid-template-columns:1fr;gap:1.5rem}
+  .sectors-grid,.sectors-extra.open{grid-template-columns:repeat(2,1fr)}
+  .how-steps{grid-template-columns:1fr;gap:2rem}
+  .how-step:not(:last-child)::after{display:none}
+  .how-step{padding:0}
+  .cases-grid,.reviews-grid{grid-template-columns:1fr}
+  .cta-form-row{grid-template-columns:1fr}
+  .cta-split{grid-template-columns:1fr}
+  .cta-form-side{padding:3rem 1.5rem}
+  .cta-map-side{min-height:300px}
+  .footer-inner{grid-template-columns:1fr 1fr}
+  .trust-inner{gap:1rem;justify-content:flex-start}
+  .trust-item{font-size:.82rem}
+  .cookie-banner-inner{grid-template-columns:1fr;gap:1rem}
+  .cookie-banner-actions{flex-wrap:wrap}
+  .cb-btn{flex:1;text-align:center}
+  .cp-header,.cp-body,.cp-footer{padding-left:1.25rem;padding-right:1.25rem}
+  .cp-footer{flex-wrap:wrap}
+  .cp-footer .cb-btn{flex:1;text-align:center}
+}
+
+@media(prefers-reduced-motion:no-preference){
+  .fade-in{opacity:0;transform:translateY(20px);transition:opacity .5s ease,transform .5s ease}
+  .fade-in.visible{opacity:1;transform:translateY(0)}
+}
+</style>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZXXNMZ7DNZ"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-ZXXNMZ7DNZ');</script>
 </head>
 <body>
 
+<!-- SUBHEADER -->
+<div class="subheader">
+  <div class="subheader-inner">
+    <a href="mailto:info@serdoc.es?subject=Formulario%20de%20contacto%20Serdoc" class="sh-desktop"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1.5" y="3" width="11" height="8" rx="1.5"/><path d="M1.5 3l5.5 4 5.5-4"/></svg> info@serdoc.es</a>
+    <span class="subheader-sep sh-desktop">|</span>
+    <a href="tel:+34916896573"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 3a1 1 0 0 1 1-1h1.5l1.2 2.5-1.2 1.2a6.5 6.5 0 0 0 3 3l1.2-1.2L11 9.5V11a1 1 0 0 1-1 1A9 9 0 0 1 2 3z"/></svg> +34 91 689 65 73</a>
+    <span class="subheader-sep">|</span>
+    <a href="https://wa.link/wxd00g"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 12l.7-2.5A5 5 0 1 1 5.5 11z"/><path d="M5 8c.4.8 1.2 1.6 2.5 2"/></svg> +34 615 26 69 79</a>
+    <span class="subheader-sep sh-desktop">|</span>
+    <a href="https://www.linkedin.com/company/serdoc/" target="_blank" rel="noopener" class="sh-desktop"><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg> LinkedIn</a>
+  </div>
+</div>
+
+<!-- HEADER -->
 <header class="header">
   <div class="header-inner">
-    <a href="./" class="logo"><img src="https://serdoc.es/wp-content/uploads/2023/11/lg-serdoc-white.png" alt="Serdoc" loading="eager"></a>
-    <nav class="nav">
-      <a href="./soluciones-rfid/">Soluciones RFID</a>
-      <a href="./soluciones-rfid-bibliotecas/">Bibliotecas</a>
-      <a href="./gestion-documental/">Gestión Documental</a>
-      <a href="./sobre-nosotros/">Nosotros</a>
-      <a href="./blog/">Blog</a>
-      <a href="./contacto/" class="nav-cta">Consulta gratis</a>
+    <a href="/" class="logo"><svg height="34" viewBox="0 0 697.9 215" xmlns="http://www.w3.org/2000/svg"><defs><style>.lw{fill:#fff}</style></defs><g><path class="lw" d="M394.8,147.1c0,15.5-13.8,21.5-26.4,21.5-19.8,0-28.5-10.9-30.5-23.2h11.5c2.1,8.2,7.6,12.4,18.8,12.4s15-3.7,15-10.3-5.8-7.7-18.9-10.6c-13.8-3-24.5-6.9-24.5-20.1s12.4-21.4,26-21.4,26,9.2,28,20.4h-11.5c-2-5.9-6.9-9.7-16.4-9.7s-14.7,4.2-14.7,10.4,4,6.7,15.8,9.2c17.9,3.9,27.7,7.7,27.7,21.3Z"/><path class="lw" d="M396.1,139.7c0-16.8,11.9-29.1,28.7-29.1s29.2,13.9,28.1,32.2h-45.1c.8,10.2,8,15.9,17.3,15.9s12.2-2.8,14.9-8.3h11.8c-4.4,12.4-15,18.2-26.8,18.2-16.9,0-28.9-12-28.9-28.8ZM440.7,133.4c-1.7-7.7-7.4-12.9-15.9-12.9s-14.6,5.4-16.4,12.9h32.3Z"/><path class="lw" d="M456.4,111.8h11.4v10.9c3.4-7.7,9.7-12.1,18.5-12.1s2.5.1,3.3.3v11.6c-1-.1-1.9-.2-3.4-.2-10.4,0-18.4,5.9-18.4,19.6v25.5h-11.4v-55.6Z"/><path class="lw" d="M492.7,96.6h24.8c20.6,0,36.2,14.9,36.2,35.4s-15.7,35.4-36.2,35.4h-24.8v-70.8ZM517.6,156.5c14.3,0,24.7-10,24.7-24.5s-10.4-24.5-24.7-24.5h-13.5v49h13.5Z"/><path class="lw" d="M613.4,139.6c0,16.7-12.6,28.9-28.8,28.9s-28.8-12.3-28.8-28.9,12.9-29,28.8-29,28.8,12.2,28.8,29ZM567.2,139.6c0,10.7,7.6,18.1,17.3,18.1s17.3-7.4,17.3-18.1-7.7-18.1-17.3-18.1-17.3,7.4-17.3,18.1Z"/><path class="lw" d="M615.3,139.6c0-16.6,12.3-29,28.9-29s24.8,8,27.3,21.4h-11.8c-2.1-7-8.3-10.8-15.5-10.8-10.3,0-17.4,7.7-17.4,18.4s7.3,18.4,17.3,18.4,13.5-4,15.6-10.9h11.8c-2.6,13.8-14.4,21.5-27.4,21.5s-28.8-12.4-28.8-29Z"/></g><rect class="lw" x="79" y="81.2" width="8.7" height="8.7" transform="translate(-33.6 110) rotate(-57.5)"/><rect class="lw" x="73.1" y="90.4" width="8.7" height="8.7" transform="translate(-44 109.3) rotate(-57.5)"/><rect class="lw" x="94" y="77.8" width="8.7" height="8.7" transform="translate(-23.8 121.1) rotate(-57.5)"/><rect class="lw" x="99.9" y="68.6" width="8.7" height="8.7" transform="translate(-13.3 121.8) rotate(-57.5)"/><rect class="lw" x="90.7" y="62.8" width="8.7" height="8.7" transform="translate(-12.6 111.3) rotate(-57.5)"/><rect class="lw" x="81.5" y="56.9" width="8.7" height="8.7" transform="translate(-11.9 100.8) rotate(-57.5)"/><rect class="lw" x="60.6" y="69.5" width="8.7" height="8.7" transform="translate(-32.2 89) rotate(-57.5)"/><rect class="lw" x="63.9" y="84.5" width="8.7" height="8.7" transform="translate(-43.4 98.8) rotate(-57.5)"/><rect class="lw" x="76.5" y="105.4" width="8.7" height="8.7" transform="translate(-55.2 119.1) rotate(-57.5)"/><rect class="lw" x="82.3" y="96.2" width="8.7" height="8.7" transform="translate(-44.7 119.8) rotate(-57.5)"/><rect class="lw" x="91.5" y="102.1" width="8.7" height="8.7" transform="translate(-45.4 130.2) rotate(-57.5)"/><rect class="lw" x="97.4" y="92.9" width="8.7" height="8.7" transform="translate(-34.9 130.9) rotate(-57.5)"/><rect class="lw" x="103.2" y="83.7" width="8.7" height="8.7" transform="translate(-24.4 131.6) rotate(-57.5)"/><rect class="lw" x="114.9" y="65.3" width="8.7" height="8.7" transform="translate(-3.5 132.9) rotate(-57.5)"/><rect class="lw" x="105.7" y="59.4" width="8.7" height="8.7" transform="translate(-2.8 122.5) rotate(-57.5)"/><rect class="lw" x="87.3" y="47.7" width="8.7" height="8.7" transform="translate(-1.5 101.5) rotate(-57.5)"/><rect class="lw" x="45.5" y="72.8" width="8.7" height="8.7" transform="translate(-42 77.9) rotate(-57.5)"/><rect class="lw" x="43" y="97.1" width="8.7" height="8.7" transform="translate(-63.6 87) rotate(-57.5)"/><rect class="lw" x="61.4" y="108.8" width="8.7" height="8.7" transform="translate(-65 107.9) rotate(-57.5)"/><rect class="lw" x="79.8" y="120.5" width="8.7" height="8.7" transform="translate(-66.3 128.9) rotate(-57.5)"/><rect class="lw" x="85.7" y="111.3" width="8.7" height="8.7" transform="translate(-55.9 129.6) rotate(-57.5)"/><rect class="lw" x="100.7" y="107.9" width="8.7" height="8.7" transform="translate(-46.1 140.7) rotate(-57.5)"/><rect class="lw" x="106.6" y="98.7" width="8.7" height="8.7" transform="translate(-35.6 141.4) rotate(-57.5)"/><rect class="lw" x="112.4" y="89.5" width="8.7" height="8.7" transform="translate(-25.1 142.1) rotate(-57.5)"/><rect class="lw" x="118.3" y="80.3" width="8.7" height="8.7" transform="translate(-14.6 142.7) rotate(-57.5)"/><rect class="lw" x="130" y="61.9" width="8.7" height="8.7" transform="translate(6.3 144.1) rotate(-57.5)"/><rect class="lw" x="120.8" y="56.1" width="8.7" height="8.7" transform="translate(7 133.6) rotate(-57.5)"/><rect class="lw" x="102.4" y="44.4" width="8.7" height="8.7" transform="translate(8.3 112.7) rotate(-57.5)"/><rect class="lw" x="68.9" y="36" width="8.7" height="8.7" transform="translate(-.1 80.6) rotate(-57.5)"/><rect class="lw" x="53.9" y="39.4" width="8.7" height="8.7" transform="translate(-9.9 69.4) rotate(-57.5)"/><rect class="lw" x="30.5" y="76.2" width="8.7" height="8.7" transform="translate(-51.8 66.7) rotate(-57.5)"/><rect class="lw" x="28" y="100.4" width="8.7" height="8.7" transform="translate(-73.4 75.8) rotate(-57.5)"/><rect class="lw" x="46.4" y="112.1" width="8.7" height="8.7" transform="translate(-74.8 96.8) rotate(-57.5)"/><rect class="lw" x="55.6" y="118" width="8.7" height="8.7" transform="translate(-75.5 107.3) rotate(-57.5)"/><rect class="lw" x="64.8" y="123.8" width="8.7" height="8.7" transform="translate(-76.1 117.7) rotate(-57.5)"/><rect class="lw" x="83.2" y="135.5" width="8.7" height="8.7" transform="translate(-77.5 138.7) rotate(-57.5)"/><rect class="lw" x="89" y="126.3" width="8.7" height="8.7" transform="translate(-67 139.4) rotate(-57.5)"/><rect class="lw" x="104.1" y="123" width="8.7" height="8.7" transform="translate(-57.2 150.5) rotate(-57.5)"/><rect class="lw" x="115.8" y="104.6" width="8.7" height="8.7" transform="translate(-36.3 151.9) rotate(-57.5)"/><rect class="lw" x="121.6" y="95.4" width="8.7" height="8.7" transform="translate(-25.8 152.5) rotate(-57.5)"/><rect class="lw" x="127.5" y="86.2" width="8.7" height="8.7" transform="translate(-15.3 153.2) rotate(-57.5)"/><rect class="lw" x="133.3" y="77" width="8.7" height="8.7" transform="translate(-4.8 153.9) rotate(-57.5)"/><rect class="lw" x="145" y="58.6" width="8.7" height="8.7" transform="translate(16.1 155.2) rotate(-57.5)"/><rect class="lw" x="135.8" y="52.7" width="8.7" height="8.7" transform="translate(16.8 144.7) rotate(-57.5)"/><rect class="lw" x="117.4" y="41" width="8.7" height="8.7" transform="translate(18.1 123.8) rotate(-57.5)"/><rect class="lw" x="108.2" y="35.2" width="8.7" height="8.7" transform="translate(18.8 113.3) rotate(-57.5)"/><rect class="lw" x="99" y="29.3" width="8.7" height="8.7" transform="translate(19.5 102.9) rotate(-57.5)"/><rect class="lw" x="80.6" y="17.6" width="8.7" height="8.7" transform="translate(20.8 81.9) rotate(-57.5)"/><rect class="lw" x="50.5" y="24.3" width="8.7" height="8.7" transform="translate(1.2 59.6) rotate(-57.5)"/><rect class="lw" x="31.3" y="115.5" width="8.7" height="8.7" transform="translate(-84.6 85.6) rotate(-57.5)"/><rect class="lw" x="40.5" y="121.3" width="8.7" height="8.7" transform="translate(-85.3 96.1) rotate(-57.5)"/><rect class="lw" x="58.9" y="133" width="8.7" height="8.7" transform="translate(-86.6 117.1) rotate(-57.5)"/><rect class="lw" x="68.1" y="138.9" width="8.7" height="8.7" transform="translate(-87.3 127.5) rotate(-57.5)"/><rect class="lw" x="86.5" y="150.6" width="8.7" height="8.7" transform="translate(-88.6 148.5) rotate(-57.5)"/><rect class="lw" x="92.4" y="141.4" width="8.7" height="8.7" transform="translate(-78.1 149.2) rotate(-57.5)"/><rect class="lw" x="101.6" y="147.2" width="8.7" height="8.7" transform="translate(-78.8 159.6) rotate(-57.5)"/><rect class="lw" x="107.4" y="138" width="8.7" height="8.7" transform="translate(-68.4 160.3) rotate(-57.5)"/><rect class="lw" x="113.3" y="128.8" width="8.7" height="8.7" transform="translate(-57.9 161) rotate(-57.5)"/><rect class="lw" x="119.1" y="119.6" width="8.7" height="8.7" transform="translate(-47.4 161.6) rotate(-57.5)"/><rect class="lw" x="125" y="110.4" width="8.7" height="8.7" transform="translate(-36.9 162.3) rotate(-57.5)"/><rect class="lw" x="136.7" y="92" width="8.7" height="8.7" transform="translate(-16 163.7) rotate(-57.5)"/><rect class="lw" x="142.5" y="82.8" width="8.7" height="8.7" transform="translate(-5.5 164.3) rotate(-57.5)"/><rect class="lw" x="148.4" y="73.6" width="8.7" height="8.7" transform="translate(5 165) rotate(-57.5)"/><rect class="lw" x="154.2" y="64.4" width="8.7" height="8.7" transform="translate(15.4 165.7) rotate(-57.5)"/><rect class="lw" x="95.7" y="156.4" width="8.7" height="8.7" transform="translate(-89.3 159) rotate(-57.5)"/><path class="lw" d="M147.9,153c0,0,.1-.2.2-.2l70.7-59.8-49.6-24.4-40.6,72.8-6.7,12.1,23.9,15.4,2-15.4Z"/><path class="lw" d="M172.8,158.5c0,0,.2-.1.2-.2l95.9-32.2-27.5-49.8-91.5,77.4,3.5,4.1,3.3,3.9,6.3,7.4,9.6-10.5Z"/><polygon class="lw" points="149.4 155.9 147.8 168 154.6 161.9 151.8 158.7 149.4 155.9"/><path class="lw" d="M119.6,154.1l29-52-42.7,68.2h21l-7.4-15.3Z"/><polygon class="lw" points="123 156.5 126.5 164 128.7 168.5 132.5 162.6 128.2 159.9 123 156.5"/><polygon class="lw" points="172.4 167.7 164.5 198 309.6 198 309.6 114.5 174.4 160 172.4 167.7"/><polygon class="lw" points="166.9 167.9 170.7 166.4 171 165.1 171.6 162.8 166.9 167.9"/></svg></a>
+    <nav class="nav" id="desktopNav">
+      <a href="/" class="nav-item">Inicio</a>
+      <div class="mega-parent">
+        <a href="/soluciones-rfid/" class="nav-item">Soluciones RFID <svg width="10" height="10" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3.5l3 3 3-3"/></svg></a>
+        <div class="megamenu">
+          <div class="megamenu-cols">
+            <div class="megamenu-col"><h4>Industria</h4><a href="/rfid-logistica-almacenes/"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="5" width="12" height="9" rx="1"/><path d="M4 5V3.5A1.5 1.5 0 0 1 5.5 2h5A1.5 1.5 0 0 1 12 3.5V5"/></svg>Logística y almacenes</a><a href="/rfid-lavanderias/"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="2" width="10" height="12" rx="1.5"/><circle cx="8" cy="9.5" r="2.5"/><path d="M5 4.5h6"/></svg>Lavanderías industriales</a><a href="/rfid-gestion-herramientas/"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M10 2l4 4-5 5-4-4z"/><path d="M2 14l4-4"/></svg>Gestión de herramientas</a><a href="/rfid-control-accesos/"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="10" height="10" rx="2"/><circle cx="8" cy="7" r="1.5"/><path d="M8 8.5v2.5"/></svg>Control de accesos</a><a href="/rfid-farmacias/"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="10" height="10" rx="2"/><path d="M6.5 5.5v5M4 8h5"/></svg>Farmacias</a></div>
+            <div class="megamenu-col"><h4>Retail y comercio</h4><a href="/rfid-retail-tiendas/"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2.5 7l2-5h7l2 5"/><rect x="2" y="7" width="12" height="7" rx="1"/></svg>Retail y tiendas</a><a href="/sistemas-antihurto-rfid/"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M8 2C5 2 3 4.5 3 7v4l-1 2h12l-1-2V7c0-2.5-2-5-5-5z"/><path d="M6 13a2 2 0 0 0 4 0"/></svg>Sistemas antihurto</a><a href="/etiquetas-rfid/"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 4l5-2 7 6-5 6-7-6z"/><circle cx="6" cy="6" r="1"/></svg>Etiquetas RFID</a><a href="/dispositivos-rfid/"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="1" width="8" height="14" rx="1.5"/><circle cx="8" cy="12" r="1"/></svg>Dispositivos RFID</a><a href="/rfid-joyerias/"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 3h8l-4 5z"/><path d="M4 3L2 6l6 8 6-8-2-3"/></svg>Joyerías</a></div>
+            <div class="megamenu-col"><h4>Salud y servicios</h4><a href="/rfid-hospitales/"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="2" width="12" height="12" rx="2"/><path d="M6.5 5v6M3.5 8h6"/></svg>Hospitales</a><a href="/rfid-residencias/"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 14h12"/><path d="M4 14V6l4-3 4 3v8"/><path d="M6.5 14v-3h3v3"/></svg>Residencias de mayores</a><a href="/rfid-hosteleria/"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8.5h10"/><path d="M4.5 8.5V6a3.5 3.5 0 0 1 7 0v2.5"/><path d="M3 8.5v3.5a1.5 1.5 0 0 0 1.5 1.5h7a1.5 1.5 0 0 0 1.5-1.5V8.5"/></svg>Hostelería</a><a href="/rfid-eventos/"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="3" width="12" height="11" rx="1.5"/><path d="M5 1.5v3M11 1.5v3M2 7.5h12"/></svg>Eventos</a></div>
+            <div class="megamenu-photo">
+              <img src="https://images.unsplash.com/photo-1553413077-190dd305871c?w=300&q=70" alt="Soluciones RFID empresa Madrid Serdoc" loading="lazy" width="300" height="100">
+              <a href="/soluciones-rfid/" class="megamenu-photo-cta">Ver todas las soluciones <svg class="arrow-r" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 6h8m-3-3 3 3-3 3"/></svg></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mega-parent">
+        <a href="/soluciones-rfid-para-bibliotecas/" class="nav-item">Bibliotecas <svg width="10" height="10" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3.5l3 3 3-3"/></svg></a>
+        <div class="megamenu"><div class="megamenu-cols"><div class="megamenu-col megamenu-single"><a href="/autoprestamo-libros-rfid/">Autopréstamo de libros</a><a href="/autolibro/">Autolibro</a><a href="/rfid-bibliobus/">Bibliobús RFID</a><a href="/autoprestamo-de-portatiles/">Autopréstamo de portátiles</a><a href="/reserva-automatica-ordenadores/">Reserva de ordenadores</a><a href="/buzon-de-devolucion-inteligente/">Buzón de devolución</a></div></div></div>
+      </div>
+      <a href="/accede-reserva-espacios/" class="nav-item">ACCEDE</a>
+      <div class="mega-parent">
+        <a href="/sistema-de-gestion-documental/" class="nav-item">Gestión Documental <svg width="10" height="10" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3.5l3 3 3-3"/></svg></a>
+        <div class="megamenu"><div class="megamenu-cols"><div class="megamenu-col megamenu-single"><a href="/digitalizacion-documentos/">Digitalización de documentos</a><a href="/business-process-outsourcing/">Business Process Outsourcing</a></div></div></div>
+      </div>
+      <a href="/casos-de-exito/" class="nav-item">Casos de éxito</a>
+      <a href="/blog/" class="nav-item">Blog</a>
+      <a href="/contacto/" class="nav-item nav-cta">Solicitar consulta gratuita</a>
     </nav>
-    <button class="menu-toggle" onclick="toggleMenu()" aria-label="Menú"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h16M3 11h16M3 16h16"/></svg></button>
+    <button class="menu-toggle" id="menuToggle" aria-label="Menú" aria-expanded="false"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h16M3 11h16M3 16h16"/></svg></button>
   </div>
 </header>
 
+<!-- MOBILE NAV -->
+<div class="mobile-nav" id="mobileNav">
+  <a href="/">Inicio</a>
+  <div class="mn-section">Soluciones RFID</div>
+  <div class="mn-sub"><a href="/soluciones-rfid/">Ver todas las soluciones</a><a href="/rfid-logistica-almacenes/">Logística y almacenes</a><a href="/rfid-retail-tiendas/">Retail y tiendas</a><a href="/rfid-hospitales/">Hospitales</a><a href="/rfid-residencias/">Residencias</a><a href="/rfid-lavanderias/">Lavanderías</a><a href="/rfid-hosteleria/">Hostelería</a><a href="/rfid-joyerias/">Joyerías</a><a href="/rfid-eventos/">Eventos</a><a href="/rfid-control-accesos/">Control de accesos</a><a href="/rfid-gestion-herramientas/">Gestión de herramientas</a><a href="/rfid-farmacias/">Farmacias</a><a href="/sistemas-antihurto-rfid/">Sistemas antihurto</a><a href="/etiquetas-rfid/">Etiquetas RFID</a><a href="/dispositivos-rfid/">Dispositivos RFID</a></div>
+  <div class="mn-section">Bibliotecas</div>
+  <div class="mn-sub"><a href="/soluciones-rfid-para-bibliotecas/">Ver soluciones bibliotecas</a><a href="/autoprestamo-libros-rfid/">Autopréstamo de libros</a><a href="/autolibro/">Autolibro</a><a href="/rfid-bibliobus/">Bibliobús RFID</a><a href="/autoprestamo-de-portatiles/">Autopréstamo portátiles</a><a href="/reserva-automatica-ordenadores/">Reserva de ordenadores</a><a href="/buzon-de-devolucion-inteligente/">Buzón de devolución</a></div>
+  <a href="/accede-reserva-espacios/">ACCEDE</a>
+  <div class="mn-section">Gestión Documental</div>
+  <div class="mn-sub"><a href="/sistema-de-gestion-documental/">Gestión documental y BPO</a><a href="/digitalizacion-documentos/">Digitalización</a><a href="/business-process-outsourcing/">BPO</a></div>
+  <a href="/casos-de-exito/">Casos de éxito</a>
+  <a href="/blog/">Blog</a>
+  <a href="/contacto/" style="color:var(--amber);font-weight:700">Solicitar consulta gratuita</a>
+</div>
+
+<!-- BLOCK 1: HERO -->
 <section class="hero">
+  <div class="hero-bg"><img src="https://images.unsplash.com/photo-1553413077-190dd305871c?w=1920&q=80" alt="Instalación de sistema RFID en almacén logístico Madrid" loading="eager" fetchpriority="high" width="1920" height="800"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-overlay-b"></div>
   <div class="hero-inner">
     <div class="hero-text">
-      <div class="hero-eyebrow"><span class="dot"></span> Más de 25 años implementando soluciones</div>
-      <h1>Implementamos tecnología RFID <em>llave en mano</em> para tu negocio</h1>
-      <p class="hero-sub">Hardware, software a medida, instalación y soporte continuo. No vendemos componentes: resolvemos tu problema de principio a fin.</p>
+      <h1>Empresa RFID en Madrid con +25 años: automatización para almacenes, tiendas y bibliotecas</h1>
+      <p class="hero-sub">Sistemas RFID llave en mano para logística, retail, hospitales y gestión documental · Empresa RFID en Madrid con más de 25 años</p>
       <div class="hero-actions">
-        <a href="./contacto/" class="btn btn-primary">Solicitar consulta gratuita →</a>
-        <a href="./soluciones-rfid/" class="btn btn-ghost">Ver soluciones</a>
-      </div>
-    </div>
-    <div class="hero-visual">
-      <div class="hero-img-wrap">
-        <img src="https://serdoc.es/wp-content/uploads/2023/11/female-seller-scanning-ecommerce-shipping-box-in-dropshipping-warehouse-.jpg" alt="Escaneo RFID en almacén" loading="eager">
-        <div class="hero-img-badge"><svg width="16" height="16" fill="none" stroke="#22D3EE" stroke-width="2.5" style="vertical-align:-2px;flex-shrink:0"><circle cx="8" cy="8" r="6.5"/><path d="M5.5 8l2 2 3.5-3.5"/></svg> ISO 9001 Certificada</div>
+        <a href="/contacto/" class="btn btn-primary">Solicitar consulta gratuita <svg class="arrow-r" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 8h10m-4-4 4 4-4 4"/></svg></a>
+        <a href="/soluciones-rfid/" class="btn btn-ghost">Ver soluciones</a>
       </div>
     </div>
   </div>
 </section>
 
-
+<!-- TRUST STRIP -->
 <div class="trust">
   <div class="trust-inner">
-    <div class="trust-item">+25 años de experiencia</div>
-    <div class="trust-item">4.8<svg width="14" height="14" viewBox="0 0 14 14" fill="#F59E0B" style="vertical-align:-1px;margin:0 2px"><path d="M7 1l1.8 3.6L13 5.3l-3 2.9.7 4.1L7 10.3 3.3 12.3l.7-4.1-3-2.9 4.2-.7z"/></svg> en Google</div>
-    <div class="trust-item">ISO 9001 certificada</div>
-    <div class="trust-item">Implementación llave en mano</div>
+    <div class="trust-item"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="9" cy="9" r="8"/><path d="M9 5v4l3 2"/></svg> +25 años de experiencia</div>
+    <div class="trust-item"><svg width="18" height="18" viewBox="0 0 18 18" fill="#F59E0B"><path d="M9 1.5l2.1 4.3 4.7.7-3.4 3.3.8 4.7L9 12.2l-4.2 2.3.8-4.7-3.4-3.3 4.7-.7z"/></svg> 4,8 en Google</div>
+    <div class="trust-item"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="12" height="12" rx="2"/><path d="M6 9l2 2 4-4"/></svg> ISO 9001 certificada</div>
+    <div class="trust-item"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 14V4h3l2 3h5v7z"/></svg> Implementación llave en mano</div>
   </div>
 </div>
 
-<section class="doors">
-  <div class="doors-inner container">
-    <div class="section-label">¿Qué necesitas?</div>
-    <h2 class="section-title">Tres áreas, un solo partner</h2>
-    <p class="section-sub">Sea cual sea tu sector, te acompañamos desde el diagnóstico hasta la puesta en marcha.</p>
-    <div class="doors-grid">
-      <a href="./soluciones-rfid/" class="door fade-up">
-        <div class="door-icon door-icon-rfid"><svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 14a7 7 0 0 1 14 0"/><path d="M10 14a4 4 0 0 1 8 0"/><circle cx="14" cy="14" r="1.5" fill="white"/></svg></div>
-        <h3>Soluciones RFID</h3>
-        <p>Identificación y trazabilidad por radiofrecuencia para cualquier sector. Instalación completa con hardware y software a medida.</p>
-        <div class="door-tags"><span class="door-tag">Retail</span><span class="door-tag">Logística</span><span class="door-tag">Lavanderías</span><span class="door-tag">Residencias</span><span class="door-tag">+9 sectores</span></div>
-        <div class="door-link">Explorar soluciones <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7h8m-3-3 3 3-3 3"/></svg></div>
-      </a>
-      <a href="./soluciones-rfid-bibliotecas/" class="door fade-up stagger-1">
-        <div class="door-icon door-icon-bib"><svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v14"/><path d="M8 3v16"/></svg></div>
-        <h3>Bibliotecas</h3>
-        <p>Autopréstamo, autoservicio, bibliobuses y gestión integral de colecciones con tecnología RFID.</p>
-        <div class="door-tags"><span class="door-tag">Autopréstamo</span><span class="door-tag">Autolibro</span><span class="door-tag">Bibliobús</span><span class="door-tag">ACCEDE</span></div>
-        <div class="door-link">Ver soluciones <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7h8m-3-3 3 3-3 3"/></svg></div>
-      </a>
-      <a href="./gestion-documental/" class="door fade-up stagger-2">
-        <div class="door-icon door-icon-doc"><svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
-        <h3>Gestión Documental</h3>
-        <p>Digitalización, custodia, BPO y datos abiertos enlazados para empresas e instituciones.</p>
-        <div class="door-tags"><span class="door-tag">Digitalización</span><span class="door-tag">Custodia</span><span class="door-tag">BPO</span><span class="door-tag">Linked Open Data</span></div>
-        <div class="door-link">Conocer servicios <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7h8m-3-3 3 3-3 3"/></svg></div>
-      </a>
-    </div>
-  </div>
-</section>
 
-<section class="diff">
-  <div class="diff-inner">
-    <div>
-      <div class="section-label" style="color:var(--teal-light)">Nuestro diferencial</div>
-      <h2 class="diff-title">No vendemos componentes.<br>Implementamos soluciones.</h2>
-      <p class="diff-text">Hay miles de proveedores de hardware RFID. Pero una empresa que te diseñe la solución, te suministre el hardware, desarrolle el software a medida, te lo instale y te dé soporte continuo… eso es otra cosa.</p>
-      <div class="diff-compare">
-        <div class="diff-col diff-col-bad"><h4>Proveedor de componentes</h4><ul><li>Te vende etiquetas y lectores</li><li>Tú buscas quien lo instale</li><li>Tú integras con tu sistema</li><li>Si falla, es tu problema</li></ul></div>
-        <div class="diff-col diff-col-good"><h4>Serdoc · Llave en mano</h4><ul><li>Diagnóstico de tu necesidad</li><li>Hardware + software a medida</li><li>Instalación y formación</li><li>Soporte técnico continuo</li></ul></div>
+<!-- CLIENTS BAND -->
+<div class="clients">
+  <div class="clients-inner">
+    <div class="clients-label">Confían en Serdoc</div>
+    <div class="clients-grid">
+      <div class="client-item">
+        <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.4" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19V5a1 1 0 011-1h7v15"/><path d="M8 4v15"/><path d="M16 7l4-1.5v13L16 20"/><path d="M2 19h20"/></svg>
+        <span>Reina Sofía</span>
+      </div>
+      <div class="client-item">
+        <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.4" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+        <span>Univ. Politécnica Madrid</span>
+      </div>
+      <div class="client-item">
+        <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.4" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M6 7V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v2"/><circle cx="12" cy="14" r="2"/></svg>
+        <span>Sector Logística</span>
+      </div>
+      <div class="client-item">
+        <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.4" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10l3-7h12l3 7"/><rect x="2" y="10" width="20" height="12" rx="1.5"/></svg>
+        <span>Sector Retail</span>
+      </div>
+      <div class="client-item">
+        <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.4" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M9 7v10M6 12h12"/></svg>
+        <span>Sector Hospitales</span>
+      </div>
+      <div class="client-item">
+        <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.4" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M9 13h6M9 17h3"/></svg>
+        <span>Gestión Documental</span>
       </div>
     </div>
-    <div class="diff-visual"><div class="diff-img-wrap"><img src="https://serdoc.es/wp-content/uploads/2023/11/female-seller-scanning-ecommerce-shipping-box-in-dropshipping-warehouse-1-1.jpg" alt="Implementación RFID" loading="lazy"></div></div>
+  </div>
+</div>
+<!-- BLOCK 2: COUNTERS -->
+<section class="counters fade-in">
+  <div class="counters-inner">
+    <h2>Resultados que hablan por sí solos</h2>
+    <div class="counters-grid">
+      <div class="counter-card"><div class="counter-num" data-target="25" data-prefix="+">0</div><div class="counter-label">años de experiencia en identificación por radiofrecuencia</div></div>
+      <div class="counter-card"><div class="counter-num" data-target="99.9" data-suffix="%">0</div><div class="counter-label">precisión de inventario con tecnología RFID</div></div>
+      <div class="counter-card"><div class="counter-num" data-target="70" data-prefix="-" data-suffix="%">0</div><div class="counter-label">reducción del tiempo de inventario</div></div>
+    </div>
   </div>
 </section>
 
-<section class="sectors">
-  <div class="sectors-inner container">
-    <div class="section-label text-center">Sectores</div>
-    <h2 class="section-title text-center" style="margin:0 auto .75rem">Tecnología RFID para cada sector</h2>
+<!-- BLOCK 3: SECTORS -->
+<section class="sectors fade-in">
+  <div class="sectors-inner">
+    <h2>Soluciones RFID para empresas: logística, retail, bibliotecas y más</h2>
     <div class="sectors-grid">
-      <a href="./rfid-retail-tiendas/" class="sector-card fade-up"><div class="sector-icon"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 9l3-7h10l3 7"/><rect x="2" y="9" width="18" height="11" rx="1"/><path d="M9 9v11"/></svg></div><h4>Retail y tiendas</h4></a>
-      <a href="./rfid-logistica-almacenes/" class="sector-card fade-up"><div class="sector-icon"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="7" width="18" height="13" rx="1.5"/><path d="M6 7V4a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v3"/><circle cx="11" cy="13" r="1.5"/></svg></div><h4>Logística</h4></a>
-      <a href="./rfid-lavanderias/" class="sector-card fade-up"><div class="sector-icon"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="2" width="16" height="18" rx="2"/><circle cx="11" cy="13" r="4"/><path d="M9 13c1-1.5 3-1.5 4 0"/><path d="M7 6h8"/></svg></div><h4>Lavanderías</h4></a>
-      <a href="./rfid-residencias/" class="sector-card fade-up"><div class="sector-icon"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 21h16"/><path d="M5 21V7l6-4 6 4v14"/><path d="M9 21v-4h4v4"/><circle cx="11" cy="11" r="1.5"/></svg></div><h4>Residencias</h4></a>
-      <a href="./rfid-hospitales/" class="sector-card fade-up"><div class="sector-icon"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="16" height="16" rx="2"/><path d="M9 7v8M5 11h10"/></svg></div><h4>Hospitales</h4></a>
-      <a href="./rfid-hosteleria/" class="sector-card fade-up"><div class="sector-icon"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 11h16"/><path d="M5 11V6a6 6 0 0 1 12 0v5"/><path d="M3 11v5a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3v-5"/><path d="M11 3V1"/></svg></div><h4>Hostelería</h4></a>
-      <a href="./soluciones-rfid-bibliotecas/" class="sector-card fade-up"><div class="sector-icon"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 19V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v14"/><path d="M20 19V9a2 2 0 0 1 2-2"/><path d="M2 19h20"/><path d="M8 3v16"/></svg></div><h4>Bibliotecas</h4></a>
-      <a href="./soluciones-rfid/" class="sector-card fade-up"><div class="sector-icon"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="9"/><path d="M11 7v8M7 11h8"/></svg></div><h4>Más sectores</h4></a>
+      <a href="/rfid-logistica-almacenes/" class="sector-card"><div class="sector-img"><img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=400&q=70" alt="Sistema RFID para logística y almacenes Madrid" loading="lazy" width="400" height="120"></div><div class="sector-card-body"><div class="sector-icon"><svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M6 7V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v2"/><circle cx="12" cy="14" r="2"/><path d="M8 14h8"/></svg></div><h3>Logística y almacenes</h3><span class="sector-link">Ver solución <svg class="arrow-r" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 6h8m-3-3 3 3-3 3"/></svg></span></div></a>
+      <a href="/rfid-retail-tiendas/" class="sector-card"><div class="sector-img"><img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=400&q=70" alt="Solución RFID para tiendas y retail" loading="lazy" width="400" height="120"></div><div class="sector-card-body"><div class="sector-icon"><svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 10l3-7h16l3 7"/><rect x="2" y="10" width="24" height="14" rx="1.5"/><path d="M10 10v14"/><path d="M18 10v14"/></svg></div><h3>Retail y tiendas</h3><span class="sector-link">Ver solución <svg class="arrow-r" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 6h8m-3-3 3 3-3 3"/></svg></span></div></a>
+      <a href="/soluciones-rfid-para-bibliotecas/" class="sector-card"><div class="sector-img"><img src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?w=400&q=70" alt="Sistema RFID para bibliotecas" loading="lazy" width="400" height="120"></div><div class="sector-card-body"><div class="sector-icon"><svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 21V3a1 1 0 0 1 1-1h7a1 1 0 0 1 1 1v18"/><path d="M8 2v19"/><path d="M16 7l4-2v14l-4 2"/><path d="M16 7v14"/><path d="M2 21h20"/></svg></div><h3>Bibliotecas con RFID</h3><span class="sector-link">Ver solución <svg class="arrow-r" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 6h8m-3-3 3 3-3 3"/></svg></span></div></a>
+      <a href="/rfid-hospitales/" class="sector-card"><div class="sector-img"><img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?w=400&q=70" alt="RFID para hospitales y centros sanitarios" loading="lazy" width="400" height="120"></div><div class="sector-card-body"><div class="sector-icon"><svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="22" height="22" rx="3"/><path d="M10 7v14M3 14h14"/></svg></div><h3>Hospitales</h3><span class="sector-link">Ver solución <svg class="arrow-r" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 6h8m-3-3 3 3-3 3"/></svg></span></div></a>
+    </div>
+    <div class="sectors-extra" id="sectorsExtra">
+      <a href="/rfid-residencias/" class="sector-card"><div class="sector-img"><img src="https://images.unsplash.com/photo-1584515933487-779824d29309?w=400&q=70" alt="Tecnología RFID para residencias de mayores" loading="lazy" width="400" height="120"></div><div class="sector-card-body"><div class="sector-icon"><svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 23h22"/><path d="M5 23V8l9-5 9 5v15"/><path d="M10 23v-5h8v5"/></svg></div><h3>Residencias de mayores</h3><span class="sector-link">Ver solución <svg class="arrow-r" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 6h8m-3-3 3 3-3 3"/></svg></span></div></a>
+      <a href="/rfid-joyerias/" class="sector-card"><div class="sector-img"><img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=400&q=70" alt="Control de inventario RFID para joyerías" loading="lazy" width="400" height="120"></div><div class="sector-card-body"><div class="sector-icon"><svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 4h16l-4 8H10z"/><path d="M6 4L2 8l12 16 12-16-4-4"/><path d="M10 12l4 12"/><path d="M18 12l-4 12"/></svg></div><h3>Joyerías</h3><span class="sector-link">Ver solución <svg class="arrow-r" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 6h8m-3-3 3 3-3 3"/></svg></span></div></a>
+      <a href="/rfid-eventos/" class="sector-card"><div class="sector-img"><img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=400&q=70" alt="Gestión de accesos RFID para eventos" loading="lazy" width="400" height="120"></div><div class="sector-card-body"><div class="sector-icon"><svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="5" width="24" height="20" rx="2"/><path d="M7 2v6M17 2v6M2 13h24"/><circle cx="10" cy="18" r="1.5"/><circle cx="18" cy="18" r="1.5"/></svg></div><h3>Eventos y accesos</h3><span class="sector-link">Ver solución <svg class="arrow-r" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 6h8m-3-3 3 3-3 3"/></svg></span></div></a>
+      <a href="/rfid-hosteleria/" class="sector-card"><div class="sector-img"><img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=400&q=70" alt="RFID para hostelería y restaurantes" loading="lazy" width="400" height="120"></div><div class="sector-card-body"><div class="sector-icon"><svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 12h20"/><path d="M6 12V7a6 6 0 0 1 12 0v5"/><path d="M4 12v7a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-7"/></svg></div><h3>Hostelería</h3><span class="sector-link">Ver solución <svg class="arrow-r" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 6h8m-3-3 3 3-3 3"/></svg></span></div></a>
+      <a href="/rfid-lavanderias/" class="sector-card"><div class="sector-img"><img src="https://images.unsplash.com/photo-1545173168-9f1947eebb7f?w=400&q=70" alt="Trazabilidad RFID para lavanderías industriales" loading="lazy" width="400" height="120"></div><div class="sector-card-body"><div class="sector-icon"><svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="2" width="22" height="24" rx="2.5"/><circle cx="14" cy="16" r="5"/><path d="M7 7h14"/><circle cx="14" cy="16" r="2"/></svg></div><h3>Lavanderías industriales</h3><span class="sector-link">Ver solución <svg class="arrow-r" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 6h8m-3-3 3 3-3 3"/></svg></span></div></a>
+      <a href="/rfid-control-accesos/" class="sector-card"><div class="sector-img"><img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&q=70" alt="Sistema de control de accesos con RFID" loading="lazy" width="400" height="120"></div><div class="sector-card-body"><div class="sector-icon"><svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="22" height="22" rx="3"/><circle cx="14" cy="11" r="3"/><path d="M14 14v5"/><path d="M11 19h6"/></svg></div><h3>Control de accesos RFID</h3><span class="sector-link">Ver solución <svg class="arrow-r" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 6h8m-3-3 3 3-3 3"/></svg></span></div></a>
+      <a href="/rfid-gestion-herramientas/" class="sector-card"><div class="sector-img"><img src="https://images.unsplash.com/photo-1504148455328-c376907d081c?w=400&q=70" alt="Gestión de herramientas con tecnología RFID" loading="lazy" width="400" height="120"></div><div class="sector-card-body"><div class="sector-icon"><svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 3l5 5-8 8-5-5z"/><path d="M3 21l7-7"/><circle cx="5" cy="19" r="3"/><path d="M15 8l-3 3"/></svg></div><h3>Gestión de herramientas</h3><span class="sector-link">Ver solución <svg class="arrow-r" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 6h8m-3-3 3 3-3 3"/></svg></span></div></a>
+      <a href="/rfid-farmacias/" class="sector-card"><div class="sector-img"><img src="https://images.unsplash.com/photo-1576602976047-174e57a47881?w=400&q=70" alt="Control de medicamentos RFID en farmacias" loading="lazy" width="400" height="120"></div><div class="sector-card-body"><div class="sector-icon"><svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="5" y="2" width="18" height="24" rx="2"/><path d="M5 7h18"/><path d="M11 12v7M8 15h10"/></svg></div><h3>Farmacias</h3><span class="sector-link">Ver solución <svg class="arrow-r" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 6h8m-3-3 3 3-3 3"/></svg></span></div></a>
+    </div>
+    <button class="sectors-toggle" id="sectorsToggle" onclick="toggleSectors()">Ver todos los sectores <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 5l4 4 4-4"/></svg></button>
+  </div>
+</section>
+
+<!-- BLOCK 4: HOW IT WORKS -->
+<section class="how fade-in">
+  <div class="how-inner">
+    <h2>Cómo funciona el RFID: etiquetas, lectores y software</h2>
+    <div class="how-steps">
+      <div class="how-step">
+        <div class="how-step-icon" aria-hidden="true"><svg width="36" height="36" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/><circle cx="7" cy="7" r="1.5"/></svg></div>
+        <div class="how-step-num">01</div>
+        <h3>Etiqueta RFID en el producto</h3>
+        <p>Cada artículo lleva un chip con un código único que lo identifica de forma individual e irrepetible. Sin contacto, sin batería, sin mantenimiento.</p>
+      </div>
+      <div class="how-step">
+        <div class="how-step-icon" aria-hidden="true"><svg width="36" height="36" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M5 12.55a11 11 0 0114.08 0"/><path d="M1.42 9a16 16 0 0121.16 0"/><path d="M8.53 16.11a6 6 0 016.95 0"/><circle cx="12" cy="20" r="1"/></svg></div>
+        <div class="how-step-num">02</div>
+        <h3>El lector RFID capta la señal</h3>
+        <p>El lector RFID emite una señal de radiofrecuencia que activa simultáneamente todas las etiquetas dentro de su rango — sin línea de visión directa ni intervención manual.</p>
+      </div>
+      <div class="how-step">
+        <div class="how-step-icon" aria-hidden="true"><svg width="36" height="36" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/><path d="M6 8h2M6 11h8M6 14h5"/></svg></div>
+        <div class="how-step-num">03</div>
+        <h3>El sistema ERP se actualiza en tiempo real</h3>
+        <p>El ERP recibe los datos al instante. Inventario, trazabilidad y control de stock quedan registrados automáticamente sin que nadie tenga que teclear nada.</p>
+      </div>
+    </div>
+    <a href="/que-es-rfid-y-como-funciona/" class="how-link">Saber más sobre cómo funciona el RFID <svg class="arrow-r" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 7h10m-4-4 4 4-4 4"/></svg></a>
+  </div>
+</section>
+
+<!-- BLOCK 5: CASES -->
+<section class="cases fade-in">
+  <div class="cases-inner">
+    <h2>Proyectos RFID reales: casos de éxito en Madrid y toda España</h2>
+    <div class="cases-grid">
+      <div class="case-card">
+        <div class="case-header case-header-bib">
+          <div class="case-header-text">RFID · Biblioteca</div>
+          <svg width="56" height="56" fill="none" stroke="currentColor" stroke-width="1.2" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19V5a1 1 0 011-1h7v15"/><path d="M8 4v15"/><path d="M16 7l4-1.5v13L16 20"/><path d="M16 7v13"/><path d="M2 19h20"/></svg>
+        </div>
+        <span class="case-badge case-badge-bib">Bibliotecas</span>
+        <div class="case-client">Museo Nacional Centro de Arte Reina Sofía</div>
+        <p class="case-result">Inventarios completos viables por primera vez. Localización de ejemplares extraviados en segundos. Accesos diáfanos sin arcos antihurto.</p>
+        <a href="/casos-de-exito/" class="case-link">Ver caso completo <svg class="arrow-r" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 6h8m-3-3 3 3-3 3"/></svg></a>
+      </div>
+      <div class="case-card">
+        <div class="case-img">
+          <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=600&q=70" alt="Autopréstamo de portátiles con RFID en Universidad Politécnica de Madrid" loading="lazy" width="600" height="160">
+          <span class="case-img-label">RFID · Universidad</span>
+        </div>
+        <span class="case-badge case-badge-uni">Universidad</span>
+        <div class="case-client">Universidad Politécnica de Madrid</div>
+        <p class="case-result">Primer sistema de autopréstamo de portátiles en España. Servicio 24/7 sin personal dedicado. Amortización frente a coste de personal.</p>
+        <a href="/casos-de-exito/" class="case-link">Ver caso completo <svg class="arrow-r" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 6h8m-3-3 3 3-3 3"/></svg></a>
+      </div>
+      <div class="case-card">
+        <div class="case-img">
+          <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&q=70" alt="Digitalización y gestión documental para aseguradora médica" loading="lazy" width="600" height="160">
+          <span class="case-img-label">Gestión documental · BPO</span>
+        </div>
+        <span class="case-badge case-badge-doc">Gestión documental</span>
+        <div class="case-client">Aseguradora médica (nombre confidencial)</div>
+        <p class="case-result">Plazos de gestión reducidos de meses a días. Eliminación total del papel. Reducción de fraude en facturación médica.</p>
+        <a href="/casos-de-exito/" class="case-link">Ver caso completo <svg class="arrow-r" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 6h8m-3-3 3 3-3 3"/></svg></a>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:2rem"><a href="/casos-de-exito/" class="btn btn-outline">Ver todos los casos de éxito <svg class="arrow-r" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 7h10m-4-4 4 4-4 4"/></svg></a></div>
+  </div>
+</section>
+
+<!-- BLOCK 6: REVIEWS -->
+<section class="reviews fade-in">
+  <div class="reviews-inner">
+    <h2>Lo que dicen nuestros clientes</h2>
+    <div class="reviews-rating"><div class="reviews-stars"><svg width="16" height="16" viewBox="0 0 16 16" fill="#F59E0B"><path d="M8 1l2 4.1 4.5.7-3.3 3.2.8 4.5L8 11.3 3.9 13.5l.8-4.5L1.5 5.8 6 5.1z"/></svg><svg width="16" height="16" viewBox="0 0 16 16" fill="#F59E0B"><path d="M8 1l2 4.1 4.5.7-3.3 3.2.8 4.5L8 11.3 3.9 13.5l.8-4.5L1.5 5.8 6 5.1z"/></svg><svg width="16" height="16" viewBox="0 0 16 16" fill="#F59E0B"><path d="M8 1l2 4.1 4.5.7-3.3 3.2.8 4.5L8 11.3 3.9 13.5l.8-4.5L1.5 5.8 6 5.1z"/></svg><svg width="16" height="16" viewBox="0 0 16 16" fill="#F59E0B"><path d="M8 1l2 4.1 4.5.7-3.3 3.2.8 4.5L8 11.3 3.9 13.5l.8-4.5L1.5 5.8 6 5.1z"/></svg><svg width="16" height="16" viewBox="0 0 16 16" fill="#F59E0B"><path d="M8 1l2 4.1 4.5.7-3.3 3.2.8 4.5L8 11.3 3.9 13.5l.8-4.5L1.5 5.8 6 5.1z"/></svg></div><span>4,8 sobre 5 · 12 reseñas verificadas en Google</span></div>
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="review-stars"><svg width="14" height="14" viewBox="0 0 16 16" fill="#F59E0B"><path d="M8 1l2 4.1 4.5.7-3.3 3.2.8 4.5L8 11.3 3.9 13.5l.8-4.5L1.5 5.8 6 5.1z"/></svg><svg width="14" height="14" viewBox="0 0 16 16" fill="#F59E0B"><path d="M8 1l2 4.1 4.5.7-3.3 3.2.8 4.5L8 11.3 3.9 13.5l.8-4.5L1.5 5.8 6 5.1z"/></svg><svg width="14" height="14" viewBox="0 0 16 16" fill="#F59E0B"><path d="M8 1l2 4.1 4.5.7-3.3 3.2.8 4.5L8 11.3 3.9 13.5l.8-4.5L1.5 5.8 6 5.1z"/></svg><svg width="14" height="14" viewBox="0 0 16 16" fill="#F59E0B"><path d="M8 1l2 4.1 4.5.7-3.3 3.2.8 4.5L8 11.3 3.9 13.5l.8-4.5L1.5 5.8 6 5.1z"/></svg><svg width="14" height="14" viewBox="0 0 16 16" fill="#F59E0B"><path d="M8 1l2 4.1 4.5.7-3.3 3.2.8 4.5L8 11.3 3.9 13.5l.8-4.5L1.5 5.8 6 5.1z"/></svg></div>
+        <p class="review-text">"Muy buenos profesionales, serios y muy cumplidores."</p>
+        <div class="review-footer">
+          <div class="review-avatar review-avatar-a" aria-hidden="true">AR</div>
+          <div class="review-meta"><div class="review-author">Alejandro R.M.</div><div class="review-source">Cliente verificado en Google</div></div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars"><svg width="14" height="14" viewBox="0 0 16 16" fill="#F59E0B"><path d="M8 1l2 4.1 4.5.7-3.3 3.2.8 4.5L8 11.3 3.9 13.5l.8-4.5L1.5 5.8 6 5.1z"/></svg><svg width="14" height="14" viewBox="0 0 16 16" fill="#F59E0B"><path d="M8 1l2 4.1 4.5.7-3.3 3.2.8 4.5L8 11.3 3.9 13.5l.8-4.5L1.5 5.8 6 5.1z"/></svg><svg width="14" height="14" viewBox="0 0 16 16" fill="#F59E0B"><path d="M8 1l2 4.1 4.5.7-3.3 3.2.8 4.5L8 11.3 3.9 13.5l.8-4.5L1.5 5.8 6 5.1z"/></svg><svg width="14" height="14" viewBox="0 0 16 16" fill="#F59E0B"><path d="M8 1l2 4.1 4.5.7-3.3 3.2.8 4.5L8 11.3 3.9 13.5l.8-4.5L1.5 5.8 6 5.1z"/></svg><svg width="14" height="14" viewBox="0 0 16 16" fill="#F59E0B"><path d="M8 1l2 4.1 4.5.7-3.3 3.2.8 4.5L8 11.3 3.9 13.5l.8-4.5L1.5 5.8 6 5.1z"/></svg></div>
+        <p class="review-text">"Nos resolvieron todo el proyecto de RFID de principio a fin. La diferencia con otros proveedores que solo vendían hardware fue enorme."</p>
+        <div class="review-footer">
+          <div class="review-avatar review-avatar-b" aria-hidden="true">CV</div>
+          <div class="review-meta"><div class="review-author">Cliente verificado</div><div class="review-source">Reseña verificada en Google</div></div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars"><svg width="14" height="14" viewBox="0 0 16 16" fill="#F59E0B"><path d="M8 1l2 4.1 4.5.7-3.3 3.2.8 4.5L8 11.3 3.9 13.5l.8-4.5L1.5 5.8 6 5.1z"/></svg><svg width="14" height="14" viewBox="0 0 16 16" fill="#F59E0B"><path d="M8 1l2 4.1 4.5.7-3.3 3.2.8 4.5L8 11.3 3.9 13.5l.8-4.5L1.5 5.8 6 5.1z"/></svg><svg width="14" height="14" viewBox="0 0 16 16" fill="#F59E0B"><path d="M8 1l2 4.1 4.5.7-3.3 3.2.8 4.5L8 11.3 3.9 13.5l.8-4.5L1.5 5.8 6 5.1z"/></svg><svg width="14" height="14" viewBox="0 0 16 16" fill="#F59E0B"><path d="M8 1l2 4.1 4.5.7-3.3 3.2.8 4.5L8 11.3 3.9 13.5l.8-4.5L1.5 5.8 6 5.1z"/></svg><svg width="14" height="14" viewBox="0 0 16 16" fill="#F59E0B"><path d="M8 1l2 4.1 4.5.7-3.3 3.2.8 4.5L8 11.3 3.9 13.5l.8-4.5L1.5 5.8 6 5.1z"/></svg></div>
+        <p class="review-text">"Llevamos años trabajando con ellos. La calidad del servicio y la atención personalizada no la encontramos en ningún otro proveedor."</p>
+        <div class="review-footer">
+          <div class="review-avatar review-avatar-c" aria-hidden="true">CV</div>
+          <div class="review-meta"><div class="review-author">Cliente verificado</div><div class="review-source">Reseña verificada en Google</div></div>
+        </div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:1.5rem"><a href="https://maps.app.goo.gl/q1FrY1e9xkPJ1TJ57" target="_blank" rel="noopener" style="font-size:.9rem;font-weight:600;color:var(--teal);font-family:Outfit,sans-serif;display:inline-flex;align-items:center;gap:.4rem">Ver todas las reseñas en Google <svg class="arrow-r" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 7h10m-4-4 4 4-4 4"/></svg></a></div>
+  </div>
+</section>
+
+<!-- BLOCK 7: FAQ -->
+<section class="faq fade-in">
+  <div class="faq-inner">
+    <h2>Preguntas frecuentes sobre sistemas RFID y gestión documental</h2>
+    <div class="faq-list">
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">¿Qué es el RFID y cómo funciona?<svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 4v10M4 9h10"/></svg></button><div class="faq-a"><div class="faq-a-inner">RFID (identificación por radiofrecuencia) es una tecnología que permite identificar objetos a distancia mediante ondas de radio. Cada artículo lleva una etiqueta con un chip que un lector capta automáticamente, sin necesidad de escanear uno a uno ni de línea de visión directa.</div></div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">¿Cuánto cuesta implantar un sistema RFID en una empresa?<svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 4v10M4 9h10"/></svg></button><div class="faq-a"><div class="faq-a-inner">El coste depende del tamaño del proyecto, el número de referencias y el hardware necesario. En Serdoc preparamos presupuestos personalizados sin compromiso. La inversión típica se amortiza en menos de 12 meses gracias al ahorro en tiempo y la reducción de pérdidas.</div></div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">¿En qué sectores trabajáis?<svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 4v10M4 9h10"/></svg></button><div class="faq-a"><div class="faq-a-inner">Implementamos RFID en logística, retail, bibliotecas, hospitales, residencias de mayores, lavanderías industriales, hostelería, joyerías, farmacias, eventos y control de accesos. También ofrecemos gestión documental y BPO.</div></div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">¿Cuánto tiempo tarda la implantación?<svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 4v10M4 9h10"/></svg></button><div class="faq-a"><div class="faq-a-inner">Depende del alcance. Una tienda de retail se implementa en 1-2 semanas. Un almacén medio en 3-4 semanas. Una red de bibliotecas puede llevar varios meses. El proceso es gradual y no interrumpe tu operación.</div></div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">¿Hacéis instalaciones fuera de Madrid?<svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 4v10M4 9h10"/></svg></button><div class="faq-a"><div class="faq-a-inner">Sí. Nuestra sede está en Leganés (Madrid) pero realizamos implantaciones en toda España. Contamos con más de 25 años de experiencia en proyectos a nivel nacional.</div></div></div>
+    </div>
+    <div class="faq-bottom"><a href="/preguntas-frecuentes-rfid/" class="btn btn-outline">Ver las 50 preguntas frecuentes <svg class="arrow-r" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 7h10m-4-4 4 4-4 4"/></svg></a></div>
+  </div>
+</section>
+
+<!-- BLOCK 8: CTA FORM + MAP -->
+<section class="cta-form-section">
+  <div class="cta-split">
+    <div class="cta-form-side">
+      <div style="display:flex;gap:1.5rem;margin-bottom:2rem;flex-wrap:wrap">
+        <div style="display:flex;align-items:center;gap:.5rem;font-size:.85rem;color:rgba(255,255,255,.5);font-family:Outfit,sans-serif"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" style="color:#F59E0B"><path d="M12 2l3.1 6.3L22 9.3l-5 4.9 1.2 6.8L12 17.8l-6.2 3.2L7 14.2 2 9.3l6.9-1z"/></svg> 4,8 en Google</div>
+        <div style="display:flex;align-items:center;gap:.5rem;font-size:.85rem;color:rgba(255,255,255,.5);font-family:Outfit,sans-serif"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" style="color:#F59E0B"><path d="M9 12l2 2 4-4"/><rect x="3" y="3" width="18" height="18" rx="2"/></svg> ISO 9001</div>
+        <div style="display:flex;align-items:center;gap:.5rem;font-size:.85rem;color:rgba(255,255,255,.5);font-family:Outfit,sans-serif"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" style="color:#F59E0B"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 2"/></svg> Respuesta &lt;24h</div>
+      </div>
+      <h2>¿Tu empresa necesita RFID?</h2>
+      <p class="cta-form-sub">Cuéntanos tu caso. Te respondemos en menos de 24 horas.</p>
+      <form class="cta-form" action="/gracias/" method="POST">
+        <div class="cta-form-row"><input type="text" name="nombre" placeholder="Nombre y empresa" required><input type="text" name="contacto" placeholder="Teléfono o email" required></div>
+        <textarea name="mensaje" placeholder="Cuéntanos brevemente tu caso (opcional)" rows="2"></textarea>
+        <label class="cta-form-check"><input type="checkbox" required> He leído y acepto la <a href="/politica-de-privacidad/">política de privacidad</a></label>
+        <button type="submit" class="btn btn-primary">Enviar consulta <svg class="arrow-r" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 8h10m-4-4 4 4-4 4"/></svg></button>
+      </form>
+    </div>
+    <div class="cta-map-side">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3041.6164286044977!2d-3.7741914999999993!3d40.32866959999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd418a27fdd41851%3A0x6017c9e180f5d23f!2sSerdoc%20Inform%C3%A1tica%20Gesti%C3%B3n%20documental%20y%20Sistema%20RFID!5e0!3m2!1ses!2ses!4v1781779229481!5m2!1ses!2ses" width="600" height="450" style="border:0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Ubicación de Serdoc en Google Maps"></iframe>
     </div>
   </div>
 </section>
 
-<section class="roi">
-  <div class="roi-inner container">
-    <div class="text-center">
-      <div class="section-label">Resultados reales</div>
-      <h2 class="section-title" style="margin:0 auto .75rem">La tecnología que se paga sola</h2>
-    </div>
-    <div class="roi-grid">
-      <div class="roi-card fade-up"><div class="roi-num">10×</div><div class="roi-label">Inventarios más rápidos</div><div class="roi-desc">200 productos por segundo frente al conteo manual.</div></div>
-      <div class="roi-card fade-up stagger-1"><div class="roi-num">70%</div><div class="roi-label">Menos tiempo en procesos</div><div class="roi-desc">Automatizar la identificación elimina el trabajo manual repetitivo.</div></div>
-      <div class="roi-card fade-up stagger-2"><div class="roi-num">-60%</div><div class="roi-label">Reducción de pérdidas</div><div class="roi-desc">Etiquetas invisibles + alertas en tiempo real.</div></div>
-    </div>
-  </div>
-</section>
-
-<section class="testimonials">
-  <div class="testimonials-inner container">
-    <div class="text-center">
-      <div class="section-label">Opiniones verificadas</div>
-      <h2 class="section-title" style="margin:0 auto .75rem">Lo que dicen nuestros clientes</h2>
-    </div>
-    <div class="test-grid">
-      <div class="test-card fade-up"><div class="test-stars"><svg width="14" height="14" viewBox="0 0 14 14" fill="#F59E0B"><path d="M7 1l1.8 3.6 4.2.7-3 2.9.7 4.1L7 10.3 3.3 12.3l.7-4.1-3-2.9 4.2-.7z"/></svg><svg width="14" height="14" viewBox="0 0 14 14" fill="#F59E0B"><path d="M7 1l1.8 3.6 4.2.7-3 2.9.7 4.1L7 10.3 3.3 12.3l.7-4.1-3-2.9 4.2-.7z"/></svg><svg width="14" height="14" viewBox="0 0 14 14" fill="#F59E0B"><path d="M7 1l1.8 3.6 4.2.7-3 2.9.7 4.1L7 10.3 3.3 12.3l.7-4.1-3-2.9 4.2-.7z"/></svg><svg width="14" height="14" viewBox="0 0 14 14" fill="#F59E0B"><path d="M7 1l1.8 3.6 4.2.7-3 2.9.7 4.1L7 10.3 3.3 12.3l.7-4.1-3-2.9 4.2-.7z"/></svg><svg width="14" height="14" viewBox="0 0 14 14" fill="#F59E0B"><path d="M7 1l1.8 3.6 4.2.7-3 2.9.7 4.1L7 10.3 3.3 12.3l.7-4.1-3-2.9 4.2-.7z"/></svg></div><div class="test-text">"Muy buenos profesionales, serios y muy cumplidores."</div><div class="test-author">Cliente verificado</div><div class="test-source">Google · Trustindex</div></div>
-      <div class="test-card fade-up stagger-1"><div class="test-stars"><svg width="14" height="14" viewBox="0 0 14 14" fill="#F59E0B"><path d="M7 1l1.8 3.6 4.2.7-3 2.9.7 4.1L7 10.3 3.3 12.3l.7-4.1-3-2.9 4.2-.7z"/></svg><svg width="14" height="14" viewBox="0 0 14 14" fill="#F59E0B"><path d="M7 1l1.8 3.6 4.2.7-3 2.9.7 4.1L7 10.3 3.3 12.3l.7-4.1-3-2.9 4.2-.7z"/></svg><svg width="14" height="14" viewBox="0 0 14 14" fill="#F59E0B"><path d="M7 1l1.8 3.6 4.2.7-3 2.9.7 4.1L7 10.3 3.3 12.3l.7-4.1-3-2.9 4.2-.7z"/></svg><svg width="14" height="14" viewBox="0 0 14 14" fill="#F59E0B"><path d="M7 1l1.8 3.6 4.2.7-3 2.9.7 4.1L7 10.3 3.3 12.3l.7-4.1-3-2.9 4.2-.7z"/></svg><svg width="14" height="14" viewBox="0 0 14 14" fill="#F59E0B"><path d="M7 1l1.8 3.6 4.2.7-3 2.9.7 4.1L7 10.3 3.3 12.3l.7-4.1-3-2.9 4.2-.7z"/></svg></div><div class="test-text">"Nos resolvieron todo el proyecto de RFID de principio a fin."</div><div class="test-author">Cliente verificado</div><div class="test-source">Google · Trustindex</div></div>
-      <div class="test-card fade-up stagger-2"><div class="test-stars"><svg width="14" height="14" viewBox="0 0 14 14" fill="#F59E0B"><path d="M7 1l1.8 3.6 4.2.7-3 2.9.7 4.1L7 10.3 3.3 12.3l.7-4.1-3-2.9 4.2-.7z"/></svg><svg width="14" height="14" viewBox="0 0 14 14" fill="#F59E0B"><path d="M7 1l1.8 3.6 4.2.7-3 2.9.7 4.1L7 10.3 3.3 12.3l.7-4.1-3-2.9 4.2-.7z"/></svg><svg width="14" height="14" viewBox="0 0 14 14" fill="#F59E0B"><path d="M7 1l1.8 3.6 4.2.7-3 2.9.7 4.1L7 10.3 3.3 12.3l.7-4.1-3-2.9 4.2-.7z"/></svg><svg width="14" height="14" viewBox="0 0 14 14" fill="#F59E0B"><path d="M7 1l1.8 3.6 4.2.7-3 2.9.7 4.1L7 10.3 3.3 12.3l.7-4.1-3-2.9 4.2-.7z"/></svg><svg width="14" height="14" viewBox="0 0 14 14" fill="#F59E0B"><path d="M7 1l1.8 3.6 4.2.7-3 2.9.7 4.1L7 10.3 3.3 12.3l.7-4.1-3-2.9 4.2-.7z"/></svg></div><div class="test-text">"Llevamos años trabajando con ellos. La calidad del servicio es excepcional."</div><div class="test-author">Cliente verificado</div><div class="test-source">Google · Trustindex</div></div>
-    </div>
-  </div>
-</section>
-
-
-<section class="cta-section" id="contacto">
-  <div class="cta-inner">
-    <h2 class="cta-title">¿Hablamos de tu proyecto?</h2>
-    <p class="cta-sub">Cuéntanos qué necesitas y te preparamos una propuesta sin compromiso en 48 horas.</p>
-    <form class="cta-form" action="./contacto/" method="get">
-      <input type="text" name="nombre" placeholder="Nombre" required>
-      <input type="email" name="email" placeholder="Email" required>
-      <input type="tel" name="tel" placeholder="Teléfono">
-      <button type="submit" class="btn btn-primary">Enviar consulta</button>
-      <textarea class="cta-form-full" name="msg" placeholder="Cuéntanos brevemente qué necesitas..." rows="3"></textarea>
-    </form>
-    <div class="cta-contact-alt">
-      <a href="tel:+34916896573"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" style="vertical-align:-2px"><path d="M2 3a1 1 0 0 1 1-1h2l1.5 3-1.5 1.5a8 8 0 0 0 3.5 3.5L10 8.5l3 1.5v2a1 1 0 0 1-1 1A11 11 0 0 1 2 3z"/></svg> 916 89 65 73</a>
-      <a href="https://wa.link/wxd00g"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" style="vertical-align:-2px"><path d="M3 14l1-3.5A6 6 0 1 1 6.5 13z"/><path d="M6 9c.5 1 1.5 2 3 2.5"/></svg> WhatsApp</a>
-      <a href="mailto:info@serdoc.es"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" style="vertical-align:-2px"><rect x="1" y="3" width="14" height="10" rx="1.5"/><path d="M1 3l7 5 7-5"/></svg> info@serdoc.es</a>
-    </div>
-  </div>
-</section>
-
+<!-- FOOTER -->
 <footer class="footer">
   <div class="footer-inner">
     <div class="footer-brand">
-      <img src="https://serdoc.es/wp-content/uploads/2023/11/lg-serdoc-white.png" alt="Serdoc">
-      <p>Más de 25 años implementando soluciones de identificación inteligente y gestión de la información para empresas e instituciones.</p>
+      <svg height="40" viewBox="0 0 697.9 215" xmlns="http://www.w3.org/2000/svg"><defs><style>.fl{fill:#fff}</style></defs><g><path class="fl" d="M394.8,147.1c0,15.5-13.8,21.5-26.4,21.5-19.8,0-28.5-10.9-30.5-23.2h11.5c2.1,8.2,7.6,12.4,18.8,12.4s15-3.7,15-10.3-5.8-7.7-18.9-10.6c-13.8-3-24.5-6.9-24.5-20.1s12.4-21.4,26-21.4,26,9.2,28,20.4h-11.5c-2-5.9-6.9-9.7-16.4-9.7s-14.7,4.2-14.7,10.4,4,6.7,15.8,9.2c17.9,3.9,27.7,7.7,27.7,21.3Z"/><path class="fl" d="M396.1,139.7c0-16.8,11.9-29.1,28.7-29.1s29.2,13.9,28.1,32.2h-45.1c.8,10.2,8,15.9,17.3,15.9s12.2-2.8,14.9-8.3h11.8c-4.4,12.4-15,18.2-26.8,18.2-16.9,0-28.9-12-28.9-28.8ZM440.7,133.4c-1.7-7.7-7.4-12.9-15.9-12.9s-14.6,5.4-16.4,12.9h32.3Z"/><path class="fl" d="M456.4,111.8h11.4v10.9c3.4-7.7,9.7-12.1,18.5-12.1s2.5.1,3.3.3v11.6c-1-.1-1.9-.2-3.4-.2-10.4,0-18.4,5.9-18.4,19.6v25.5h-11.4v-55.6Z"/><path class="fl" d="M492.7,96.6h24.8c20.6,0,36.2,14.9,36.2,35.4s-15.7,35.4-36.2,35.4h-24.8v-70.8ZM517.6,156.5c14.3,0,24.7-10,24.7-24.5s-10.4-24.5-24.7-24.5h-13.5v49h13.5Z"/><path class="fl" d="M613.4,139.6c0,16.7-12.6,28.9-28.8,28.9s-28.8-12.3-28.8-28.9,12.9-29,28.8-29,28.8,12.2,28.8,29ZM567.2,139.6c0,10.7,7.6,18.1,17.3,18.1s17.3-7.4,17.3-18.1-7.7-18.1-17.3-18.1-17.3,7.4-17.3,18.1Z"/><path class="fl" d="M615.3,139.6c0-16.6,12.3-29,28.9-29s24.8,8,27.3,21.4h-11.8c-2.1-7-8.3-10.8-15.5-10.8-10.3,0-17.4,7.7-17.4,18.4s7.3,18.4,17.3,18.4,13.5-4,15.6-10.9h11.8c-2.6,13.8-14.4,21.5-27.4,21.5s-28.8-12.4-28.8-29Z"/></g><rect class="fl" x="79" y="81.2" width="8.7" height="8.7" transform="translate(-33.6 110) rotate(-57.5)"/><rect class="fl" x="73.1" y="90.4" width="8.7" height="8.7" transform="translate(-44 109.3) rotate(-57.5)"/><rect class="fl" x="94" y="77.8" width="8.7" height="8.7" transform="translate(-23.8 121.1) rotate(-57.5)"/><rect class="fl" x="99.9" y="68.6" width="8.7" height="8.7" transform="translate(-13.3 121.8) rotate(-57.5)"/><rect class="fl" x="90.7" y="62.8" width="8.7" height="8.7" transform="translate(-12.6 111.3) rotate(-57.5)"/><rect class="fl" x="81.5" y="56.9" width="8.7" height="8.7" transform="translate(-11.9 100.8) rotate(-57.5)"/><rect class="fl" x="60.6" y="69.5" width="8.7" height="8.7" transform="translate(-32.2 89) rotate(-57.5)"/><rect class="fl" x="63.9" y="84.5" width="8.7" height="8.7" transform="translate(-43.4 98.8) rotate(-57.5)"/><rect class="fl" x="76.5" y="105.4" width="8.7" height="8.7" transform="translate(-55.2 119.1) rotate(-57.5)"/><rect class="fl" x="82.3" y="96.2" width="8.7" height="8.7" transform="translate(-44.7 119.8) rotate(-57.5)"/><rect class="fl" x="91.5" y="102.1" width="8.7" height="8.7" transform="translate(-45.4 130.2) rotate(-57.5)"/><rect class="fl" x="97.4" y="92.9" width="8.7" height="8.7" transform="translate(-34.9 130.9) rotate(-57.5)"/><rect class="fl" x="103.2" y="83.7" width="8.7" height="8.7" transform="translate(-24.4 131.6) rotate(-57.5)"/><rect class="fl" x="114.9" y="65.3" width="8.7" height="8.7" transform="translate(-3.5 132.9) rotate(-57.5)"/><rect class="fl" x="105.7" y="59.4" width="8.7" height="8.7" transform="translate(-2.8 122.5) rotate(-57.5)"/><rect class="fl" x="87.3" y="47.7" width="8.7" height="8.7" transform="translate(-1.5 101.5) rotate(-57.5)"/><rect class="fl" x="45.5" y="72.8" width="8.7" height="8.7" transform="translate(-42 77.9) rotate(-57.5)"/><rect class="fl" x="43" y="97.1" width="8.7" height="8.7" transform="translate(-63.6 87) rotate(-57.5)"/><rect class="fl" x="61.4" y="108.8" width="8.7" height="8.7" transform="translate(-65 107.9) rotate(-57.5)"/><rect class="fl" x="79.8" y="120.5" width="8.7" height="8.7" transform="translate(-66.3 128.9) rotate(-57.5)"/><rect class="fl" x="85.7" y="111.3" width="8.7" height="8.7" transform="translate(-55.9 129.6) rotate(-57.5)"/><rect class="fl" x="100.7" y="107.9" width="8.7" height="8.7" transform="translate(-46.1 140.7) rotate(-57.5)"/><rect class="fl" x="106.6" y="98.7" width="8.7" height="8.7" transform="translate(-35.6 141.4) rotate(-57.5)"/><rect class="fl" x="112.4" y="89.5" width="8.7" height="8.7" transform="translate(-25.1 142.1) rotate(-57.5)"/><rect class="fl" x="118.3" y="80.3" width="8.7" height="8.7" transform="translate(-14.6 142.7) rotate(-57.5)"/><rect class="fl" x="130" y="61.9" width="8.7" height="8.7" transform="translate(6.3 144.1) rotate(-57.5)"/><rect class="fl" x="120.8" y="56.1" width="8.7" height="8.7" transform="translate(7 133.6) rotate(-57.5)"/><rect class="fl" x="102.4" y="44.4" width="8.7" height="8.7" transform="translate(8.3 112.7) rotate(-57.5)"/><rect class="fl" x="68.9" y="36" width="8.7" height="8.7" transform="translate(-.1 80.6) rotate(-57.5)"/><rect class="fl" x="53.9" y="39.4" width="8.7" height="8.7" transform="translate(-9.9 69.4) rotate(-57.5)"/><rect class="fl" x="30.5" y="76.2" width="8.7" height="8.7" transform="translate(-51.8 66.7) rotate(-57.5)"/><rect class="fl" x="28" y="100.4" width="8.7" height="8.7" transform="translate(-73.4 75.8) rotate(-57.5)"/><rect class="fl" x="46.4" y="112.1" width="8.7" height="8.7" transform="translate(-74.8 96.8) rotate(-57.5)"/><rect class="fl" x="55.6" y="118" width="8.7" height="8.7" transform="translate(-75.5 107.3) rotate(-57.5)"/><rect class="fl" x="64.8" y="123.8" width="8.7" height="8.7" transform="translate(-76.1 117.7) rotate(-57.5)"/><rect class="fl" x="83.2" y="135.5" width="8.7" height="8.7" transform="translate(-77.5 138.7) rotate(-57.5)"/><rect class="fl" x="89" y="126.3" width="8.7" height="8.7" transform="translate(-67 139.4) rotate(-57.5)"/><rect class="fl" x="104.1" y="123" width="8.7" height="8.7" transform="translate(-57.2 150.5) rotate(-57.5)"/><rect class="fl" x="115.8" y="104.6" width="8.7" height="8.7" transform="translate(-36.3 151.9) rotate(-57.5)"/><rect class="fl" x="121.6" y="95.4" width="8.7" height="8.7" transform="translate(-25.8 152.5) rotate(-57.5)"/><rect class="fl" x="127.5" y="86.2" width="8.7" height="8.7" transform="translate(-15.3 153.2) rotate(-57.5)"/><rect class="fl" x="133.3" y="77" width="8.7" height="8.7" transform="translate(-4.8 153.9) rotate(-57.5)"/><rect class="fl" x="145" y="58.6" width="8.7" height="8.7" transform="translate(16.1 155.2) rotate(-57.5)"/><rect class="fl" x="135.8" y="52.7" width="8.7" height="8.7" transform="translate(16.8 144.7) rotate(-57.5)"/><rect class="fl" x="117.4" y="41" width="8.7" height="8.7" transform="translate(18.1 123.8) rotate(-57.5)"/><rect class="fl" x="108.2" y="35.2" width="8.7" height="8.7" transform="translate(18.8 113.3) rotate(-57.5)"/><rect class="fl" x="99" y="29.3" width="8.7" height="8.7" transform="translate(19.5 102.9) rotate(-57.5)"/><rect class="fl" x="80.6" y="17.6" width="8.7" height="8.7" transform="translate(20.8 81.9) rotate(-57.5)"/><rect class="fl" x="50.5" y="24.3" width="8.7" height="8.7" transform="translate(1.2 59.6) rotate(-57.5)"/><rect class="fl" x="31.3" y="115.5" width="8.7" height="8.7" transform="translate(-84.6 85.6) rotate(-57.5)"/><rect class="fl" x="40.5" y="121.3" width="8.7" height="8.7" transform="translate(-85.3 96.1) rotate(-57.5)"/><rect class="fl" x="58.9" y="133" width="8.7" height="8.7" transform="translate(-86.6 117.1) rotate(-57.5)"/><rect class="fl" x="68.1" y="138.9" width="8.7" height="8.7" transform="translate(-87.3 127.5) rotate(-57.5)"/><rect class="fl" x="86.5" y="150.6" width="8.7" height="8.7" transform="translate(-88.6 148.5) rotate(-57.5)"/><rect class="fl" x="92.4" y="141.4" width="8.7" height="8.7" transform="translate(-78.1 149.2) rotate(-57.5)"/><rect class="fl" x="101.6" y="147.2" width="8.7" height="8.7" transform="translate(-78.8 159.6) rotate(-57.5)"/><rect class="fl" x="107.4" y="138" width="8.7" height="8.7" transform="translate(-68.4 160.3) rotate(-57.5)"/><rect class="fl" x="113.3" y="128.8" width="8.7" height="8.7" transform="translate(-57.9 161) rotate(-57.5)"/><rect class="fl" x="119.1" y="119.6" width="8.7" height="8.7" transform="translate(-47.4 161.6) rotate(-57.5)"/><rect class="fl" x="125" y="110.4" width="8.7" height="8.7" transform="translate(-36.9 162.3) rotate(-57.5)"/><rect class="fl" x="136.7" y="92" width="8.7" height="8.7" transform="translate(-16 163.7) rotate(-57.5)"/><rect class="fl" x="142.5" y="82.8" width="8.7" height="8.7" transform="translate(-5.5 164.3) rotate(-57.5)"/><rect class="fl" x="148.4" y="73.6" width="8.7" height="8.7" transform="translate(5 165) rotate(-57.5)"/><rect class="fl" x="154.2" y="64.4" width="8.7" height="8.7" transform="translate(15.4 165.7) rotate(-57.5)"/><rect class="fl" x="95.7" y="156.4" width="8.7" height="8.7" transform="translate(-89.3 159) rotate(-57.5)"/><path class="fl" d="M147.9,153c0,0,.1-.2.2-.2l70.7-59.8-49.6-24.4-40.6,72.8-6.7,12.1,23.9,15.4,2-15.4Z"/><path class="fl" d="M172.8,158.5c0,0,.2-.1.2-.2l95.9-32.2-27.5-49.8-91.5,77.4,3.5,4.1,3.3,3.9,6.3,7.4,9.6-10.5Z"/><polygon class="fl" points="149.4 155.9 147.8 168 154.6 161.9 151.8 158.7 149.4 155.9"/><path class="fl" d="M119.6,154.1l29-52-42.7,68.2h21l-7.4-15.3Z"/><polygon class="fl" points="123 156.5 126.5 164 128.7 168.5 132.5 162.6 128.2 159.9 123 156.5"/><polygon class="fl" points="172.4 167.7 164.5 198 309.6 198 309.6 114.5 174.4 160 172.4 167.7"/><polygon class="fl" points="166.9 167.9 170.7 166.4 171 165.1 171.6 162.8 166.9 167.9"/></svg>
+      <p>Más de 25 años implementando soluciones RFID y gestión documental para empresas e instituciones en Madrid y toda España.</p>
     </div>
     <div>
-      <h5>Soluciones RFID</h5>
+      <h5>Soluciones</h5>
       <ul>
-        <li><a href="./rfid-retail-tiendas/">Retail y tiendas</a></li>
-        <li><a href="./rfid-logistica-almacenes/">Logística</a></li>
-        <li><a href="./rfid-lavanderias/">Lavanderías</a></li>
-        <li><a href="./rfid-residencias/">Residencias</a></li>
-        <li><a href="./rfid-hospitales/">Hospitales</a></li>
-        <li><a href="./cajas-autocobro-rfid/">Cajas autocobro</a></li>
+        <li><a href="/soluciones-rfid/">→ Soluciones RFID</a></li>
+        <li><a href="/soluciones-rfid-para-bibliotecas/">→ Bibliotecas</a></li>
+        <li><a href="/accede-reserva-espacios/">→ ACCEDE</a></li>
+        <li><a href="/sistema-de-gestion-documental/">→ Gestión Documental</a></li>
+        <li><a href="/casos-de-exito/">→ Casos de éxito</a></li>
+        <li><a href="/blog/">→ Blog</a></li>
       </ul>
     </div>
     <div>
-      <h5>Bibliotecas</h5>
+      <h5>Recursos</h5>
       <ul>
-        <li><a href="./autoprestamo-libros-rfid/">Autopréstamo</a></li>
-        <li><a href="./autolibro/">Autolibro</a></li>
-        <li><a href="./rfid-bibliobus/">Bibliobús</a></li>
-        <li><a href="./accede-reserva-espacios/">ACCEDE</a></li>
+        <li><a href="/guia-rfid/">→ Guía completa RFID</a></li>
+        <li><a href="/preguntas-frecuentes-rfid/">→ Preguntas frecuentes</a></li>
+        <li><a href="/rfid-madrid/">→ RFID Madrid</a></li>
+        <li><a href="/quienes-somos/">→ Quiénes somos</a></li>
+        <li><a href="/linked-open-data/">→ Linked Open Data</a></li>
       </ul>
     </div>
-    <div>
-      <h5>Empresa</h5>
-      <ul>
-        <li><a href="./sobre-nosotros/">Sobre nosotros</a></li>
-        <li><a href="./casos-de-exito/">Casos de éxito</a></li>
-        <li><a href="./gestion-documental/">Gestión documental</a></li>
-        <li><a href="./linked-open-data/">Linked Open Data</a></li>
-        <li><a href="./blog/">Blog</a></li>
-        <li><a href="./contacto/">Contacto</a></li>
-      </ul>
+    <div class="footer-contact">
+      <h5>Contacto</h5>
+      <p style="margin-bottom:.75rem"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" style="vertical-align:-2px;margin-right:.3rem;opacity:.5"><path d="M2 4h10v7H2z"/><path d="M2 4l5 3.5L12 4"/></svg><a href="mailto:info@serdoc.es">info@serdoc.es</a></p>
+      <p style="font-size:.72rem;color:rgba(255,255,255,.3);margin-bottom:.15rem">Llámanos ahora</p>
+      <p style="margin-bottom:.75rem"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" style="vertical-align:-2px;margin-right:.3rem;opacity:.5"><path d="M2 3a1 1 0 0 1 1-1h1.5l1 2.5-1 1a7 7 0 0 0 3 3l1-1 2.5 1V11a1 1 0 0 1-1 1A9 9 0 0 1 2 3z"/></svg><a href="tel:+34916896573">+34 916 896 573</a></p>
+      <p style="margin-bottom:.75rem"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:-3px;margin-right:.3rem;opacity:.6"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg><a href="https://wa.me/34625681553">+34 625 681 553</a></p>
+      <p><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24" style="vertical-align:-2px;margin-right:.3rem;opacity:.5"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg><a href="https://www.linkedin.com/company/serdoc/" target="_blank" rel="noopener">LinkedIn</a></p>
+      <p style="margin-top:1rem;font-size:.82rem;color:rgba(255,255,255,.3)">Calle del Cobre 11<br>28914 Leganés, Madrid</p>
     </div>
   </div>
-  <div class="footer-bottom">
-    <span>© 2026 Serdoc Informática S.L. · <a href="#">Aviso legal</a> · <a href="#">Privacidad</a> · <a href="#">Cookies</a></span>
-    <div class="footer-certs"><img src="https://serdoc.es/wp-content/uploads/2023/11/segell3-e1722591111580.png" alt="ISO 9001" loading="lazy"></div>
-  </div>
+  <div class="footer-bottom"><span>© 2026 Serdoc Informática S.L.</span><span><a href="/aviso-legal/">Aviso legal</a> · <a href="/politica-de-cookies/">Política de cookies</a> · <a href="/politica-de-privacidad/">Política de privacidad</a></span></div>
 </footer>
 
-<div class="cookie-overlay" id="cookieOverlay"></div>
-<div class="cookie-banner" id="cookieBanner">
-  <div class="cookie-banner-inner">
-    <div class="cookie-banner-text">
-      <h3>Usamos cookies para mejorar tu experiencia</h3>
-      <p>Utilizamos cookies propias y de terceros para analizar el uso del sitio web y mostrarte información relevante. <a href="/politica-de-cookies/">Más información</a>.</p>
-    </div>
-    <div class="cookie-banner-actions">
-      <button class="cb-btn cb-btn-reject" onclick="CookieConsent.rejectAll()">Rechazar</button>
-      <button class="cb-btn cb-btn-settings" onclick="CookieConsent.showPrefs()">Configurar</button>
-      <button class="cb-btn cb-btn-accept" onclick="CookieConsent.acceptAll()">Aceptar todas</button>
-    </div>
-  </div>
+<!-- FLOATING BUTTONS -->
+<div class="float-btns">
+  <a href="https://wa.me/34625681553?text=Hola%2C%20me%20gustar%C3%ADa%20obtener%20informaci%C3%B3n%20sobre%20vuestras%20soluciones%20RFID" class="float-btn float-btn-wa" target="_blank" rel="noopener" aria-label="WhatsApp"><svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+  <a href="tel:+34916896573" class="float-btn float-btn-phone" aria-label="Llamar"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 5a2 2 0 0 1 2-2h2.28a1 1 0 0 1 .95.68l1.22 3.66a1 1 0 0 1-.24 1.01L7.69 9.85a12 12 0 0 0 6.46 6.46l1.52-1.52a1 1 0 0 1 1.01-.24l3.66 1.22a1 1 0 0 1 .68.95V19a2 2 0 0 1-2 2A17 17 0 0 1 3 5z"/></svg></a>
 </div>
-<div class="cookie-prefs" id="cookiePrefs">
-  <div class="cookie-prefs-panel">
-    <div class="cp-header">
-      <div class="cp-header-row">
-        <h2>Preferencias de cookies</h2>
-        <button class="cp-close" onclick="CookieConsent.closePrefs()" aria-label="Cerrar"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3l8 8M11 3l-8 8"/></svg></button>
-      </div>
-      <p>Personaliza qué cookies permites. Las funcionales son necesarias y no se pueden desactivar.</p>
-    </div>
-    <div class="cp-body">
-      <div class="cc"><div class="cc-header"><div class="cc-info"><div class="cc-title">Funcionales <span class="cc-badge cc-badge-required">Siempre activas</span></div><div class="cc-desc">Necesarias para el funcionamiento básico del sitio.</div></div><div class="cc-toggle-wrap"><label class="toggle"><input type="checkbox" checked disabled><span class="toggle-track"></span></label></div></div></div>
-      <div class="cc"><div class="cc-header"><div class="cc-info"><div class="cc-title">Analíticas</div><div class="cc-desc">Nos permiten entender cómo se usa el sitio para mejorarlo.</div></div><div class="cc-toggle-wrap"><label class="toggle"><input type="checkbox" id="toggleAnalytics"><span class="toggle-track"></span></label></div></div></div>
-      <div class="cc"><div class="cc-header"><div class="cc-info"><div class="cc-title">Marketing</div><div class="cc-desc">Permiten mostrarte publicidad relevante y medir campañas.</div></div><div class="cc-toggle-wrap"><label class="toggle"><input type="checkbox" id="toggleMarketing"><span class="toggle-track"></span></label></div></div></div>
-      <div class="cc"><div class="cc-header"><div class="cc-info"><div class="cc-title">Preferencias</div><div class="cc-desc">Recuerdan tus ajustes para futuras visitas.</div></div><div class="cc-toggle-wrap"><label class="toggle"><input type="checkbox" id="togglePreferences"><span class="toggle-track"></span></label></div></div></div>
-    </div>
-    <div class="cp-footer">
-      <button class="cb-btn cb-btn-reject" onclick="CookieConsent.rejectAll()">Rechazar opcionales</button>
-      <button class="cb-btn cb-btn-accept" onclick="CookieConsent.savePrefs()">Guardar preferencias</button>
-    </div>
-  </div>
-</div>
-<button class="cookie-reopen" id="cookieReopen" onclick="CookieConsent.showPrefs()" aria-label="Configurar cookies"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.5"/><circle cx="7" cy="8" r="1.2" fill="#F59E0B"/><circle cx="12" cy="6" r="1" fill="#D97706"/><circle cx="13" cy="12" r="1.2" fill="#F59E0B"/><circle cx="8" cy="13" r="1" fill="#D97706"/></svg></button>
 
-<script src="./js/main.js"></script>
-<script src="./js/cookies.js"></script>
+<!-- COOKIE SYSTEM -->
+<div class="cookie-overlay" id="cookieOverlay"></div>
+<div class="cookie-banner" id="cookieBanner"><div class="cookie-banner-inner"><div class="cookie-banner-text"><h3>Usamos cookies para mejorar tu experiencia</h3><p>Utilizamos cookies propias y de terceros para analizar el uso del sitio. <a href="/politica-de-privacidad/">Más información</a>.</p></div><div class="cookie-banner-actions"><button class="cb-btn cb-btn-reject" onclick="CC.reject()">Rechazar</button><button class="cb-btn cb-btn-settings" onclick="CC.showPrefs()">Configurar</button><button class="cb-btn cb-btn-accept" onclick="CC.accept()">Aceptar todas</button></div></div></div>
+<div class="cookie-prefs" id="cookiePrefs"><div class="cookie-prefs-panel"><div class="cp-header"><div class="cp-header-row"><h2>Preferencias de cookies</h2><button class="cp-close" onclick="CC.closePrefs()" aria-label="Cerrar"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3l8 8M11 3l-8 8"/></svg></button></div><p>Personaliza qué cookies permites. Las funcionales son necesarias y no se pueden desactivar.</p></div><div class="cp-body"><div class="cc"><div class="cc-header"><div class="cc-info"><div class="cc-title">Funcionales <span class="cc-badge">Siempre activas</span></div><div class="cc-desc">Necesarias para el funcionamiento básico del sitio.</div></div><div><label class="toggle"><input type="checkbox" checked disabled><span class="toggle-track"></span></label></div></div></div><div class="cc"><div class="cc-header"><div class="cc-info"><div class="cc-title">Analíticas</div><div class="cc-desc">Nos permiten entender cómo se usa el sitio para mejorarlo.</div></div><div><label class="toggle"><input type="checkbox" id="tA"><span class="toggle-track"></span></label></div></div></div><div class="cc"><div class="cc-header"><div class="cc-info"><div class="cc-title">Marketing</div><div class="cc-desc">Permiten mostrarte publicidad relevante y medir campañas.</div></div><div><label class="toggle"><input type="checkbox" id="tM"><span class="toggle-track"></span></label></div></div></div><div class="cc"><div class="cc-header"><div class="cc-info"><div class="cc-title">Preferencias</div><div class="cc-desc">Recuerdan tus ajustes para futuras visitas.</div></div><div><label class="toggle"><input type="checkbox" id="tP"><span class="toggle-track"></span></label></div></div></div></div><div class="cp-footer"><button class="cb-btn cb-btn-reject" onclick="CC.reject()">Rechazar opcionales</button><button class="cb-btn cb-btn-accept" onclick="CC.savePrefs()">Guardar preferencias</button></div></div></div>
+<button class="cookie-reopen" id="cookieReopen" onclick="CC.showPrefs()" aria-label="Configurar cookies"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.5"/><circle cx="7" cy="8" r="1.2" fill="#F59E0B"/><circle cx="12" cy="6" r="1" fill="#D97706"/><circle cx="13" cy="12" r="1.2" fill="#F59E0B"/><circle cx="8" cy="13" r="1" fill="#D97706"/></svg></button>
+
+<script>
+/* Counters */
+function animateCounters(){document.querySelectorAll('.counter-num').forEach(el=>{const t=parseFloat(el.dataset.target),p=el.dataset.prefix||'',s=el.dataset.suffix||'',d=t%1!==0,dur=1800,st=performance.now();function u(n){const e=Math.min((n-st)/dur,1),ea=1-Math.pow(1-e,3),c=ea*t;el.textContent=p+(d?c.toFixed(1).replace('.',','):Math.floor(c))+s;if(e<1)requestAnimationFrame(u)}requestAnimationFrame(u)})}
+
+/* Observer */
+const obs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('visible');if(x.target.classList.contains('counters'))animateCounters()}})},{threshold:.15});
+document.querySelectorAll('.fade-in').forEach(el=>obs.observe(el));
+
+/* Sectors */
+function toggleSectors(){const e=document.getElementById('sectorsExtra'),b=document.getElementById('sectorsToggle'),o=e.classList.contains('open');e.classList.toggle('open');b.classList.toggle('open');b.firstChild.textContent=o?'Ver todos los sectores':'Ocultar sectores'}
+
+/* FAQ */
+function toggleFaq(b){const a=b.nextElementSibling,o=b.classList.contains('open');document.querySelectorAll('.faq-q.open').forEach(q=>{q.classList.remove('open');q.nextElementSibling.style.maxHeight=null});if(!o){b.classList.add('open');a.style.maxHeight=a.scrollHeight+'px'}}
+
+/* Mobile menu */
+document.getElementById('menuToggle').addEventListener('click',function(){const n=document.getElementById('mobileNav'),o=n.classList.contains('open');n.classList.toggle('open');this.setAttribute('aria-expanded',!o);this.innerHTML=o?'<svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h16M3 11h16M3 16h16"/></svg>':'<svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4l14 14M18 4l-14 14"/></svg>'});
+
+/* Cookie Consent */
+const CC={
+  show(){document.getElementById('cookieBanner').classList.add('active');document.getElementById('cookieReopen').classList.remove('visible')},
+  hide(){document.getElementById('cookieBanner').classList.remove('active')},
+  showPrefs(){this.hide();document.getElementById('cookiePrefs').classList.add('active');document.getElementById('cookieOverlay').classList.add('active')},
+  closePrefs(){document.getElementById('cookiePrefs').classList.remove('active');document.getElementById('cookieOverlay').classList.remove('active');if(!localStorage.getItem('serdoc_cc'))setTimeout(()=>this.show(),200);else document.getElementById('cookieReopen').classList.add('visible')},
+  accept(){this.save({f:1,a:1,m:1,p:1})},
+  reject(){document.getElementById('tA').checked=false;document.getElementById('tM').checked=false;document.getElementById('tP').checked=false;this.save({f:1,a:0,m:0,p:0})},
+  savePrefs(){this.save({f:1,a:document.getElementById('tA').checked?1:0,m:document.getElementById('tM').checked?1:0,p:document.getElementById('tP').checked?1:0})},
+  save(c){localStorage.setItem('serdoc_cc',JSON.stringify(c));this.hide();document.getElementById('cookiePrefs').classList.remove('active');document.getElementById('cookieOverlay').classList.remove('active');document.getElementById('cookieReopen').classList.add('visible');if(typeof gtag==='function')gtag('consent','update',{analytics_storage:c.a?'granted':'denied',ad_storage:c.m?'granted':'denied'})},
+  init(){const s=localStorage.getItem('serdoc_cc');if(s){const c=JSON.parse(s);document.getElementById('tA').checked=!!c.a;document.getElementById('tM').checked=!!c.m;document.getElementById('tP').checked=!!c.p;document.getElementById('cookieReopen').classList.add('visible')}else setTimeout(()=>this.show(),800)}
+};
+document.getElementById('cookieOverlay').addEventListener('click',()=>CC.closePrefs());
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&document.getElementById('cookiePrefs').classList.contains('active'))CC.closePrefs()});
+CC.init();
+</script>
 </body>
 </html>
