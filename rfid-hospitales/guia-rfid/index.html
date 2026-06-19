@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Página en construcción — Serdoc</title>
+<meta name="robots" content="noindex,nofollow">
+<style>body{font-family:sans-serif;display:flex;align-items:center;justify-content:center;min-height:100vh;margin:0;background:#f8f9fb;color:#1B2A4A}.box{text-align:center;padding:2rem}.box h1{font-size:1.5rem;margin-bottom:.5rem}.box p{color:#64748B;margin-bottom:1.5rem}.box a{background:#f57a14;color:white;padding:.6rem 1.5rem;border-radius:8px;text-decoration:none;font-weight:700}.cookie-banner{position:fixed;bottom:0;left:0;right:0;z-index:9999;transform:translateY(100%);transition:transform .4s cubic-bezier(.22,.68,0,1)}
+.cookie-banner.active{transform:translateY(0)}
+.cookie-banner-inner{max-width:1200px;margin:0 auto;background:var(--white);border-top:1px solid var(--g200);box-shadow:0 -8px 40px rgba(15,27,51,.1);padding:1.25rem 1.5rem;display:grid;grid-template-columns:1fr auto;gap:1.5rem;align-items:center}
+.cookie-banner-text h3{font-size:.95rem;font-weight:700;color:var(--navy);margin-bottom:.25rem}
+.cookie-banner-text p{font-size:.9rem;color:var(--g500)}
+.cookie-banner-text a{color:var(--teal);text-decoration:underline}
+.cookie-banner-actions{display:flex;gap:.5rem}
+.cookie-banner-inner{grid-template-columns:1fr;gap:1rem}
+.cookie-banner-actions{flex-wrap:wrap}
+.cookie-banner.active{transform:translateY(0)}
+.cookie-banner-inner{max-width:1200px;margin:0 auto;background:var(--white);border-top:1px solid var(--g200);box-shadow:0 -8px 40px rgba(15,27,51,.1);padding:1.25rem 1.5rem;display:grid;grid-template-columns:1fr auto;gap:1.5rem;align-items:center}
+.cookie-banner-inner{grid-template-columns:1fr;gap:1rem}
+.cookie-banner-text h3{font-size:.95rem;font-weight:700;color:var(--navy);margin-bottom:.25rem}
+.cookie-banner-text p{font-size:.9rem;color:var(--g500)}
+.cookie-banner-text a{color:var(--teal);text-decoration:underline}
+.cookie-banner-actions{display:flex;gap:.5rem}
+.cookie-banner-actions{flex-wrap:wrap}
+.cookie-prefs{position:fixed;inset:0;z-index:9999;display:flex;align-items:center;justify-content:center;padding:1.5rem;opacity:0;pointer-events:none;transition:opacity .3s}
+.cookie-prefs.active{opacity:1;pointer-events:auto}
+.cookie-prefs-panel{background:var(--white);border-radius:20px;box-shadow:0 24px 64px rgba(15,27,51,.2);width:100%;max-width:560px;max-height:90vh;display:flex;flex-direction:column;transform:translateY(16px);transition:transform .35s cubic-bezier(.22,.68,0,1)}
+.cookie-prefs.active .cookie-prefs-panel{transform:translateY(0)}
+.cookie-prefs-panel{background:var(--white);border-radius:20px;box-shadow:0 24px 64px rgba(15,27,51,.2);width:100%;max-width:560px;max-height:90vh;display:flex;flex-direction:column;transform:translateY(16px);transition:transform .35s cubic-bezier(.22,.68,0,1)}
+.cookie-prefs-panel{transform:translateY(0)}
+.cp-header{padding:1.5rem 1.75rem 1rem;border-bottom:1px solid var(--g200)}
+.cp-header-row{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:.5rem}
+.cp-header h2{font-size:1.1rem;font-weight:800;color:var(--navy)}
+.cp-header p{font-size:.9rem;color:var(--g500);line-height:1.6}
+.cp-header,.cp-body,.cp-footer{padding-left:1.25rem;padding-right:1.25rem}
+.cp-header-row{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:.5rem}
+.cp-body{padding:1rem 1.75rem;overflow-y:auto;flex:1}
+.cp-body,.cp-footer{padding-left:1.25rem;padding-right:1.25rem}
+.cp-footer{padding:1rem 1.75rem 1.5rem;border-top:1px solid var(--g200);display:flex;gap:.5rem;justify-content:flex-end}
+.cp-footer{padding-left:1.25rem;padding-right:1.25rem}
+.cp-footer{flex-wrap:wrap}
+.cp-footer .cb-btn{flex:1;text-align:center}
+.cp-close{width:32px;height:32px;border-radius:8px;border:1px solid var(--g200);background:var(--g100);cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--g400);transition:all .15s;flex-shrink:0}
+.cp-close:hover{background:var(--g200);color:var(--g800)}
+.cc{padding:1rem 0;border-bottom:1px solid var(--g100)}
+.cc:last-child{border-bottom:none}
+.cc-header{display:flex;justify-content:space-between;align-items:center;gap:1rem}
+.cc-info{flex:1}
+.cc-title{font-family:'Outfit',sans-serif;font-size:.92rem;font-weight:700;color:var(--navy);display:flex;align-items:center;gap:.5rem}
+.cc-desc{font-size:.85rem;color:var(--g500);margin-top:.25rem;line-height:1.5}
+.cc-badge{font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;padding:.15rem .45rem;border-radius:4px;background:var(--green-bg);color:var(--green)}
+.toggle{position:relative;width:44px;height:24px;display:inline-block}
+.toggle input{opacity:0;width:0;height:0;position:absolute}
+.toggle input:checked+.toggle-track{background:var(--teal)}
+.toggle input:checked+.toggle-track::after{transform:translateX(20px)}
+.toggle input:disabled+.toggle-track{background:var(--teal);opacity:.5;cursor:not-allowed}
+.toggle input:disabled:checked+.toggle-track::after{transform:translateX(20px)}
+.toggle-track{position:absolute;inset:0;border-radius:99px;background:var(--g300);cursor:pointer;transition:background .2s}
+.toggle-track::after{content:'';position:absolute;top:2px;left:2px;width:20px;height:20px;border-radius:50%;background:var(--white);box-shadow:0 1px 3px rgba(0,0,0,.15);transition:transform .2s}
+.toggle-track{background:var(--teal)}
+.toggle-track::after{transform:translateX(20px)}
+.toggle-track{background:var(--teal);opacity:.5;cursor:not-allowed}
+.toggle-track::after{transform:translateX(20px)}
+.toggle input{opacity:0;width:0;height:0;position:absolute}
+.toggle input:checked+.toggle-track{background:var(--teal)}
+.toggle input:checked+.toggle-track::after{transform:translateX(20px)}
+.toggle input:disabled+.toggle-track{background:var(--teal);opacity:.5;cursor:not-allowed}
+.toggle input:disabled:checked+.toggle-track::after{transform:translateX(20px)}
+.toggle input:checked+.toggle-track{background:var(--teal)}
+.toggle input:checked+.toggle-track::after{transform:translateX(20px)}
+.cookie-reopen{position:fixed;bottom:1.25rem;left:1.25rem;z-index:990;width:44px;height:44px;border-radius:12px;background:var(--navy);border:1px solid rgba(255,255,255,.1);box-shadow:0 4px 16px rgba(15,27,51,.2);cursor:pointer;display:none;align-items:center;justify-content:center;color:white;transition:all .2s}
+.cookie-reopen.visible{display:flex}
+.cookie-reopen:hover{background:var(--navy-mid);transform:translateY(-2px)}
+.cookie-reopen.visible{display:flex}
+.cb-btn{padding:.6rem 1.1rem;border-radius:8px;font-size:.9rem;font-weight:700;font-family:'Outfit';transition:all .2s;border:none;white-space:nowrap}
+.cb-btn-accept{background:var(--navy);color:var(--white)}
+.cb-btn-accept:hover{background:var(--navy-mid)}
+.cb-btn-reject{background:var(--g100);color:var(--g700);border:1px solid var(--g200)}
+.cb-btn-reject:hover{background:var(--g200)}
+.cb-btn-settings{background:var(--g100);color:var(--g700);border:1px solid var(--g200)}
+.cb-btn-settings:hover{background:var(--g200)}
+.cb-btn{flex:1;text-align:center}
+.cb-btn{flex:1;text-align:center}
+.cb-btn-accept{background:var(--navy);color:var(--white)}
+.cb-btn-accept:hover{background:var(--navy-mid)}
+.cb-btn-reject{background:var(--g100);color:var(--g700);border:1px solid var(--g200)}
+.cb-btn-reject:hover{background:var(--g200)}
+.cb-btn-settings{background:var(--g100);color:var(--g700);border:1px solid var(--g200)}
+.cb-btn-settings:hover{background:var(--g200)}
+</style>
+</head>
+<body><div class="box"><h1>Página en construcción</h1><p>Esta sección estará disponible próximamente.</p><a href="/">← Volver al inicio</a></div>
+<div class="cookie-banner" id="cookieBanner"><div class="cookie-banner-inner"><div class="cookie-banner-text"><h3>Usamos cookies para mejorar tu experiencia</h3><p>Utilizamos cookies propias y de terceros para analizar el uso del sitio. <a href="/politica-de-privacidad/">Más información</a>.</p></div><div class="cookie-banner-actions"><button class="cb-btn cb-btn-reject" onclick="CC.reject()">Rechazar</button><button class="cb-btn cb-btn-settings" onclick="CC.showPrefs()">Configurar</button><button class="cb-btn cb-btn-accept" onclick="CC.accept()">Aceptar todas</button></div></div></div>
+<div class="cookie-prefs" id="cookiePrefs"><div class="cookie-prefs-panel"><div class="cp-header"><div class="cp-header-row"><h2>Preferencias de cookies</h2><button class="cp-close" onclick="CC.closePrefs()" aria-label="Cerrar"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3l8 8M11 3l-8 8"/></svg></button></div><p>Personaliza qué cookies permites. Las funcionales son necesarias y no se pueden desactivar.</p></div><div class="cp-body"><div class="cc"><div class="cc-header"><div class="cc-info"><div class="cc-title">Funcionales <span class="cc-badge">Siempre activas</span></div><div class="cc-desc">Necesarias para el funcionamiento básico del sitio.</div></div><div><label class="toggle"><input type="checkbox" checked disabled><span class="toggle-track"></span></label></div></div></div><div class="cc"><div class="cc-header"><div class="cc-info"><div class="cc-title">Analíticas</div><div class="cc-desc">Nos permiten entender cómo se usa el sitio para mejorarlo.</div></div><div><label class="toggle"><input type="checkbox" id="tA"><span class="toggle-track"></span></label></div></div></div><div class="cc"><div class="cc-header"><div class="cc-info"><div class="cc-title">Marketing</div><div class="cc-desc">Permiten mostrarte publicidad relevante y medir campañas.</div></div><div><label class="toggle"><input type="checkbox" id="tM"><span class="toggle-track"></span></label></div></div></div><div class="cc"><div class="cc-header"><div class="cc-info"><div class="cc-title">Preferencias</div><div class="cc-desc">Recuerdan tus ajustes para futuras visitas.</div></div><div><label class="toggle"><input type="checkbox" id="tP"><span class="toggle-track"></span></label></div></div></div></div><div class="cp-footer"><button class="cb-btn cb-btn-reject" onclick="CC.reject()">Rechazar opcionales</button><button class="cb-btn cb-btn-accept" onclick="CC.savePrefs()">Guardar preferencias</button></div></div></div>
+<button class="cookie-reopen" id="cookieReopen" onclick="CC.showPrefs()" aria-label="Configurar cookies"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.5"/><circle cx="7" cy="8" r="1.2" fill="#f57a14"/><circle cx="12" cy="6" r="1" fill="#d4620f"/><circle cx="13" cy="12" r="1.2" fill="#f57a14"/><circle cx="8" cy="13" r="1" fill="#d4620f"/></svg></button>
+<script>const CC={
+  show(){document.getElementById('cookieBanner').classList.add('active');document.getElementById('cookieReopen').classList.remove('visible')},
+  hide(){document.getElementById('cookieBanner').classList.remove('active')},
+  showPrefs(){this.hide();document.getElementById('cookiePrefs').classList.add('active');document.getElementById('cookieOverlay').classList.add('active')},
+  closePrefs(){document.getElementById('cookiePrefs').classList.remove('active');document.getElementById('cookieOverlay').classList.remove('active');if(!localStorage.getItem('serdoc_cc'))setTimeout(()=>this.show(),200);else document.getElementById('cookieReopen').classList.add('visible')},
+  accept(){this.save({f:1,a:1,m:1,p:1})},
+  reject(){document.getElementById('tA').checked=false;document.getElementById('tM').checked=false;document.getElementById('tP').checked=false;this.save({f:1,a:0,m:0,p:0})},
+  savePrefs(){this.save({f:1,a:document.getElementById('tA').checked?1:0,m:document.getElementById('tM').checked?1:0,p:document.getElementById('tP').checked?1:0})},
+  save(c){localStorage.setItem('serdoc_cc',JSON.stringify(c));this.hide();document.getElementById('cookiePrefs').classList.remove('active');document.getElementById('cookieOverlay').classList.remove('active');document.getElementById('cookieReopen').classList.add('visible');if(typeof gtag==='function')gtag('consent','update',{analytics_storage:c.a?'granted':'denied',ad_storage:c.m?'granted':'denied'})},
+  init(){const s=localStorage.getItem('serdoc_cc');if(s){const c=JSON.parse(s);document.getElementById('tA').checked=!!c.a;document.getElementById('tM').checked=!!c.m;document.getElementById('tP').checked=!!c.p;document.getElementById('cookieReopen').classList.add('visible')}else setTimeout(()=>this.show(),800)}
+};
+document.getElementById('cookieOverlay').addEventListener('click',()=>CC.closePrefs());
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&document.getElementById('cookiePrefs').classList.contains('active'))CC.closePrefs()});
+CC.init();</script>
+</body>
+</html>
