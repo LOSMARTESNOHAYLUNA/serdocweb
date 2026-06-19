@@ -464,12 +464,17 @@ a:hover .arrow-r,button:hover .arrow-r{transform:translateX(3px)}
 .sector-icon svg,.trust-item svg,.client-item svg,
 .how-step-circle svg,.how-link svg,.btn svg,
 .faq-q svg,.case-link svg,.float-btn svg,
-.subheader svg,.megamenu-col a svg,.nav-item svg,
+.megamenu-col a svg,.nav-item svg,
 .arrow-r,.sectors-toggle svg,.how-connector-icon svg{
   fill:none!important;
   stroke-width:1.5!important;
   stroke-linecap:round!important;
   stroke-linejoin:round!important;
+}
+/* Subheader: solo stroke para phone y email, fill para WA y LinkedIn */
+.subheader a.sh-phone svg,.subheader a.sh-email svg{
+  fill:none!important;stroke-width:1.5!important;
+  stroke-linecap:round!important;stroke-linejoin:round!important;
 }
 .counter-icon svg{
   fill:none!important;stroke:#0891B2!important;
@@ -746,11 +751,6 @@ a:hover .arrow-r,button:hover .arrow-r{transform:translateX(3px)}
 <section class="cta-form-section">
   <div class="cta-split">
     <div class="cta-form-side">
-      <div style="display:flex;gap:1.5rem;margin-bottom:2rem;flex-wrap:wrap">
-        <div style="display:flex;align-items:center;gap:.6rem;font-size:.9rem;font-weight:600;color:rgba(255,255,255,.7);font-family:Outfit,sans-serif"><svg width="22" height="22" viewBox="0 0 24 24" fill="#f57a14"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg> 4,8 en Google</div>
-        <div style="display:flex;align-items:center;gap:.6rem;font-size:.9rem;font-weight:600;color:rgba(255,255,255,.7);font-family:Outfit,sans-serif"><svg width="22" height="22" viewBox="0 0 24 24" fill="#f57a14"><path d="M12 1l-9 4v6c0 5.25 3.75 10.15 9 11.25C17.25 21.15 21 16.25 21 11V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg> ISO 9001</div>
-        <div style="display:flex;align-items:center;gap:.6rem;font-size:.9rem;font-weight:600;color:rgba(255,255,255,.7);font-family:Outfit,sans-serif"><svg width="22" height="22" viewBox="0 0 24 24" fill="#f57a14"><path d="M15 1H9v2h6V1zm-4 13h2V8h-2v6zm8.03-6.61l1.42-1.42c-.43-.51-.9-.99-1.41-1.41l-1.42 1.42C16.07 4.74 14.12 4 12 4c-4.97 0-9 4.03-9 9s4.02 9 9 9 9-4.03 9-9c0-2.12-.74-4.07-1.97-5.61zM12 20c-3.87 0-7-3.13-7-7s3.13-7 7-7 7 3.13 7 7-3.13 7-7 7z"/></svg> Respuesta &lt;24h</div>
-      </div>
       <h2>¿Tu empresa necesita RFID?</h2>
       <p class="cta-form-sub">Cuéntanos tu caso. Te respondemos en menos de 24 horas.</p>
       <form class="cta-form" action="/gracias/" method="POST">
