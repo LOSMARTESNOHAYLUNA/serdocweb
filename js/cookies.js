@@ -35,12 +35,10 @@ const CookieConsent = {
 
   showBanner() {
     this.banner.classList.add('active');
-    this.overlay.classList.add('active');
     this.reopen.classList.remove('visible');
   },
   hideBanner() {
     this.banner.classList.remove('active');
-    this.overlay.classList.remove('active');
   },
   showPrefs() {
     this.hideBanner();
