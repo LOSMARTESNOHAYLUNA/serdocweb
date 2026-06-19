@@ -179,9 +179,9 @@ a:hover .arrow-r,button:hover .arrow-r{transform:translateX(3px)}
 }
 .sector-link{display:inline-flex;align-items:center;gap:.4rem;font-size:.95rem;font-weight:600;color:var(--teal);font-family:'Outfit',sans-serif;margin-top:auto;background:none;border:none;text-decoration:none;transition:gap .2s,opacity .2s}
 .sector-card:hover .sector-link{gap:.6rem}
-.sectors-toggle{display:inline-flex;align-items:center;gap:.4rem;margin-top:1.5rem;background:none;border:none;padding:0;font-size:1rem;font-weight:600;font-family:'Outfit',sans-serif;color:var(--teal);cursor:pointer;transition:gap .2s,opacity .2s}
-.sectors-toggle:hover{gap:.6rem;opacity:.8}
-.sectors-toggle svg{transition:transform .3s}
+.sectors-toggle{display:inline-flex;align-items:center;justify-content:center;gap:.6rem;background:var(--white);border:1.5px solid var(--g200);border-radius:var(--radius);padding:.85rem 2rem;font-size:1.05rem;font-weight:700;color:var(--navy-deep);font-family:'Outfit',sans-serif;cursor:pointer;box-shadow:0 2px 12px rgba(15,27,51,.07);min-width:240px;transition:transform .22s,box-shadow .22s,border-color .22s}
+.sectors-toggle:hover{transform:translateY(-2px);box-shadow:0 10px 32px rgba(15,27,51,.13);border-color:var(--g300)}
+.sectors-toggle svg{color:var(--navy-deep);transition:transform .3s;flex-shrink:0}
 .sectors-toggle.open svg{transform:rotate(180deg)}
 
 .link-btn{
@@ -220,8 +220,10 @@ a:hover .arrow-r,button:hover .arrow-r{transform:translateX(3px)}
 /* Connector */
 .how-conn{flex:0 0 80px;height:2px;background:var(--g200);margin-top:31px;position:relative;overflow:hidden}
 .how-conn-fill{position:absolute;top:0;left:0;height:100%;width:0;background:var(--teal)}
-.how-link{display:inline-flex;align-items:center;gap:.4rem;margin-top:2.5rem;font-size:1rem;font-weight:600;color:var(--teal);font-family:'Outfit',sans-serif;background:none;border:none;text-decoration:none;transition:gap .2s,opacity .2s}
-.how-link:hover{gap:.6rem;opacity:.8}
+.how-link{display:inline-flex;align-items:center;justify-content:center;gap:.6rem;background:var(--white);border:1.5px solid var(--g200);border-radius:var(--radius);padding:.85rem 2rem;font-size:1.05rem;font-weight:700;color:var(--navy-deep);font-family:'Outfit',sans-serif;box-shadow:0 2px 12px rgba(15,27,51,.07);min-width:240px;text-decoration:none;transition:transform .22s,box-shadow .22s,border-color .22s}
+.how-link:hover{transform:translateY(-2px);box-shadow:0 10px 32px rgba(15,27,51,.13);border-color:var(--g300)}
+.how-link svg{color:var(--navy-deep);flex-shrink:0;transition:transform .2s}
+.how-link:hover svg{transform:translateX(4px)}
 /* Mobile: vertical */
 
 /* ── BLOCK 5: CASES ── */
@@ -242,9 +244,9 @@ a:hover .arrow-r,button:hover .arrow-r{transform:translateX(3px)}
 
 /* ── BLOCK 6: REVIEWS ── */
 .reviews{padding:5rem 1.5rem;background:var(--white)}
-.reviews-inner{max-width:1200px;margin:0 auto}
+.reviews-inner{max-width:1200px;margin:0 auto;text-align:center}
 .reviews h2{font-size:clamp(2rem,3.5vw,2.8rem);font-weight:800;color:var(--navy);margin-bottom:.5rem;text-align:center}
-.reviews-rating{display:flex;align-items:center;gap:.5rem;font-size:.95rem;color:var(--g500);margin-bottom:2.5rem}
+.reviews-rating{display:flex;align-items:center;justify-content:center;gap:.5rem;font-size:.95rem;color:var(--g500);margin-bottom:2.5rem}
 .reviews-stars{display:flex;gap:2px}
 .reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
 .review-card{background:var(--g50);border:1px solid var(--g200);border-radius:14px;padding:1.5rem}
@@ -273,8 +275,8 @@ a:hover .arrow-r,button:hover .arrow-r{transform:translateX(3px)}
 .cta-form-section::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 60% at 30% 50%,rgba(8,145,178,.08) 0%,transparent 70%)}
 .cta-split{display:grid;grid-template-columns:1fr 1fr;min-height:500px;position:relative;z-index:1}
 .cta-form-side{padding:4rem 3rem;display:flex;flex-direction:column;justify-content:center}
-.cta-form-side h2{font-size:clamp(1.5rem,3vw,2rem);font-weight:800;margin-bottom:.5rem}
-.cta-form-sub{color:rgba(255,255,255,.55);margin-bottom:2rem;font-size:1.05rem}
+.cta-form-side h2{font-size:clamp(1.5rem,3vw,2rem);font-weight:800;margin-bottom:.5rem;text-align:center}
+.cta-form-sub{color:rgba(255,255,255,.55);margin-bottom:2rem;font-size:1.05rem;text-align:center}
 .cta-form{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:var(--radius-lg);padding:1.5rem;text-align:left}
 .cta-form-row{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;margin-bottom:.75rem}
 .cta-form input,.cta-form textarea{width:100%;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);border-radius:var(--radius);padding:.75rem 1rem;color:white;font-size:.95rem;font-family:'Source Sans 3',sans-serif;outline:none;transition:border .2s}
@@ -428,6 +430,36 @@ a:hover .arrow-r,button:hover .arrow-r{transform:translateX(3px)}
 }
 
 
+
+/* ── CTA SECTION BUTTONS ── */
+.btn-cta-outline{
+  display:inline-flex;align-items:center;justify-content:center;gap:.6rem;
+  background:var(--white);
+  border:1.5px solid var(--g200);
+  border-radius:var(--radius);
+  padding:.85rem 2rem;
+  font-size:1.05rem;font-weight:700;
+  color:var(--navy-deep);
+  font-family:'Outfit',sans-serif;
+  text-decoration:none;
+  box-shadow:0 2px 12px rgba(15,27,51,.07);
+  cursor:pointer;
+  min-width:260px;
+  transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease;
+}
+.btn-cta-outline:hover{
+  transform:translateY(-2px);
+  box-shadow:0 10px 32px rgba(15,27,51,.13);
+  border-color:var(--g300);
+  color:var(--navy-deep);
+}
+.btn-cta-outline svg{
+  color:var(--navy-deep);
+  flex-shrink:0;
+  transition:transform .2s ease;
+}
+.btn-cta-outline:hover svg{transform:translateX(4px)}
+.cta-center{text-align:center;margin-top:2.25rem}
 /* ── GLOBAL ICON STYLE ── */
 .sector-icon svg,.trust-item svg,.client-item svg,
 .how-step-circle svg,.how-link svg,.btn svg,
@@ -579,7 +611,7 @@ a:hover .arrow-r,button:hover .arrow-r{transform:translateX(3px)}
       <a href="/rfid-gestion-herramientas/" class="sector-card"><div class="sector-img"><img src="https://images.unsplash.com/photo-1504148455328-c376907d081c?w=400&q=70" alt="Gestión de herramientas con tecnología RFID" loading="lazy" width="400" height="220"></div><div class="sector-card-body"><div class="sector-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div><h3>Gestión de herramientas</h3><p class="sector-desc">Registro y localización de herramientas de alto valor en almacén y obra.</p><span class="sector-link">Ver solución <svg class="arrow-r" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 6h8m-3-3 3 3-3 3"/></svg></span></div></a>
       <a href="/rfid-farmacias/" class="sector-card"><div class="sector-img"><img src="https://images.unsplash.com/photo-1576602976047-174e57a47881?w=400&q=70" alt="Control de medicamentos RFID en farmacias" loading="lazy" width="400" height="220"></div><div class="sector-card-body"><div class="sector-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m10.5 20.5 10-10a4.95 4.95 0 1 0-7-7l-10 10a4.95 4.95 0 1 0 7 7z"/><path d="M8.5 8.5 16 16"/></svg></div><h3>Farmacias</h3><p class="sector-desc">Control de medicamentos, caducidades y trazabilidad de lotes.</p><span class="sector-link">Ver solución <svg class="arrow-r" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 6h8m-3-3 3 3-3 3"/></svg></span></div></a>
     </div>
-    <button class="sectors-toggle" id="sectorsToggle" onclick="toggleSectors()">Ver todos los sectores <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 5l4 4 4-4"/></svg></button>
+    <div class="cta-center" style="margin-top:1.25rem"><button class="sectors-toggle" id="sectorsToggle" onclick="toggleSectors()">Ver todos los sectores <span id="sectorsArrow" style="font-size:1.1em;line-height:1">›</span></button></div>
   </div>
 </section>
 
@@ -615,7 +647,7 @@ a:hover .arrow-r,button:hover .arrow-r{transform:translateX(3px)}
         </div>
       </div>
     </div>
-    <a href="/que-es-rfid-y-como-funciona/" class="how-link">Saber más sobre cómo funciona el RFID <svg class="arrow-r" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 7h10m-4-4 4 4-4 4"/></svg></a>
+    <div class="cta-center"><a href="/que-es-rfid-y-como-funciona/" class="how-link">Saber más sobre cómo funciona el RFID <span style="font-size:1.1em;line-height:1">›</span></a></div>
   </div>
   </div>
 </section>
@@ -656,7 +688,7 @@ a:hover .arrow-r,button:hover .arrow-r{transform:translateX(3px)}
         <a href="/casos-de-exito/" class="case-link">Ver caso completo <svg class="arrow-r" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 6h8m-3-3 3 3-3 3"/></svg></a>
       </div>
     </div>
-    <div style="text-align:center;margin-top:2rem"><a href="/casos-de-exito/" class="link-btn">Ver todos los casos de éxito <svg class="arrow-r" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 7h10m-4-4 4 4-4 4"/></svg></a></div>
+    <div class="cta-center"><a href="/casos-de-exito/" class="btn-cta-outline">Ver todos los casos de éxito <span style="font-size:1.1em;line-height:1">›</span></a></div>
   </div>
 </section>
 
@@ -691,7 +723,7 @@ a:hover .arrow-r,button:hover .arrow-r{transform:translateX(3px)}
         </div>
       </div>
     </div>
-    <div style="text-align:center;margin-top:1.5rem"><a href="https://maps.app.goo.gl/q1FrY1e9xkPJ1TJ57" target="_blank" rel="noopener" class="link-btn">Ver todas las reseñas en Google <svg class="arrow-r" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 7h10m-4-4 4 4-4 4"/></svg></a></div>
+    <div class="cta-center"><a href="https://maps.app.goo.gl/q1FrY1e9xkPJ1TJ57" target="_blank" rel="noopener" class="btn-cta-outline">Ver todas las reseñas en Google <span style="font-size:1.1em;line-height:1">›</span></a></div>
   </div>
 </section>
 
@@ -706,7 +738,7 @@ a:hover .arrow-r,button:hover .arrow-r{transform:translateX(3px)}
       <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">¿Cuánto tiempo tarda la implantación?<svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 4v10M4 9h10"/></svg></button><div class="faq-a"><div class="faq-a-inner">Depende del alcance. Una tienda de retail se implementa en 1-2 semanas. Un almacén medio en 3-4 semanas. Una red de bibliotecas puede llevar varios meses. El proceso es gradual y no interrumpe tu operación.</div></div></div>
       <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">¿Hacéis instalaciones fuera de Madrid?<svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 4v10M4 9h10"/></svg></button><div class="faq-a"><div class="faq-a-inner">Sí. Nuestra sede está en Leganés (Madrid) pero realizamos implantaciones en toda España. Contamos con más de 25 años de experiencia en proyectos a nivel nacional.</div></div></div>
     </div>
-    <div class="faq-bottom"><a href="/preguntas-frecuentes-rfid/" class="link-btn">Ver las 50 preguntas frecuentes <svg class="arrow-r" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 7h10m-4-4 4 4-4 4"/></svg></a></div>
+    <div class="faq-bottom cta-center"><a href="/preguntas-frecuentes-rfid/" class="btn-cta-outline">Ver las 50 preguntas frecuentes <span style="font-size:1.1em;line-height:1">›</span></a></div>
   </div>
 </section>
 
@@ -719,7 +751,7 @@ a:hover .arrow-r,button:hover .arrow-r{transform:translateX(3px)}
         <div style="display:flex;align-items:center;gap:.6rem;font-size:.9rem;font-weight:600;color:rgba(255,255,255,.7);font-family:Outfit,sans-serif"><svg width="22" height="22" viewBox="0 0 24 24" fill="#f57a14"><path d="M12 1l-9 4v6c0 5.25 3.75 10.15 9 11.25C17.25 21.15 21 16.25 21 11V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg> ISO 9001</div>
         <div style="display:flex;align-items:center;gap:.6rem;font-size:.9rem;font-weight:600;color:rgba(255,255,255,.7);font-family:Outfit,sans-serif"><svg width="22" height="22" viewBox="0 0 24 24" fill="#f57a14"><path d="M15 1H9v2h6V1zm-4 13h2V8h-2v6zm8.03-6.61l1.42-1.42c-.43-.51-.9-.99-1.41-1.41l-1.42 1.42C16.07 4.74 14.12 4 12 4c-4.97 0-9 4.03-9 9s4.02 9 9 9 9-4.03 9-9c0-2.12-.74-4.07-1.97-5.61zM12 20c-3.87 0-7-3.13-7-7s3.13-7 7-7 7 3.13 7 7-3.13 7-7 7z"/></svg> Respuesta &lt;24h</div>
       </div>
-      <h2>¿Tu empresa<br><span class="h2-light">necesita RFID?</span></h2>
+      <h2>¿Tu empresa necesita RFID?</h2>
       <p class="cta-form-sub">Cuéntanos tu caso. Te respondemos en menos de 24 horas.</p>
       <form class="cta-form" action="/gracias/" method="POST">
         <div class="cta-form-row"><input type="text" name="nombre" placeholder="Nombre y empresa" required><input type="text" name="contacto" placeholder="Teléfono o email" required></div>
@@ -796,7 +828,7 @@ const obs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){x.targ
 document.querySelectorAll('.fade-in').forEach(el=>obs.observe(el));
 
 /* Sectors */
-function toggleSectors(){const e=document.getElementById('sectorsExtra'),b=document.getElementById('sectorsToggle'),o=e.classList.contains('open');e.classList.toggle('open');b.classList.toggle('open');b.firstChild.textContent=o?'Ver todos los sectores':'Ocultar sectores'}
+function toggleSectors(){const e=document.getElementById('sectorsExtra'),b=document.getElementById('sectorsToggle'),a=document.getElementById('sectorsArrow'),o=e.classList.contains('open');e.classList.toggle('open');b.classList.toggle('open');b.childNodes[0].textContent=o?'Ver todos los sectores ':'Ocultar sectores ';}
 
 /* FAQ */
 function toggleFaq(b){const a=b.nextElementSibling,o=b.classList.contains('open');document.querySelectorAll('.faq-q.open').forEach(q=>{q.classList.remove('open');q.nextElementSibling.style.maxHeight=null});if(!o){b.classList.add('open');a.style.maxHeight=a.scrollHeight+'px'}}
