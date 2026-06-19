@@ -19,11 +19,11 @@
 </script>
 
 <style>
-:root{--navy:#1B2A4A;--navy-deep:#0F1B33;--navy-mid:#243A5E;--teal:#0891B2;--teal-light:#22D3EE;--teal-bg:#ECFEFF;--amber:#f57a14;--amber-hover:#d96910;--white:#FFFFFF;--bg:#FAFBFC;--bg-warm:#F8F9FB;--g50:#F8FAFC;--g100:#F1F5F9;--g200:#E2E8F0;--g300:#CBD5E1;--g400:#94A3B8;--g500:#64748B;--g600:#475569;--g700:#334155;--g800:#1E293B;--g900:#0F172A;--green:#059669;--green-bg:#ECFDF5;--purple:#7C3AED;--purple-bg:#F3EEFF;--radius:10px;--radius-lg:16px;--shadow:0 4px 16px rgba(15,27,51,.08);--shadow-lg:0 16px 48px rgba(15,27,51,.1)}
+:root{--navy:#1B2A4A;--navy-deep:#0F1B33;--navy-mid:#243A5E;--teal:#0891B2;--teal-light:#22D3EE;--teal-bg:#ECFEFF;--amber:#f57a14;--amber-hover:#d4620f;--white:#FFFFFF;--bg:#FAFBFC;--bg-warm:#F8F9FB;--g50:#F8FAFC;--g100:#F1F5F9;--g200:#E2E8F0;--g300:#CBD5E1;--g400:#94A3B8;--g500:#64748B;--g600:#475569;--g700:#334155;--g800:#27353e;--g900:#0F172A;--green:#059669;--green-bg:#ECFDF5;--purple:#7C3AED;--purple-bg:#F3EEFF;--radius:10px;--radius-lg:16px;--shadow:0 4px 16px rgba(15,27,51,.08);--shadow-lg:0 16px 48px rgba(15,27,51,.1)}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font-family:'Source Sans 3',sans-serif;background:var(--bg);color:var(--g800);line-height:1.68;-webkit-font-smoothing:antialiased;font-size:1.0625rem!important}
-p{font-size:1.0625rem!important}
+body{font-family:'Source Sans 3',sans-serif;background:var(--bg);color:var(--g800);line-height:1.68;-webkit-font-smoothing:antialiased;font-size:17px!important}
+p{font-size:17px!important}
 h1,h2,h3,h4,h5,h6{font-family:'Outfit',sans-serif;line-height:1.2}
 a{text-decoration:none;color:inherit}
 img{max-width:100%;display:block}
@@ -33,7 +33,7 @@ button{font-family:inherit;cursor:pointer}
 /* ── SUBHEADER ── */
 .subheader{position:fixed;top:0;left:0;right:0;z-index:1001;background:#0F1B33;padding:.35rem 1.5rem;border-bottom:1px solid rgba(255,255,255,.04)}
 .subheader-inner{max-width:1200px;margin:0 auto;display:flex;justify-content:center;align-items:center;gap:1.25rem}
-.subheader a{font-size:.8rem;color:rgba(255,255,255,.5);display:inline-flex;align-items:center;gap:.35rem;font-family:'Outfit',sans-serif;transition:color .15s}
+.subheader a{font-size:13px;color:rgba(255,255,255,.5);display:inline-flex;align-items:center;gap:.35rem;font-family:'Outfit',sans-serif;transition:color .15s}
 .subheader a:hover{color:var(--teal-light)}
 .subheader-sep{color:rgba(255,255,255,.15);font-size:.7rem}
 .subheader svg{flex-shrink:0;opacity:.6}
@@ -43,7 +43,7 @@ button{font-family:inherit;cursor:pointer}
 .header-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:.7rem 1.5rem}
 .logo svg{height:44px;width:auto}
 .nav{display:flex;align-items:center;gap:.15rem}
-.nav-item{color:rgba(255,255,255,.7);font-size:.9rem;font-weight:500;padding:.45rem .7rem;border-radius:6px;transition:all .2s;font-family:'Outfit',sans-serif;background:none;border:none;display:inline-flex;align-items:center;gap:3px}
+.nav-item{color:rgba(255,255,255,.7);font-size:15px;font-weight:500;padding:.45rem .7rem;border-radius:6px;transition:all .2s;font-family:'Outfit',sans-serif;background:none;border:none;display:inline-flex;align-items:center;gap:3px}
 .nav-item:hover{color:var(--white);background:rgba(255,255,255,.07)}
 .nav-cta{background:var(--amber)!important;color:var(--navy-deep)!important;font-weight:700!important;border-radius:8px!important;padding:.5rem 1rem!important}
 .nav-cta:hover{background:var(--amber-hover)!important}
@@ -70,7 +70,7 @@ button{font-family:inherit;cursor:pointer}
 /* ── MOBILE NAV ── */
 .mobile-nav{display:none;position:fixed;top:86px;left:0;right:0;bottom:0;background:var(--navy-deep);z-index:999;overflow-y:auto;padding:1rem 1.5rem 2rem}
 .mobile-nav.open{display:block}
-.mobile-nav a{display:block;padding:.75rem 0;font-size:1rem;color:rgba(255,255,255,.8);font-family:'Outfit',sans-serif;font-weight:500;border-bottom:1px solid rgba(255,255,255,.06)}
+.mobile-nav a{display:block;padding:.75rem 0;font-size:17px;color:rgba(255,255,255,.8);font-family:'Outfit',sans-serif;font-weight:500;border-bottom:1px solid rgba(255,255,255,.06)}
 .mobile-nav a:hover{color:var(--teal-light)}
 .mobile-nav .mn-section{font-size:.72rem;text-transform:uppercase;letter-spacing:.06em;color:var(--g400);margin-top:1.25rem;margin-bottom:.25rem;font-family:'Outfit',sans-serif;font-weight:700}
 .mobile-nav .mn-sub a{padding-left:1rem;font-size:.92rem;color:rgba(255,255,255,.55)}
@@ -98,7 +98,7 @@ a:hover .arrow-r,button:hover .arrow-r{transform:translateX(3px)}
 /* ── TRUST STRIP ── */
 .trust{background:#f57a14;border-bottom:none;padding:1rem 1.5rem}
 .trust-inner{max-width:1200px;margin:0 auto;display:flex;justify-content:center;flex-wrap:wrap;gap:1.75rem}
-.trust-item{display:flex;align-items:center;gap:.5rem;font-size:.95rem;font-weight:700;color:rgba(255,255,255,.95);font-family:'Outfit',sans-serif}
+.trust-item{display:flex;align-items:center;gap:.5rem;font-size:15px;font-weight:700;color:rgba(255,255,255,.95);font-family:'Outfit',sans-serif}
 .trust-item svg{flex-shrink:0;color:rgba(255,255,255,.85)}
 
 /* ── BLOCK 2: COUNTERS ── */
@@ -107,7 +107,7 @@ a:hover .arrow-r,button:hover .arrow-r{transform:translateX(3px)}
 .counters h2{font-size:clamp(2rem,3.5vw,2.8rem);font-weight:800;color:var(--navy);margin-bottom:3rem}
 .counters-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem}
 .counter-num{font-family:'Outfit',sans-serif;font-size:clamp(2.5rem,5vw,3.8rem);font-weight:800;color:var(--teal);margin-bottom:.25rem;line-height:1}
-.counter-label{font-size:1rem;color:var(--g500);max-width:220px;margin:0 auto}
+.counter-label{font-size:15px;color:var(--g500);max-width:220px;margin:0 auto}
 
 /* ── BLOCK 3: SECTORS ── */
 .sectors{padding:5rem 1.5rem;background:var(--bg-warm)}
@@ -119,7 +119,7 @@ a:hover .arrow-r,button:hover .arrow-r{transform:translateX(3px)}
 .sector-icon{width:44px;height:44px;border-radius:10px;background:var(--g100);color:var(--navy);display:flex;align-items:center;justify-content:center;margin-bottom:.75rem;transition:all .25s}
 .sector-card:hover .sector-icon{background:var(--teal-bg);color:var(--teal)}
 .sector-card h3{font-size:1.15rem;font-weight:700;color:var(--navy);margin-bottom:.5rem}
-.sector-link{font-size:1rem;font-weight:600;color:var(--teal);display:inline-flex;align-items:center;gap:.3rem;font-family:'Outfit',sans-serif;margin-top:auto}
+.sector-link{font-size:15px;font-weight:600;color:var(--teal);display:inline-flex;align-items:center;gap:.3rem;font-family:'Outfit',sans-serif;margin-top:auto}
 .sectors-extra{display:none;margin-top:1rem}
 .sectors-extra.open{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
 .sectors-toggle{display:inline-flex;align-items:center;gap:.4rem;margin-top:1.5rem;background:none;border:1px solid var(--g200);padding:.6rem 1.2rem;border-radius:8px;font-size:.9rem;font-weight:600;font-family:'Outfit',sans-serif;color:var(--navy);transition:all .2s}
@@ -136,7 +136,7 @@ a:hover .arrow-r,button:hover .arrow-r{transform:translateX(3px)}
 .how-step:not(:last-child)::after{content:'';position:absolute;top:24px;right:0;width:1px;height:60%;background:var(--g200)}
 .how-step-num{font-family:'Outfit',sans-serif;font-size:3rem;font-weight:800;color:var(--g200);line-height:1;margin-bottom:.75rem}
 .how-step h3{font-size:1.1rem;font-weight:700;color:var(--navy);margin-bottom:.5rem;max-width:220px;margin-left:auto;margin-right:auto}
-.how-step p{font-size:1rem;color:var(--g500);line-height:1.6;max-width:280px;margin-left:auto;margin-right:auto}
+.how-step p{font-size:16px;color:var(--g500);line-height:1.6;max-width:280px;margin-left:auto;margin-right:auto}
 .how-link{display:inline-flex;align-items:center;gap:.4rem;margin-top:2.5rem;font-size:1rem;font-weight:600;color:var(--teal);font-family:'Outfit',sans-serif}
 
 /* ── BLOCK 5: CASES ── */
@@ -151,8 +151,8 @@ a:hover .arrow-r,button:hover .arrow-r{transform:translateX(3px)}
 .case-badge-uni{background:var(--teal-bg);color:var(--teal)}
 .case-badge-doc{background:var(--green-bg);color:var(--green)}
 .case-client{font-size:1.15rem;font-weight:700;color:var(--navy);margin-bottom:.6rem;font-family:'Outfit'}
-.case-result{font-size:1rem;color:var(--g500);line-height:1.6;margin-bottom:1.25rem;flex:1}
-.case-link{font-size:.95rem;font-weight:600;color:var(--teal);display:inline-flex;align-items:center;gap:.3rem;font-family:'Outfit'}
+.case-result{font-size:16px;color:var(--g500);line-height:1.6;margin-bottom:1.25rem;flex:1}
+.case-link{font-size:15px;font-weight:600;color:var(--teal);display:inline-flex;align-items:center;gap:.3rem;font-family:'Outfit'}
 
 /* ── BLOCK 6: REVIEWS ── */
 .reviews{padding:5rem 1.5rem;background:var(--white)}
@@ -163,7 +163,7 @@ a:hover .arrow-r,button:hover .arrow-r{transform:translateX(3px)}
 .reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
 .review-card{background:var(--g50);border:1px solid var(--g200);border-radius:14px;padding:1.5rem}
 .review-stars{display:flex;gap:2px;margin-bottom:.75rem}
-.review-text{font-size:1rem;color:var(--g600);margin-bottom:1rem;font-style:italic;line-height:1.6}
+.review-text{font-size:16px;color:var(--g600);margin-bottom:1rem;font-style:italic;line-height:1.6}
 .review-author{font-size:.95rem;font-weight:700;color:var(--navy)}
 .review-role{font-size:.82rem;color:var(--g400)}
 .review-source{font-size:.78rem;color:var(--g400);margin-top:.25rem}
@@ -179,7 +179,7 @@ a:hover .arrow-r,button:hover .arrow-r{transform:translateX(3px)}
 .faq-q svg{flex-shrink:0;color:var(--g400);transition:transform .2s}
 .faq-q.open svg{transform:rotate(45deg)}
 .faq-a{max-height:0;overflow:hidden;transition:max-height .3s ease}
-.faq-a-inner{padding:0 0 1.25rem;font-size:1rem;color:var(--g600);line-height:1.7}
+.faq-a-inner{padding:0 0 1.25rem;font-size:16px;color:var(--g600);line-height:1.7}
 .faq-bottom{margin-top:2rem;text-align:center}
 
 /* ── BLOCK 8: CTA FORM ── */
@@ -206,12 +206,12 @@ a:hover .arrow-r,button:hover .arrow-r{transform:translateX(3px)}
 .footer{background:var(--g900);color:rgba(255,255,255,.5);padding:3rem 1.5rem 1.5rem}
 .footer-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:2rem}
 .footer-brand svg{height:40px;width:auto;margin-bottom:1rem}
-.footer-brand p{font-size:.9rem;line-height:1.6;max-width:260px}
+.footer-brand p{font-size:15px;line-height:1.6;max-width:260px}
 .footer h5{font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;color:rgba(255,255,255,.25);margin-bottom:.75rem;font-family:'Outfit'}
 .footer li{margin-bottom:.4rem}
-.footer a{font-size:.9rem;color:rgba(255,255,255,.45);transition:color .15s}
+.footer a{font-size:15px;color:rgba(255,255,255,.45);transition:color .15s}
 .footer a:hover{color:var(--teal-light)}
-.footer-contact p{font-size:.9rem;margin-bottom:.35rem}
+.footer-contact p{font-size:15px;margin-bottom:.35rem}
 .footer-contact a{color:rgba(255,255,255,.6)}
 .footer-bottom{max-width:1200px;margin:2rem auto 0;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,.06);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.75rem;font-size:.82rem}
 
@@ -340,7 +340,7 @@ a:hover .arrow-r,button:hover .arrow-r{transform:translateX(3px)}
   .cta-map-side{min-height:300px}
   .footer-inner{grid-template-columns:1fr 1fr}
   .trust-inner{gap:1rem;justify-content:flex-start}
-  .trust-item{font-size:.82rem;color:rgba(255,255,255,.95)}
+  .trust-item{font-size:14px;color:rgba(255,255,255,.95)}
   .cookie-banner-inner{grid-template-columns:1fr;gap:1rem}
   .cookie-banner-actions{flex-wrap:wrap}
   .cb-btn{flex:1;text-align:center}
@@ -593,10 +593,10 @@ a:hover .arrow-r,button:hover .arrow-r{transform:translateX(3px)}
 <section class="reviews fade-in">
   <div class="reviews-inner">
     <h2>Lo que dicen nuestros clientes</h2>
-    <div class="reviews-rating"><div class="reviews-stars"><svg width="16" height="16" viewBox="0 0 16 16" fill="#F59E0B"><path d="M8 1l2 4.1 4.5.7-3.3 3.2.8 4.5L8 11.3 3.9 13.5l.8-4.5L1.5 5.8 6 5.1z"/></svg><svg width="16" height="16" viewBox="0 0 16 16" fill="#F59E0B"><path d="M8 1l2 4.1 4.5.7-3.3 3.2.8 4.5L8 11.3 3.9 13.5l.8-4.5L1.5 5.8 6 5.1z"/></svg><svg width="16" height="16" viewBox="0 0 16 16" fill="#F59E0B"><path d="M8 1l2 4.1 4.5.7-3.3 3.2.8 4.5L8 11.3 3.9 13.5l.8-4.5L1.5 5.8 6 5.1z"/></svg><svg width="16" height="16" viewBox="0 0 16 16" fill="#F59E0B"><path d="M8 1l2 4.1 4.5.7-3.3 3.2.8 4.5L8 11.3 3.9 13.5l.8-4.5L1.5 5.8 6 5.1z"/></svg><svg width="16" height="16" viewBox="0 0 16 16" fill="#F59E0B"><path d="M8 1l2 4.1 4.5.7-3.3 3.2.8 4.5L8 11.3 3.9 13.5l.8-4.5L1.5 5.8 6 5.1z"/></svg></div><span>4,8 sobre 5 · 12 reseñas verificadas en Google</span></div>
+    <div class="reviews-rating"><div class="reviews-stars"><svg width="16" height="16" viewBox="0 0 16 16" fill="#f57a14"><path d="M8 1l2 4.1 4.5.7-3.3 3.2.8 4.5L8 11.3 3.9 13.5l.8-4.5L1.5 5.8 6 5.1z"/></svg><svg width="16" height="16" viewBox="0 0 16 16" fill="#f57a14"><path d="M8 1l2 4.1 4.5.7-3.3 3.2.8 4.5L8 11.3 3.9 13.5l.8-4.5L1.5 5.8 6 5.1z"/></svg><svg width="16" height="16" viewBox="0 0 16 16" fill="#f57a14"><path d="M8 1l2 4.1 4.5.7-3.3 3.2.8 4.5L8 11.3 3.9 13.5l.8-4.5L1.5 5.8 6 5.1z"/></svg><svg width="16" height="16" viewBox="0 0 16 16" fill="#f57a14"><path d="M8 1l2 4.1 4.5.7-3.3 3.2.8 4.5L8 11.3 3.9 13.5l.8-4.5L1.5 5.8 6 5.1z"/></svg><svg width="16" height="16" viewBox="0 0 16 16" fill="#f57a14"><path d="M8 1l2 4.1 4.5.7-3.3 3.2.8 4.5L8 11.3 3.9 13.5l.8-4.5L1.5 5.8 6 5.1z"/></svg></div><span>4,8 sobre 5 · 12 reseñas verificadas en Google</span></div>
     <div class="reviews-grid">
       <div class="review-card">
-        <div class="review-stars"><svg width="14" height="14" viewBox="0 0 16 16" fill="#F59E0B"><path d="M8 1l2 4.1 4.5.7-3.3 3.2.8 4.5L8 11.3 3.9 13.5l.8-4.5L1.5 5.8 6 5.1z"/></svg><svg width="14" height="14" viewBox="0 0 16 16" fill="#F59E0B"><path d="M8 1l2 4.1 4.5.7-3.3 3.2.8 4.5L8 11.3 3.9 13.5l.8-4.5L1.5 5.8 6 5.1z"/></svg><svg width="14" height="14" viewBox="0 0 16 16" fill="#F59E0B"><path d="M8 1l2 4.1 4.5.7-3.3 3.2.8 4.5L8 11.3 3.9 13.5l.8-4.5L1.5 5.8 6 5.1z"/></svg><svg width="14" height="14" viewBox="0 0 16 16" fill="#F59E0B"><path d="M8 1l2 4.1 4.5.7-3.3 3.2.8 4.5L8 11.3 3.9 13.5l.8-4.5L1.5 5.8 6 5.1z"/></svg><svg width="14" height="14" viewBox="0 0 16 16" fill="#F59E0B"><path d="M8 1l2 4.1 4.5.7-3.3 3.2.8 4.5L8 11.3 3.9 13.5l.8-4.5L1.5 5.8 6 5.1z"/></svg></div>
+        <div class="review-stars"><svg width="14" height="14" viewBox="0 0 16 16" fill="#f57a14"><path d="M8 1l2 4.1 4.5.7-3.3 3.2.8 4.5L8 11.3 3.9 13.5l.8-4.5L1.5 5.8 6 5.1z"/></svg><svg width="14" height="14" viewBox="0 0 16 16" fill="#f57a14"><path d="M8 1l2 4.1 4.5.7-3.3 3.2.8 4.5L8 11.3 3.9 13.5l.8-4.5L1.5 5.8 6 5.1z"/></svg><svg width="14" height="14" viewBox="0 0 16 16" fill="#f57a14"><path d="M8 1l2 4.1 4.5.7-3.3 3.2.8 4.5L8 11.3 3.9 13.5l.8-4.5L1.5 5.8 6 5.1z"/></svg><svg width="14" height="14" viewBox="0 0 16 16" fill="#f57a14"><path d="M8 1l2 4.1 4.5.7-3.3 3.2.8 4.5L8 11.3 3.9 13.5l.8-4.5L1.5 5.8 6 5.1z"/></svg><svg width="14" height="14" viewBox="0 0 16 16" fill="#f57a14"><path d="M8 1l2 4.1 4.5.7-3.3 3.2.8 4.5L8 11.3 3.9 13.5l.8-4.5L1.5 5.8 6 5.1z"/></svg></div>
         <p class="review-text">"Muy buenos profesionales, serios y muy cumplidores."</p>
         <div class="review-footer">
           <div class="review-avatar review-avatar-a" aria-hidden="true">AR</div>
@@ -604,7 +604,7 @@ a:hover .arrow-r,button:hover .arrow-r{transform:translateX(3px)}
         </div>
       </div>
       <div class="review-card">
-        <div class="review-stars"><svg width="14" height="14" viewBox="0 0 16 16" fill="#F59E0B"><path d="M8 1l2 4.1 4.5.7-3.3 3.2.8 4.5L8 11.3 3.9 13.5l.8-4.5L1.5 5.8 6 5.1z"/></svg><svg width="14" height="14" viewBox="0 0 16 16" fill="#F59E0B"><path d="M8 1l2 4.1 4.5.7-3.3 3.2.8 4.5L8 11.3 3.9 13.5l.8-4.5L1.5 5.8 6 5.1z"/></svg><svg width="14" height="14" viewBox="0 0 16 16" fill="#F59E0B"><path d="M8 1l2 4.1 4.5.7-3.3 3.2.8 4.5L8 11.3 3.9 13.5l.8-4.5L1.5 5.8 6 5.1z"/></svg><svg width="14" height="14" viewBox="0 0 16 16" fill="#F59E0B"><path d="M8 1l2 4.1 4.5.7-3.3 3.2.8 4.5L8 11.3 3.9 13.5l.8-4.5L1.5 5.8 6 5.1z"/></svg><svg width="14" height="14" viewBox="0 0 16 16" fill="#F59E0B"><path d="M8 1l2 4.1 4.5.7-3.3 3.2.8 4.5L8 11.3 3.9 13.5l.8-4.5L1.5 5.8 6 5.1z"/></svg></div>
+        <div class="review-stars"><svg width="14" height="14" viewBox="0 0 16 16" fill="#f57a14"><path d="M8 1l2 4.1 4.5.7-3.3 3.2.8 4.5L8 11.3 3.9 13.5l.8-4.5L1.5 5.8 6 5.1z"/></svg><svg width="14" height="14" viewBox="0 0 16 16" fill="#f57a14"><path d="M8 1l2 4.1 4.5.7-3.3 3.2.8 4.5L8 11.3 3.9 13.5l.8-4.5L1.5 5.8 6 5.1z"/></svg><svg width="14" height="14" viewBox="0 0 16 16" fill="#f57a14"><path d="M8 1l2 4.1 4.5.7-3.3 3.2.8 4.5L8 11.3 3.9 13.5l.8-4.5L1.5 5.8 6 5.1z"/></svg><svg width="14" height="14" viewBox="0 0 16 16" fill="#f57a14"><path d="M8 1l2 4.1 4.5.7-3.3 3.2.8 4.5L8 11.3 3.9 13.5l.8-4.5L1.5 5.8 6 5.1z"/></svg><svg width="14" height="14" viewBox="0 0 16 16" fill="#f57a14"><path d="M8 1l2 4.1 4.5.7-3.3 3.2.8 4.5L8 11.3 3.9 13.5l.8-4.5L1.5 5.8 6 5.1z"/></svg></div>
         <p class="review-text">"Nos resolvieron todo el proyecto de RFID de principio a fin. La diferencia con otros proveedores que solo vendían hardware fue enorme."</p>
         <div class="review-footer">
           <div class="review-avatar review-avatar-b" aria-hidden="true">CV</div>
@@ -612,7 +612,7 @@ a:hover .arrow-r,button:hover .arrow-r{transform:translateX(3px)}
         </div>
       </div>
       <div class="review-card">
-        <div class="review-stars"><svg width="14" height="14" viewBox="0 0 16 16" fill="#F59E0B"><path d="M8 1l2 4.1 4.5.7-3.3 3.2.8 4.5L8 11.3 3.9 13.5l.8-4.5L1.5 5.8 6 5.1z"/></svg><svg width="14" height="14" viewBox="0 0 16 16" fill="#F59E0B"><path d="M8 1l2 4.1 4.5.7-3.3 3.2.8 4.5L8 11.3 3.9 13.5l.8-4.5L1.5 5.8 6 5.1z"/></svg><svg width="14" height="14" viewBox="0 0 16 16" fill="#F59E0B"><path d="M8 1l2 4.1 4.5.7-3.3 3.2.8 4.5L8 11.3 3.9 13.5l.8-4.5L1.5 5.8 6 5.1z"/></svg><svg width="14" height="14" viewBox="0 0 16 16" fill="#F59E0B"><path d="M8 1l2 4.1 4.5.7-3.3 3.2.8 4.5L8 11.3 3.9 13.5l.8-4.5L1.5 5.8 6 5.1z"/></svg><svg width="14" height="14" viewBox="0 0 16 16" fill="#F59E0B"><path d="M8 1l2 4.1 4.5.7-3.3 3.2.8 4.5L8 11.3 3.9 13.5l.8-4.5L1.5 5.8 6 5.1z"/></svg></div>
+        <div class="review-stars"><svg width="14" height="14" viewBox="0 0 16 16" fill="#f57a14"><path d="M8 1l2 4.1 4.5.7-3.3 3.2.8 4.5L8 11.3 3.9 13.5l.8-4.5L1.5 5.8 6 5.1z"/></svg><svg width="14" height="14" viewBox="0 0 16 16" fill="#f57a14"><path d="M8 1l2 4.1 4.5.7-3.3 3.2.8 4.5L8 11.3 3.9 13.5l.8-4.5L1.5 5.8 6 5.1z"/></svg><svg width="14" height="14" viewBox="0 0 16 16" fill="#f57a14"><path d="M8 1l2 4.1 4.5.7-3.3 3.2.8 4.5L8 11.3 3.9 13.5l.8-4.5L1.5 5.8 6 5.1z"/></svg><svg width="14" height="14" viewBox="0 0 16 16" fill="#f57a14"><path d="M8 1l2 4.1 4.5.7-3.3 3.2.8 4.5L8 11.3 3.9 13.5l.8-4.5L1.5 5.8 6 5.1z"/></svg><svg width="14" height="14" viewBox="0 0 16 16" fill="#f57a14"><path d="M8 1l2 4.1 4.5.7-3.3 3.2.8 4.5L8 11.3 3.9 13.5l.8-4.5L1.5 5.8 6 5.1z"/></svg></div>
         <p class="review-text">"Llevamos años trabajando con ellos. La calidad del servicio y la atención personalizada no la encontramos en ningún otro proveedor."</p>
         <div class="review-footer">
           <div class="review-avatar review-avatar-c" aria-hidden="true">CV</div>
@@ -714,7 +714,7 @@ a:hover .arrow-r,button:hover .arrow-r{transform:translateX(3px)}
 <div class="cookie-overlay" id="cookieOverlay"></div>
 <div class="cookie-banner" id="cookieBanner"><div class="cookie-banner-inner"><div class="cookie-banner-text"><h3>Usamos cookies para mejorar tu experiencia</h3><p>Utilizamos cookies propias y de terceros para analizar el uso del sitio. <a href="/politica-de-privacidad/">Más información</a>.</p></div><div class="cookie-banner-actions"><button class="cb-btn cb-btn-reject" onclick="CC.reject()">Rechazar</button><button class="cb-btn cb-btn-settings" onclick="CC.showPrefs()">Configurar</button><button class="cb-btn cb-btn-accept" onclick="CC.accept()">Aceptar todas</button></div></div></div>
 <div class="cookie-prefs" id="cookiePrefs"><div class="cookie-prefs-panel"><div class="cp-header"><div class="cp-header-row"><h2>Preferencias de cookies</h2><button class="cp-close" onclick="CC.closePrefs()" aria-label="Cerrar"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3l8 8M11 3l-8 8"/></svg></button></div><p>Personaliza qué cookies permites. Las funcionales son necesarias y no se pueden desactivar.</p></div><div class="cp-body"><div class="cc"><div class="cc-header"><div class="cc-info"><div class="cc-title">Funcionales <span class="cc-badge">Siempre activas</span></div><div class="cc-desc">Necesarias para el funcionamiento básico del sitio.</div></div><div><label class="toggle"><input type="checkbox" checked disabled><span class="toggle-track"></span></label></div></div></div><div class="cc"><div class="cc-header"><div class="cc-info"><div class="cc-title">Analíticas</div><div class="cc-desc">Nos permiten entender cómo se usa el sitio para mejorarlo.</div></div><div><label class="toggle"><input type="checkbox" id="tA"><span class="toggle-track"></span></label></div></div></div><div class="cc"><div class="cc-header"><div class="cc-info"><div class="cc-title">Marketing</div><div class="cc-desc">Permiten mostrarte publicidad relevante y medir campañas.</div></div><div><label class="toggle"><input type="checkbox" id="tM"><span class="toggle-track"></span></label></div></div></div><div class="cc"><div class="cc-header"><div class="cc-info"><div class="cc-title">Preferencias</div><div class="cc-desc">Recuerdan tus ajustes para futuras visitas.</div></div><div><label class="toggle"><input type="checkbox" id="tP"><span class="toggle-track"></span></label></div></div></div></div><div class="cp-footer"><button class="cb-btn cb-btn-reject" onclick="CC.reject()">Rechazar opcionales</button><button class="cb-btn cb-btn-accept" onclick="CC.savePrefs()">Guardar preferencias</button></div></div></div>
-<button class="cookie-reopen" id="cookieReopen" onclick="CC.showPrefs()" aria-label="Configurar cookies"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.5"/><circle cx="7" cy="8" r="1.2" fill="#F59E0B"/><circle cx="12" cy="6" r="1" fill="#D97706"/><circle cx="13" cy="12" r="1.2" fill="#F59E0B"/><circle cx="8" cy="13" r="1" fill="#D97706"/></svg></button>
+<button class="cookie-reopen" id="cookieReopen" onclick="CC.showPrefs()" aria-label="Configurar cookies"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.5"/><circle cx="7" cy="8" r="1.2" fill="#f57a14"/><circle cx="12" cy="6" r="1" fill="#d4620f"/><circle cx="13" cy="12" r="1.2" fill="#f57a14"/><circle cx="8" cy="13" r="1" fill="#d4620f"/></svg></button>
 
 <script>
 /* Counters */
