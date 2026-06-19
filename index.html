@@ -105,7 +105,7 @@ a:hover .arrow-r,button:hover .arrow-r{transform:translateX(3px)}
 /* ── BLOCK 2: COUNTERS ── */
 .counters{padding:5rem 1.5rem;background:var(--white);border-bottom:1px solid var(--g200)}
 .counters-inner{max-width:1200px;margin:0 auto;text-align:center}
-.counters h2{font-size:clamp(2rem,3.5vw,2.8rem);font-weight:800;color:var(--navy);margin-bottom:3rem}
+.counters h2{font-size:clamp(2rem,3.5vw,2.8rem);font-weight:800;color:var(--navy);margin-bottom:3rem;text-align:center}
 .counters-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem}
 .counter-num{font-family:'Outfit',sans-serif;font-size:clamp(2.5rem,5vw,3.8rem);font-weight:800;color:var(--teal);margin-bottom:.25rem;line-height:1}
 .counter-label{font-size:15px;color:var(--g500);max-width:220px;margin:0 auto}
@@ -113,11 +113,11 @@ a:hover .arrow-r,button:hover .arrow-r{transform:translateX(3px)}
 /* ── BLOCK 3: SECTORS ── */
 .sectors{padding:5rem 1.5rem;background:#f8f9fb}
 .sectors-inner{max-width:1200px;margin:0 auto}
-.sectors h2{font-size:clamp(2rem,3.5vw,2.8rem);font-weight:800;color:var(--navy);margin-bottom:2.5rem}
+.sectors h2{font-size:clamp(2rem,3.5vw,2.8rem);font-weight:800;color:var(--navy);margin-bottom:2.5rem;text-align:center}
 /* ── BLOCK 3: SECTOR CARDS (redesigned) ── */
-.sectors-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem}
+.sectors-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem;justify-items:center}
 .sectors-extra{display:none;margin-top:1.25rem}
-.sectors-extra.open{display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem}
+.sectors-extra.open{display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem;justify-items:center}
 
 .sector-card{
   display:flex;flex-direction:column;
@@ -127,21 +127,26 @@ a:hover .arrow-r,button:hover .arrow-r{transform:translateX(3px)}
   border:1px solid var(--g100);
   transition:transform .28s cubic-bezier(.22,.68,0,1.2), box-shadow .28s ease;
   text-decoration:none;
+  max-width:300px;
+  width:100%;
+  margin:0 auto;
 }
 .sector-card:hover{
   transform:translateY(-4px);
   box-shadow:0 16px 40px rgba(15,27,51,.14);
 }
 .sector-img{
-  height:220px;width:100%;flex-shrink:0;
+  width:100%;flex-shrink:0;
   overflow:hidden;
   border-radius:20px 20px 0 0;
+  min-height:220px;
+  height:220px;
 }
 .sector-img img{
-  width:100%;height:100%;
+  width:100%;height:220px;
   object-fit:cover;object-position:center;
   display:block;
-  transition:transform .5s cubic-bezier(.25,.46,.45,.94);
+  transition:transform .45s ease;
 }
 .sector-card:hover .sector-img img{transform:scale(1.05)}
 .sector-card-body{
@@ -172,35 +177,57 @@ a:hover .arrow-r,button:hover .arrow-r{transform:translateX(3px)}
   display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;
   flex:1;
 }
-.sector-link{
-  font-size:14px;font-weight:700;color:var(--teal);
-  display:inline-flex;align-items:center;gap:.3rem;
-  font-family:'Outfit',sans-serif;margin-top:auto;
-  transition:gap .2s;
-}
-.sector-card:hover .sector-link{gap:.5rem}
-.sectors-toggle{display:inline-flex;align-items:center;gap:.4rem;margin-top:1.5rem;background:none;border:1px solid var(--g200);padding:.6rem 1.2rem;border-radius:8px;font-size:.9rem;font-weight:600;font-family:'Outfit',sans-serif;color:var(--navy);transition:all .2s}
-.sectors-toggle:hover{border-color:var(--teal);color:var(--teal)}
+.sector-link{display:inline-flex;align-items:center;gap:.4rem;font-size:.95rem;font-weight:600;color:var(--teal);font-family:'Outfit',sans-serif;margin-top:auto;background:none;border:none;text-decoration:none;transition:gap .2s,opacity .2s}
+.sector-card:hover .sector-link{gap:.6rem}
+.sectors-toggle{display:inline-flex;align-items:center;gap:.4rem;margin-top:1.5rem;background:none;border:none;padding:0;font-size:1rem;font-weight:600;font-family:'Outfit',sans-serif;color:var(--teal);cursor:pointer;transition:gap .2s,opacity .2s}
+.sectors-toggle:hover{gap:.6rem;opacity:.8}
 .sectors-toggle svg{transition:transform .3s}
 .sectors-toggle.open svg{transform:rotate(180deg)}
 
+.link-btn{
+  display:inline-flex;align-items:center;gap:.4rem;
+  background:none;border:none;padding:0;
+  font-size:1rem;font-weight:600;color:var(--teal);
+  font-family:'Outfit',sans-serif;
+  cursor:pointer;text-decoration:none;
+  transition:gap .2s,opacity .2s;
+}
+.link-btn:hover{gap:.6rem;opacity:.8}
+.link-btn svg{transition:transform .2s}
+.link-btn:hover svg{transform:translateX(2px)}
 /* ── BLOCK 4: HOW ── */
 .how{padding:5rem 1.5rem;background:var(--white)}
-.how-inner{max-width:1100px;margin:0 auto}
+.how-inner{max-width:1100px;margin:0 auto;text-align:center}
 .how h2{font-size:clamp(2rem,3.5vw,2.8rem);font-weight:800;color:var(--navy);margin-bottom:3.5rem}
-.how-steps-connected{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;align-items:start;gap:0}
-.how-connector{width:100%;height:2px;background:linear-gradient(90deg,var(--teal),rgba(8,145,178,.3));margin-top:38px;opacity:.6}
-.how-step-wrap{text-align:center;position:relative;padding:0 1rem}
-.how-step-bgnum{font-family:'Outfit',sans-serif;font-size:5rem;font-weight:800;color:var(--g200);line-height:1;position:absolute;top:-1.2rem;left:50%;transform:translateX(-50%);z-index:0;user-select:none;pointer-events:none}
-.how-step-circle{width:80px;height:80px;border-radius:50%;background:var(--teal);display:flex;align-items:center;justify-content:center;margin:0 auto 1.25rem;position:relative;z-index:1;box-shadow:0 8px 24px rgba(8,145,178,.28)}
-.how-step-wrap h3{font-size:1.05rem;font-weight:700;color:var(--navy);margin-bottom:.5rem;line-height:1.35}
-.how-step-wrap p{font-size:15px;color:var(--g500);line-height:1.6}
-.how-link{display:inline-flex;align-items:center;gap:.4rem;margin-top:2.5rem;font-size:1rem;font-weight:600;color:var(--teal);font-family:'Outfit',sans-serif}
+/* Desktop: horizontal row */
+.how-timeline{display:flex;align-items:flex-start;gap:0;position:relative}
+.how-step-wrap{flex:1;text-align:center;position:relative;padding:0 1.5rem}
+.how-step-circle{
+  width:64px;height:64px;border-radius:50%;
+  background:var(--g200);color:white;
+  display:flex;align-items:center;justify-content:center;
+  margin:0 auto .75rem;position:relative;z-index:2;
+  transition:background .5s ease, box-shadow .5s ease;
+}
+.how-step-circle.is-active{
+  background:var(--teal);
+  box-shadow:0 0 0 10px rgba(8,145,178,.12), 0 6px 24px rgba(8,145,178,.4);
+}
+.how-step-circle svg{transition:opacity .4s ease}
+.how-step-num-label{font-size:.78rem;font-weight:700;letter-spacing:.06em;color:var(--g400);font-family:'Outfit',sans-serif;margin-bottom:.6rem;text-transform:uppercase}
+.how-step-wrap h3{font-size:1rem;font-weight:700;color:var(--navy);margin-bottom:.4rem;line-height:1.35}
+.how-step-wrap p{font-size:15px;color:var(--g500);line-height:1.6;max-width:260px;margin:0 auto}
+/* Connector */
+.how-conn{flex:0 0 80px;height:2px;background:var(--g200);margin-top:31px;position:relative;overflow:hidden}
+.how-conn-fill{position:absolute;top:0;left:0;height:100%;width:0;background:var(--teal)}
+.how-link{display:inline-flex;align-items:center;gap:.4rem;margin-top:2.5rem;font-size:1rem;font-weight:600;color:var(--teal);font-family:'Outfit',sans-serif;background:none;border:none;text-decoration:none;transition:gap .2s,opacity .2s}
+.how-link:hover{gap:.6rem;opacity:.8}
+/* Mobile: vertical */
 
 /* ── BLOCK 5: CASES ── */
 .cases{padding:5rem 1.5rem;background:var(--bg-warm)}
 .cases-inner{max-width:1200px;margin:0 auto}
-.cases h2{font-size:clamp(2rem,3.5vw,2.8rem);font-weight:800;color:var(--navy);margin-bottom:2.5rem}
+.cases h2{font-size:clamp(2rem,3.5vw,2.8rem);font-weight:800;color:var(--navy);margin-bottom:2.5rem;text-align:center}
 .cases-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
 .case-card{background:var(--white);border:1px solid var(--g200);border-radius:var(--radius-lg);padding:1.75rem;display:flex;flex-direction:column;transition:all .25s}
 .case-card:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
@@ -210,12 +237,13 @@ a:hover .arrow-r,button:hover .arrow-r{transform:translateX(3px)}
 .case-badge-doc{background:var(--teal-bg);color:var(--teal)}
 .case-client{font-size:1.15rem;font-weight:700;color:var(--navy);margin-bottom:.6rem;font-family:'Outfit'}
 .case-result{font-size:16px;color:var(--g500);line-height:1.6;margin-bottom:1.25rem;flex:1}
-.case-link{font-size:15px;font-weight:600;color:var(--teal);display:inline-flex;align-items:center;gap:.3rem;font-family:'Outfit'}
+.case-link{font-size:1rem;font-weight:600;color:var(--teal);display:inline-flex;align-items:center;gap:.4rem;font-family:'Outfit';background:none;border:none;text-decoration:none;transition:gap .2s,opacity .2s}
+.case-link:hover{gap:.6rem;opacity:.8}
 
 /* ── BLOCK 6: REVIEWS ── */
 .reviews{padding:5rem 1.5rem;background:var(--white)}
 .reviews-inner{max-width:1200px;margin:0 auto}
-.reviews h2{font-size:clamp(2rem,3.5vw,2.8rem);font-weight:800;color:var(--navy);margin-bottom:.5rem}
+.reviews h2{font-size:clamp(2rem,3.5vw,2.8rem);font-weight:800;color:var(--navy);margin-bottom:.5rem;text-align:center}
 .reviews-rating{display:flex;align-items:center;gap:.5rem;font-size:.95rem;color:var(--g500);margin-bottom:2.5rem}
 .reviews-stars{display:flex;gap:2px}
 .reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
@@ -333,26 +361,14 @@ a:hover .arrow-r,button:hover .arrow-r{transform:translateX(3px)}
 .cookie-reopen:hover{background:var(--navy-mid);transform:translateY(-2px)}
 
 
-/* ── CLIENTS BAND ── */
-.clients{padding:2rem 1.5rem;background:var(--g50);border-top:1px solid var(--g200);border-bottom:1px solid var(--g200)}
-.clients-inner{max-width:1200px;margin:0 auto}
-.clients-label{text-align:center;font-size:.78rem;text-transform:uppercase;letter-spacing:.1em;color:var(--g400);font-family:'Outfit',sans-serif;font-weight:700;margin-bottom:1.5rem}
-.clients-grid{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:2rem}
-.client-item{display:flex;flex-direction:column;align-items:center;gap:.5rem;color:var(--g400);font-size:.8rem;font-family:'Outfit',sans-serif;font-weight:600;transition:color .2s}
-.client-item:hover{color:var(--navy)}
-.client-item svg{color:var(--g300);transition:color .2s}
-.client-item:hover svg{color:var(--teal)}
+
 
 /* ── SECTOR CARDS VISUAL UPGRADE ── */
 .sector-icon{width:64px;height:64px;border-radius:14px;background:linear-gradient(135deg,var(--g100),var(--g50));color:var(--navy);display:flex;align-items:center;justify-content:center;margin-bottom:1rem;transition:all .25s;flex-shrink:0}
 .sector-card:hover .sector-icon{background:linear-gradient(135deg,var(--teal-bg),rgba(8,145,178,.05));color:var(--teal)}
 .sector-card{padding:0;overflow:hidden}
 .sector-card-body{padding:1.25rem 1.25rem 1rem;display:flex;flex-direction:column;flex:1}
-.sector-img{height:120px;overflow:hidden;flex-shrink:0;width:100%}
-.sector-img img{width:100%;height:100%;object-fit:cover;object-position:center;display:block;transition:transform .5s cubic-bezier(.25,.46,.45,.94)}
-.sector-card:hover .sector-img img{transform:scale(1.07)}
-.sector-icon{width:48px;height:48px;border-radius:10px;background:linear-gradient(135deg,var(--g100),var(--g50));color:var(--navy);display:flex;align-items:center;justify-content:center;margin-bottom:.75rem;transition:all .25s}
-.sector-card h3{font-size:1rem;font-weight:700;color:var(--navy);margin-bottom:.4rem}
+/* sector-img: see primary block above */
 
 
 /* ── HOW STEP VISUAL ICONS ── */
@@ -387,10 +403,13 @@ a:hover .arrow-r,button:hover .arrow-r{transform:translateX(3px)}
   .subheader .sh-desktop{display:none}
   .counters-grid{grid-template-columns:1fr;gap:1.5rem}
   .sectors-grid,.sectors-extra.open{grid-template-columns:repeat(2,1fr);gap:1rem}
-  .sector-img{height:150px}
-  .how-steps-connected{grid-template-columns:1fr;gap:0}
-  .how-connector{width:2px;height:48px;margin:0 auto;background:linear-gradient(180deg,var(--teal),rgba(8,145,178,.3))}
-  .how-step-bgnum{font-size:3.5rem;top:-.8rem}
+  .sector-img{height:180px}  .sector-img img{height:180px}
+  .how-timeline{flex-direction:column;align-items:flex-start;padding-left:2rem}
+  .how-step-wrap{display:flex;align-items:flex-start;gap:1rem;text-align:left;width:100%;padding:0 0 0 0}
+  .how-step-wrap h3,.how-step-wrap p,.how-step-num-label{text-align:left;max-width:none}
+  .how-step-circle{flex-shrink:0;margin:0}
+  .how-conn{flex:none;width:2px;height:48px;margin:0 0 0 31px}
+  .how-conn-fill{width:100%;height:0;transition:height .8s ease!important}
   .cases-grid,.reviews-grid{grid-template-columns:1fr}
   @media(max-width:400px){.sectors-grid,.sectors-extra.open{grid-template-columns:1fr}}
   .cta-form-row{grid-template-columns:1fr}
@@ -528,46 +547,14 @@ a:hover .arrow-r,button:hover .arrow-r{transform:translateX(3px)}
 </div>
 
 
-<!-- CLIENTS BAND -->
-<div class="clients">
-  <div class="clients-inner">
-    <div class="clients-label">Confían en Serdoc</div>
-    <div class="clients-grid">
-      <div class="client-item">
-        <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="color:var(--g300)"><path d="M22 9V7h-2V5a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-2h2v-2h-2v-2h2v-2h-2V9h2zm-4 10H4V5h14v14zM6 13h5v4H6zm6-6h4v3h-4zM6 7h5v5H6zm6 4h4v6h-4z"/></svg>
-        <span>Reina Sofía</span>
-      </div>
-      <div class="client-item">
-        <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="color:var(--g300)"><path d="M12 3L1 9l4 2.18V17h2v-4.82l1 .55V17c0 1.1 1.79 2 4 2s4-.9 4-2v-4.27L23 9 12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9zM16 16.12c-.43.26-1.91.88-4 .88s-3.57-.62-4-.88v-2.79l4 2.19 4-2.19v2.79z"/></svg>
-        <span>Univ. Politécnica Madrid</span>
-      </div>
-      <div class="client-item">
-        <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="color:var(--g300)"><path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zM6 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm13.5-9l1.96 2.5H17V9.5h2.5zm-1.5 9c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/></svg>
-        <span>Sector Logística</span>
-      </div>
-      <div class="client-item">
-        <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="color:var(--g300)"><path d="M19.83 7.5l-2.27-2.27c.07-.42.14-.82.14-1.23A4 4 0 0 0 13.66 0c-1.06 0-2.09.43-2.83 1.17L9 3H4v2l-2 1v7l2 1h12l3.22-1.61.78-9.89zM6 9H4V7l2-1v3zm9.8 2H8V7.21l2.88-2.88c.18-.18.44-.33.78-.33.55 0 1 .45 1 1 0 .34-.16.63-.41.83L10.82 7.2l.64.64.96-.96L14.41 9H15.8v2zM20 20H4v2h16v-2zm-4 0v-4H8v4h8z"/></svg>
-        <span>Sector Retail</span>
-      </div>
-      <div class="client-item">
-        <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="color:var(--g300)"><path d="M19 3H5c-1.1 0-1.99.9-1.99 2L3 19c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 11h-4v4h-4v-4H6v-4h4V6h4v4h4v4z"/></svg>
-        <span>Sector Hospitales</span>
-      </div>
-      <div class="client-item">
-        <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="color:var(--g300)"><path d="M20 6h-8l-2-2H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-6 10H7v-2h7v2zm3-4H7v-2h10v2z"/></svg>
-        <span>Gestión Documental</span>
-      </div>
-    </div>
-  </div>
-</div>
 <!-- BLOCK 2: COUNTERS -->
 <section class="counters fade-in">
   <div class="counters-inner">
     <h2>Resultados <span class="h2-light">que hablan por sí solos</span></h2>
     <div class="counters-grid">
-      <div class="counter-card"><div class="counter-icon" style="width:56px;height:56px;border-radius:50%;background:var(--teal-bg);display:flex;align-items:center;justify-content:center;margin:0 auto 1rem"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0891B2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div><div class="counter-num" data-target="25" data-prefix="+">0</div><div class="counter-label">años de experiencia en identificación por radiofrecuencia</div></div>
-      <div class="counter-card"><div class="counter-icon" style="width:56px;height:56px;border-radius:50%;background:var(--teal-bg);display:flex;align-items:center;justify-content:center;margin:0 auto 1rem"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0891B2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div><div class="counter-num" data-target="99.9" data-suffix="%">0</div><div class="counter-label">precisión de inventario con tecnología RFID</div></div>
-      <div class="counter-card"><div class="counter-icon" style="width:56px;height:56px;border-radius:50%;background:var(--teal-bg);display:flex;align-items:center;justify-content:center;margin:0 auto 1rem"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0891B2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg></div><div class="counter-num" data-target="70" data-prefix="-" data-suffix="%">0</div><div class="counter-label">reducción del tiempo de inventario</div></div>
+      <div class="counter-card"><div class="counter-icon" style="width:56px;height:56px;border-radius:50%;background:var(--teal-bg);display:flex;align-items:center;justify-content:center;margin:0 auto 1rem"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0891B2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div><div class="counter-num" data-target="25" data-prefix="+">0</div><div class="counter-label">años de experiencia RFID en España</div></div>
+      <div class="counter-card"><div class="counter-icon" style="width:56px;height:56px;border-radius:50%;background:var(--teal-bg);display:flex;align-items:center;justify-content:center;margin:0 auto 1rem"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0891B2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div><div class="counter-num" data-target="99.9" data-suffix="%">0</div><div class="counter-label">de precisión en inventario RFID</div></div>
+      <div class="counter-card"><div class="counter-icon" style="width:56px;height:56px;border-radius:50%;background:var(--teal-bg);display:flex;align-items:center;justify-content:center;margin:0 auto 1rem"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0891B2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg></div><div class="counter-num" data-target="70" data-prefix="-" data-suffix="%">0</div><div class="counter-label">de reducción en tiempo de inventario</div></div>
     </div>
   </div>
 </section>
@@ -600,26 +587,32 @@ a:hover .arrow-r,button:hover .arrow-r{transform:translateX(3px)}
 <section class="how fade-in">
     <div class="how-inner">
     <h2>Cómo funciona el RFID:<br><span class="h2-light">etiquetas, lectores y software</span></h2>
-    <div class="how-steps-connected">
+    <div class="how-timeline" id="howTimeline">
       <div class="how-step-wrap">
-        <div class="how-step-bgnum">01</div>
-        <div class="how-step-circle"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7" stroke-width="3"/></svg></div>
-        <h3>Etiqueta RFID en el producto</h3>
-        <p>Cada artículo lleva un chip con un código único que lo identifica de forma individual e irrepetible. Sin contacto, sin batería, sin mantenimiento.</p>
+        <div class="how-step-circle" id="hwc1"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><circle cx="7" cy="7" r="1" fill="white" stroke="none"/></svg></div>
+        <div class="how-step-num-label">01</div>
+        <div class="how-step-text">
+          <h3>Etiqueta RFID en el producto</h3>
+          <p>Cada artículo lleva un chip con un código único que lo identifica de forma individual e irrepetible. Sin contacto, sin batería, sin mantenimiento.</p>
+        </div>
       </div>
-      <div class="how-connector"></div>
+      <div class="how-conn"><div class="how-conn-fill" id="hwl1"></div></div>
       <div class="how-step-wrap">
-        <div class="how-step-bgnum">02</div>
-        <div class="how-step-circle"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" y1="20" x2="12.01" y2="20" stroke-width="3"/></svg></div>
-        <h3>El lector RFID capta la señal</h3>
-        <p>El lector emite una señal de radiofrecuencia que activa simultáneamente todas las etiquetas dentro de su rango — sin línea de visión directa ni intervención manual.</p>
+        <div class="how-step-circle" id="hwc2"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><circle cx="12" cy="20" r="1" fill="white" stroke="none"/></svg></div>
+        <div class="how-step-num-label">02</div>
+        <div class="how-step-text">
+          <h3>El lector RFID capta la señal</h3>
+          <p>El lector emite una señal de radiofrecuencia que activa simultáneamente todas las etiquetas dentro de su rango — sin línea de visión directa ni intervención manual.</p>
+        </div>
       </div>
-      <div class="how-connector"></div>
+      <div class="how-conn"><div class="how-conn-fill" id="hwl2"></div></div>
       <div class="how-step-wrap">
-        <div class="how-step-bgnum">03</div>
-        <div class="how-step-circle"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/><path d="M6 8h4M6 11.5h12M6 15h8"/></svg></div>
-        <h3>El sistema ERP se actualiza en tiempo real</h3>
-        <p>El ERP recibe los datos al instante. Inventario, trazabilidad y control de stock quedan registrados automáticamente sin intervención manual.</p>
+        <div class="how-step-circle" id="hwc3"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/><path d="M6 8h3M6 12h10M6 16h7"/></svg></div>
+        <div class="how-step-num-label">03</div>
+        <div class="how-step-text">
+          <h3>El sistema ERP se actualiza en tiempo real</h3>
+          <p>El ERP recibe los datos al instante. Inventario, trazabilidad y control de stock quedan registrados automáticamente sin intervención manual.</p>
+        </div>
       </div>
     </div>
     <a href="/que-es-rfid-y-como-funciona/" class="how-link">Saber más sobre cómo funciona el RFID <svg class="arrow-r" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 7h10m-4-4 4 4-4 4"/></svg></a>
@@ -663,14 +656,14 @@ a:hover .arrow-r,button:hover .arrow-r{transform:translateX(3px)}
         <a href="/casos-de-exito/" class="case-link">Ver caso completo <svg class="arrow-r" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 6h8m-3-3 3 3-3 3"/></svg></a>
       </div>
     </div>
-    <div style="text-align:center;margin-top:2rem"><a href="/casos-de-exito/" class="btn btn-outline">Ver todos los casos de éxito <svg class="arrow-r" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 7h10m-4-4 4 4-4 4"/></svg></a></div>
+    <div style="text-align:center;margin-top:2rem"><a href="/casos-de-exito/" class="link-btn">Ver todos los casos de éxito <svg class="arrow-r" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 7h10m-4-4 4 4-4 4"/></svg></a></div>
   </div>
 </section>
 
 <!-- BLOCK 6: REVIEWS -->
 <section class="reviews fade-in">
   <div class="reviews-inner">
-    <h2>Lo que dicen<br><span class="h2-light">nuestros clientes</span></h2>
+    <h2>Lo que dicen nuestros clientes</h2>
     <div class="reviews-rating"><div class="reviews-stars"><svg width="16" height="16" viewBox="0 0 16 16" fill="#f57a14"><path d="M8 1l2 4.1 4.5.7-3.3 3.2.8 4.5L8 11.3 3.9 13.5l.8-4.5L1.5 5.8 6 5.1z"/></svg><svg width="16" height="16" viewBox="0 0 16 16" fill="#f57a14"><path d="M8 1l2 4.1 4.5.7-3.3 3.2.8 4.5L8 11.3 3.9 13.5l.8-4.5L1.5 5.8 6 5.1z"/></svg><svg width="16" height="16" viewBox="0 0 16 16" fill="#f57a14"><path d="M8 1l2 4.1 4.5.7-3.3 3.2.8 4.5L8 11.3 3.9 13.5l.8-4.5L1.5 5.8 6 5.1z"/></svg><svg width="16" height="16" viewBox="0 0 16 16" fill="#f57a14"><path d="M8 1l2 4.1 4.5.7-3.3 3.2.8 4.5L8 11.3 3.9 13.5l.8-4.5L1.5 5.8 6 5.1z"/></svg><svg width="16" height="16" viewBox="0 0 16 16" fill="#f57a14"><path d="M8 1l2 4.1 4.5.7-3.3 3.2.8 4.5L8 11.3 3.9 13.5l.8-4.5L1.5 5.8 6 5.1z"/></svg></div><span>4,8 sobre 5 · 12 reseñas verificadas en Google</span></div>
     <div class="reviews-grid">
       <div class="review-card">
@@ -698,7 +691,7 @@ a:hover .arrow-r,button:hover .arrow-r{transform:translateX(3px)}
         </div>
       </div>
     </div>
-    <div style="text-align:center;margin-top:1.5rem"><a href="https://maps.app.goo.gl/q1FrY1e9xkPJ1TJ57" target="_blank" rel="noopener" style="font-size:.9rem;font-weight:600;color:var(--teal);font-family:Outfit,sans-serif;display:inline-flex;align-items:center;gap:.4rem">Ver todas las reseñas en Google <svg class="arrow-r" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 7h10m-4-4 4 4-4 4"/></svg></a></div>
+    <div style="text-align:center;margin-top:1.5rem"><a href="https://maps.app.goo.gl/q1FrY1e9xkPJ1TJ57" target="_blank" rel="noopener" class="link-btn">Ver todas las reseñas en Google <svg class="arrow-r" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 7h10m-4-4 4 4-4 4"/></svg></a></div>
   </div>
 </section>
 
@@ -713,7 +706,7 @@ a:hover .arrow-r,button:hover .arrow-r{transform:translateX(3px)}
       <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">¿Cuánto tiempo tarda la implantación?<svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 4v10M4 9h10"/></svg></button><div class="faq-a"><div class="faq-a-inner">Depende del alcance. Una tienda de retail se implementa en 1-2 semanas. Un almacén medio en 3-4 semanas. Una red de bibliotecas puede llevar varios meses. El proceso es gradual y no interrumpe tu operación.</div></div></div>
       <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">¿Hacéis instalaciones fuera de Madrid?<svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 4v10M4 9h10"/></svg></button><div class="faq-a"><div class="faq-a-inner">Sí. Nuestra sede está en Leganés (Madrid) pero realizamos implantaciones en toda España. Contamos con más de 25 años de experiencia en proyectos a nivel nacional.</div></div></div>
     </div>
-    <div class="faq-bottom"><a href="/preguntas-frecuentes-rfid/" class="btn btn-outline">Ver las 50 preguntas frecuentes <svg class="arrow-r" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 7h10m-4-4 4 4-4 4"/></svg></a></div>
+    <div class="faq-bottom"><a href="/preguntas-frecuentes-rfid/" class="link-btn">Ver las 50 preguntas frecuentes <svg class="arrow-r" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 7h10m-4-4 4 4-4 4"/></svg></a></div>
   </div>
 </section>
 
@@ -826,6 +819,87 @@ const CC={
 document.getElementById('cookieOverlay').addEventListener('click',()=>CC.closePrefs());
 document.addEventListener('keydown',e=>{if(e.key==='Escape'&&document.getElementById('cookiePrefs').classList.contains('active'))CC.closePrefs()});
 CC.init();
+
+/* Timeline animation — infinite loop */
+(function(){
+  function startTimeline(){
+    var c1=document.getElementById('hwc1'),c2=document.getElementById('hwc2'),c3=document.getElementById('hwc3');
+    var l1=document.getElementById('hwl1'),l2=document.getElementById('hwl2');
+    if(!c1||!l1) return;
+
+    var tid=null; // track timeout so we can restart cleanly
+
+    function isMob(){ return window.innerWidth<768; }
+
+    function resetFills(){
+      var mob=isMob();
+      [l1,l2].forEach(function(el){
+        el.style.transition='none';
+        if(mob){ el.style.width='100%'; el.style.height='0'; }
+        else   { el.style.height='100%'; el.style.width='0'; }
+      });
+    }
+
+    function activate(circle){ circle.classList.add('is-active'); }
+    function deactivate(circle){ circle.classList.remove('is-active'); }
+
+    function fillLine(el,dur){
+      var mob=isMob();
+      var prop=mob?'height':'width';
+      // Force reflow so transition fires
+      void el.offsetWidth;
+      el.style.transition=prop+' '+dur+'ms cubic-bezier(.4,0,.2,1)';
+      el.style[prop]='100%';
+    }
+
+    function runLoop(){
+      // Reset state
+      [c1,c2,c3].forEach(deactivate);
+      resetFills();
+
+      // Step 01 — appears immediately
+      tid=setTimeout(function(){ activate(c1); },50);
+
+      // Line 1 fills after circle 1 pulses
+      tid=setTimeout(function(){ fillLine(l1,1600); },700);
+
+      // Step 02 — after line 1 finishes (700+1600=2300 + small gap)
+      tid=setTimeout(function(){ activate(c2); },2450);
+
+      // Line 2 fills
+      tid=setTimeout(function(){ fillLine(l2,1600); },3100);
+
+      // Step 03
+      tid=setTimeout(function(){ activate(c3); },4850);
+
+      // Pause at end, then loop again
+      setTimeout(runLoop, 7500);
+    }
+
+    // Start when section enters viewport
+    var obs=new IntersectionObserver(function(entries){
+      if(entries[0].isIntersecting){
+        obs.disconnect();
+        runLoop();
+      }
+    },{threshold:0.3});
+    var section=document.querySelector('.how');
+    if(section) obs.observe(section); else runLoop();
+
+    // Restart if orientation changes (mobile ↔ desktop)
+    window.addEventListener('resize', function(){
+      clearTimeout(tid);
+      resetFills();
+      [c1,c2,c3].forEach(deactivate);
+      setTimeout(runLoop, 300);
+    });
+  }
+
+  if(document.readyState==='loading'){
+    document.addEventListener('DOMContentLoaded',startTimeline);
+  } else { startTimeline(); }
+})();
+
 </script>
 </body>
 </html>
