@@ -246,7 +246,7 @@ a:hover .arrow-r,button:hover .arrow-r{transform:translateX(3px)}
 .reviews{padding:5rem 1.5rem;background:var(--white)}
 .reviews-inner{max-width:1200px;margin:0 auto;text-align:center}
 .reviews h2{font-size:clamp(2rem,3.5vw,2.8rem);font-weight:800;color:var(--navy);margin-bottom:.5rem;text-align:center}
-.reviews-rating{display:flex;align-items:center;justify-content:center;gap:.5rem;font-size:.95rem;color:var(--g500);margin-bottom:2.5rem}
+.reviews-rating{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:.4rem .5rem;font-size:.95rem;color:var(--g500);margin-bottom:2.5rem}
 .reviews-stars{display:flex;gap:2px}
 .reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
 .review-card{background:var(--g50);border:1px solid var(--g200);border-radius:14px;padding:1.5rem}
@@ -308,6 +308,7 @@ a:hover .arrow-r,button:hover .arrow-r{transform:translateX(3px)}
 .float-btn{width:56px;height:56px;border-radius:50%;border:none;display:flex;align-items:center;justify-content:center;color:white;transition:all .2s;box-shadow:0 4px 16px rgba(0,0,0,.2)}
 .float-btn:hover{transform:scale(1.08)}
 .float-btn-wa{background:#25D366;box-shadow:0 4px 16px rgba(37,211,102,.35)}
+.float-btn-wa svg{fill:currentColor!important;stroke:none!important}
 .float-btn-wa:hover{box-shadow:0 8px 24px rgba(37,211,102,.4)}
 .float-btn-phone{background:var(--navy);box-shadow:0 4px 16px rgba(27,42,74,.35)}
 .float-btn-phone:hover{box-shadow:0 8px 24px rgba(27,42,74,.4)}
@@ -403,24 +404,39 @@ a:hover .arrow-r,button:hover .arrow-r{transform:translateX(3px)}
   .hero{padding:8rem 1.5rem 3.5rem;min-height:auto}
   .subheader-inner{gap:.75rem}
   .subheader .sh-desktop{display:none}
-  .counters-grid{grid-template-columns:1fr;gap:1.5rem}
-  .sectors-grid,.sectors-extra.open{grid-template-columns:repeat(2,1fr);gap:1rem}
-  .sector-img{height:180px}  .sector-img img{height:180px}
-  .how-timeline{flex-direction:column;align-items:flex-start;padding-left:2rem}
-  .how-step-wrap{display:flex;align-items:flex-start;gap:1rem;text-align:left;width:100%;padding:0 0 0 0}
+
+  /* TRUST STRIP — columna única, icono+texto en fila */
+  .trust-inner{flex-direction:column;align-items:flex-start;gap:.55rem;padding:.75rem 1.5rem}
+  .trust-item{font-size:15px;color:rgba(255,255,255,.95);width:100%}
+
+  /* CONTADORES — horizontal: icono izquierda, número+texto derecha */
+  .counters-grid{grid-template-columns:1fr;gap:1rem}
+  .counter-card{display:flex;align-items:center;gap:1.25rem;text-align:left}
+  .counter-card .counter-icon{flex-shrink:0;margin:0!important}
+  .counter-card .counter-num{font-size:2.4rem;margin-bottom:.1rem}
+  .counter-card .counter-label{text-align:left;margin:0;max-width:none;font-size:14px}
+
+  /* SECTORES — 1 columna */
+  .sectors-grid,.sectors-extra.open{grid-template-columns:1fr;gap:1rem}
+  .sector-card{max-width:100%}
+  .sector-img{height:180px}
+  .sector-img img{height:180px}
+
+  /* CÓMO FUNCIONA — vertical con línea izquierda */
+  .how-timeline{flex-direction:column;align-items:flex-start;padding-left:0}
+  .how-step-wrap{display:flex;align-items:flex-start;gap:1rem;text-align:left;width:100%}
   .how-step-wrap h3,.how-step-wrap p,.how-step-num-label{text-align:left;max-width:none}
-  .how-step-circle{flex-shrink:0;margin:0}
-  .how-conn{flex:none;width:2px;height:48px;margin:0 0 0 31px}
-  .how-conn-fill{width:100%;height:0;transition:height .8s ease!important}
+  .how-step-circle{flex-shrink:0;margin:0;width:56px;height:56px}
+  .how-step-circle svg{width:24px;height:24px}
+  .how-conn{flex:none;width:2px;height:40px;margin:0 0 0 27px;background:var(--g200)}
+  .how-conn-fill{width:100%;height:0}
+
   .cases-grid,.reviews-grid{grid-template-columns:1fr}
-  @media(max-width:400px){.sectors-grid,.sectors-extra.open{grid-template-columns:1fr}}
   .cta-form-row{grid-template-columns:1fr}
   .cta-split{grid-template-columns:1fr}
   .cta-form-side{padding:3rem 1.5rem}
   .cta-map-side{min-height:300px}
   .footer-inner{grid-template-columns:1fr 1fr}
-  .trust-inner{gap:1rem;justify-content:flex-start}
-  .trust-item{font-size:14px;color:rgba(255,255,255,.95)}
   .cookie-banner-inner{grid-template-columns:1fr;gap:1rem}
   .cookie-banner-actions{flex-wrap:wrap}
   .cb-btn{flex:1;text-align:center}
@@ -463,7 +479,7 @@ a:hover .arrow-r,button:hover .arrow-r{transform:translateX(3px)}
 /* ── GLOBAL ICON STYLE ── */
 .sector-icon svg,.trust-item svg,.client-item svg,
 .how-step-circle svg,.how-link svg,.btn svg,
-.faq-q svg,.case-link svg,.float-btn svg,
+.faq-q svg,.case-link svg,.float-btn-phone svg,
 .megamenu-col a svg,.nav-item svg,
 .arrow-r,.sectors-toggle svg,.how-connector-icon svg{
   fill:none!important;
@@ -854,82 +870,65 @@ CC.init();
 
 /* Timeline animation — infinite loop */
 (function(){
-  function startTimeline(){
-    var c1=document.getElementById('hwc1'),c2=document.getElementById('hwc2'),c3=document.getElementById('hwc3');
-    var l1=document.getElementById('hwl1'),l2=document.getElementById('hwl2');
+  var tids=[], resizeTid=null, started=false;
+
+  function clearTids(){ tids.forEach(clearTimeout); tids=[]; }
+
+  function $(id){ return document.getElementById(id); }
+
+  function isMob(){ return window.innerWidth<768; }
+
+  function reset(c1,c2,c3,l1,l2){
+    [c1,c2,c3].forEach(function(el){ el.classList.remove('is-active'); });
+    var mob=isMob(), p=mob?'height':'width', other=mob?'width':'height';
+    [l1,l2].forEach(function(el){
+      el.style.transition='none';
+      el.style[p]='0';
+      el.style[other]='100%';
+      void el.offsetWidth; /* force reflow */
+    });
+  }
+
+  function fill(el,ms){
+    var p=isMob()?'height':'width';
+    requestAnimationFrame(function(){
+      el.style.transition=p+' '+ms+'ms cubic-bezier(.4,0,.2,1)';
+      el.style[p]='100%';
+    });
+  }
+
+  function runLoop(){
+    var c1=$('hwc1'),c2=$('hwc2'),c3=$('hwc3'),l1=$('hwl1'),l2=$('hwl2');
     if(!c1||!l1) return;
+    clearTids();
+    reset(c1,c2,c3,l1,l2);
+    tids.push(setTimeout(function(){ c1.classList.add('is-active'); },150));
+    tids.push(setTimeout(function(){ fill(l1,1500); },900));
+    tids.push(setTimeout(function(){ c2.classList.add('is-active'); },2600));
+    tids.push(setTimeout(function(){ fill(l2,1500); },3300));
+    tids.push(setTimeout(function(){ c3.classList.add('is-active'); },5000));
+    tids.push(setTimeout(runLoop,8000));
+  }
 
-    var tid=null; // track timeout so we can restart cleanly
-
-    function isMob(){ return window.innerWidth<768; }
-
-    function resetFills(){
-      var mob=isMob();
-      [l1,l2].forEach(function(el){
-        el.style.transition='none';
-        if(mob){ el.style.width='100%'; el.style.height='0'; }
-        else   { el.style.height='100%'; el.style.width='0'; }
-      });
-    }
-
-    function activate(circle){ circle.classList.add('is-active'); }
-    function deactivate(circle){ circle.classList.remove('is-active'); }
-
-    function fillLine(el,dur){
-      var mob=isMob();
-      var prop=mob?'height':'width';
-      // Force reflow so transition fires
-      void el.offsetWidth;
-      el.style.transition=prop+' '+dur+'ms cubic-bezier(.4,0,.2,1)';
-      el.style[prop]='100%';
-    }
-
-    function runLoop(){
-      // Reset state
-      [c1,c2,c3].forEach(deactivate);
-      resetFills();
-
-      // Step 01 — appears immediately
-      tid=setTimeout(function(){ activate(c1); },50);
-
-      // Line 1 fills after circle 1 pulses
-      tid=setTimeout(function(){ fillLine(l1,1600); },700);
-
-      // Step 02 — after line 1 finishes (700+1600=2300 + small gap)
-      tid=setTimeout(function(){ activate(c2); },2450);
-
-      // Line 2 fills
-      tid=setTimeout(function(){ fillLine(l2,1600); },3100);
-
-      // Step 03
-      tid=setTimeout(function(){ activate(c3); },4850);
-
-      // Pause at end, then loop again
-      setTimeout(runLoop, 7500);
-    }
-
-    // Start when section enters viewport
-    var obs=new IntersectionObserver(function(entries){
-      if(entries[0].isIntersecting){
-        obs.disconnect();
-        runLoop();
-      }
-    },{threshold:0.3});
+  function init(){
+    if(started) return; started=true;
     var section=document.querySelector('.how');
-    if(section) obs.observe(section); else runLoop();
-
-    // Restart if orientation changes (mobile ↔ desktop)
-    window.addEventListener('resize', function(){
-      clearTimeout(tid);
-      resetFills();
-      [c1,c2,c3].forEach(deactivate);
-      setTimeout(runLoop, 300);
+    if(!section){ runLoop(); return; }
+    if('IntersectionObserver' in window){
+      var obs=new IntersectionObserver(function(e){
+        if(e[0].isIntersecting){ obs.disconnect(); runLoop(); }
+      },{threshold:0.2});
+      obs.observe(section);
+    } else { runLoop(); }
+    window.addEventListener('resize',function(){
+      clearTimeout(resizeTid);
+      resizeTid=setTimeout(function(){ clearTids(); started=false; init(); },400);
     });
   }
 
   if(document.readyState==='loading'){
-    document.addEventListener('DOMContentLoaded',startTimeline);
-  } else { startTimeline(); }
+    document.addEventListener('DOMContentLoaded',init);
+  } else { init(); }
 })();
 
 </script>
