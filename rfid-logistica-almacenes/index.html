@@ -11,7 +11,89 @@
 <meta property="og:url" content="https://serdoc.es/rfid-logistica-almacenes/">
 <meta property="og:type" content="website">
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZXXNMZ7DNZ"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZXXNMZ7DNZ">/* COUNTER ANIMATION */
+document.addEventListener('DOMContentLoaded', function() {
+  var counters = document.querySelectorAll('[data-target]');
+  var animateCounter = function(el) {
+    var target = parseFloat(el.getAttribute('data-target'));
+    var prefix = el.getAttribute('data-prefix') || '';
+    var suffix = el.getAttribute('data-suffix') || '';
+    var duration = 2000;
+    var steps = 60;
+    var increment = target / steps;
+    var current = 0;
+    var step = 0;
+    var timer = setInterval(function() {
+      step++;
+      current = increment * step;
+      if (step >= steps) { current = target; clearInterval(timer); }
+      el.textContent = prefix + (Number.isInteger(target) ? Math.round(current) : current.toFixed(1)) + suffix;
+    }, duration / steps);
+  };
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) { animateCounter(entry.target); observer.unobserve(entry.target); }
+    });
+  }, { threshold: 0.3 });
+  counters.forEach(function(counter) { observer.observe(counter); });
+});
+/* Timeline animation — 4 steps, infinite loop (same engine as home) */
+(function(){
+  var tids=[], resizeTid=null, started=false;
+  function clearTids(){ tids.forEach(clearTimeout); tids=[]; }
+  function $e(id){ return document.getElementById(id); }
+  function isMob(){ return window.innerWidth<768; }
+  function reset(){
+    ['hwc1','hwc2','hwc3','hwc4'].forEach(function(id){
+      var el=$e(id); if(el) el.classList.remove('is-active');
+    });
+    var mob=isMob(), p=mob?'height':'width', other=mob?'width':'height';
+    ['hwl1','hwl2','hwl3'].forEach(function(id){
+      var el=$e(id); if(!el) return;
+      el.style.transition='none';
+      el.style[p]='0'; el.style[other]='100%';
+      void el.offsetWidth;
+    });
+  }
+  function fill(id,ms){
+    var el=$e(id); if(!el) return;
+    var p=isMob()?'height':'width';
+    requestAnimationFrame(function(){
+      el.style.transition=p+' '+ms+'ms cubic-bezier(.4,0,.2,1)';
+      el.style[p]='100%';
+    });
+  }
+  function runLoop(){
+    reset();
+    tids.push(setTimeout(function(){ var el=$e('hwc1'); if(el) el.classList.add('is-active'); }, 150));
+    tids.push(setTimeout(function(){ fill('hwl1',1200); }, 850));
+    tids.push(setTimeout(function(){ var el=$e('hwc2'); if(el) el.classList.add('is-active'); }, 2250));
+    tids.push(setTimeout(function(){ fill('hwl2',1200); }, 2950));
+    tids.push(setTimeout(function(){ var el=$e('hwc3'); if(el) el.classList.add('is-active'); }, 4350));
+    tids.push(setTimeout(function(){ fill('hwl3',1200); }, 5050));
+    tids.push(setTimeout(function(){ var el=$e('hwc4'); if(el) el.classList.add('is-active'); }, 6450));
+    tids.push(setTimeout(runLoop, 9500));
+  }
+  function init(){
+    if(started) return; started=true;
+    var section=document.querySelector('.how-sol');
+    if(!section){ runLoop(); return; }
+    if('IntersectionObserver' in window){
+      var obs=new IntersectionObserver(function(e){
+        if(e[0].isIntersecting){ obs.disconnect(); runLoop(); }
+      },{threshold:0.15});
+      obs.observe(section);
+    } else { runLoop(); }
+    window.addEventListener('resize',function(){
+      clearTimeout(resizeTid);
+      resizeTid=setTimeout(function(){ clearTids(); started=false; init(); },400);
+    });
+  }
+  if(document.readyState==='loading'){
+    document.addEventListener('DOMContentLoaded', init);
+  } else { init(); }
+})();
+</script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-ZXXNMZ7DNZ');</script>
 <meta name="google-site-verification" content="OIjTbV3rH7Xazv0qjQYDeix4W-D63KeJp04xwGasD8M">
 
@@ -189,7 +271,7 @@ to{transform:scale(1.08)}}
 .footer-bottom{max-width:1200px;margin:2rem auto 0;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,.06);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.75rem;font-size:.82rem}
 
 /* ── FLOATING BUTTONS ── */
-.float-btns{position:fixed;bottom:1.5rem;right:1.5rem;z-index:9999;display:flex;flex-direction:column;gap:.75rem}
+.float-btns{position:fixed!important;bottom:1.5rem;right:1.5rem;z-index:9999;display:flex;flex-direction:column;gap:.75rem}
 .float-btn{width:56px;height:56px;border-radius:50%;border:none;display:flex;align-items:center;justify-content:center;color:white;transition:all .2s;box-shadow:0 4px 16px rgba(0,0,0,.2);text-decoration:none}
 .float-btn:hover{transform:scale(1.08)}
 .float-btn-wa{background:#25D366;box-shadow:0 4px 16px rgba(37,211,102,.35)}
@@ -343,10 +425,10 @@ to{transform:scale(1.08)}}
 
 
 /* ── BREADCRUMB ── */
-.breadcrumb{background:var(--g50);border-bottom:1px solid var(--g200);padding:.65rem 1.5rem}
-.breadcrumb-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;gap:.45rem;flex-wrap:wrap;font-size:.82rem;color:var(--g400);font-family:'Outfit',sans-serif}
-.breadcrumb a{color:var(--g500);text-decoration:none;transition:color .2s}.breadcrumb a:hover{color:var(--teal)}
-.breadcrumb-sep{color:var(--g300)}.breadcrumb-current{color:var(--navy);font-weight:600}
+.breadcrumb{background:var(--white);border-bottom:1.5px solid var(--g200);padding:.9rem 1.5rem;box-shadow:0 1px 4px rgba(15,27,51,.04)}
+.breadcrumb-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;gap:.35rem;flex-wrap:wrap;font-size:.9rem;font-family:'Outfit',sans-serif;font-weight:500}
+.breadcrumb a{color:var(--teal);font-weight:600;text-decoration:none;transition:color .15s}.breadcrumb a:hover{color:var(--navy);text-decoration:underline;text-underline-offset:3px}
+.breadcrumb-sep{color:var(--teal);font-weight:700;padding:0 .1rem}.breadcrumb-current{color:var(--g500);font-weight:500}
 
 /* ── LANDING HERO ── */
 .lhero{position:relative;overflow:hidden;min-height:88vh;display:flex;align-items:center;padding:8rem 1.5rem 5rem;background:var(--navy-deep)}
@@ -467,10 +549,12 @@ to{transform:scale(1.08)}}
 @media(max-width:768px){
   .lhero-inner{padding:0 1rem}
   .problem-grid{grid-template-columns:1fr}
-  .lsteps{flex-direction:column;gap:0}
-  .lstep-conn{width:2px;height:40px;margin:0 auto}
-  .lstep-bg{display:none}
-  .lstep{padding:0 .5rem}
+  .how-timeline{flex-direction:column;align-items:flex-start}
+  .how-step-wrap{display:flex;align-items:flex-start;gap:1rem;text-align:left;width:100%;padding:0}
+  .how-step-wrap h3,.how-step-wrap p,.how-step-num-label{text-align:left;max-width:none}
+  .how-step-circle{flex-shrink:0;margin:0;width:52px;height:52px}
+  .how-conn{flex:none;width:2px;height:36px;margin:0 0 0 25px}
+  .how-conn-fill{width:100%;height:0}
   .benefits-grid{grid-template-columns:1fr 1fr}
   .cta-band-inner{flex-direction:column;align-items:flex-start;gap:1.25rem}
   .blog-grid{grid-template-columns:1fr}
@@ -493,6 +577,68 @@ to{transform:scale(1.08)}}
 .prob-icon svg{stroke:var(--teal)!important}
 .lstep-circle svg{stroke:currentColor!important}
 
+
+/* ── HOW IT WORKS (same as home) ── */
+.how-sol{padding:5rem 1.5rem;background:white}
+.how-sol-inner{max-width:1100px;margin:0 auto;text-align:center}
+.how-sol .section-h2{margin-bottom:3rem}
+.how-timeline{display:flex;align-items:flex-start;gap:0;position:relative}
+.how-step-wrap{flex:1;text-align:center;position:relative;padding:0 1rem;min-width:0}
+.how-step-circle{
+  width:64px;height:64px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  margin:0 auto .75rem;
+  background:var(--g200);color:white;
+  position:relative;z-index:2;
+  transition:background .5s ease,box-shadow .5s ease;
+}
+.how-step-circle.is-active{
+  background:var(--teal);
+  box-shadow:0 0 0 10px rgba(8,145,178,.12),0 6px 24px rgba(8,145,178,.4);
+}
+.how-step-circle svg{transition:opacity .4s ease;flex-shrink:0}
+.how-step-num-label{
+  font-size:.72rem;font-weight:700;letter-spacing:.08em;
+  color:var(--g400);font-family:'Outfit',sans-serif;
+  margin-bottom:.6rem;text-transform:uppercase;
+}
+.how-conn{
+  flex:0 0 60px;height:2px;
+  background:var(--g200);margin-top:31px;
+  position:relative;overflow:hidden;
+}
+.how-conn-fill{position:absolute;top:0;left:0;height:100%;width:0;background:var(--teal)}
+.how-step-wrap h3{font-size:.95rem;font-weight:700;color:var(--navy);margin-bottom:.4rem;line-height:1.35}
+.how-step-wrap p{font-size:.88rem;color:var(--g500);line-height:1.6;max-width:200px;margin:0 auto}
+
+
+/* ── CTA FINAL (home style) ── */
+.cta-form-section{padding:0;background:var(--navy-deep);color:var(--white);position:relative;overflow:hidden}
+.cta-form-section::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 60% at 30% 50%,rgba(8,145,178,.08) 0%,transparent 70%)}
+.cta-split{display:grid;grid-template-columns:1fr 1fr;min-height:500px;position:relative;z-index:1}
+.cta-split{grid-template-columns:1fr}
+.cta-form-side{padding:4rem 3rem;display:flex;flex-direction:column;justify-content:center}
+.cta-form-side h2{font-size:clamp(1.5rem,3vw,2rem);font-weight:800;margin-bottom:.5rem;text-align:center}
+.cta-form-side{padding:3rem 1.5rem}
+.cta-form-sub{color:rgba(255,255,255,.55);margin-bottom:2rem;font-size:1.05rem;text-align:center}
+.cta-form{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:var(--radius-lg);padding:1.5rem;text-align:left}
+.cta-form-row{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;margin-bottom:.75rem}
+.cta-form-row{grid-template-columns:1fr}
+.cta-form input,.cta-form textarea{width:100%;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);border-radius:var(--radius);padding:.75rem 1rem;color:white;font-size:.95rem;font-family:'Source Sans 3',sans-serif;outline:none;transition:border .2s}
+.cta-form input::placeholder,.cta-form textarea::placeholder{color:rgba(255,255,255,.3)}
+.cta-form input:focus,.cta-form textarea:focus{border-color:var(--teal)}
+.cta-form textarea{width:100%;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);border-radius:var(--radius);padding:.75rem 1rem;color:white;font-size:.95rem;font-family:'Source Sans 3',sans-serif;outline:none;transition:border .2s}
+.cta-form textarea::placeholder{color:rgba(255,255,255,.3)}
+.cta-form textarea:focus{border-color:var(--teal)}
+.cta-form textarea{margin-bottom:.75rem;resize:vertical}
+.cta-form-check{display:flex;align-items:center;gap:.5rem;margin-bottom:1rem;font-size:.85rem;color:rgba(255,255,255,.45);cursor:pointer}
+.cta-form-check input[type="checkbox"]{flex-shrink:0;width:16px;height:16px;margin:0;accent-color:var(--teal);cursor:pointer}
+.cta-form-check label{cursor:pointer;line-height:1.3}
+.cta-form-check a{color:var(--teal-light);text-decoration:underline}
+.cta-map-side{position:relative;min-height:500px;height:100%}
+.cta-map-side iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0;display:block}
+.cta-map-side{min-height:300px}
+.cta-form .btn-primary{width:100%;justify-content:center}
 </style>
 </head>
 <body>
@@ -603,23 +749,41 @@ to{transform:scale(1.08)}}
   <div class="how-sol-inner">
     <div class="section-label">El proceso</div>
     <h2 class="section-h2">Cómo funciona<br><span class="h2-light">la solución RFID para logística</span></h2>
-    <div class="lsteps" id="howTimeline">
-      <div class="lstep">
-        <div class="lstep-circle" id="lc1"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7" stroke-width="3"/></svg></div>
-        <div class="lstep-bg">PASO 01</div>
-        <div class="lstep-text"><h3>Etiquetado RFID único</h3><p>Cada palet, caja o artículo recibe una etiqueta RFID con un código único e irrepetible.</p></div>
+    <div class="how-timeline" id="howTimeline">
+      <div class="how-step-wrap">
+        <div class="how-step-circle" id="hwc1"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><circle cx="7" cy="7" r="1" fill="white" stroke="none"/></svg></div>
+        <div class="how-step-num-label">01</div>
+        <div class="how-step-text">
+          <h3>Etiquetado RFID único</h3>
+          <p>Cada palet, caja o artículo recibe una etiqueta RFID con un código único e irrepetible.</p>
+        </div>
       </div>
-      <div class="lstep-conn"><div class="lstep-conn-fill" id="ll1"></div></div>
-      <div class="lstep">
-        <div class="lstep-circle" id="lc2"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" y1="20" x2="12.01" y2="20" stroke-width="3"/></svg></div>
-        <div class="lstep-bg">PASO 02</div>
-        <div class="lstep-text"><h3>Lectura automática masiva</h3><p>Los lectores capturan cientos de etiquetas por segundo sin línea de visión ni intervención manual.</p></div>
+      <div class="how-conn"><div class="how-conn-fill" id="hwl1"></div></div>
+      <div class="how-step-wrap">
+        <div class="how-step-circle" id="hwc2"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><circle cx="12" cy="20" r="1" fill="white" stroke="none"/></svg></div>
+        <div class="how-step-num-label">02</div>
+        <div class="how-step-text">
+          <h3>Lectura masiva automática</h3>
+          <p>Los lectores capturan cientos de etiquetas por segundo sin línea de visión ni intervención manual.</p>
+        </div>
       </div>
-      <div class="lstep-conn"><div class="lstep-conn-fill" id="ll2"></div></div>
-      <div class="lstep">
-        <div class="lstep-circle" id="lc3"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/><path d="M6 8h4M6 12h10M6 16h6"/></svg></div>
-        <div class="lstep-bg">PASO 03</div>
-        <div class="lstep-text"><h3>ERP actualizado en tiempo real</h3><p>Los datos de inventario y movimientos se sincronizan automáticamente en tu sistema de gestión.</p></div>
+      <div class="how-conn"><div class="how-conn-fill" id="hwl2"></div></div>
+      <div class="how-step-wrap">
+        <div class="how-step-circle" id="hwc3"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/><path d="M6 8h3M6 12h10M6 16h7"/></svg></div>
+        <div class="how-step-num-label">03</div>
+        <div class="how-step-text">
+          <h3>Sincronización con ERP</h3>
+          <p>Los datos de inventario se actualizan automáticamente en tu sistema de gestión sin intervención manual.</p>
+        </div>
+      </div>
+      <div class="how-conn"><div class="how-conn-fill" id="hwl3"></div></div>
+      <div class="how-step-wrap">
+        <div class="how-step-circle" id="hwc4"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></div>
+        <div class="how-step-num-label">04</div>
+        <div class="how-step-text">
+          <h3>Control y alertas en tiempo real</h3>
+          <p>Panel centralizado con trazabilidad completa, alertas de rotura y reportes automáticos.</p>
+        </div>
       </div>
     </div>
   </div>
@@ -632,10 +796,10 @@ to{transform:scale(1.08)}}
   <div class="benefits-inner">
     <h2>Resultados medibles<br><span class="h2-light">desde el primer mes de operación</span></h2>
     <div class="benefits-grid">
-      <div class="ben-card"><div class="ben-num" data-count="99.9" data-suffix="%">0%</div><h3>Precisión de inventario</h3><p>Del error humano al cero defectos. El sistema lee y verifica cada unidad sin excepción.</p></div>
-      <div class="ben-card"><div class="ben-num" data-count="70" data-prefix="−" data-suffix="%">0%</div><h3>Tiempo de inventario</h3><p>Lo que antes costaba días con código de barras, se hace en horas con RFID.</p></div>
-      <div class="ben-card"><div class="ben-num" data-count="60" data-prefix="−" data-suffix="%">0%</div><h3>Errores de expedición</h3><p>Verificación automática de cada pedido antes de salir del almacén. Cero devoluciones por error.</p></div>
-      <div class="ben-card"><div class="ben-num" data-count="25" data-prefix="+">0</div><h3>Años implantando RFID</h3><p>Experiencia en logística, retail, bibliotecas y sanidad en toda España.</p></div>
+      <div class="ben-card"><div class="ben-num" data-target="99.9" data-suffix="%">0%</div><h3>Precisión de inventario</h3><p>Del error humano al cero defectos. El sistema lee y verifica cada unidad sin excepción.</p></div>
+      <div class="ben-card"><div class="ben-num" data-target="70" data-prefix="−" data-suffix="%">0%</div><h3>Tiempo de inventario</h3><p>Lo que antes costaba días con código de barras, se hace en horas con RFID.</p></div>
+      <div class="ben-card"><div class="ben-num" data-target="60" data-prefix="−" data-suffix="%">0%</div><h3>Errores de expedición</h3><p>Verificación automática de cada pedido antes de salir del almacén. Cero devoluciones por error.</p></div>
+      <div class="ben-card"><div class="ben-num" data-target="25" data-prefix="+">0</div><h3>Años implantando RFID</h3><p>Experiencia en logística, retail, bibliotecas y sanidad en toda España.</p></div>
     </div>
   </div>
 </section>
@@ -719,29 +883,23 @@ to{transform:scale(1.08)}}
 </section>
 
 <!-- CTA FINAL -->
-<section class="lcta">
-  <div class="lcta-inner">
-    <div class="lcta-form-side">
-      <h2>¿Tu empresa necesita RFID para logística?</h2>
-      <p class="lcta-sub">Cuéntanos tu caso. Te respondemos en menos de 24 horas.</p>
-      <form class="lform" action="https://api.web3forms.com/submit" method="POST">
+<section class="cta-form-section">
+  <div class="cta-split">
+    <div class="cta-form-side">
+      <h2 style="text-align:center">¿Tu empresa necesita RFID para logística?</h2>
+      <p class="cta-form-sub" style="text-align:center">Cuéntanos tu caso. Te respondemos en menos de 24 horas.</p>
+      <form class="cta-form" action="https://api.web3forms.com/submit" method="POST">
         <input type="hidden" name="access_key" value="993c9b26-1def-4f5f-9cad-aeadf8873252">
         <input type="hidden" name="subject" value="Nuevo lead Serdoc — Logística RFID">
         <input type="hidden" name="redirect" value="https://serdoc.es/gracias/">
-        <div class="lform-row">
-          <input type="text" name="nombre" placeholder="Nombre y empresa" required>
-          <input type="text" name="contacto" placeholder="Teléfono o email" required>
-        </div>
-        <textarea name="mensaje" placeholder="Cuéntanos brevemente tu caso (opcional)" rows="3"></textarea>
-        <div class="lform-check">
-          <input type="checkbox" id="privacidad-land" name="privacidad" required>
-          <label for="privacidad-land">He leído y acepto la <a href="/politica-de-privacidad/">política de privacidad</a></label>
-        </div>
-        <button type="submit" class="lform-submit">Enviar consulta <span style="font-size:1.1em">›</span></button>
+        <div class="cta-form-row"><input type="text" name="nombre" placeholder="Nombre y empresa" required><input type="text" name="contacto" placeholder="Teléfono o email" required></div>
+        <textarea name="mensaje" placeholder="Cuéntanos brevemente tu caso (opcional)" rows="2"></textarea>
+        <div class="cta-form-check"><input type="checkbox" id="privacidad-land" name="privacidad" required><label for="privacidad-land">He leído y acepto la <a href="/politica-de-privacidad/">política de privacidad</a></label></div>
+        <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;background:#f57a14;border:none">Enviar consulta <svg class="arrow-r" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 8h10m-4-4 4 4-4 4"/></svg></button>
       </form>
     </div>
-    <div class="lcta-map">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3041.6164286044977!2d-3.7741914999999993!3d40.32866959999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd418a27fdd41851%3A0x6017c9e180f5d23f!2sSerdoc%20Inform%C3%A1tica%20Gesti%C3%B3n%20documental%20y%20Sistema%20RFID!5e0!3m2!1ses!2ses!4v1781779229481!5m2!1ses!2ses" width="100%" height="100%" style="border:0" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Serdoc Informática — Leganés Madrid"></iframe>
+    <div class="cta-map-side">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3041.6164286044977!2d-3.7741914999999993!3d40.32866959999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd418a27fdd41851%3A0x6017c9e180f5d23f!2sSerdoc%20Inform%C3%A1tica%20Gesti%C3%B3n%20documental%20y%20Sistema%20RFID!5e0!3m2!1ses!2ses!4v1781779229481!5m2!1ses!2ses" width="600" height="450" style="border:0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Ubicación Serdoc — Leganés Madrid"></iframe>
     </div>
   </div>
 </section>
@@ -792,16 +950,13 @@ to{transform:scale(1.08)}}
   <a href="tel:+34916896573" class="float-btn float-btn-phone" aria-label="Llamar"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5a2 2 0 0 1 2-2h2.28a1 1 0 0 1 .95.68l1.22 3.66a1 1 0 0 1-.24 1.01L7.69 9.85a12 12 0 0 0 6.46 6.46l1.52-1.52a1 1 0 0 1 1.01-.24l3.66 1.22a1 1 0 0 1 .68.95V19a2 2 0 0 1-2 2A17 17 0 0 1 3 5z"/></svg></a>
 </div>
 
+<div class="cookie-overlay" id="cookieOverlay"></div>
 <div class="cookie-banner" id="cookieBanner"><div class="cookie-banner-inner"><div class="cookie-banner-text"><h3>Usamos cookies para mejorar tu experiencia</h3><p>Utilizamos cookies propias y de terceros para analizar el uso del sitio. <a href="/politica-de-privacidad/">Más información</a>.</p></div><div class="cookie-banner-actions"><button class="cb-btn cb-btn-reject" onclick="CC.reject()">Rechazar</button><button class="cb-btn cb-btn-settings" onclick="CC.showPrefs()">Configurar</button><button class="cb-btn cb-btn-accept" onclick="CC.accept()">Aceptar todas</button></div></div></div>
 <div class="cookie-prefs" id="cookiePrefs"><div class="cookie-prefs-panel"><div class="cp-header"><div class="cp-header-row"><h2>Preferencias de cookies</h2><button class="cp-close" onclick="CC.closePrefs()" aria-label="Cerrar"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3l8 8M11 3l-8 8"/></svg></button></div><p>Personaliza qué cookies permites. Las funcionales son necesarias y no se pueden desactivar.</p></div><div class="cp-body"><div class="cc"><div class="cc-header"><div class="cc-info"><div class="cc-title">Funcionales <span class="cc-badge">Siempre activas</span></div><div class="cc-desc">Necesarias para el funcionamiento básico del sitio.</div></div><div><label class="toggle"><input type="checkbox" checked disabled><span class="toggle-track"></span></label></div></div></div><div class="cc"><div class="cc-header"><div class="cc-info"><div class="cc-title">Analíticas</div><div class="cc-desc">Nos permiten entender cómo se usa el sitio para mejorarlo.</div></div><div><label class="toggle"><input type="checkbox" id="tA"><span class="toggle-track"></span></label></div></div></div><div class="cc"><div class="cc-header"><div class="cc-info"><div class="cc-title">Marketing</div><div class="cc-desc">Permiten mostrarte publicidad relevante y medir campañas.</div></div><div><label class="toggle"><input type="checkbox" id="tM"><span class="toggle-track"></span></label></div></div></div><div class="cc"><div class="cc-header"><div class="cc-info"><div class="cc-title">Preferencias</div><div class="cc-desc">Recuerdan tus ajustes para futuras visitas.</div></div><div><label class="toggle"><input type="checkbox" id="tP"><span class="toggle-track"></span></label></div></div></div></div><div class="cp-footer"><button class="cb-btn cb-btn-reject" onclick="CC.reject()">Rechazar opcionales</button><button class="cb-btn cb-btn-accept" onclick="CC.savePrefs()">Guardar preferencias</button></div></div></div>
 <button class="cookie-reopen" id="cookieReopen" onclick="CC.showPrefs()" aria-label="Configurar cookies"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.5"/><circle cx="7" cy="8" r="1.2" fill="#f57a14"/><circle cx="12" cy="6" r="1" fill="#d4620f"/><circle cx="13" cy="12" r="1.2" fill="#f57a14"/><circle cx="8" cy="13" r="1" fill="#d4620f"/></svg></button>
 
 <script>
 /* Counters */
-function animateCounters(){document.querySelectorAll('.counter-num').forEach(el=>{const t=parseFloat(el.dataset.target),p=el.dataset.prefix||'',s=el.dataset.suffix||'',d=t%1!==0,dur=1800,st=performance.now();function u(n){const e=Math.min((n-st)/dur,1),ea=1-Math.pow(1-e,3),c=ea*t;el.textContent=p+(d?c.toFixed(1).replace('.',','):Math.floor(c))+s;if(e<1)requestAnimationFrame(u)}requestAnimationFrame(u)})}
-
-/* Observer */
-const obs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('visible');if(x.target.classList.contains('counters'))animateCounters()}})},{threshold:.15});
 document.querySelectorAll('.fade-in').forEach(el=>obs.observe(el));
 
 /* Sectors */
@@ -825,63 +980,35 @@ const CC={
   save(c){localStorage.setItem('serdoc_cc',JSON.stringify(c));this.hide();document.getElementById('cookiePrefs').classList.remove('active');document.getElementById('cookieOverlay').classList.remove('active');document.getElementById('cookieReopen').classList.add('visible');if(typeof gtag==='function')gtag('consent','update',{analytics_storage:c.a?'granted':'denied',ad_storage:c.m?'granted':'denied'})},
   init(){const s=localStorage.getItem('serdoc_cc');if(s){const c=JSON.parse(s);document.getElementById('tA').checked=!!c.a;document.getElementById('tM').checked=!!c.m;document.getElementById('tP').checked=!!c.p;document.getElementById('cookieReopen').classList.add('visible')}else setTimeout(()=>this.show(),800)}
 };
-document.getElementById('cookieOverlay').addEventListener('click',()=>CC.closePrefs());
+(function(){var ov=document.getElementById('cookieOverlay');if(ov)ov.addEventListener('click',function(){CC.closePrefs();});})();
 document.addEventListener('keydown',e=>{if(e.key==='Escape'&&document.getElementById('cookiePrefs').classList.contains('active'))CC.closePrefs()});
 CC.init();
 
-/* ── LANDING TIMELINE ANIMATION (3 steps) ── */
+/* ── COUNTERS ── */
 (function(){
-  var tids=[],rTid=null,started=false;
-  function clearT(){tids.forEach(clearTimeout);tids=[];}
-  function $e(id){return document.getElementById(id);}
-  function isMob(){return window.innerWidth<768;}
-  function reset(){
-    ['lc1','lc2','lc3'].forEach(function(id){var el=$e(id);if(el)el.classList.remove('is-active');});
-    var p=isMob()?'height':'width';
-    ['ll1','ll2'].forEach(function(id){
-      var el=$e(id);if(!el)return;
-      el.style.transition='none';
-      el.style.width='0';el.style.height='0';
-      if(!isMob())el.style.height='100%'; else el.style.width='100%';
-      void el.offsetWidth;
-    });
+  function animate(el){
+    if(el._done)return; el._done=true;
+    var target=parseFloat(el.getAttribute('data-target'));
+    var prefix=el.getAttribute('data-prefix')||'';
+    var suffix=el.getAttribute('data-suffix')||'';
+    var isFloat=target!==Math.floor(target);
+    var steps=60,step=0,ms=Math.round(2000/steps);
+    var t=setInterval(function(){
+      step++; var v=(target/steps)*step;
+      if(step>=steps){v=target;clearInterval(t);}
+      el.textContent=prefix+(isFloat?v.toFixed(1):Math.round(v))+suffix;
+    },ms);
   }
-  function fill(id,ms){
-    var el=$e(id);if(!el)return;
-    var p=isMob()?'height':'width';
-    requestAnimationFrame(function(){
-      el.style.transition=p+' '+ms+'ms cubic-bezier(.4,0,.2,1)';
-      el.style[p]='100%';
-    });
-  }
-  function runLoop(){
-    reset();
-    tids.push(setTimeout(function(){var el=$e('lc1');if(el)el.classList.add('is-active');},100));
-    tids.push(setTimeout(function(){fill('ll1',1500);},750));
-    tids.push(setTimeout(function(){var el=$e('lc2');if(el)el.classList.add('is-active');},2450));
-    tids.push(setTimeout(function(){fill('ll2',1500);},3100));
-    tids.push(setTimeout(function(){var el=$e('lc3');if(el)el.classList.add('is-active');},4800));
-    tids.push(setTimeout(runLoop,8000));
-  }
-  function init(){
-    if(started)return;started=true;
-    var sec=document.querySelector('.how-sol');
-    if(!sec){setTimeout(runLoop,300);return;}
-    if('IntersectionObserver' in window){
-      var obs=new IntersectionObserver(function(e){
-        if(e[0].isIntersecting){obs.disconnect();runLoop();}
-      },{threshold:0.15});
-      obs.observe(sec);
-    } else {setTimeout(runLoop,300);}
-    window.addEventListener('resize',function(){
-      clearTimeout(rTid);
-      rTid=setTimeout(function(){clearT();started=false;init();},400);
-    });
-  }
-  if(document.readyState==='loading'){
-    document.addEventListener('DOMContentLoaded',init);
-  } else {init();}
+  var els=document.querySelectorAll('.ben-num[data-target]');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(e){if(e.isIntersecting)animate(e.target);});
+    },{threshold:0.2,rootMargin:'0px 0px -10px 0px'});
+    els.forEach(function(el){io.observe(el);});
+  } else { els.forEach(animate); }
 })();
+
+
 
 /* ── PARALLAX BENEFITS ── */
 (function(){
@@ -896,48 +1023,52 @@ CC.init();
   update();
 })();
 
-/* ── COUNTER ANIMATION ── */
+
+
+
+/* ── TIMELINE ANIMATION — 4 steps ── */
 (function(){
-  var animated={};
-  function runCounter(el){
-    var id=el.id||(el.id='cnt'+Math.random().toString(36).slice(2));
-    if(animated[id])return;
-    animated[id]=true;
-    var target=parseFloat(el.dataset.count);
-    var prefix=el.dataset.prefix||'';
-    var suffix=el.dataset.suffix||'';
-    var isFloat=String(target).indexOf('.')!==-1;
-    var dur=2000, start=null;
-    function step(ts){
-      if(!start)start=ts;
-      var prog=Math.min((ts-start)/dur,1);
-      // ease out cubic
-      var ease=1-Math.pow(1-prog,3);
-      var cur=ease*target;
-      el.textContent=prefix+(isFloat?cur.toFixed(1):Math.round(cur))+suffix;
-      if(prog<1)requestAnimationFrame(step);
-    }
-    requestAnimationFrame(step);
-  }
-  function check(){
-    document.querySelectorAll('.ben-num[data-count]').forEach(function(el){
-      var rect=el.getBoundingClientRect();
-      if(rect.top<window.innerHeight*0.9&&rect.bottom>0)runCounter(el);
+  var tids=[],rTid=null,going=false;
+  function clr(){tids.forEach(clearTimeout);tids=[];}
+  function ge(id){return document.getElementById(id);}
+  function mob(){return window.innerWidth<768;}
+  function reset(){
+    ['hwc1','hwc2','hwc3','hwc4'].forEach(function(id){var e=ge(id);if(e)e.classList.remove('is-active');});
+    var p=mob()?'height':'width',op=mob()?'width':'height';
+    ['hwl1','hwl2','hwl3'].forEach(function(id){
+      var e=ge(id);if(!e)return;
+      e.style.transition='none';e.style[p]='0';e.style[op]='100%';void e.offsetWidth;
     });
   }
-  window.addEventListener('scroll',check,{passive:true});
-  window.addEventListener('resize',check,{passive:true});
-  // Also try IntersectionObserver for reliability
-  if('IntersectionObserver' in window){
-    var io=new IntersectionObserver(function(entries){
-      entries.forEach(function(e){if(e.isIntersecting)runCounter(e.target);});
-    },{rootMargin:'0px 0px -50px 0px',threshold:0});
-    document.querySelectorAll('.ben-num[data-count]').forEach(function(el){io.observe(el);});
+  function fill(id,ms){
+    var e=ge(id);if(!e)return;
+    var p=mob()?'height':'width';
+    requestAnimationFrame(function(){e.style.transition=p+' '+ms+'ms cubic-bezier(.4,0,.2,1)';e.style[p]='100%';});
   }
-  // Initial check after DOM ready
-  setTimeout(check,500);
+  function act(id){var e=ge(id);if(e)e.classList.add('is-active');}
+  function loop(){
+    reset();
+    tids.push(setTimeout(function(){act('hwc1');},150));
+    tids.push(setTimeout(function(){fill('hwl1',1200);},850));
+    tids.push(setTimeout(function(){act('hwc2');},2250));
+    tids.push(setTimeout(function(){fill('hwl2',1200);},2950));
+    tids.push(setTimeout(function(){act('hwc3');},4350));
+    tids.push(setTimeout(function(){fill('hwl3',1200);},5050));
+    tids.push(setTimeout(function(){act('hwc4');},6450));
+    tids.push(setTimeout(loop,9500));
+  }
+  function init(){
+    if(going)return;going=true;
+    var sec=document.querySelector('.how-sol');
+    if(!sec){setTimeout(loop,300);return;}
+    if('IntersectionObserver' in window){
+      var obs=new IntersectionObserver(function(e){if(e[0].isIntersecting){obs.disconnect();loop();}},{threshold:0.1});
+      obs.observe(sec);
+    } else {setTimeout(loop,300);}
+    window.addEventListener('resize',function(){clearTimeout(rTid);rTid=setTimeout(function(){clr();going=false;init();},400);});
+  }
+  document.readyState==='loading'?document.addEventListener('DOMContentLoaded',init):init();
 })();
-
 </script>
 </body>
 </html>
