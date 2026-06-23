@@ -8,6 +8,20 @@
 <meta name="description" content="Empresa RFID en Madrid con más de 25 años de experiencia. Soluciones para logística, retail, bibliotecas y hospitales. Consulta gratuita sin compromiso.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://serdoc.es/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://serdoc.es/">
+<meta property="og:title" content="Soluciones RFID en Madrid | Serdoc — +25 años de experiencia">
+<meta property="og:description" content="Empresa líder en soluciones RFID para logística, retail, bibliotecas y hospitales. Más de 25 años implementando proyectos llave en mano en Madrid y toda España.">
+<meta property="og:image" content="https://images.unsplash.com/photo-1553413077-190dd305871c?w=1200&q=80">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Serdoc Informática — Soluciones RFID y gestión documental en Madrid">
+<meta property="og:site_name" content="Serdoc Informática">
+<meta property="og:locale" content="es_ES">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Soluciones RFID en Madrid | Serdoc — +25 años de experiencia">
+<meta name="twitter:description" content="Empresa líder en soluciones RFID para logística, retail, bibliotecas y hospitales. Más de 25 años implementando proyectos llave en mano en Madrid y toda España.">
+<meta name="twitter:image" content="https://images.unsplash.com/photo-1553413077-190dd305871c?w=1200&q=80">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
 
@@ -165,7 +179,7 @@ a:hover .arrow-r,button:hover .arrow-r{transform:translateX(3px)}
   transition:background .25s, color .25s;
   flex-shrink:0;
 }
-.sector-card:hover .sector-icon{background:var(--teal-bg);color:var(--teal)}
+.sector-card:hover .sector-icon{background:var(--teal);color:white;border-color:var(--teal)}
 .sector-card h3{
   font-size:1.2rem;font-weight:700;color:var(--navy);
   margin-bottom:.4rem;line-height:1.35;
@@ -368,10 +382,10 @@ a:hover .arrow-r,button:hover .arrow-r{transform:translateX(3px)}
 
 
 /* ── SECTOR CARDS VISUAL UPGRADE ── */
-.sector-icon{width:64px;height:64px;border-radius:14px;background:linear-gradient(135deg,var(--g100),var(--g50));color:var(--navy);display:flex;align-items:center;justify-content:center;margin-bottom:1rem;transition:all .25s;flex-shrink:0}
-.sector-card:hover .sector-icon{background:linear-gradient(135deg,var(--teal-bg),rgba(8,145,178,.05));color:var(--teal)}
-.sector-card{padding:0;overflow:hidden}
-.sector-card-body{padding:1.25rem 1.25rem 1rem;display:flex;flex-direction:column;flex:1}
+.sector-icon{width:56px;height:56px;border-radius:50%;background:var(--white);color:var(--teal);border:2px solid var(--g200);display:flex;align-items:center;justify-content:center;transition:all .25s;flex-shrink:0;position:relative;z-index:2;box-shadow:0 2px 12px rgba(15,27,51,.1);margin-top:-28px;margin-bottom:.75rem;margin-left:auto;margin-right:auto}
+.sector-card:hover .sector-icon{background:var(--teal);color:white;border-color:var(--teal);box-shadow:0 4px 16px rgba(8,145,178,.35)}
+.sector-card{padding:0;overflow:visible}
+.sector-card-body{padding:.5rem 1.25rem 1rem;display:flex;flex-direction:column;flex:1;align-items:center;text-align:center}
 /* sector-img: see primary block above */
 
 
@@ -621,7 +635,7 @@ a:hover .arrow-r,button:hover .arrow-r{transform:translateX(3px)}
       <a href="/rfid-logistica-almacenes/" class="sector-card"><div class="sector-img"><img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=400&q=70" alt="Sistema RFID para logística y almacenes Madrid" loading="lazy" width="400" height="220"></div><div class="sector-card-body"><div class="sector-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 4v4h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div><h3>Logística y almacenes</h3><p class="sector-desc">Inventario automático, trazabilidad de palés y control de stocks en tiempo real.</p><span class="sector-link">Ver solución <svg class="arrow-r" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 6h8m-3-3 3 3-3 3"/></svg></span></div></a>
       <a href="/rfid-retail-tiendas/" class="sector-card"><div class="sector-img"><img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=400&q=70" alt="Solución RFID para tiendas y retail" loading="lazy" width="400" height="220"></div><div class="sector-card-body"><div class="sector-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg></div><h3>Retail y tiendas</h3><p class="sector-desc">Autopago, antihurto y gestión de colecciones sin escanear uno a uno.</p><span class="sector-link">Ver solución <svg class="arrow-r" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 6h8m-3-3 3 3-3 3"/></svg></span></div></a>
       <a href="/soluciones-rfid-para-bibliotecas/" class="sector-card"><div class="sector-img"><img src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?w=400&q=70" alt="Sistema RFID para bibliotecas y fondos documentales" loading="lazy" width="400" height="220"></div><div class="sector-card-body"><div class="sector-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div><h3>Bibliotecas con RFID</h3><p class="sector-desc">Autopréstamo, inventario masivo y control de acceso a fondos documentales.</p><span class="sector-link">Ver solución <svg class="arrow-r" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 6h8m-3-3 3 3-3 3"/></svg></span></div></a>
-      <a href="/rfid-hospitales/" class="sector-card"><div class="sector-img"><img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?w=400&q=70" alt="RFID para hospitales y centros sanitarios" loading="lazy" width="400" height="220"></div><div class="sector-card-body"><div class="sector-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v8M8 12h8"/></svg></div><h3>Hospitales</h3><p class="sector-desc">Localización de equipos, control de errantes y trazabilidad de medicamentos.</p><span class="sector-link">Ver solución <svg class="arrow-r" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 6h8m-3-3 3 3-3 3"/></svg></span></div></a>
+      <a href="/rfid-hospitales/" class="sector-card"><div class="sector-img"><img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?w=400&q=70" alt="RFID para hospitales y centros sanitarios" loading="lazy" width="400" height="220"></div><div class="sector-card-body"><div class="sector-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/><path d="M12 7v5M9.5 9.5h5"/></svg></div><h3>Hospitales</h3><p class="sector-desc">Localización de equipos, control de errantes y trazabilidad de medicamentos.</p><span class="sector-link">Ver solución <svg class="arrow-r" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 6h8m-3-3 3 3-3 3"/></svg></span></div></a>
     </div>
     <div class="sectors-extra" id="sectorsExtra">
       <a href="/rfid-residencias/" class="sector-card"><div class="sector-img"><img src="https://images.unsplash.com/photo-1584515933487-779824d29309?w=400&q=70" alt="Tecnología RFID para residencias de mayores" loading="lazy" width="400" height="220"></div><div class="sector-card-body"><div class="sector-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/><path d="M12 12v0" stroke-width="2.5"/></svg></div><h3>Residencias de mayores</h3><p class="sector-desc">Localización de residentes y control de activos en centros geriátricos.</p><span class="sector-link">Ver solución <svg class="arrow-r" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 6h8m-3-3 3 3-3 3"/></svg></span></div></a>
