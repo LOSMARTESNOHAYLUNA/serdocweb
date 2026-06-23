@@ -497,6 +497,110 @@ a:hover .arrow-r{transform:translateX(3px)}
 /* Keep header .nav items correct after static mega-parent */
 .header{overflow:visible!important}
 .header-inner{position:relative;overflow:visible!important}
+
+/* ═══ PATCH v3 — Global fixes ═══ */
+
+/* 1 ── Grid: always 3 columns, responsive */
+.srv-carousel {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 1.5rem !important;
+  margin-top: 2.5rem !important;
+}
+@media (max-width: 900px) {
+  .srv-carousel { grid-template-columns: repeat(2, 1fr) !important; }
+}
+@media (max-width: 600px) {
+  .srv-carousel { grid-template-columns: 1fr !important; }
+}
+
+/* 2 ── Ver solución: centered */
+.srv-link {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: .4rem !important;
+  margin-top: auto !important;
+  padding-top: .75rem !important;
+  border-top: 1px solid var(--g100) !important;
+  font-size: .88rem !important;
+}
+
+/* 3 ── Megamenu: gap bridge (prevents menu closing on mouse move down) */
+.mega-parent { position: static !important; }
+.mega-parent > a.nav-item::after {
+  content: '';
+  position: absolute;
+  height: 14px;
+  left: 0;
+  right: 0;
+  bottom: -14px;
+  z-index: 101;
+}
+
+/* RFID megamenu: full-width */
+.megamenu {
+  position: absolute !important;
+  left: 0 !important;
+  right: 0 !important;
+  width: 100% !important;
+  transform: none !important;
+  border-radius: 0 0 16px 16px !important;
+  top: 100% !important;
+}
+
+/* Fix photo height to match content */
+.megamenu-cols { align-items: stretch !important; }
+.megamenu-photo {
+  min-width: 200px !important;
+  align-self: stretch !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+.megamenu-photo img {
+  flex: 1 !important;
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 140px !important;
+  object-fit: cover !important;
+}
+
+/* 4 ── Simple dropdowns (Bibliotecas, Gestión Documental) */
+.megamenu.megamenu-simple {
+  position: absolute !important;
+  left: auto !important;
+  right: auto !important;
+  width: auto !important;
+  min-width: 260px !important;
+  max-width: 360px !important;
+  border-radius: 14px !important;
+  transform: none !important;
+  top: calc(100% + .25rem) !important;
+}
+/* Position relative to mega-parent for simple dropdowns */
+.mega-parent:has(.megamenu-simple) {
+  position: relative !important;
+}
+
+/* Disable CSS hover — JS will handle with 200ms delay */
+.mega-parent:hover .megamenu:not(.is-open) {
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+.megamenu.is-open {
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+  margin-top: .25rem !important;
+}
+
+/* 5 ── Remove static badges (applied in HTML, this ensures they're gone) */
+.srv-img-badge[style*="position:static"],
+.srv-img-badge[style*="position: static"] {
+  display: none !important;
+}
+
 </style></head><body><div class="subheader">
   <div class="subheader-inner">
     <a href="mailto:info@serdoc.es?subject=Formulario%20de%20contacto%20Serdoc" class="sh-desktop"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1.5" y="3" width="11" height="8" rx="1.5"/><path d="M1.5 3l5.5 4 5.5-4"/></svg> info@serdoc.es</a>
@@ -527,11 +631,11 @@ a:hover .arrow-r{transform:translateX(3px)}
       </div>
       <div class="mega-parent">
         <a href="/soluciones-rfid-para-bibliotecas/" class="nav-item">Bibliotecas <svg width="10" height="10" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3.5l3 3 3-3"/></svg></a>
-        <div class="megamenu"><div class="megamenu-cols"><div class="megamenu-col megamenu-single"><a href="/autoprestamo-libros-rfid/">Autopréstamo de libros</a><a href="/autolibro/">Autolibro</a><a href="/rfid-bibliobus/">Bibliobús RFID</a><a href="/autoprestamo-de-portatiles/">Autopréstamo de portátiles</a><a href="/reserva-automatica-ordenadores/">Reserva de ordenadores</a><a href="/buzon-de-devolucion-inteligente/">Buzón de devolución</a></div></div></div>
+        <div class="megamenu megamenu-simple"><div class="megamenu-cols"><div class="megamenu-col megamenu-single"><a href="/autoprestamo-libros-rfid/">Autopréstamo de libros</a><a href="/autolibro/">Autolibro</a><a href="/rfid-bibliobus/">Bibliobús RFID</a><a href="/autoprestamo-de-portatiles/">Autopréstamo de portátiles</a><a href="/reserva-automatica-ordenadores/">Reserva de ordenadores</a><a href="/buzon-de-devolucion-inteligente/">Buzón de devolución</a></div></div></div>
       </div>
       <div class="mega-parent">
         <a href="/sistema-de-gestion-documental/" class="nav-item">Gestión Documental <svg width="10" height="10" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3.5l3 3 3-3"/></svg></a>
-        <div class="megamenu"><div class="megamenu-cols"><div class="megamenu-col megamenu-single"><a href="/digitalizacion-documentos/">Digitalización de documentos</a><a href="/business-process-outsourcing/">Business Process Outsourcing</a></div></div></div>
+        <div class="megamenu megamenu-simple"><div class="megamenu-cols"><div class="megamenu-col megamenu-single"><a href="/digitalizacion-documentos/">Digitalización de documentos</a><a href="/business-process-outsourcing/">Business Process Outsourcing</a></div></div></div>
       </div>
       <a href="/casos-de-exito/" class="nav-item">Casos de éxito</a>
       <a href="/blog/" class="nav-item">Blog</a>
@@ -555,7 +659,6 @@ a:hover .arrow-r{transform:translateX(3px)}
   <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;margin-top:1.5rem">
     <div><img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=700&q=80" alt="Aseguradora médica digitalización BPO — Serdoc" style="width:100%;border-radius:16px;object-fit:cover;height:340px"></div>
     <div>
-      <span class="srv-img-badge" style="position:static;display:inline-block;margin-bottom:1rem">BPO Documental</span>
       <h2 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.7rem;margin-bottom:1rem">Aseguradora médica: de meses a días en el ciclo documental</h2>
       <p style="color:var(--g600);margin-bottom:1.25rem">Una aseguradora médica de ámbito nacional tenía su backoffice de facturación completamente en papel. El proceso de revisión de cada expediente tardaba semanas, los errores de facturación eran frecuentes y la detección de fraude era prácticamente imposible en ese volumen.</p>
       <p style="color:var(--g600);margin-bottom:1.5rem">Serdoc implantó un proceso BPO completo: digitalización masiva del archivo histórico, indexación y clasificación automática, y flujo de revisión digital con validación a dos niveles. El equipo de Serdoc gestiona ahora 50.000 expedientes al mes.</p>
@@ -573,7 +676,6 @@ a:hover .arrow-r{transform:translateX(3px)}
   <div class="section-label">Caso de éxito 02</div>
   <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;margin-top:1.5rem">
     <div>
-      <span class="srv-img-badge" style="position:static;display:inline-block;margin-bottom:1rem">Autopréstamo</span>
       <h2 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.7rem;margin-bottom:1rem">UPM: el primer autopréstamo de portátiles 24/7 de España</h2>
       <p style="color:var(--g600);margin-bottom:1.25rem">La Universidad Politécnica de Madrid necesitaba ofrecer a sus estudiantes acceso a portátiles fuera del horario de atención, sin incrementar la plantilla de personal. Los préstamos manuales generaban colas, errores de registro y pérdidas de material.</p>
       <p style="color:var(--g600);margin-bottom:1.25rem">Serdoc implantó el primer sistema de autopréstamo de portátiles de España: los estudiantes usan su carnet universitario en el terminal para retirar y devolver ordenadores de forma autónoma, las 24 horas del día, con control RFID completo de cada movimiento.</p>
@@ -593,7 +695,6 @@ a:hover .arrow-r{transform:translateX(3px)}
   <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;margin-top:1.5rem">
     <div><img src="https://images.unsplash.com/photo-1553413077-190dd305871c?w=700&q=80" alt="Museo Reina Sofía RFID UHF — Serdoc" style="width:100%;border-radius:16px;object-fit:cover;height:340px"></div>
     <div>
-      <span class="srv-img-badge" style="position:static;display:inline-block;margin-bottom:1rem">RFID UHF</span>
       <h2 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.7rem;margin-bottom:1rem">Museo Reina Sofía: RFID UHF completo para colecciones de arte</h2>
       <p style="color:var(--g600);margin-bottom:1.25rem">El Museo Nacional Centro de Arte Reina Sofía requería un sistema de trazabilidad para su colección permanente: localización de obras durante su movimiento interno, inventarios periódicos fiables y accesos controlados a zonas de almacén sin interferir en la experiencia del visitante.</p>
       <p style="color:var(--g600);margin-bottom:1.25rem">Serdoc implantó RFID UHF con etiquetas especialmente seleccionadas para no interferir con las obras. El resultado: inventarios completos por primera vez en la historia del museo, localización de obras a distancia y accesos diáfanos en zonas de exposición.</p>
@@ -787,6 +888,30 @@ CC.init();
   if(!bg||window.innerWidth<768)return;
   function upd(){var r=bg.parentElement.getBoundingClientRect();bg.style.transform='translateY('+((window.innerHeight/2-r.top-r.height/2)*0.1)+'px)';}
   window.addEventListener('scroll',upd,{passive:true});upd();
+})();
+</script>
+<script>
+/* ═ MEGAMENU DELAY PATCH ═ */
+(function(){
+  var parents = document.querySelectorAll('.mega-parent');
+  parents.forEach(function(p) {
+    var menu = p.querySelector('.megamenu');
+    if (!menu) return;
+    var timer;
+    function open() {
+      clearTimeout(timer);
+      menu.classList.add('is-open');
+    }
+    function close() {
+      timer = setTimeout(function() {
+        menu.classList.remove('is-open');
+      }, 200);
+    }
+    p.addEventListener('mouseenter', open);
+    p.addEventListener('mouseleave', close);
+    menu.addEventListener('mouseenter', open);
+    menu.addEventListener('mouseleave', close);
+  });
 })();
 </script>
 </body></html>
