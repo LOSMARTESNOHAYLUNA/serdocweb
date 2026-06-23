@@ -1,0 +1,747 @@
+<!DOCTYPE html><html lang="es"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Estándares de etiquetas RFID: EPC, ISO 18000, ISO 15693 | Serdoc</title><meta name="description" content="Guía de estándares RFID: EPC Gen2, ISO 18000-63, ISO 15693, ISO 14443 y DSFID. Cuándo aplica cada uno y qué significa para tu proyecto.">
+<link rel="canonical" href="https://www.serdoc.es/cuales-son-los-estandares-de-etiquetas-rfid/"><meta name="robots" content="index,follow">
+<meta property="og:type" content="article"><meta property="og:url" content="https://www.serdoc.es/cuales-son-los-estandares-de-etiquetas-rfid/">
+<meta property="og:title" content="Estándares de etiquetas RFID: EPC, ISO 18000, ISO 15693 | Serdoc"><meta property="og:description" content="Guía de estándares RFID: EPC Gen2, ISO 18000-63, ISO 15693, ISO 14443 y DSFID. Cuándo aplica cada uno y qué significa para tu proyecto.">
+<meta property="og:image" content="https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200&q=80"><meta name="twitter:card" content="summary_large_image">
+<meta name="google-site-verification" content="OIjTbV3rH7Xazv0qjQYDeix4W-D63KeJp04xwGasD8M">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":Estándares de etiquetas RFID: EPC Gen2, ISO 18000 y más,"description":Guía de estándares RFID: EPC Gen2, ISO 18000-63, ISO 15693, ISO 14443 y DSFID. Cuándo aplica cada uno y qué significa para tu proyecto.,"datePublished":"2024-12-10","author":{"@type":"Organization","name":"Serdoc Informática S.L."},"publisher":{"@type":"Organization","name":"Serdoc Informática S.L.","url":"https://www.serdoc.es"},"url":"https://www.serdoc.es/cuales-son-los-estandares-de-etiquetas-rfid/","image":https://images.unsplash.com/photo-1518770660439-4636190af475?w=1920&amp;q=80},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://www.serdoc.es/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://www.serdoc.es/blog/"},{"@type":"ListItem","position":3,"name":Estándares de etiquetas RFID: EPC Gen2, ISO 18000 y más,"item":"https://www.serdoc.es/cuales-son-los-estandares-de-etiquetas-rfid/"}]}]}</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZXXNMZ7DNZ"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-ZXXNMZ7DNZ');</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#1B2A4A;--navy-deep:#0F1B33;--navy-mid:#243A5E;--teal:#0891B2;--teal-light:#22D3EE;--teal-bg:#ECFEFF;--amber:#f57a14;--amber-hover:#d4620f;--white:#FFFFFF;--bg:#FAFBFC;--bg-warm:#F8F9FB;--g50:#F8FAFC;--g100:#F1F5F9;--g200:#E2E8F0;--g300:#CBD5E1;--g400:#94A3B8;--g500:#64748B;--g600:#475569;--g700:#334155;--g800:#27353e;--g900:#0F172A;--green:#059669;--green-bg:#ECFDF5;--radius:10px;--radius-lg:16px;--shadow:0 4px 16px rgba(15,27,51,.08);--shadow-lg:0 16px 48px rgba(15,27,51,.1)}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Source Sans 3',sans-serif;background:var(--bg);color:var(--g800);line-height:1.68;-webkit-font-smoothing:antialiased;font-size:17px!important}
+p{font-size:17px!important}
+h1,h2,h3,h4,h5,h6{font-family:'Outfit',sans-serif;line-height:1.2}
+.h2-light{font-weight:300;display:block}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+ul,ol{list-style:none}
+button{font-family:inherit;cursor:pointer}
+
+.subheader{position:fixed;top:0;left:0;right:0;z-index:1001;background:#0F1B33;padding:.35rem 1.5rem;border-bottom:1px solid rgba(255,255,255,.04)}
+.subheader-inner{max-width:1200px;margin:0 auto;display:flex;justify-content:center;align-items:center;gap:1.25rem}
+.subheader a{font-size:13px;color:rgba(255,255,255,.5);display:inline-flex;align-items:center;gap:.35rem;font-family:'Outfit',sans-serif;transition:color .15s}
+.subheader a:hover{color:var(--teal-light)}
+.subheader-sep{color:rgba(255,255,255,.15);font-size:.7rem}
+.subheader svg{flex-shrink:0;opacity:.6}
+
+.header{position:fixed;top:30px;left:0;right:0;z-index:1000;background:rgba(15,27,51,.96);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.06)}
+.header-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:.7rem 1.5rem}
+.logo svg{height:44px;width:auto}
+.nav{display:flex;align-items:center;gap:.15rem}
+.nav-item{color:rgba(255,255,255,.7);font-size:15px;font-weight:500;padding:.45rem .7rem;border-radius:6px;transition:all .2s;font-family:'Outfit',sans-serif;background:none;border:none;display:inline-flex;align-items:center;gap:3px}
+.nav-item:hover{color:var(--white);background:rgba(255,255,255,.07)}
+.nav-cta{background:var(--amber)!important;color:var(--navy-deep)!important;font-weight:700!important;border-radius:8px!important;padding:.5rem 1rem!important}
+.nav-cta:hover{background:var(--amber-hover)!important}
+.menu-toggle{display:none;background:none;border:none;color:white;padding:.5rem}
+.mega-parent{position:relative}
+.megamenu{position:absolute;top:100%;left:50%;transform:translateX(-50%);background:var(--white);border:1px solid var(--g200);border-radius:14px;box-shadow:var(--shadow-lg);padding:1.25rem;opacity:0;visibility:hidden;pointer-events:none;transition:all .2s;margin-top:.5rem;z-index:100}
+.mega-parent:hover .megamenu{opacity:1;visibility:visible;pointer-events:auto;margin-top:.25rem}
+.megamenu-cols{display:flex;gap:1.5rem}
+.megamenu-col{min-width:180px}
+.megamenu-col h4{font-size:.7rem;text-transform:uppercase;letter-spacing:.06em;color:var(--g400);margin-bottom:.5rem;font-family:'Outfit',sans-serif;font-weight:700}
+.megamenu-col a{display:flex;align-items:center;gap:.4rem;padding:.4rem .5rem;font-size:.88rem;color:var(--g600);border-radius:6px;font-family:'Outfit',sans-serif;font-weight:500;transition:all .15s}
+.megamenu-col a:hover{background:var(--g100);color:var(--navy)}
+.megamenu-col a svg{flex-shrink:0;color:var(--g400);transition:color .15s}
+.megamenu-col a:hover svg{color:var(--teal)}
+.megamenu-single{min-width:220px}
+.megamenu-photo{min-width:170px;border-left:1px solid var(--g100);padding-left:1.25rem;display:flex;flex-direction:column;gap:.75rem}
+.megamenu-photo img{width:100%;height:100px;object-fit:cover;border-radius:8px}
+.megamenu-photo-cta{font-size:.82rem;font-weight:700;color:var(--teal);font-family:'Outfit',sans-serif;display:inline-flex;align-items:center;gap:.3rem;transition:gap .2s}
+.megamenu-photo-cta:hover{gap:.5rem}
+.mobile-nav{display:none;position:fixed;top:86px;left:0;right:0;bottom:0;background:var(--navy-deep);z-index:999;overflow-y:auto;padding:1rem 1.5rem 2rem}
+.mobile-nav.open{display:block}
+.mobile-nav a{display:block;padding:.75rem 0;font-size:17px;color:rgba(255,255,255,.8);font-family:'Outfit',sans-serif;font-weight:500;border-bottom:1px solid rgba(255,255,255,.06)}
+.mobile-nav a:hover{color:var(--teal-light)}
+.mobile-nav .mn-section{font-size:.72rem;text-transform:uppercase;letter-spacing:.06em;color:var(--g400);margin-top:1.25rem;margin-bottom:.25rem;font-family:'Outfit',sans-serif;font-weight:700}
+.mobile-nav .mn-sub a{padding-left:1rem;font-size:.92rem;color:rgba(255,255,255,.55)}
+
+.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.85rem 1.6rem;border-radius:var(--radius);font-size:.95rem;font-weight:700;font-family:'Outfit',sans-serif;transition:all .2s;border:none}
+.btn-primary{background:var(--amber);color:var(--navy-deep)}
+.btn-primary:hover{background:#bbd9ee;color:var(--navy-deep)!important;transform:translateY(-1px);box-shadow:0 8px 24px rgba(187,217,238,.35)}
+.btn-ghost{background:transparent;color:var(--white);border:2px solid rgba(255,255,255,.35)}
+.btn-ghost:hover{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.6)}
+.btn-cta-outline{display:inline-flex;align-items:center;gap:.4rem;border:1.5px solid var(--g200);color:var(--g600);padding:.7rem 1.5rem;border-radius:var(--radius);font-size:.95rem;font-weight:600;font-family:'Outfit',sans-serif;transition:all .2s}
+.btn-cta-outline:hover{border-color:var(--teal);color:var(--teal)}
+.btn-navy{display:inline-flex;align-items:center;gap:.5rem;background:var(--navy-deep);color:white;padding:.9rem 1.85rem;border-radius:var(--radius);font-size:.95rem;font-weight:700;font-family:'Outfit',sans-serif;text-decoration:none;transition:all .2s;border:none;cursor:pointer}
+.btn-navy:hover{background:var(--navy);transform:translateY(-1px)}
+.arrow-r{transition:transform .2s}
+a:hover .arrow-r{transform:translateX(3px)}
+
+/* BREADCRUMB */
+
+.breadcrumb-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;gap:.4rem;flex-wrap:wrap;font-size:.9rem;font-family:'Outfit',sans-serif;font-weight:500}
+.breadcrumb a{color:var(--teal);font-weight:600;text-decoration:none;transition:color .15s}
+.breadcrumb a:hover{color:var(--navy);text-decoration:underline;text-underline-offset:3px}
+.breadcrumb-sep{color:var(--teal);font-weight:700;padding:0 .1rem}
+.breadcrumb-current{color:var(--g500);font-weight:500}
+
+/* HERO */
+@keyframes kenburns{from{transform:scale(1)}to{transform:scale(1.08)}}
+.lhero{position:relative;overflow:hidden;min-height:88vh;display:flex;align-items:center;padding:8rem 1.5rem 5rem}
+.lhero-bg{position:absolute;inset:0;z-index:0;overflow:hidden}
+.lhero-bg img{width:100%;height:100%;object-fit:cover;display:block;animation:kenburns 20s ease-in-out infinite alternate}
+.lhero-overlay{position:absolute;inset:0;z-index:1;background:rgba(15,27,51,.75)}
+.lhero-overlay-b{position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(15,27,51,.2) 0%,rgba(15,27,51,.75) 100%)}
+.lhero-inner{max-width:760px;margin:0 auto;text-align:center;position:relative;z-index:2;isolation:isolate}
+.lhero-badge{display:inline-flex;align-items:center;gap:.4rem;background:rgba(8,145,178,.15);border:1px solid rgba(8,145,178,.3);border-radius:999px;padding:.3rem .85rem;font-size:.75rem;font-weight:700;color:#22D3EE;font-family:'Outfit',sans-serif;text-transform:uppercase;letter-spacing:.06em;margin-bottom:1.25rem}
+.lhero h1{font-size:clamp(2.2rem,4.5vw,3.6rem);font-weight:800;color:white;line-height:1.12;margin-bottom:1.2rem}
+.lhero-intro{font-size:1.1rem;color:rgba(255,255,255,.75);line-height:1.7;margin-bottom:2.25rem;max-width:580px;margin-left:auto;margin-right:auto}
+.lhero-actions{display:flex;gap:.85rem;flex-wrap:wrap;justify-content:center}
+
+/* SECTION SHARED */
+.section-label{font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--teal);font-family:'Outfit',sans-serif;margin-bottom:.6rem;text-align:center}
+.section-h2{font-size:clamp(1.7rem,3vw,2.4rem);font-weight:800;color:var(--navy);margin-bottom:.7rem;line-height:1.2;text-align:center}
+.section-sub{font-size:1rem;color:var(--g500);margin-bottom:2.5rem;max-width:580px;text-align:center;margin-left:auto;margin-right:auto}
+
+/* PROBLEMA */
+.problem{padding:5rem 1.5rem;background:var(--bg-warm)}
+.problem-inner{max-width:1200px;margin:0 auto;text-align:center}
+.problem-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2.5rem}
+.prob-card{background:white;border:1px solid var(--g200);border-radius:16px;padding:1.75rem;transition:box-shadow .25s,transform .25s;text-align:left}
+.prob-card:hover{box-shadow:0 8px 32px rgba(15,27,51,.09);transform:translateY(-2px)}
+.prob-icon{width:52px;height:52px;border-radius:50%;background:var(--teal-bg);display:flex;align-items:center;justify-content:center;margin-bottom:1rem;color:var(--teal)}
+.prob-icon svg{fill:none!important;stroke:var(--teal)!important;stroke-width:1.5!important;stroke-linecap:round!important;stroke-linejoin:round!important}
+.prob-card h3{font-size:1rem;font-weight:700;color:var(--navy);margin-bottom:.4rem;line-height:1.3}
+.prob-card p{font-size:.95rem;color:var(--g500);line-height:1.6}
+
+/* CÓMO FUNCIONA */
+.how-sol{padding:5rem 1.5rem;background:white}
+.how-sol-inner{max-width:1100px;margin:0 auto;text-align:center}
+.how-timeline{display:flex;align-items:flex-start;gap:0;position:relative;margin-top:3rem}
+.how-step-wrap{flex:1;text-align:center;position:relative;padding:0 1rem;min-width:0}
+.how-step-circle{width:64px;height:64px;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto .75rem;background:rgba(8,145,178,.15);border:2px solid rgba(8,145,178,.35);color:var(--teal);position:relative;z-index:2;transition:background .5s ease,box-shadow .5s ease,border-color .5s}
+.how-step-circle.is-active{background:var(--teal);border-color:var(--teal);color:white;box-shadow:0 0 0 10px rgba(8,145,178,.12),0 6px 24px rgba(8,145,178,.4)}
+.how-step-circle svg{transition:opacity .4s ease;flex-shrink:0}
+.how-step-num-label{font-size:.72rem;font-weight:700;letter-spacing:.08em;color:var(--g400);font-family:'Outfit',sans-serif;margin-bottom:.6rem;text-transform:uppercase}
+.how-conn{flex:0 0 60px;height:2px;background:var(--g200);margin-top:31px;position:relative;overflow:hidden}
+.how-conn-fill{position:absolute;top:0;left:0;height:100%;width:0;background:var(--teal)}
+.how-step-wrap h3{font-size:.95rem;font-weight:700;color:var(--navy);margin-bottom:.4rem;line-height:1.35}
+.how-step-wrap p{font-size:.88rem;color:var(--g500);line-height:1.6;max-width:200px;margin:0 auto}
+
+/* BENEFICIOS */
+.benefits{padding:5rem 1.5rem;position:relative;overflow:hidden}
+.benefits-bg{position:absolute;inset:-10%;background:url('https://images.unsplash.com/photo-1553413077-190dd305871c?w=1920&q=80') center/cover no-repeat;z-index:0;will-change:transform}
+.benefits-overlay{position:absolute;inset:0;background:rgba(10,20,45,.85);z-index:1}
+.benefits-inner{max-width:1200px;margin:0 auto;position:relative;z-index:2;text-align:center}
+.benefits h2{font-size:clamp(1.7rem,3vw,2.4rem);font-weight:800;color:white;margin-bottom:2.5rem;line-height:1.2}
+.benefits .h2-light{font-weight:300;color:rgba(255,255,255,.55)}
+.benefits-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem}
+.ben-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:1.75rem;transition:all .25s;text-align:left}
+.ben-card:hover{background:rgba(255,255,255,.08);border-color:rgba(8,145,178,.35)}
+.ben-num{font-size:clamp(2.2rem,3.5vw,3.2rem);font-weight:800;color:var(--amber);font-family:'Outfit',sans-serif;line-height:1;margin-bottom:.5rem}
+.ben-card h3{font-size:.95rem;font-weight:700;color:white;margin-bottom:.35rem}
+.ben-card p{font-size:.88rem;color:rgba(255,255,255,.5);line-height:1.6}
+
+/* ROI — VISUAL TIMELINE */
+.roi-section{padding:5rem 1.5rem;background:var(--navy-deep);position:relative;overflow:hidden}
+.roi-section::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 100%,rgba(8,145,178,.08) 0%,transparent 70%)}
+.roi-inner{max-width:1100px;margin:0 auto;position:relative;z-index:1}
+.roi-intro{max-width:620px;margin:1.5rem auto 3.5rem;font-size:1.05rem;color:rgba(255,255,255,.6);text-align:center;line-height:1.7}
+.roi-timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;position:relative;margin-bottom:3rem}
+.roi-timeline::before{display:none}
+.roi-phase{text-align:center;padding:0 .75rem;position:relative;z-index:1}
+.roi-phase-dot{width:72px;height:72px;border-radius:50%;margin:0 auto 1.25rem;display:flex;align-items:center;justify-content:center;position:relative;z-index:2}
+.roi-phase-dot{background:rgba(8,145,178,.12);border:2px solid rgba(8,145,178,.35)}
+.roi-phase-dot svg{color:var(--teal);fill:none;stroke:var(--teal);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.roi-phase-label{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;margin-bottom:.4rem;font-family:'Outfit',sans-serif}
+.roi-phase-label{color:var(--teal-light)}
+.roi-phase h3{font-size:.95rem;font-weight:700;color:white;margin-bottom:.4rem;line-height:1.3}
+.roi-phase p{font-size:.82rem;color:rgba(255,255,255,.5);line-height:1.55}
+.roi-message{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:1.5rem 2rem;text-align:center;max-width:680px;margin:0 auto 2rem}
+.roi-message p{font-size:1rem;color:rgba(255,255,255,.7);line-height:1.7;margin:0}
+.roi-message strong{color:white}
+.roi-cta{text-align:center}
+
+/* SERVICIOS RELACIONADOS — CARRUSEL */
+.srv-rel{padding:5rem 1.5rem;background:var(--bg-warm)}
+.srv-rel-inner{max-width:1200px;margin:0 auto}
+.srv-carousel{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2.5rem}
+.srv-card{background:var(--white);border-radius:16px;overflow:hidden;border:1px solid var(--g200);display:flex;flex-direction:column;text-decoration:none;transition:all .25s}
+.srv-card:hover{transform:translateY(-4px);box-shadow:0 12px 36px rgba(15,27,51,.12);border-color:var(--teal)}
+.srv-img{height:180px;overflow:hidden;position:relative;flex-shrink:0}
+.srv-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease}
+.srv-card:hover .srv-img img{transform:scale(1.06)}
+.srv-img-badge{position:absolute;top:.75rem;left:.75rem;background:rgba(15,27,51,.75);backdrop-filter:blur(4px);border-radius:6px;padding:.25rem .6rem;font-size:.72rem;font-weight:700;color:white;font-family:'Outfit',sans-serif;text-transform:uppercase;letter-spacing:.04em}
+.srv-body{padding:1.25rem 1.25rem 1.5rem;flex:1;display:flex;flex-direction:column}
+.srv-body h3{font-size:1.05rem;font-weight:700;color:var(--navy);margin-bottom:.4rem;line-height:1.3}
+.srv-body p{font-size:.9rem;color:var(--g500);line-height:1.55;flex:1;margin-bottom:1rem}
+.srv-link{display:inline-flex;align-items:center;gap:.3rem;font-size:.9rem;font-weight:600;color:var(--teal);font-family:'Outfit',sans-serif;transition:gap .2s;margin-top:auto}
+.srv-link:hover{gap:.5rem}
+.srv-more{text-align:center;margin-top:2rem}
+.srv-more a{display:inline-flex;align-items:center;gap:.4rem;color:var(--teal);font-weight:700;font-size:1rem;font-family:'Outfit',sans-serif;transition:gap .2s}
+.srv-more a:hover{gap:.6rem}
+
+/* CTA BAND */
+.cta-band{background:var(--amber);padding:2.75rem 1.5rem}
+.cta-band-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:1.5rem;flex-wrap:wrap}
+.cta-band-text{font-size:clamp(1.1rem,2.2vw,1.55rem);font-weight:800;color:var(--navy-deep);font-family:'Outfit',sans-serif;max-width:580px;line-height:1.3}
+
+/* FAQ */
+.faq-land{padding:5rem 1.5rem;background:white}
+.faq-land-inner{max-width:780px;margin:0 auto}
+.faq-land h2{text-align:center;font-size:clamp(1.7rem,3vw,2.4rem);font-weight:800;color:var(--navy);margin-bottom:.5rem}
+.faq-land-list{margin:2.5rem 0 2rem}
+.faq-ditem{border-bottom:1px solid var(--g200)}
+.faq-dq{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1.2rem 0;cursor:pointer;user-select:none;list-style:none;font-size:1rem;font-weight:600;color:var(--navy);font-family:'Outfit',sans-serif;transition:color .2s}
+.faq-dq::-webkit-details-marker{display:none}
+.faq-dq:hover{color:var(--teal)}
+.faq-dq svg{flex-shrink:0;transition:transform .25s;color:var(--g400)}
+.faq-ditem[open] .faq-dq svg{transform:rotate(180deg);color:var(--teal)}
+.faq-da{padding:.25rem 0 1.25rem;font-size:.98rem;color:var(--g600);line-height:1.7}
+
+/* CTA FORM */
+.cta-form-section{padding:0;background:var(--navy-deep);color:var(--white);position:relative;overflow:hidden}
+.cta-split{display:grid;grid-template-columns:1fr 1fr;min-height:500px;position:relative;z-index:1}
+.cta-form-side{padding:3.5rem 3rem;display:flex;flex-direction:column;justify-content:center}
+.cta-form-side h2{font-size:clamp(1.5rem,2.5vw,2.2rem);font-weight:800;color:var(--white);margin-bottom:.5rem;line-height:1.25;text-align:center}
+.cta-form-side .h2-light{color:rgba(255,255,255,.55)}
+.cta-form-sub{color:rgba(255,255,255,.5);margin-bottom:2rem;font-size:.98rem;text-align:center}
+.cta-form{display:flex;flex-direction:column;gap:.75rem}
+.cta-form-row{display:grid;grid-template-columns:1fr 1fr;gap:.75rem}
+.cta-form input,.cta-form textarea{width:100%;padding:.8rem 1rem;border-radius:var(--radius);border:1.5px solid rgba(255,255,255,.12);background:rgba(255,255,255,.07);color:white;font-size:.97rem;font-family:'Source Sans 3',sans-serif;outline:none;transition:border-color .2s;box-sizing:border-box}
+.cta-form input::placeholder,.cta-form textarea::placeholder{color:rgba(255,255,255,.35)}
+.cta-form input:focus,.cta-form textarea:focus{border-color:var(--teal)}
+.cta-form textarea{resize:vertical;min-height:80px}
+.cta-form-check{display:flex;align-items:center;gap:.5rem;font-size:.83rem;color:rgba(255,255,255,.45);cursor:pointer}
+.cta-form-check input{flex-shrink:0;width:15px;height:15px;margin:0;accent-color:var(--teal);cursor:pointer}
+.cta-form-check label{cursor:pointer;line-height:1.3}
+.cta-form-check a{color:rgba(255,255,255,.55);text-decoration:underline}
+.cta-map-side{position:relative;min-height:500px;height:100%}
+.cta-map-side iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0;display:block}
+
+/* FOOTER */
+.footer{background:var(--g900);color:rgba(255,255,255,.5);padding:3rem 1.5rem 1.5rem}
+.footer-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:2rem}
+.footer-brand svg{height:40px;width:auto;margin-bottom:1rem}
+.footer-brand p{font-size:15px;line-height:1.6;max-width:260px}
+.footer h5{font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;color:rgba(255,255,255,.25);margin-bottom:.75rem;font-family:'Outfit'}
+.footer li{margin-bottom:.4rem}
+.footer a{font-size:15px;color:rgba(255,255,255,.45);transition:color .15s}
+.footer a:hover{color:var(--teal-light)}
+.footer-contact p{font-size:15px;margin-bottom:.35rem}
+.footer-contact a{color:rgba(255,255,255,.6)}
+.footer-bottom{max-width:1200px;margin:2rem auto 0;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,.06);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.75rem;font-size:.82rem}
+
+/* FLOATING BUTTONS */
+.float-btns{position:fixed!important;bottom:1.5rem;right:1.5rem;z-index:9999;display:flex;flex-direction:column;gap:.75rem}
+.float-btn{width:56px;height:56px;border-radius:50%;border:none;display:flex;align-items:center;justify-content:center;color:white;transition:all .2s;box-shadow:0 4px 16px rgba(0,0,0,.2);text-decoration:none}
+.float-btn:hover{transform:scale(1.08)}
+.float-btn-wa{background:#25D366;box-shadow:0 4px 16px rgba(37,211,102,.35)}
+.float-btn-wa svg{fill:currentColor!important;stroke:none!important}
+.float-btn-wa:hover{box-shadow:0 8px 24px rgba(37,211,102,.4)}
+.float-btn-phone{background:var(--amber);box-shadow:0 4px 16px rgba(245,122,20,.35)}
+.float-btn-phone:hover{box-shadow:0 8px 24px rgba(245,122,20,.4)}
+
+
+/* ── COOKIE BANNER ── */
+.cookie-overlay{position:fixed;inset:0;background:rgba(15,27,51,.45);backdrop-filter:blur(3px);z-index:9998;opacity:0;transition:opacity .3s;pointer-events:none}
+.cookie-overlay.active{opacity:1;pointer-events:auto}
+.cookie-banner{position:fixed;bottom:0;left:0;right:0;z-index:9999;transform:translateY(100%);transition:transform .4s cubic-bezier(.22,.68,0,1)}
+.cookie-banner.active{transform:translateY(0)}
+.cookie-banner-inner{max-width:1200px;margin:0 auto;background:var(--white);border-top:1px solid var(--g200);box-shadow:0 -8px 40px rgba(15,27,51,.1);padding:1.25rem 1.5rem;display:grid;grid-template-columns:1fr auto;gap:1.5rem;align-items:center}
+.cookie-banner-text h3{font-size:.95rem;font-weight:700;color:var(--navy);margin-bottom:.25rem}
+.cookie-banner-text p{font-size:.9rem;color:var(--g500)}
+.cookie-banner-text a{color:var(--teal);text-decoration:underline}
+.cookie-banner-actions{display:flex;gap:.5rem}
+.cb-btn{padding:.6rem 1.1rem;border-radius:8px;font-size:.9rem;font-weight:700;font-family:'Outfit';transition:all .2s;border:none;white-space:nowrap}
+.cb-btn-accept{background:var(--navy);color:var(--white)}
+.cb-btn-accept:hover{background:var(--navy-mid)}
+.cb-btn-reject{background:var(--g100);color:var(--g700);border:1px solid var(--g200)}
+.cb-btn-reject:hover{background:var(--g200)}
+.cb-btn-settings{background:var(--g100);color:var(--g700);border:1px solid var(--g200)}
+.cb-btn-settings:hover{background:var(--g200)}
+
+/* ── COOKIE PREFS ── */
+.cookie-prefs{position:fixed;inset:0;z-index:9999;display:flex;align-items:center;justify-content:center;padding:1.5rem;opacity:0;pointer-events:none;transition:opacity .3s}
+.cookie-prefs.active{opacity:1;pointer-events:auto}
+.cookie-prefs-panel{background:var(--white);border-radius:20px;box-shadow:0 24px 64px rgba(15,27,51,.2);width:100%;max-width:560px;max-height:90vh;display:flex;flex-direction:column;transform:translateY(16px);transition:transform .35s cubic-bezier(.22,.68,0,1)}
+.cookie-prefs.active .cookie-prefs-panel{transform:translateY(0)}
+.cp-header{padding:1.5rem 1.75rem 1rem;border-bottom:1px solid var(--g200)}
+.cp-header-row{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:.5rem}
+.cp-header h2{font-size:1.1rem;font-weight:800;color:var(--navy)}
+.cp-close{width:32px;height:32px;border-radius:8px;border:1px solid var(--g200);background:var(--g100);cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--g400);transition:all .15s;flex-shrink:0}
+.cp-close:hover{background:var(--g200);color:var(--g800)}
+.cp-header p{font-size:.9rem;color:var(--g500);line-height:1.6}
+.cp-body{padding:1rem 1.75rem;overflow-y:auto;flex:1}
+.cp-footer{padding:1rem 1.75rem 1.5rem;border-top:1px solid var(--g200);display:flex;gap:.5rem;justify-content:flex-end}
+.cc{padding:1rem 0;border-bottom:1px solid var(--g100)}
+.cc:last-child{border-bottom:none}
+.cc-header{display:flex;justify-content:space-between;align-items:center;gap:1rem}
+.cc-info{flex:1}
+.cc-title{font-family:'Outfit',sans-serif;font-size:.92rem;font-weight:700;color:var(--navy);display:flex;align-items:center;gap:.5rem}
+.cc-badge{font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;padding:.15rem .45rem;border-radius:4px;background:var(--green-bg);color:var(--green)}
+.cc-desc{font-size:.85rem;color:var(--g500);margin-top:.25rem;line-height:1.5}
+.toggle{position:relative;width:44px;height:24px;display:inline-block}
+.toggle input{opacity:0;width:0;height:0;position:absolute}
+.toggle-track{position:absolute;inset:0;border-radius:99px;background:var(--g300);cursor:pointer;transition:background .2s}
+.toggle-track::after{content:'';position:absolute;top:2px;left:2px;width:20px;height:20px;border-radius:50%;background:var(--white);box-shadow:0 1px 3px rgba(0,0,0,.15);transition:transform .2s}
+.toggle input:checked+.toggle-track{background:var(--teal)}
+.toggle input:checked+.toggle-track::after{transform:translateX(20px)}
+.toggle input:disabled+.toggle-track{background:var(--teal);opacity:.5;cursor:not-allowed}
+.toggle input:disabled:checked+.toggle-track::after{transform:translateX(20px)}
+.cookie-reopen{position:fixed;bottom:1.25rem;left:1.25rem;z-index:990;width:44px;height:44px;border-radius:12px;background:var(--navy);border:1px solid rgba(255,255,255,.1);box-shadow:0 4px 16px rgba(15,27,51,.2);cursor:pointer;display:none;align-items:center;justify-content:center;color:white;transition:all .2s}
+.cookie-reopen.visible{display:flex}
+.cookie-reopen:hover{background:var(--navy-mid);transform:translateY(-2px)}
+
+
+
+
+/* ── SECTOR CARDS VISUAL UPGRADE ── */
+.sector-icon{width:64px;height:64px;border-radius:14px;background:linear-gradient(135deg,var(--g100),var(--g50));color:var(--navy);display:flex;align-items:center;justify-content:center;margin-bottom:1rem;transition:all .25s;flex-shrink:0}
+.sector-card:hover .sector-icon{background:linear-gradient(135deg,var(--teal-bg),rgba(8,145,178,.05));color:var(--teal)}
+.sector-card{padding:0;overflow:hidden}
+.sector-card-body{padding:1.25rem 1.25rem 1rem;display:flex;flex-direction:column;flex:1}
+/* sector-img: see primary block above */
+
+
+/* ── HOW STEP VISUAL ICONS ── */
+/* how-step merged above */
+
+/* ── CASE CARDS VISUAL HEADER ── */
+.case-header{height:80px;border-radius:10px 10px 0 0;margin:-1.75rem -1.75rem 1.25rem;display:flex;align-items:center;justify-content:space-between;padding:0 1.5rem;overflow:hidden;position:relative}
+.case-header-text{color:rgba(255,255,255,.9);font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;font-family:'Outfit',sans-serif}
+.case-card{background:var(--white);border:1px solid var(--g200);border-radius:var(--radius-lg);padding:1.75rem;display:flex;flex-direction:column;transition:all .25s;overflow:hidden}
+.case-img{margin:-1.75rem -1.75rem 1.25rem;height:200px;overflow:hidden;position:relative}
+.case-img img{width:100%;height:100%;object-fit:cover;object-position:center;display:block;transition:transform .45s ease}
+.case-card:hover .case-img img{transform:scale(1.05)}
+.case-img-label{position:absolute;bottom:.6rem;left:.75rem;font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:rgba(255,255,255,.9);background:rgba(15,27,51,.5);backdrop-filter:blur(4px);padding:.2rem .55rem;border-radius:4px;font-family:'Outfit',sans-serif}
+
+
+/* ── REVIEW AVATARS ── */
+.review-footer{display:flex;align-items:center;gap:.75rem;margin-top:auto}
+.review-avatar{width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.85rem;font-weight:800;font-family:'Outfit',sans-serif;color:white;flex-shrink:0}
+.review-avatar-a{background:linear-gradient(135deg,var(--navy),var(--navy-mid))}
+.review-avatar-b{background:linear-gradient(135deg,var(--teal),#0E7490)}
+.review-avatar-c{background:linear-gradient(135deg,#f57a14,#d96910)}
+.review-meta{flex:1}
+.review-card{background:var(--g50);border:1px solid var(--g200);border-radius:14px;padding:1.5rem;display:flex;flex-direction:column}
+
+/* ── RESPONSIVE ── */
+
+@media(max-width:768px){
+  .nav{display:none}
+  .menu-toggle{display:block}
+  .hero{padding:8rem 1.5rem 3.5rem;min-height:auto}
+  .subheader-inner{gap:.75rem}
+  .subheader .sh-desktop{display:none}
+
+  /* TRUST STRIP — columna única, icono+texto en fila */
+  .trust-inner{flex-direction:column;align-items:flex-start;gap:.55rem;padding:.75rem 1.5rem}
+  .trust-item{font-size:15px;color:rgba(255,255,255,.95);width:100%}
+
+  /* CONTADORES — horizontal: icono izquierda, número+texto derecha */
+  .counters-grid{grid-template-columns:1fr;gap:1rem}
+  .counter-card{display:flex;align-items:center;gap:1.25rem;text-align:left}
+  .counter-card .counter-icon{flex-shrink:0;margin:0!important}
+  .counter-card .counter-num{font-size:2.4rem;margin-bottom:.1rem}
+  .counter-card .counter-label{text-align:left;margin:0;max-width:none;font-size:14px}
+
+  /* SECTORES — 1 columna */
+  .sectors-grid,.sectors-extra.open{grid-template-columns:1fr;gap:1rem}
+  .sector-card{max-width:100%}
+  .sector-img{height:180px}
+  .sector-img img{height:180px}
+
+  /* CÓMO FUNCIONA — vertical con línea izquierda */
+  .how-timeline{flex-direction:column;align-items:flex-start;padding-left:0}
+  .how-step-wrap{display:flex;align-items:flex-start;gap:1rem;text-align:left;width:100%}
+  .how-step-wrap h3,.how-step-wrap p,.how-step-num-label{text-align:left;max-width:none}
+  .how-step-circle{flex-shrink:0;margin:0;width:56px;height:56px}
+  .how-step-circle svg{width:24px;height:24px}
+  .how-conn{flex:none;width:2px;height:40px;margin:0 0 0 27px;background:var(--g200)}
+  .how-conn-fill{width:100%;height:0}
+
+  .cases-grid,.reviews-grid{grid-template-columns:1fr}
+  .cta-form-row{grid-template-columns:1fr}
+  .cta-split{grid-template-columns:1fr}
+  .cta-form-side{padding:3rem 1.5rem}
+  .cta-map-side{min-height:300px}
+  .footer-inner{grid-template-columns:1fr 1fr}
+  .cookie-banner-inner{grid-template-columns:1fr;gap:1rem}
+  .cookie-banner-actions{flex-wrap:wrap}
+  .cb-btn{flex:1;text-align:center}
+  .cp-header,.cp-body,.cp-footer{padding-left:1.25rem;padding-right:1.25rem}
+  .cp-footer{flex-wrap:wrap}
+  .cp-footer .cb-btn{flex:1;text-align:center}
+}
+
+
+
+/* ── CTA SECTION BUTTONS ── */
+.btn-cta-outline{
+  display:inline-flex;align-items:center;justify-content:center;gap:.6rem;
+  background:var(--white);
+  border:1.5px solid var(--g200);
+  border-radius:var(--radius);
+  padding:.85rem 2rem;
+  font-size:1.05rem;font-weight:700;
+  color:var(--navy-deep);
+  font-family:'Outfit',sans-serif;
+  text-decoration:none;
+  box-shadow:0 2px 12px rgba(15,27,51,.07);
+  cursor:pointer;
+  min-width:260px;
+  transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease;
+}
+.btn-cta-outline:hover{
+  transform:translateY(-2px);
+  box-shadow:0 10px 32px rgba(15,27,51,.13);
+  border-color:var(--g300);
+  color:var(--navy-deep);
+}
+.btn-cta-outline svg{
+  color:var(--navy-deep);
+  flex-shrink:0;
+  transition:transform .2s ease;
+}
+.btn-cta-outline:hover svg{transform:translateX(4px)}
+.cta-center{text-align:center;margin-top:2.25rem}
+/* ── GLOBAL ICON STYLE ── */
+.sector-icon svg,.trust-item svg,.client-item svg,
+.how-step-circle svg,.how-link svg,.btn svg,
+.faq-q svg,.case-link svg,.float-btn-phone svg,
+.megamenu-col a svg,.nav-item svg,
+.arrow-r,.sectors-toggle svg,.how-connector-icon svg{
+  fill:none!important;
+  stroke-width:1.5!important;
+  stroke-linecap:round!important;
+  stroke-linejoin:round!important;
+}
+/* Subheader: solo stroke para phone y email, fill para WA y LinkedIn */
+.subheader a.sh-phone svg,.subheader a.sh-email svg{
+  fill:none!important;stroke-width:1.5!important;
+  stroke-linecap:round!important;stroke-linejoin:round!important;
+}
+.counter-icon svg{
+  fill:none!important;stroke:#0891B2!important;
+  stroke-width:1.5!important;stroke-linecap:round!important;stroke-linejoin:round!important;
+}
+@media(prefers-reduced-motion:no-preference){
+  .fade-in{opacity:0;transform:translateY(20px);transition:opacity .5s ease,transform .5s ease}
+  .fade-in.visible{opacity:1;transform:translateY(0)}
+}
+
+/* HERO BREADCRUMB */
+.hero-breadcrumb{position:relative;z-index:10;margin-bottom:1.75rem;font-size:.82rem;font-family:'Outfit',sans-serif;font-weight:500;display:flex;align-items:center;flex-wrap:wrap;justify-content:center;letter-spacing:.01em}
+.hero-breadcrumb a{color:rgba(255,255,255,.8);text-decoration:none;transition:color .15s}
+.hero-breadcrumb a:hover{color:white;text-decoration:underline;text-underline-offset:3px}
+.hero-breadcrumb span:not(.bc-sep){color:white;font-weight:600}
+.hero-breadcrumb .bc-sep{color:rgba(255,255,255,.4);margin:0 .5rem;font-size:.85em}
+
+
+/* ═══ GLOBAL UPDATES v2 ═══ */
+/* 1 - Secondary buttons: white pill */
+.btn-ghost,.btn-cta-outline,.btn-secondary-pill{
+  background:var(--white)!important;border-radius:50px!important;
+  box-shadow:0 2px 16px rgba(15,27,51,.1)!important;
+  color:var(--navy)!important;font-weight:700!important;
+  padding:.75rem 2rem!important;border:none!important;
+  font-family:'Outfit',sans-serif;font-size:.95rem;
+  display:inline-flex;align-items:center;gap:.5rem;text-decoration:none;
+  transition:all .2s;
+}
+.btn-ghost:hover,.btn-cta-outline:hover,.btn-secondary-pill:hover{
+  box-shadow:0 6px 24px rgba(15,27,51,.15)!important;
+  transform:translateY(-1px)!important;
+  color:var(--navy-deep)!important;
+  background:var(--white)!important;
+}
+/* 2 - Float phone button → navy */
+.float-btn-phone{background:var(--navy)!important;box-shadow:0 4px 16px rgba(27,42,74,.35)!important}
+.float-btn-phone:hover{background:var(--navy-mid)!important;box-shadow:0 8px 24px rgba(27,42,74,.45)!important}
+/* 3 - Hover on dark section bg → amber */
+.roi-section .btn.btn-primary:hover,
+.lhero .btn.btn-primary:hover{background:#f57a14!important;color:var(--white)!important}
+.cta-band .btn-navy{transition:all .2s}
+.cta-band .btn-navy:hover{background:#f57a14!important;color:white!important}
+/* 4 - Cookie buttons → navy */
+.cb-btn-reject,.cb-btn-settings{background:var(--navy)!important;color:var(--white)!important;border:none!important}
+.cb-btn-reject:hover,.cb-btn-settings:hover{background:var(--navy-mid)!important}
+/* 5 - Badges → teal */
+.srv-img-badge{
+  background:rgba(8,145,178,.12)!important;
+  color:var(--teal)!important;
+  border:1px solid rgba(8,145,178,.25)!important;
+  backdrop-filter:none!important;
+}
+/* 6 - Megamenu full-width: make header the positioning parent */
+.mega-parent{position:static!important}
+.megamenu{
+  position:absolute!important;
+  left:0!important;right:0!important;
+  width:100%!important;
+  transform:none!important;
+  border-radius:0 0 16px 16px!important;
+  top:100%!important;
+}
+/* 7 - Megamenu photo full height */
+.megamenu-photo{min-width:200px;align-self:stretch!important;display:flex!important;flex-direction:column!important;gap:.75rem!important}
+.megamenu-photo img{width:100%!important;height:100%!important;min-height:140px!important;max-height:none!important;object-fit:cover!important;flex:1!important}
+/* 8 - ACCEDE header button */
+.btn-accede{
+  display:inline-flex;align-items:center;gap:.4rem;
+  background:var(--teal);color:white;
+  padding:.72rem 1.3rem;border-radius:var(--radius);
+  font-size:.88rem;font-weight:700;font-family:'Outfit',sans-serif;
+  transition:all .2s;text-decoration:none;white-space:nowrap;border:none;
+}
+.btn-accede:hover{background:#0780A0;transform:translateY(-1px)}
+/* 9 - nav-cta wraps nicely with ACCEDE */
+.header-ctas{display:flex;align-items:center;gap:.6rem}
+/* Keep header .nav items correct after static mega-parent */
+.header{overflow:visible!important}
+.header-inner{position:relative;overflow:visible!important}
+
+.article-grid{display:grid;grid-template-columns:1fr 320px;gap:3rem;max-width:1100px;margin:0 auto;padding:4rem 2rem}
+@media(max-width:900px){.article-grid{grid-template-columns:1fr;}}
+</style></head><body><div class="subheader">
+  <div class="subheader-inner">
+    <a href="mailto:info@serdoc.es?subject=Formulario%20de%20contacto%20Serdoc" class="sh-desktop"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1.5" y="3" width="11" height="8" rx="1.5"/><path d="M1.5 3l5.5 4 5.5-4"/></svg> info@serdoc.es</a>
+    <span class="subheader-sep sh-desktop">|</span>
+    <a href="tel:+34916896573"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 3a1 1 0 0 1 1-1h1.5l1.2 2.5-1.2 1.2a6.5 6.5 0 0 0 3 3l1.2-1.2L11 9.5V11a1 1 0 0 1-1 1A9 9 0 0 1 2 3z"/></svg> +34 91 689 65 73</a>
+    <span class="subheader-sep">|</span>
+    <a href="https://wa.link/wxd00g" target="_blank" rel="noopener"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> +34 615 26 69 79</a>
+    <span class="subheader-sep sh-desktop">|</span>
+    <a href="https://www.linkedin.com/company/serdoc/" target="_blank" rel="noopener" class="sh-desktop"><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg> LinkedIn</a>
+  </div>
+</div><header class="header">
+  <div class="header-inner">
+    <a href="/" class="logo"><svg height="34" viewBox="0 0 697.9 215" xmlns="http://www.w3.org/2000/svg"><defs><style>.lw{fill:#fff}</style></defs><g><path class="lw" d="M394.8,147.1c0,15.5-13.8,21.5-26.4,21.5-19.8,0-28.5-10.9-30.5-23.2h11.5c2.1,8.2,7.6,12.4,18.8,12.4s15-3.7,15-10.3-5.8-7.7-18.9-10.6c-13.8-3-24.5-6.9-24.5-20.1s12.4-21.4,26-21.4,26,9.2,28,20.4h-11.5c-2-5.9-6.9-9.7-16.4-9.7s-14.7,4.2-14.7,10.4,4,6.7,15.8,9.2c17.9,3.9,27.7,7.7,27.7,21.3Z"/><path class="lw" d="M396.1,139.7c0-16.8,11.9-29.1,28.7-29.1s29.2,13.9,28.1,32.2h-45.1c.8,10.2,8,15.9,17.3,15.9s12.2-2.8,14.9-8.3h11.8c-4.4,12.4-15,18.2-26.8,18.2-16.9,0-28.9-12-28.9-28.8ZM440.7,133.4c-1.7-7.7-7.4-12.9-15.9-12.9s-14.6,5.4-16.4,12.9h32.3Z"/><path class="lw" d="M456.4,111.8h11.4v10.9c3.4-7.7,9.7-12.1,18.5-12.1s2.5.1,3.3.3v11.6c-1-.1-1.9-.2-3.4-.2-10.4,0-18.4,5.9-18.4,19.6v25.5h-11.4v-55.6Z"/><path class="lw" d="M492.7,96.6h24.8c20.6,0,36.2,14.9,36.2,35.4s-15.7,35.4-36.2,35.4h-24.8v-70.8ZM517.6,156.5c14.3,0,24.7-10,24.7-24.5s-10.4-24.5-24.7-24.5h-13.5v49h13.5Z"/><path class="lw" d="M613.4,139.6c0,16.7-12.6,28.9-28.8,28.9s-28.8-12.3-28.8-28.9,12.9-29,28.8-29,28.8,12.2,28.8,29ZM567.2,139.6c0,10.7,7.6,18.1,17.3,18.1s17.3-7.4,17.3-18.1-7.7-18.1-17.3-18.1-17.3,7.4-17.3,18.1Z"/><path class="lw" d="M615.3,139.6c0-16.6,12.3-29,28.9-29s24.8,8,27.3,21.4h-11.8c-2.1-7-8.3-10.8-15.5-10.8-10.3,0-17.4,7.7-17.4,18.4s7.3,18.4,17.3,18.4,13.5-4,15.6-10.9h11.8c-2.6,13.8-14.4,21.5-27.4,21.5s-28.8-12.4-28.8-29Z"/></g><rect class="lw" x="79" y="81.2" width="8.7" height="8.7" transform="translate(-33.6 110) rotate(-57.5)"/><rect class="lw" x="73.1" y="90.4" width="8.7" height="8.7" transform="translate(-44 109.3) rotate(-57.5)"/><rect class="lw" x="94" y="77.8" width="8.7" height="8.7" transform="translate(-23.8 121.1) rotate(-57.5)"/><rect class="lw" x="99.9" y="68.6" width="8.7" height="8.7" transform="translate(-13.3 121.8) rotate(-57.5)"/><rect class="lw" x="90.7" y="62.8" width="8.7" height="8.7" transform="translate(-12.6 111.3) rotate(-57.5)"/><rect class="lw" x="81.5" y="56.9" width="8.7" height="8.7" transform="translate(-11.9 100.8) rotate(-57.5)"/><rect class="lw" x="60.6" y="69.5" width="8.7" height="8.7" transform="translate(-32.2 89) rotate(-57.5)"/><rect class="lw" x="63.9" y="84.5" width="8.7" height="8.7" transform="translate(-43.4 98.8) rotate(-57.5)"/><rect class="lw" x="76.5" y="105.4" width="8.7" height="8.7" transform="translate(-55.2 119.1) rotate(-57.5)"/><rect class="lw" x="82.3" y="96.2" width="8.7" height="8.7" transform="translate(-44.7 119.8) rotate(-57.5)"/><rect class="lw" x="91.5" y="102.1" width="8.7" height="8.7" transform="translate(-45.4 130.2) rotate(-57.5)"/><rect class="lw" x="97.4" y="92.9" width="8.7" height="8.7" transform="translate(-34.9 130.9) rotate(-57.5)"/><rect class="lw" x="103.2" y="83.7" width="8.7" height="8.7" transform="translate(-24.4 131.6) rotate(-57.5)"/><rect class="lw" x="114.9" y="65.3" width="8.7" height="8.7" transform="translate(-3.5 132.9) rotate(-57.5)"/><rect class="lw" x="105.7" y="59.4" width="8.7" height="8.7" transform="translate(-2.8 122.5) rotate(-57.5)"/><rect class="lw" x="87.3" y="47.7" width="8.7" height="8.7" transform="translate(-1.5 101.5) rotate(-57.5)"/><rect class="lw" x="45.5" y="72.8" width="8.7" height="8.7" transform="translate(-42 77.9) rotate(-57.5)"/><rect class="lw" x="43" y="97.1" width="8.7" height="8.7" transform="translate(-63.6 87) rotate(-57.5)"/><rect class="lw" x="61.4" y="108.8" width="8.7" height="8.7" transform="translate(-65 107.9) rotate(-57.5)"/><rect class="lw" x="79.8" y="120.5" width="8.7" height="8.7" transform="translate(-66.3 128.9) rotate(-57.5)"/><rect class="lw" x="85.7" y="111.3" width="8.7" height="8.7" transform="translate(-55.9 129.6) rotate(-57.5)"/><rect class="lw" x="100.7" y="107.9" width="8.7" height="8.7" transform="translate(-46.1 140.7) rotate(-57.5)"/><rect class="lw" x="106.6" y="98.7" width="8.7" height="8.7" transform="translate(-35.6 141.4) rotate(-57.5)"/><rect class="lw" x="112.4" y="89.5" width="8.7" height="8.7" transform="translate(-25.1 142.1) rotate(-57.5)"/><rect class="lw" x="118.3" y="80.3" width="8.7" height="8.7" transform="translate(-14.6 142.7) rotate(-57.5)"/><rect class="lw" x="130" y="61.9" width="8.7" height="8.7" transform="translate(6.3 144.1) rotate(-57.5)"/><rect class="lw" x="120.8" y="56.1" width="8.7" height="8.7" transform="translate(7 133.6) rotate(-57.5)"/><rect class="lw" x="102.4" y="44.4" width="8.7" height="8.7" transform="translate(8.3 112.7) rotate(-57.5)"/><rect class="lw" x="68.9" y="36" width="8.7" height="8.7" transform="translate(-.1 80.6) rotate(-57.5)"/><rect class="lw" x="53.9" y="39.4" width="8.7" height="8.7" transform="translate(-9.9 69.4) rotate(-57.5)"/><rect class="lw" x="30.5" y="76.2" width="8.7" height="8.7" transform="translate(-51.8 66.7) rotate(-57.5)"/><rect class="lw" x="28" y="100.4" width="8.7" height="8.7" transform="translate(-73.4 75.8) rotate(-57.5)"/><rect class="lw" x="46.4" y="112.1" width="8.7" height="8.7" transform="translate(-74.8 96.8) rotate(-57.5)"/><rect class="lw" x="55.6" y="118" width="8.7" height="8.7" transform="translate(-75.5 107.3) rotate(-57.5)"/><rect class="lw" x="64.8" y="123.8" width="8.7" height="8.7" transform="translate(-76.1 117.7) rotate(-57.5)"/><rect class="lw" x="83.2" y="135.5" width="8.7" height="8.7" transform="translate(-77.5 138.7) rotate(-57.5)"/><rect class="lw" x="89" y="126.3" width="8.7" height="8.7" transform="translate(-67 139.4) rotate(-57.5)"/><rect class="lw" x="104.1" y="123" width="8.7" height="8.7" transform="translate(-57.2 150.5) rotate(-57.5)"/><rect class="lw" x="115.8" y="104.6" width="8.7" height="8.7" transform="translate(-36.3 151.9) rotate(-57.5)"/><rect class="lw" x="121.6" y="95.4" width="8.7" height="8.7" transform="translate(-25.8 152.5) rotate(-57.5)"/><rect class="lw" x="127.5" y="86.2" width="8.7" height="8.7" transform="translate(-15.3 153.2) rotate(-57.5)"/><rect class="lw" x="133.3" y="77" width="8.7" height="8.7" transform="translate(-4.8 153.9) rotate(-57.5)"/><rect class="lw" x="145" y="58.6" width="8.7" height="8.7" transform="translate(16.1 155.2) rotate(-57.5)"/><rect class="lw" x="135.8" y="52.7" width="8.7" height="8.7" transform="translate(16.8 144.7) rotate(-57.5)"/><rect class="lw" x="117.4" y="41" width="8.7" height="8.7" transform="translate(18.1 123.8) rotate(-57.5)"/><rect class="lw" x="108.2" y="35.2" width="8.7" height="8.7" transform="translate(18.8 113.3) rotate(-57.5)"/><rect class="lw" x="99" y="29.3" width="8.7" height="8.7" transform="translate(19.5 102.9) rotate(-57.5)"/><rect class="lw" x="80.6" y="17.6" width="8.7" height="8.7" transform="translate(20.8 81.9) rotate(-57.5)"/><rect class="lw" x="50.5" y="24.3" width="8.7" height="8.7" transform="translate(1.2 59.6) rotate(-57.5)"/><rect class="lw" x="31.3" y="115.5" width="8.7" height="8.7" transform="translate(-84.6 85.6) rotate(-57.5)"/><rect class="lw" x="40.5" y="121.3" width="8.7" height="8.7" transform="translate(-85.3 96.1) rotate(-57.5)"/><rect class="lw" x="58.9" y="133" width="8.7" height="8.7" transform="translate(-86.6 117.1) rotate(-57.5)"/><rect class="lw" x="68.1" y="138.9" width="8.7" height="8.7" transform="translate(-87.3 127.5) rotate(-57.5)"/><rect class="lw" x="86.5" y="150.6" width="8.7" height="8.7" transform="translate(-88.6 148.5) rotate(-57.5)"/><rect class="lw" x="92.4" y="141.4" width="8.7" height="8.7" transform="translate(-78.1 149.2) rotate(-57.5)"/><rect class="lw" x="101.6" y="147.2" width="8.7" height="8.7" transform="translate(-78.8 159.6) rotate(-57.5)"/><rect class="lw" x="107.4" y="138" width="8.7" height="8.7" transform="translate(-68.4 160.3) rotate(-57.5)"/><rect class="lw" x="113.3" y="128.8" width="8.7" height="8.7" transform="translate(-57.9 161) rotate(-57.5)"/><rect class="lw" x="119.1" y="119.6" width="8.7" height="8.7" transform="translate(-47.4 161.6) rotate(-57.5)"/><rect class="lw" x="125" y="110.4" width="8.7" height="8.7" transform="translate(-36.9 162.3) rotate(-57.5)"/><rect class="lw" x="136.7" y="92" width="8.7" height="8.7" transform="translate(-16 163.7) rotate(-57.5)"/><rect class="lw" x="142.5" y="82.8" width="8.7" height="8.7" transform="translate(-5.5 164.3) rotate(-57.5)"/><rect class="lw" x="148.4" y="73.6" width="8.7" height="8.7" transform="translate(5 165) rotate(-57.5)"/><rect class="lw" x="154.2" y="64.4" width="8.7" height="8.7" transform="translate(15.4 165.7) rotate(-57.5)"/><rect class="lw" x="95.7" y="156.4" width="8.7" height="8.7" transform="translate(-89.3 159) rotate(-57.5)"/><path class="lw" d="M147.9,153c0,0,.1-.2.2-.2l70.7-59.8-49.6-24.4-40.6,72.8-6.7,12.1,23.9,15.4,2-15.4Z"/><path class="lw" d="M172.8,158.5c0,0,.2-.1.2-.2l95.9-32.2-27.5-49.8-91.5,77.4,3.5,4.1,3.3,3.9,6.3,7.4,9.6-10.5Z"/><polygon class="lw" points="149.4 155.9 147.8 168 154.6 161.9 151.8 158.7 149.4 155.9"/><path class="lw" d="M119.6,154.1l29-52-42.7,68.2h21l-7.4-15.3Z"/><polygon class="lw" points="123 156.5 126.5 164 128.7 168.5 132.5 162.6 128.2 159.9 123 156.5"/><polygon class="lw" points="172.4 167.7 164.5 198 309.6 198 309.6 114.5 174.4 160 172.4 167.7"/><polygon class="lw" points="166.9 167.9 170.7 166.4 171 165.1 171.6 162.8 166.9 167.9"/></svg></a>
+    <nav class="nav" id="desktopNav">
+      <div class="mega-parent">
+        <a href="/soluciones-rfid/" class="nav-item">Soluciones RFID <svg width="10" height="10" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3.5l3 3 3-3"/></svg></a>
+        <div class="megamenu">
+          <div class="megamenu-cols">
+            <div class="megamenu-col"><h4>Industria</h4><a href="/rfid-logistica-almacenes/"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="5" width="12" height="9" rx="1"/><path d="M4 5V3.5A1.5 1.5 0 0 1 5.5 2h5A1.5 1.5 0 0 1 12 3.5V5"/></svg>Logística y almacenes</a><a href="/rfid-lavanderias/"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="2" width="10" height="12" rx="1.5"/><circle cx="8" cy="9.5" r="2.5"/><path d="M5 4.5h6"/></svg>Lavanderías industriales</a><a href="/rfid-gestion-herramientas/"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M10 2l4 4-5 5-4-4z"/><path d="M2 14l4-4"/></svg>Gestión de herramientas</a><a href="/rfid-control-accesos/"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="10" height="10" rx="2"/><circle cx="8" cy="7" r="1.5"/><path d="M8 8.5v2.5"/></svg>Control de accesos</a><a href="/rfid-farmacias/"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="10" height="10" rx="2"/><path d="M6.5 5.5v5M4 8h5"/></svg>Farmacias</a></div>
+            <div class="megamenu-col"><h4>Retail y comercio</h4><a href="/rfid-retail-tiendas/"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2.5 7l2-5h7l2 5"/><rect x="2" y="7" width="12" height="7" rx="1"/></svg>Retail y tiendas</a><a href="/sistemas-antihurto-rfid/"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M8 2C5 2 3 4.5 3 7v4l-1 2h12l-1-2V7c0-2.5-2-5-5-5z"/><path d="M6 13a2 2 0 0 0 4 0"/></svg>Sistemas antihurto</a><a href="/etiquetas-rfid/"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 4l5-2 7 6-5 6-7-6z"/><circle cx="6" cy="6" r="1"/></svg>Etiquetas RFID</a><a href="/dispositivos-rfid/"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="1" width="8" height="14" rx="1.5"/><circle cx="8" cy="12" r="1"/></svg>Dispositivos RFID</a><a href="/rfid-joyerias/"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 3h8l-4 5z"/><path d="M4 3L2 6l6 8 6-8-2-3"/></svg>Joyerías</a></div>
+            <div class="megamenu-col"><h4>Salud y servicios</h4><a href="/rfid-hospitales/"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="2" width="12" height="12" rx="2"/><path d="M6.5 5v6M3.5 8h6"/></svg>Hospitales</a><a href="/rfid-residencias/"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 14h12"/><path d="M4 14V6l4-3 4 3v8"/><path d="M6.5 14v-3h3v3"/></svg>Residencias de mayores</a><a href="/rfid-hosteleria/"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8.5h10"/><path d="M4.5 8.5V6a3.5 3.5 0 0 1 7 0v2.5"/><path d="M3 8.5v3.5a1.5 1.5 0 0 0 1.5 1.5h7a1.5 1.5 0 0 0 1.5-1.5V8.5"/></svg>Hostelería</a><a href="/rfid-eventos/"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="3" width="12" height="11" rx="1.5"/><path d="M5 1.5v3M11 1.5v3M2 7.5h12"/></svg>Eventos</a></div>
+            <div class="megamenu-photo">
+              <img src="https://images.unsplash.com/photo-1553413077-190dd305871c?w=300&q=70" alt="Soluciones RFID empresa Madrid Serdoc" loading="lazy" width="300" height="100">
+              <a href="/soluciones-rfid/" class="megamenu-photo-cta">Ver todas las soluciones <svg class="arrow-r" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 6h8m-3-3 3 3-3 3"/></svg></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mega-parent">
+        <a href="/soluciones-rfid-para-bibliotecas/" class="nav-item">Bibliotecas <svg width="10" height="10" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3.5l3 3 3-3"/></svg></a>
+        <div class="megamenu"><div class="megamenu-cols"><div class="megamenu-col megamenu-single"><a href="/autoprestamo-libros-rfid/">Autopréstamo de libros</a><a href="/autolibro/">Autolibro</a><a href="/rfid-bibliobus/">Bibliobús RFID</a><a href="/autoprestamo-de-portatiles/">Autopréstamo de portátiles</a><a href="/reserva-automatica-ordenadores/">Reserva de ordenadores</a><a href="/buzon-de-devolucion-inteligente/">Buzón de devolución</a></div></div></div>
+      </div>
+      <div class="mega-parent">
+        <a href="/sistema-de-gestion-documental/" class="nav-item">Gestión Documental <svg width="10" height="10" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3.5l3 3 3-3"/></svg></a>
+        <div class="megamenu"><div class="megamenu-cols"><div class="megamenu-col megamenu-single"><a href="/digitalizacion-documentos/">Digitalización de documentos</a><a href="/business-process-outsourcing/">Business Process Outsourcing</a></div></div></div>
+      </div>
+      <a href="/casos-de-exito/" class="nav-item">Casos de éxito</a>
+      <a href="/blog/" class="nav-item">Blog</a>
+      <div class="header-ctas"><a href="/contacto/" class="nav-item nav-cta">Solicitar consulta gratuita</a><a href="/accede-reserva-espacios/" class="btn-accede">ACCEDE</a></div>
+    </nav>
+    <button class="menu-toggle" id="menuToggle" aria-label="Menú" aria-expanded="false"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h16M3 11h16M3 16h16"/></svg></button>
+  </div>
+</header>
+<section style="padding:3rem 0 1rem;background:var(--navy-deep)">
+  <div style="max-width:900px;margin:0 auto;padding:0 2rem">
+    <div class="hero-breadcrumb" style="margin-bottom:1rem"><a href="/" style="color:rgba(255,255,255,.7)">Inicio</a><span class="bc-sep">›</span><a href="/blog/" style="color:rgba(255,255,255,.7)">Blog</a><span class="bc-sep">›</span><span style="color:white">Estándares de etiquetas RFID: EPC Gen2, ISO 18000 y más</span></div>
+    <h1 style="font-family:'Outfit',sans-serif;color:white;font-size:clamp(1.6rem,3.5vw,2.4rem);margin-bottom:.75rem">Estándares de etiquetas RFID: EPC Gen2, ISO 18000 y más</h1>
+    <p style="color:rgba(255,255,255,.6);font-size:.85rem">Publicado: 2024-12-10 · Serdoc Informática</p>
+  </div>
+</section>
+<div style="background:var(--bg)">
+  <div class="article-grid">
+    <article>
+      <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=900&q=80" alt="Estándares de etiquetas RFID: EPC Gen2, ISO 18000 y más" style="width:100%;border-radius:12px;object-fit:cover;height:320px;margin-bottom:2rem" loading="eager">
+      <p style="font-size:1.1rem;color:var(--g700);line-height:1.85;font-weight:500;margin-bottom:1.5rem">Los estándares RFID determinan cómo se codifican y comunican los datos entre etiquetas y lectores. Elegir el estándar correcto garantiza la interoperabilidad entre sistemas y proveedores. Estos son los más importantes y cuándo aplica cada uno.</p>
+      <h2 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.3rem;margin:2rem 0 .75rem">EPC Gen2 (ISO 18000-63): el estándar de facto en logística y retail</h2><p style="color:var(--g700);line-height:1.9;margin-bottom:1rem">EPC (Electronic Product Code) Gen2, ratificado como ISO 18000-63, es el protocolo dominante para RFID UHF en logística, retail e inventario. Define cómo se codifica un identificador único de 96 bits en la etiqueta y cómo se leen múltiples etiquetas simultáneamente. Casi todos los lectores UHF del mercado son compatibles con EPC Gen2. Si tu proyecto es de logística, retail o inventario masivo, este será tu estándar.</p><h2 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.3rem;margin:2rem 0 .75rem">ISO 15693: RFID HF para bibliotecas y documentación</h2><p style="color:var(--g700);line-height:1.9;margin-bottom:1rem">ISO 15693 es el estándar principal para RFID HF (13,56 MHz) utilizado en bibliotecas, documentación y control de accesos de media distancia. Define etiquetas con alcance de hasta 1 metro. Los terminales de autopréstamo de Serdoc son compatibles con ISO 15693. El estándar SIP2 (comunicación entre terminales y SIGB) se apoya en este protocolo de identificación.</p><h2 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.3rem;margin:2rem 0 .75rem">ISO 14443: para NFC y tarjetas contactless</h2><p style="color:var(--g700);line-height:1.9;margin-bottom:1rem">ISO 14443 define la comunicación para tarjetas de proximidad (hasta 10 cm): tarjetas de crédito contactless, DNI electrónico, abonos de transporte y la mayoría de tarjetas NFC. Tiene dos variantes (Tipo A y Tipo B). Es el que usa tu tarjeta bancaria cuando pagas sin contacto.</p><h2 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.3rem;margin:2rem 0 .75rem">¿Cómo afectan los estándares a tu proyecto?</h2><p style="color:var(--g700);line-height:1.9;margin-bottom:1rem">Para proyectos de inventario, logística o retail: EPC Gen2 / ISO 18000-63. Para bibliotecas: ISO 15693 + SIP2. Para control de accesos con tarjetas: ISO 14443 (NFC). Para proyectos con necesidades específicas (temperatura, metal, farmacéutico): consultar los estándares ISO 18000-2 (LF), ISO 11784/11785 (animales). En la evaluación técnica de Serdoc validamos siempre la compatibilidad de estándares antes de seleccionar el hardware.</p>
+      <div style="margin-top:3rem;padding:1.5rem;background:rgba(8,145,178,.06);border-radius:12px;border-left:4px solid var(--teal)">
+        <p style="font-weight:700;color:var(--navy);font-family:'Outfit',sans-serif;margin-bottom:.5rem">¿Quieres implantar esta solución en tu empresa?</p>
+        <p style="color:var(--g600);margin-bottom:1rem">El equipo técnico de Serdoc lleva más de 25 años implantando proyectos RFID. Evaluación gratuita sin compromiso.</p>
+        <a href="/contacto/" class="btn btn-primary">Solicitar evaluación gratuita</a>
+      </div>
+    </article>
+    <aside style="align-self:start;position:sticky;top:100px">
+      <div style="background:white;border-radius:12px;box-shadow:0 2px 16px rgba(15,27,51,.08);padding:1.5rem;margin-bottom:1.5rem">
+        <h3 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:.85rem;text-transform:uppercase;letter-spacing:.06em;margin-bottom:1rem">Artículos relacionados</h3>
+        <a href="/tipos-de-etiquetas-rfid-y-sus-aplicaciones/" style="display:block;padding:.75rem 1rem;background:var(--teal-bg);border-radius:8px;color:var(--teal);font-weight:600;font-family:'Outfit',sans-serif;text-decoration:none;font-size:.9rem;margin-bottom:.5rem"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7h8m-3-3 3 3-3 3"/></svg> Tipos de etiquetas RFID</a><a href="/lectores-rfid-fijos-y-moviles/" style="display:block;padding:.75rem 1rem;background:var(--teal-bg);border-radius:8px;color:var(--teal);font-weight:600;font-family:'Outfit',sans-serif;text-decoration:none;font-size:.9rem;margin-bottom:.5rem"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7h8m-3-3 3 3-3 3"/></svg> Lectores RFID</a><a href="/que-es-rfid-y-como-funciona/" style="display:block;padding:.75rem 1rem;background:var(--teal-bg);border-radius:8px;color:var(--teal);font-weight:600;font-family:'Outfit',sans-serif;text-decoration:none;font-size:.9rem;margin-bottom:.5rem"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7h8m-3-3 3 3-3 3"/></svg> Qué es RFID</a>
+      </div>
+      <div style="background:var(--navy);border-radius:12px;padding:1.5rem;text-align:center">
+        <p style="color:rgba(255,255,255,.8);font-size:.9rem;margin-bottom:1rem">¿Tienes un proyecto RFID en mente?</p>
+        <a href="/contacto/" style="display:block;background:#f57a14;color:white;padding:.75rem 1rem;border-radius:8px;font-weight:700;font-family:'Outfit',sans-serif;text-decoration:none;font-size:.9rem">Consulta gratuita →</a>
+        <p style="color:rgba(255,255,255,.5);font-size:.8rem;margin-top:.75rem">+34 916 896 573</p>
+      </div>
+    </aside>
+  </div>
+</div>
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <svg height="40" viewBox="0 0 697.9 215" xmlns="http://www.w3.org/2000/svg"><defs><style>.fl{fill:#fff}</style></defs><g><path class="fl" d="M394.8,147.1c0,15.5-13.8,21.5-26.4,21.5-19.8,0-28.5-10.9-30.5-23.2h11.5c2.1,8.2,7.6,12.4,18.8,12.4s15-3.7,15-10.3-5.8-7.7-18.9-10.6c-13.8-3-24.5-6.9-24.5-20.1s12.4-21.4,26-21.4,26,9.2,28,20.4h-11.5c-2-5.9-6.9-9.7-16.4-9.7s-14.7,4.2-14.7,10.4,4,6.7,15.8,9.2c17.9,3.9,27.7,7.7,27.7,21.3Z"/><path class="fl" d="M396.1,139.7c0-16.8,11.9-29.1,28.7-29.1s29.2,13.9,28.1,32.2h-45.1c.8,10.2,8,15.9,17.3,15.9s12.2-2.8,14.9-8.3h11.8c-4.4,12.4-15,18.2-26.8,18.2-16.9,0-28.9-12-28.9-28.8ZM440.7,133.4c-1.7-7.7-7.4-12.9-15.9-12.9s-14.6,5.4-16.4,12.9h32.3Z"/><path class="fl" d="M456.4,111.8h11.4v10.9c3.4-7.7,9.7-12.1,18.5-12.1s2.5.1,3.3.3v11.6c-1-.1-1.9-.2-3.4-.2-10.4,0-18.4,5.9-18.4,19.6v25.5h-11.4v-55.6Z"/><path class="fl" d="M492.7,96.6h24.8c20.6,0,36.2,14.9,36.2,35.4s-15.7,35.4-36.2,35.4h-24.8v-70.8ZM517.6,156.5c14.3,0,24.7-10,24.7-24.5s-10.4-24.5-24.7-24.5h-13.5v49h13.5Z"/><path class="fl" d="M613.4,139.6c0,16.7-12.6,28.9-28.8,28.9s-28.8-12.3-28.8-28.9,12.9-29,28.8-29,28.8,12.2,28.8,29ZM567.2,139.6c0,10.7,7.6,18.1,17.3,18.1s17.3-7.4,17.3-18.1-7.7-18.1-17.3-18.1-17.3,7.4-17.3,18.1Z"/><path class="fl" d="M615.3,139.6c0-16.6,12.3-29,28.9-29s24.8,8,27.3,21.4h-11.8c-2.1-7-8.3-10.8-15.5-10.8-10.3,0-17.4,7.7-17.4,18.4s7.3,18.4,17.3,18.4,13.5-4,15.6-10.9h11.8c-2.6,13.8-14.4,21.5-27.4,21.5s-28.8-12.4-28.8-29Z"/></g><rect class="fl" x="79" y="81.2" width="8.7" height="8.7" transform="translate(-33.6 110) rotate(-57.5)"/><rect class="fl" x="73.1" y="90.4" width="8.7" height="8.7" transform="translate(-44 109.3) rotate(-57.5)"/><rect class="fl" x="94" y="77.8" width="8.7" height="8.7" transform="translate(-23.8 121.1) rotate(-57.5)"/><rect class="fl" x="99.9" y="68.6" width="8.7" height="8.7" transform="translate(-13.3 121.8) rotate(-57.5)"/><rect class="fl" x="90.7" y="62.8" width="8.7" height="8.7" transform="translate(-12.6 111.3) rotate(-57.5)"/><rect class="fl" x="81.5" y="56.9" width="8.7" height="8.7" transform="translate(-11.9 100.8) rotate(-57.5)"/><rect class="fl" x="60.6" y="69.5" width="8.7" height="8.7" transform="translate(-32.2 89) rotate(-57.5)"/><rect class="fl" x="63.9" y="84.5" width="8.7" height="8.7" transform="translate(-43.4 98.8) rotate(-57.5)"/><rect class="fl" x="76.5" y="105.4" width="8.7" height="8.7" transform="translate(-55.2 119.1) rotate(-57.5)"/><rect class="fl" x="82.3" y="96.2" width="8.7" height="8.7" transform="translate(-44.7 119.8) rotate(-57.5)"/><rect class="fl" x="91.5" y="102.1" width="8.7" height="8.7" transform="translate(-45.4 130.2) rotate(-57.5)"/><rect class="fl" x="97.4" y="92.9" width="8.7" height="8.7" transform="translate(-34.9 130.9) rotate(-57.5)"/><rect class="fl" x="103.2" y="83.7" width="8.7" height="8.7" transform="translate(-24.4 131.6) rotate(-57.5)"/><rect class="fl" x="114.9" y="65.3" width="8.7" height="8.7" transform="translate(-3.5 132.9) rotate(-57.5)"/><rect class="fl" x="105.7" y="59.4" width="8.7" height="8.7" transform="translate(-2.8 122.5) rotate(-57.5)"/><rect class="fl" x="87.3" y="47.7" width="8.7" height="8.7" transform="translate(-1.5 101.5) rotate(-57.5)"/><rect class="fl" x="45.5" y="72.8" width="8.7" height="8.7" transform="translate(-42 77.9) rotate(-57.5)"/><rect class="fl" x="43" y="97.1" width="8.7" height="8.7" transform="translate(-63.6 87) rotate(-57.5)"/><rect class="fl" x="61.4" y="108.8" width="8.7" height="8.7" transform="translate(-65 107.9) rotate(-57.5)"/><rect class="fl" x="79.8" y="120.5" width="8.7" height="8.7" transform="translate(-66.3 128.9) rotate(-57.5)"/><rect class="fl" x="85.7" y="111.3" width="8.7" height="8.7" transform="translate(-55.9 129.6) rotate(-57.5)"/><rect class="fl" x="100.7" y="107.9" width="8.7" height="8.7" transform="translate(-46.1 140.7) rotate(-57.5)"/><rect class="fl" x="106.6" y="98.7" width="8.7" height="8.7" transform="translate(-35.6 141.4) rotate(-57.5)"/><rect class="fl" x="112.4" y="89.5" width="8.7" height="8.7" transform="translate(-25.1 142.1) rotate(-57.5)"/><rect class="fl" x="118.3" y="80.3" width="8.7" height="8.7" transform="translate(-14.6 142.7) rotate(-57.5)"/><rect class="fl" x="130" y="61.9" width="8.7" height="8.7" transform="translate(6.3 144.1) rotate(-57.5)"/><rect class="fl" x="120.8" y="56.1" width="8.7" height="8.7" transform="translate(7 133.6) rotate(-57.5)"/><rect class="fl" x="102.4" y="44.4" width="8.7" height="8.7" transform="translate(8.3 112.7) rotate(-57.5)"/><rect class="fl" x="68.9" y="36" width="8.7" height="8.7" transform="translate(-.1 80.6) rotate(-57.5)"/><rect class="fl" x="53.9" y="39.4" width="8.7" height="8.7" transform="translate(-9.9 69.4) rotate(-57.5)"/><rect class="fl" x="30.5" y="76.2" width="8.7" height="8.7" transform="translate(-51.8 66.7) rotate(-57.5)"/><rect class="fl" x="28" y="100.4" width="8.7" height="8.7" transform="translate(-73.4 75.8) rotate(-57.5)"/><rect class="fl" x="46.4" y="112.1" width="8.7" height="8.7" transform="translate(-74.8 96.8) rotate(-57.5)"/><rect class="fl" x="55.6" y="118" width="8.7" height="8.7" transform="translate(-75.5 107.3) rotate(-57.5)"/><rect class="fl" x="64.8" y="123.8" width="8.7" height="8.7" transform="translate(-76.1 117.7) rotate(-57.5)"/><rect class="fl" x="83.2" y="135.5" width="8.7" height="8.7" transform="translate(-77.5 138.7) rotate(-57.5)"/><rect class="fl" x="89" y="126.3" width="8.7" height="8.7" transform="translate(-67 139.4) rotate(-57.5)"/><rect class="fl" x="104.1" y="123" width="8.7" height="8.7" transform="translate(-57.2 150.5) rotate(-57.5)"/><rect class="fl" x="115.8" y="104.6" width="8.7" height="8.7" transform="translate(-36.3 151.9) rotate(-57.5)"/><rect class="fl" x="121.6" y="95.4" width="8.7" height="8.7" transform="translate(-25.8 152.5) rotate(-57.5)"/><rect class="fl" x="127.5" y="86.2" width="8.7" height="8.7" transform="translate(-15.3 153.2) rotate(-57.5)"/><rect class="fl" x="133.3" y="77" width="8.7" height="8.7" transform="translate(-4.8 153.9) rotate(-57.5)"/><rect class="fl" x="145" y="58.6" width="8.7" height="8.7" transform="translate(16.1 155.2) rotate(-57.5)"/><rect class="fl" x="135.8" y="52.7" width="8.7" height="8.7" transform="translate(16.8 144.7) rotate(-57.5)"/><rect class="fl" x="117.4" y="41" width="8.7" height="8.7" transform="translate(18.1 123.8) rotate(-57.5)"/><rect class="fl" x="108.2" y="35.2" width="8.7" height="8.7" transform="translate(18.8 113.3) rotate(-57.5)"/><rect class="fl" x="99" y="29.3" width="8.7" height="8.7" transform="translate(19.5 102.9) rotate(-57.5)"/><rect class="fl" x="80.6" y="17.6" width="8.7" height="8.7" transform="translate(20.8 81.9) rotate(-57.5)"/><rect class="fl" x="50.5" y="24.3" width="8.7" height="8.7" transform="translate(1.2 59.6) rotate(-57.5)"/><rect class="fl" x="31.3" y="115.5" width="8.7" height="8.7" transform="translate(-84.6 85.6) rotate(-57.5)"/><rect class="fl" x="40.5" y="121.3" width="8.7" height="8.7" transform="translate(-85.3 96.1) rotate(-57.5)"/><rect class="fl" x="58.9" y="133" width="8.7" height="8.7" transform="translate(-86.6 117.1) rotate(-57.5)"/><rect class="fl" x="68.1" y="138.9" width="8.7" height="8.7" transform="translate(-87.3 127.5) rotate(-57.5)"/><rect class="fl" x="86.5" y="150.6" width="8.7" height="8.7" transform="translate(-88.6 148.5) rotate(-57.5)"/><rect class="fl" x="92.4" y="141.4" width="8.7" height="8.7" transform="translate(-78.1 149.2) rotate(-57.5)"/><rect class="fl" x="101.6" y="147.2" width="8.7" height="8.7" transform="translate(-78.8 159.6) rotate(-57.5)"/><rect class="fl" x="107.4" y="138" width="8.7" height="8.7" transform="translate(-68.4 160.3) rotate(-57.5)"/><rect class="fl" x="113.3" y="128.8" width="8.7" height="8.7" transform="translate(-57.9 161) rotate(-57.5)"/><rect class="fl" x="119.1" y="119.6" width="8.7" height="8.7" transform="translate(-47.4 161.6) rotate(-57.5)"/><rect class="fl" x="125" y="110.4" width="8.7" height="8.7" transform="translate(-36.9 162.3) rotate(-57.5)"/><rect class="fl" x="136.7" y="92" width="8.7" height="8.7" transform="translate(-16 163.7) rotate(-57.5)"/><rect class="fl" x="142.5" y="82.8" width="8.7" height="8.7" transform="translate(-5.5 164.3) rotate(-57.5)"/><rect class="fl" x="148.4" y="73.6" width="8.7" height="8.7" transform="translate(5 165) rotate(-57.5)"/><rect class="fl" x="154.2" y="64.4" width="8.7" height="8.7" transform="translate(15.4 165.7) rotate(-57.5)"/><rect class="fl" x="95.7" y="156.4" width="8.7" height="8.7" transform="translate(-89.3 159) rotate(-57.5)"/><path class="fl" d="M147.9,153c0,0,.1-.2.2-.2l70.7-59.8-49.6-24.4-40.6,72.8-6.7,12.1,23.9,15.4,2-15.4Z"/><path class="fl" d="M172.8,158.5c0,0,.2-.1.2-.2l95.9-32.2-27.5-49.8-91.5,77.4,3.5,4.1,3.3,3.9,6.3,7.4,9.6-10.5Z"/><polygon class="fl" points="149.4 155.9 147.8 168 154.6 161.9 151.8 158.7 149.4 155.9"/><path class="fl" d="M119.6,154.1l29-52-42.7,68.2h21l-7.4-15.3Z"/><polygon class="fl" points="123 156.5 126.5 164 128.7 168.5 132.5 162.6 128.2 159.9 123 156.5"/><polygon class="fl" points="172.4 167.7 164.5 198 309.6 198 309.6 114.5 174.4 160 172.4 167.7"/><polygon class="fl" points="166.9 167.9 170.7 166.4 171 165.1 171.6 162.8 166.9 167.9"/></svg>
+      <p>Más de 25 años implementando soluciones RFID y gestión documental para empresas e instituciones en Madrid y toda España.</p>
+    </div>
+    <div>
+      <h5>Soluciones</h5>
+      <ul>
+        <li><a href="/soluciones-rfid/">→ Soluciones RFID</a></li>
+        <li><a href="/soluciones-rfid-para-bibliotecas/">→ Bibliotecas</a></li>
+        <li><a href="/accede-reserva-espacios/">→ ACCEDE</a></li>
+        <li><a href="/sistema-de-gestion-documental/">→ Gestión Documental</a></li>
+        <li><a href="/casos-de-exito/">→ Casos de éxito</a></li>
+        <li><a href="/blog/">→ Blog</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>Recursos</h5>
+      <ul>
+        <li><a href="/guia-rfid/">→ Guía completa RFID</a></li>
+        <li><a href="/preguntas-frecuentes-rfid/">→ Preguntas frecuentes</a></li>
+        <li><a href="/rfid-madrid/">→ RFID Madrid</a></li>
+        <li><a href="/quienes-somos/">→ Quiénes somos</a></li>
+        <li><a href="/linked-open-data/">→ Linked Open Data</a></li>
+      </ul>
+    </div>
+    <div class="footer-contact">
+      <h5>Contacto</h5>
+      <p style="margin-bottom:.75rem"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" style="vertical-align:-2px;margin-right:.3rem;opacity:.5"><path d="M2 4h10v7H2z"/><path d="M2 4l5 3.5L12 4"/></svg><a href="mailto:info@serdoc.es">info@serdoc.es</a></p>
+      <p style="font-size:.72rem;color:rgba(255,255,255,.3);margin-bottom:.15rem">Llámanos ahora</p>
+      <p style="margin-bottom:.75rem"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" style="vertical-align:-2px;margin-right:.3rem;opacity:.5"><path d="M2 3a1 1 0 0 1 1-1h1.5l1 2.5-1 1a7 7 0 0 0 3 3l1-1 2.5 1V11a1 1 0 0 1-1 1A9 9 0 0 1 2 3z"/></svg><a href="tel:+34916896573">+34 916 896 573</a></p>
+      <p style="margin-bottom:.75rem"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:-3px;margin-right:.3rem;opacity:.6"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg><a href="https://wa.me/34625681553">+34 625 681 553</a></p>
+      <p><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24" style="vertical-align:-2px;margin-right:.3rem;opacity:.5"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg><a href="https://www.linkedin.com/company/serdoc/" target="_blank" rel="noopener">LinkedIn</a></p>
+      <p style="margin-top:1rem;font-size:.82rem;color:rgba(255,255,255,.3)">Calle del Cobre 11<br>28914 Leganés, Madrid</p>
+    </div>
+  </div>
+  <div class="footer-bottom"><span>© 2026 Serdoc Informática S.L.</span><span><a href="/aviso-legal/">Aviso legal</a> · <a href="/politica-de-cookies/">Política de cookies</a> · <a href="/politica-de-privacidad/">Política de privacidad</a></span></div>
+</footer>
+<!-- FLOATING BUTTONS -->
+<div class="float-btns">
+  <a href="https://wa.me/34625681553?text=Hola%2C%20me%20gustar%C3%ADa%20obtener%20informaci%C3%B3n%20sobre%20vuestras%20soluciones%20RFID" class="float-btn float-btn-wa" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+  <a href="tel:+34916896573" class="float-btn float-btn-phone" aria-label="Llamar">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5a2 2 0 0 1 2-2h2.28a1 1 0 0 1 .95.68l1.22 3.66a1 1 0 0 1-.24 1.01L7.69 9.85a12 12 0 0 0 6.46 6.46l1.52-1.52a1 1 0 0 1 1.01-.24l3.66 1.22a1 1 0 0 1 .68.95V19a2 2 0 0 1-2 2A17 17 0 0 1 3 5z"/></svg>
+  </a>
+</div>
+<!-- COOKIE SYSTEM -->
+<div class="cookie-overlay" id="cookieOverlay"></div>
+<div class="cookie-banner" id="cookieBanner"><div class="cookie-banner-inner"><div class="cookie-banner-text"><h3>Usamos cookies para mejorar tu experiencia</h3><p>Utilizamos cookies propias y de terceros para analizar el uso del sitio. <a href="/politica-de-privacidad/">Más información</a>.</p></div><div class="cookie-banner-actions"><button class="cb-btn cb-btn-reject" onclick="CC.reject()">Rechazar</button><button class="cb-btn cb-btn-settings" onclick="CC.showPrefs()">Configurar</button><button class="cb-btn cb-btn-accept" onclick="CC.accept()">Aceptar todas</button></div></div></div>
+<div class="cookie-prefs" id="cookiePrefs"><div class="cookie-prefs-panel"><div class="cp-header"><div class="cp-header-row"><h2>Preferencias de cookies</h2><button class="cp-close" onclick="CC.closePrefs()" aria-label="Cerrar"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3l8 8M11 3l-8 8"/></svg></button></div><p>Personaliza qué cookies permites. Las funcionales son necesarias y no se pueden desactivar.</p></div><div class="cp-body"><div class="cc"><div class="cc-header"><div class="cc-info"><div class="cc-title">Funcionales <span class="cc-badge">Siempre activas</span></div><div class="cc-desc">Necesarias para el funcionamiento básico del sitio.</div></div><div><label class="toggle"><input type="checkbox" checked disabled><span class="toggle-track"></span></label></div></div></div><div class="cc"><div class="cc-header"><div class="cc-info"><div class="cc-title">Analíticas</div><div class="cc-desc">Nos permiten entender cómo se usa el sitio para mejorarlo.</div></div><div><label class="toggle"><input type="checkbox" id="tA"><span class="toggle-track"></span></label></div></div></div><div class="cc"><div class="cc-header"><div class="cc-info"><div class="cc-title">Marketing</div><div class="cc-desc">Permiten mostrarte publicidad relevante y medir campañas.</div></div><div><label class="toggle"><input type="checkbox" id="tM"><span class="toggle-track"></span></label></div></div></div><div class="cc"><div class="cc-header"><div class="cc-info"><div class="cc-title">Preferencias</div><div class="cc-desc">Recuerdan tus ajustes para futuras visitas.</div></div><div><label class="toggle"><input type="checkbox" id="tP"><span class="toggle-track"></span></label></div></div></div></div><div class="cp-footer"><button class="cb-btn cb-btn-reject" onclick="CC.reject()">Rechazar opcionales</button><button class="cb-btn cb-btn-accept" onclick="CC.savePrefs()">Guardar preferencias</button></div></div></div>
+<button class="cookie-reopen" id="cookieReopen" onclick="CC.showPrefs()" aria-label="Configurar cookies"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.5"/><circle cx="7" cy="8" r="1.2" fill="#f57a14"/><circle cx="12" cy="6" r="1" fill="#d4620f"/><circle cx="13" cy="12" r="1.2" fill="#f57a14"/><circle cx="8" cy="13" r="1" fill="#d4620f"/></svg></button>
+<script>
+/* MOBILE MENU */
+document.addEventListener('DOMContentLoaded', function() {
+  var t = document.getElementById('menuToggle');
+  if (!t) return;
+  t.addEventListener('click', function() {
+    var n = document.getElementById('mobileNav');
+    if (!n) return;
+    var o = n.classList.contains('open');
+    n.classList.toggle('open');
+    this.setAttribute('aria-expanded', !o);
+    this.innerHTML = o
+      ? '<svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h16M3 11h16M3 16h16"/></svg>'
+      : '<svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4l14 14M18 4l-14 14"/></svg>';
+  });
+});
+
+/* COOKIE CONSENT */
+const CC={
+  show(){document.getElementById('cookieBanner').classList.add('active');document.getElementById('cookieReopen').classList.remove('visible')},
+  hide(){document.getElementById('cookieBanner').classList.remove('active')},
+  showPrefs(){this.hide();document.getElementById('cookiePrefs').classList.add('active');document.getElementById('cookieOverlay').classList.add('active')},
+  closePrefs(){document.getElementById('cookiePrefs').classList.remove('active');document.getElementById('cookieOverlay').classList.remove('active');if(!localStorage.getItem('serdoc_cc'))setTimeout(()=>this.show(),200);else document.getElementById('cookieReopen').classList.add('visible')},
+  accept(){this.save({f:1,a:1,m:1,p:1})},
+  reject(){document.getElementById('tA').checked=false;document.getElementById('tM').checked=false;document.getElementById('tP').checked=false;this.save({f:1,a:0,m:0,p:0})},
+  savePrefs(){this.save({f:1,a:document.getElementById('tA').checked?1:0,m:document.getElementById('tM').checked?1:0,p:document.getElementById('tP').checked?1:0})},
+  save(c){localStorage.setItem('serdoc_cc',JSON.stringify(c));this.hide();document.getElementById('cookiePrefs').classList.remove('active');document.getElementById('cookieOverlay').classList.remove('active');document.getElementById('cookieReopen').classList.add('visible');if(typeof gtag==='function')gtag('consent','update',{analytics_storage:c.a?'granted':'denied',ad_storage:c.m?'granted':'denied'})},
+  init(){const s=localStorage.getItem('serdoc_cc');if(s){const c=JSON.parse(s);document.getElementById('tA').checked=!!c.a;document.getElementById('tM').checked=!!c.m;document.getElementById('tP').checked=!!c.p;document.getElementById('cookieReopen').classList.add('visible')}else setTimeout(()=>this.show(),800)}
+};
+document.getElementById('cookieOverlay').addEventListener('click',()=>CC.closePrefs());
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&document.getElementById('cookiePrefs').classList.contains('active'))CC.closePrefs()});
+CC.init();
+(function(){
+  var ov=document.getElementById('cookieOverlay');
+  if(ov) ov.addEventListener('click',function(){CC.closePrefs();});
+  document.addEventListener('keydown',function(e){
+    var p=document.getElementById('cookiePrefs');
+    if(e.key==='Escape'&&p&&p.classList.contains('active'))CC.closePrefs();
+  });
+})();
+
+/* COUNTERS */
+(function(){
+  var done={};
+  function animate(el){
+    var k=el.dataset.target; if(done[k])return; done[k]=true;
+    var target=parseFloat(k),prefix=el.dataset.prefix||'',suffix=el.dataset.suffix||'';
+    var isFloat=target!==Math.floor(target),steps=60,step=0;
+    var t=setInterval(function(){
+      step++; var v=(target/steps)*step;
+      if(step>=steps){v=target;clearInterval(t);}
+      el.textContent=prefix+(isFloat?v.toFixed(1):Math.round(v))+suffix;
+    },Math.round(2000/steps));
+  }
+  var els=document.querySelectorAll('.ben-num[data-target]');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(e){
+      e.forEach(function(x){if(x.isIntersecting)animate(x.target);});
+    },{threshold:0.1});
+    els.forEach(function(el){io.observe(el);});
+  } else {els.forEach(animate);}
+})();
+
+/* TIMELINE 4 STEPS */
+(function(){
+  var tids=[],rTid=null,going=false;
+  function clr(){tids.forEach(clearTimeout);tids=[];}
+  function ge(id){return document.getElementById(id);}
+  function mob(){return window.innerWidth<768;}
+  function reset(){
+    ['hwc1','hwc2','hwc3','hwc4'].forEach(function(id){var e=ge(id);if(e)e.classList.remove('is-active');});
+    var p=mob()?'height':'width',op=mob()?'width':'height';
+    ['hwl1','hwl2','hwl3'].forEach(function(id){
+      var e=ge(id);if(!e)return;
+      e.style.transition='none';e.style[p]='0';e.style[op]='100%';void e.offsetWidth;
+    });
+  }
+  function fill(id,ms){
+    var e=ge(id);if(!e)return;
+    var p=mob()?'height':'width';
+    requestAnimationFrame(function(){e.style.transition=p+' '+ms+'ms cubic-bezier(.4,0,.2,1)';e.style[p]='100%';});
+  }
+  function act(id){var e=ge(id);if(e)e.classList.add('is-active');}
+  function loop(){
+    reset();
+    tids.push(setTimeout(function(){act('hwc1');},150));
+    tids.push(setTimeout(function(){fill('hwl1',1200);},850));
+    tids.push(setTimeout(function(){act('hwc2');},2250));
+    tids.push(setTimeout(function(){fill('hwl2',1200);},2950));
+    tids.push(setTimeout(function(){act('hwc3');},4350));
+    tids.push(setTimeout(function(){fill('hwl3',1200);},5050));
+    tids.push(setTimeout(function(){act('hwc4');},6450));
+    tids.push(setTimeout(loop,9500));
+  }
+  function init(){
+    if(going)return;going=true;
+    var sec=document.querySelector('.how-sol');
+    if(!sec){setTimeout(loop,300);return;}
+    if('IntersectionObserver' in window){
+      var obs=new IntersectionObserver(function(e){if(e[0].isIntersecting){obs.disconnect();loop();}},{threshold:0.1});
+      obs.observe(sec);
+    } else {setTimeout(loop,300);}
+    window.addEventListener('resize',function(){clearTimeout(rTid);rTid=setTimeout(function(){clr();going=false;init();},400);});
+  }
+  document.readyState==='loading'?document.addEventListener('DOMContentLoaded',init):init();
+})();
+
+/* PARALLAX */
+(function(){
+  var bg=document.getElementById('benefitsBg');
+  if(!bg||window.innerWidth<768)return;
+  function upd(){var r=bg.parentElement.getBoundingClientRect();bg.style.transform='translateY('+((window.innerHeight/2-r.top-r.height/2)*0.1)+'px)';}
+  window.addEventListener('scroll',upd,{passive:true});upd();
+})();
+</script>
+</body></html>

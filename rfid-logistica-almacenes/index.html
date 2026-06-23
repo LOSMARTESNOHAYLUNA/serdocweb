@@ -477,6 +477,69 @@ a:hover .arrow-r{transform:translateX(3px)}
 .hero-breadcrumb span:not(.bc-sep){color:white;font-weight:600}
 .hero-breadcrumb .bc-sep{color:rgba(255,255,255,.4);margin:0 .5rem;font-size:.85em}
 
+
+/* ═══ GLOBAL UPDATES v2 ═══ */
+/* 1 - Secondary buttons: white pill */
+.btn-ghost,.btn-cta-outline,.btn-secondary-pill{
+  background:var(--white)!important;border-radius:50px!important;
+  box-shadow:0 2px 16px rgba(15,27,51,.1)!important;
+  color:var(--navy)!important;font-weight:700!important;
+  padding:.75rem 2rem!important;border:none!important;
+  font-family:'Outfit',sans-serif;font-size:.95rem;
+  display:inline-flex;align-items:center;gap:.5rem;text-decoration:none;
+  transition:all .2s;
+}
+.btn-ghost:hover,.btn-cta-outline:hover,.btn-secondary-pill:hover{
+  box-shadow:0 6px 24px rgba(15,27,51,.15)!important;
+  transform:translateY(-1px)!important;
+  color:var(--navy-deep)!important;
+  background:var(--white)!important;
+}
+/* 2 - Float phone button → navy */
+.float-btn-phone{background:var(--navy)!important;box-shadow:0 4px 16px rgba(27,42,74,.35)!important}
+.float-btn-phone:hover{background:var(--navy-mid)!important;box-shadow:0 8px 24px rgba(27,42,74,.45)!important}
+/* 3 - Hover on dark section bg → amber */
+.roi-section .btn.btn-primary:hover,
+.lhero .btn.btn-primary:hover{background:#f57a14!important;color:var(--white)!important}
+.cta-band .btn-navy{transition:all .2s}
+.cta-band .btn-navy:hover{background:#f57a14!important;color:white!important}
+/* 4 - Cookie buttons → navy */
+.cb-btn-reject,.cb-btn-settings{background:var(--navy)!important;color:var(--white)!important;border:none!important}
+.cb-btn-reject:hover,.cb-btn-settings:hover{background:var(--navy-mid)!important}
+/* 5 - Badges → teal */
+.srv-img-badge{
+  background:rgba(8,145,178,.12)!important;
+  color:var(--teal)!important;
+  border:1px solid rgba(8,145,178,.25)!important;
+  backdrop-filter:none!important;
+}
+/* 6 - Megamenu full-width: make header the positioning parent */
+.mega-parent{position:static!important}
+.megamenu{
+  position:absolute!important;
+  left:0!important;right:0!important;
+  width:100%!important;
+  transform:none!important;
+  border-radius:0 0 16px 16px!important;
+  top:100%!important;
+}
+/* 7 - Megamenu photo full height */
+.megamenu-photo{min-width:200px;align-self:stretch!important;display:flex!important;flex-direction:column!important;gap:.75rem!important}
+.megamenu-photo img{width:100%!important;height:100%!important;min-height:140px!important;max-height:none!important;object-fit:cover!important;flex:1!important}
+/* 8 - ACCEDE header button */
+.btn-accede{
+  display:inline-flex;align-items:center;gap:.4rem;
+  background:var(--teal);color:white;
+  padding:.72rem 1.3rem;border-radius:var(--radius);
+  font-size:.88rem;font-weight:700;font-family:'Outfit',sans-serif;
+  transition:all .2s;text-decoration:none;white-space:nowrap;border:none;
+}
+.btn-accede:hover{background:#0780A0;transform:translateY(-1px)}
+/* 9 - nav-cta wraps nicely with ACCEDE */
+.header-ctas{display:flex;align-items:center;gap:.6rem}
+/* Keep header .nav items correct after static mega-parent */
+.header{overflow:visible!important}
+.header-inner{position:relative;overflow:visible!important}
 </style>
 </head>
 <body>
@@ -497,7 +560,6 @@ a:hover .arrow-r{transform:translateX(3px)}
   <div class="header-inner">
     <a href="/" class="logo"><svg height="34" viewBox="0 0 697.9 215" xmlns="http://www.w3.org/2000/svg"><defs><style>.lw{fill:#fff}</style></defs><g><path class="lw" d="M394.8,147.1c0,15.5-13.8,21.5-26.4,21.5-19.8,0-28.5-10.9-30.5-23.2h11.5c2.1,8.2,7.6,12.4,18.8,12.4s15-3.7,15-10.3-5.8-7.7-18.9-10.6c-13.8-3-24.5-6.9-24.5-20.1s12.4-21.4,26-21.4,26,9.2,28,20.4h-11.5c-2-5.9-6.9-9.7-16.4-9.7s-14.7,4.2-14.7,10.4,4,6.7,15.8,9.2c17.9,3.9,27.7,7.7,27.7,21.3Z"/><path class="lw" d="M396.1,139.7c0-16.8,11.9-29.1,28.7-29.1s29.2,13.9,28.1,32.2h-45.1c.8,10.2,8,15.9,17.3,15.9s12.2-2.8,14.9-8.3h11.8c-4.4,12.4-15,18.2-26.8,18.2-16.9,0-28.9-12-28.9-28.8ZM440.7,133.4c-1.7-7.7-7.4-12.9-15.9-12.9s-14.6,5.4-16.4,12.9h32.3Z"/><path class="lw" d="M456.4,111.8h11.4v10.9c3.4-7.7,9.7-12.1,18.5-12.1s2.5.1,3.3.3v11.6c-1-.1-1.9-.2-3.4-.2-10.4,0-18.4,5.9-18.4,19.6v25.5h-11.4v-55.6Z"/><path class="lw" d="M492.7,96.6h24.8c20.6,0,36.2,14.9,36.2,35.4s-15.7,35.4-36.2,35.4h-24.8v-70.8ZM517.6,156.5c14.3,0,24.7-10,24.7-24.5s-10.4-24.5-24.7-24.5h-13.5v49h13.5Z"/><path class="lw" d="M613.4,139.6c0,16.7-12.6,28.9-28.8,28.9s-28.8-12.3-28.8-28.9,12.9-29,28.8-29,28.8,12.2,28.8,29ZM567.2,139.6c0,10.7,7.6,18.1,17.3,18.1s17.3-7.4,17.3-18.1-7.7-18.1-17.3-18.1-17.3,7.4-17.3,18.1Z"/><path class="lw" d="M615.3,139.6c0-16.6,12.3-29,28.9-29s24.8,8,27.3,21.4h-11.8c-2.1-7-8.3-10.8-15.5-10.8-10.3,0-17.4,7.7-17.4,18.4s7.3,18.4,17.3,18.4,13.5-4,15.6-10.9h11.8c-2.6,13.8-14.4,21.5-27.4,21.5s-28.8-12.4-28.8-29Z"/></g><rect class="lw" x="79" y="81.2" width="8.7" height="8.7" transform="translate(-33.6 110) rotate(-57.5)"/><rect class="lw" x="73.1" y="90.4" width="8.7" height="8.7" transform="translate(-44 109.3) rotate(-57.5)"/><rect class="lw" x="94" y="77.8" width="8.7" height="8.7" transform="translate(-23.8 121.1) rotate(-57.5)"/><rect class="lw" x="99.9" y="68.6" width="8.7" height="8.7" transform="translate(-13.3 121.8) rotate(-57.5)"/><rect class="lw" x="90.7" y="62.8" width="8.7" height="8.7" transform="translate(-12.6 111.3) rotate(-57.5)"/><rect class="lw" x="81.5" y="56.9" width="8.7" height="8.7" transform="translate(-11.9 100.8) rotate(-57.5)"/><rect class="lw" x="60.6" y="69.5" width="8.7" height="8.7" transform="translate(-32.2 89) rotate(-57.5)"/><rect class="lw" x="63.9" y="84.5" width="8.7" height="8.7" transform="translate(-43.4 98.8) rotate(-57.5)"/><rect class="lw" x="76.5" y="105.4" width="8.7" height="8.7" transform="translate(-55.2 119.1) rotate(-57.5)"/><rect class="lw" x="82.3" y="96.2" width="8.7" height="8.7" transform="translate(-44.7 119.8) rotate(-57.5)"/><rect class="lw" x="91.5" y="102.1" width="8.7" height="8.7" transform="translate(-45.4 130.2) rotate(-57.5)"/><rect class="lw" x="97.4" y="92.9" width="8.7" height="8.7" transform="translate(-34.9 130.9) rotate(-57.5)"/><rect class="lw" x="103.2" y="83.7" width="8.7" height="8.7" transform="translate(-24.4 131.6) rotate(-57.5)"/><rect class="lw" x="114.9" y="65.3" width="8.7" height="8.7" transform="translate(-3.5 132.9) rotate(-57.5)"/><rect class="lw" x="105.7" y="59.4" width="8.7" height="8.7" transform="translate(-2.8 122.5) rotate(-57.5)"/><rect class="lw" x="87.3" y="47.7" width="8.7" height="8.7" transform="translate(-1.5 101.5) rotate(-57.5)"/><rect class="lw" x="45.5" y="72.8" width="8.7" height="8.7" transform="translate(-42 77.9) rotate(-57.5)"/><rect class="lw" x="43" y="97.1" width="8.7" height="8.7" transform="translate(-63.6 87) rotate(-57.5)"/><rect class="lw" x="61.4" y="108.8" width="8.7" height="8.7" transform="translate(-65 107.9) rotate(-57.5)"/><rect class="lw" x="79.8" y="120.5" width="8.7" height="8.7" transform="translate(-66.3 128.9) rotate(-57.5)"/><rect class="lw" x="85.7" y="111.3" width="8.7" height="8.7" transform="translate(-55.9 129.6) rotate(-57.5)"/><rect class="lw" x="100.7" y="107.9" width="8.7" height="8.7" transform="translate(-46.1 140.7) rotate(-57.5)"/><rect class="lw" x="106.6" y="98.7" width="8.7" height="8.7" transform="translate(-35.6 141.4) rotate(-57.5)"/><rect class="lw" x="112.4" y="89.5" width="8.7" height="8.7" transform="translate(-25.1 142.1) rotate(-57.5)"/><rect class="lw" x="118.3" y="80.3" width="8.7" height="8.7" transform="translate(-14.6 142.7) rotate(-57.5)"/><rect class="lw" x="130" y="61.9" width="8.7" height="8.7" transform="translate(6.3 144.1) rotate(-57.5)"/><rect class="lw" x="120.8" y="56.1" width="8.7" height="8.7" transform="translate(7 133.6) rotate(-57.5)"/><rect class="lw" x="102.4" y="44.4" width="8.7" height="8.7" transform="translate(8.3 112.7) rotate(-57.5)"/><rect class="lw" x="68.9" y="36" width="8.7" height="8.7" transform="translate(-.1 80.6) rotate(-57.5)"/><rect class="lw" x="53.9" y="39.4" width="8.7" height="8.7" transform="translate(-9.9 69.4) rotate(-57.5)"/><rect class="lw" x="30.5" y="76.2" width="8.7" height="8.7" transform="translate(-51.8 66.7) rotate(-57.5)"/><rect class="lw" x="28" y="100.4" width="8.7" height="8.7" transform="translate(-73.4 75.8) rotate(-57.5)"/><rect class="lw" x="46.4" y="112.1" width="8.7" height="8.7" transform="translate(-74.8 96.8) rotate(-57.5)"/><rect class="lw" x="55.6" y="118" width="8.7" height="8.7" transform="translate(-75.5 107.3) rotate(-57.5)"/><rect class="lw" x="64.8" y="123.8" width="8.7" height="8.7" transform="translate(-76.1 117.7) rotate(-57.5)"/><rect class="lw" x="83.2" y="135.5" width="8.7" height="8.7" transform="translate(-77.5 138.7) rotate(-57.5)"/><rect class="lw" x="89" y="126.3" width="8.7" height="8.7" transform="translate(-67 139.4) rotate(-57.5)"/><rect class="lw" x="104.1" y="123" width="8.7" height="8.7" transform="translate(-57.2 150.5) rotate(-57.5)"/><rect class="lw" x="115.8" y="104.6" width="8.7" height="8.7" transform="translate(-36.3 151.9) rotate(-57.5)"/><rect class="lw" x="121.6" y="95.4" width="8.7" height="8.7" transform="translate(-25.8 152.5) rotate(-57.5)"/><rect class="lw" x="127.5" y="86.2" width="8.7" height="8.7" transform="translate(-15.3 153.2) rotate(-57.5)"/><rect class="lw" x="133.3" y="77" width="8.7" height="8.7" transform="translate(-4.8 153.9) rotate(-57.5)"/><rect class="lw" x="145" y="58.6" width="8.7" height="8.7" transform="translate(16.1 155.2) rotate(-57.5)"/><rect class="lw" x="135.8" y="52.7" width="8.7" height="8.7" transform="translate(16.8 144.7) rotate(-57.5)"/><rect class="lw" x="117.4" y="41" width="8.7" height="8.7" transform="translate(18.1 123.8) rotate(-57.5)"/><rect class="lw" x="108.2" y="35.2" width="8.7" height="8.7" transform="translate(18.8 113.3) rotate(-57.5)"/><rect class="lw" x="99" y="29.3" width="8.7" height="8.7" transform="translate(19.5 102.9) rotate(-57.5)"/><rect class="lw" x="80.6" y="17.6" width="8.7" height="8.7" transform="translate(20.8 81.9) rotate(-57.5)"/><rect class="lw" x="50.5" y="24.3" width="8.7" height="8.7" transform="translate(1.2 59.6) rotate(-57.5)"/><rect class="lw" x="31.3" y="115.5" width="8.7" height="8.7" transform="translate(-84.6 85.6) rotate(-57.5)"/><rect class="lw" x="40.5" y="121.3" width="8.7" height="8.7" transform="translate(-85.3 96.1) rotate(-57.5)"/><rect class="lw" x="58.9" y="133" width="8.7" height="8.7" transform="translate(-86.6 117.1) rotate(-57.5)"/><rect class="lw" x="68.1" y="138.9" width="8.7" height="8.7" transform="translate(-87.3 127.5) rotate(-57.5)"/><rect class="lw" x="86.5" y="150.6" width="8.7" height="8.7" transform="translate(-88.6 148.5) rotate(-57.5)"/><rect class="lw" x="92.4" y="141.4" width="8.7" height="8.7" transform="translate(-78.1 149.2) rotate(-57.5)"/><rect class="lw" x="101.6" y="147.2" width="8.7" height="8.7" transform="translate(-78.8 159.6) rotate(-57.5)"/><rect class="lw" x="107.4" y="138" width="8.7" height="8.7" transform="translate(-68.4 160.3) rotate(-57.5)"/><rect class="lw" x="113.3" y="128.8" width="8.7" height="8.7" transform="translate(-57.9 161) rotate(-57.5)"/><rect class="lw" x="119.1" y="119.6" width="8.7" height="8.7" transform="translate(-47.4 161.6) rotate(-57.5)"/><rect class="lw" x="125" y="110.4" width="8.7" height="8.7" transform="translate(-36.9 162.3) rotate(-57.5)"/><rect class="lw" x="136.7" y="92" width="8.7" height="8.7" transform="translate(-16 163.7) rotate(-57.5)"/><rect class="lw" x="142.5" y="82.8" width="8.7" height="8.7" transform="translate(-5.5 164.3) rotate(-57.5)"/><rect class="lw" x="148.4" y="73.6" width="8.7" height="8.7" transform="translate(5 165) rotate(-57.5)"/><rect class="lw" x="154.2" y="64.4" width="8.7" height="8.7" transform="translate(15.4 165.7) rotate(-57.5)"/><rect class="lw" x="95.7" y="156.4" width="8.7" height="8.7" transform="translate(-89.3 159) rotate(-57.5)"/><path class="lw" d="M147.9,153c0,0,.1-.2.2-.2l70.7-59.8-49.6-24.4-40.6,72.8-6.7,12.1,23.9,15.4,2-15.4Z"/><path class="lw" d="M172.8,158.5c0,0,.2-.1.2-.2l95.9-32.2-27.5-49.8-91.5,77.4,3.5,4.1,3.3,3.9,6.3,7.4,9.6-10.5Z"/><polygon class="lw" points="149.4 155.9 147.8 168 154.6 161.9 151.8 158.7 149.4 155.9"/><path class="lw" d="M119.6,154.1l29-52-42.7,68.2h21l-7.4-15.3Z"/><polygon class="lw" points="123 156.5 126.5 164 128.7 168.5 132.5 162.6 128.2 159.9 123 156.5"/><polygon class="lw" points="172.4 167.7 164.5 198 309.6 198 309.6 114.5 174.4 160 172.4 167.7"/><polygon class="lw" points="166.9 167.9 170.7 166.4 171 165.1 171.6 162.8 166.9 167.9"/></svg></a>
     <nav class="nav" id="desktopNav">
-      <a href="/" class="nav-item">Inicio</a>
       <div class="mega-parent">
         <a href="/soluciones-rfid/" class="nav-item">Soluciones RFID <svg width="10" height="10" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3.5l3 3 3-3"/></svg></a>
         <div class="megamenu">
@@ -516,14 +578,13 @@ a:hover .arrow-r{transform:translateX(3px)}
         <a href="/soluciones-rfid-para-bibliotecas/" class="nav-item">Bibliotecas <svg width="10" height="10" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3.5l3 3 3-3"/></svg></a>
         <div class="megamenu"><div class="megamenu-cols"><div class="megamenu-col megamenu-single"><a href="/autoprestamo-libros-rfid/">Autopréstamo de libros</a><a href="/autolibro/">Autolibro</a><a href="/rfid-bibliobus/">Bibliobús RFID</a><a href="/autoprestamo-de-portatiles/">Autopréstamo de portátiles</a><a href="/reserva-automatica-ordenadores/">Reserva de ordenadores</a><a href="/buzon-de-devolucion-inteligente/">Buzón de devolución</a></div></div></div>
       </div>
-      <a href="/accede-reserva-espacios/" class="nav-item">ACCEDE</a>
       <div class="mega-parent">
         <a href="/sistema-de-gestion-documental/" class="nav-item">Gestión Documental <svg width="10" height="10" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3.5l3 3 3-3"/></svg></a>
         <div class="megamenu"><div class="megamenu-cols"><div class="megamenu-col megamenu-single"><a href="/digitalizacion-documentos/">Digitalización de documentos</a><a href="/business-process-outsourcing/">Business Process Outsourcing</a></div></div></div>
       </div>
       <a href="/casos-de-exito/" class="nav-item">Casos de éxito</a>
       <a href="/blog/" class="nav-item">Blog</a>
-      <a href="/contacto/" class="nav-item nav-cta">Solicitar consulta gratuita</a>
+      <div class="header-ctas"><a href="/contacto/" class="nav-item nav-cta">Solicitar consulta gratuita</a><a href="/accede-reserva-espacios/" class="btn-accede">ACCEDE</a></div>
     </nav>
     <button class="menu-toggle" id="menuToggle" aria-label="Menú" aria-expanded="false"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h16M3 11h16M3 16h16"/></svg></button>
   </div>

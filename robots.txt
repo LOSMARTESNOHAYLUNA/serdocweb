@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /gracias/
+Disallow: /aviso-legal/
+Disallow: /politica-de-privacidad/
+Disallow: /politica-de-cookies/
+
+Sitemap: https://www.serdoc.es/sitemap.xml
