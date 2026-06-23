@@ -711,6 +711,76 @@ a:hover .arrow-r{transform:translateX(3px)}
   pointer-events: auto;
 }
 
+
+/* ═══ PATCH v5 ═══ */
+
+/* 1 ── Megamenu: auto-width, no full-width stretch */
+.mega-parent { position: relative !important; }
+/* RFID megamenu — 3 cols, centered under trigger */
+.megamenu {
+  position: absolute !important;
+  top: calc(100% + 6px) !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  width: auto !important;
+  min-width: 660px !important;
+  max-width: 780px !important;
+  right: auto !important;
+  border-radius: 14px !important;
+}
+/* Simple dropdowns stay compact and left-aligned */
+.megamenu.megamenu-simple {
+  left: 0 !important;
+  transform: none !important;
+  min-width: 240px !important;
+  max-width: 320px !important;
+}
+
+/* 2 ── Blog card badges: dark overlay (matches home project badges) */
+.blog-card-cat {
+  background: rgba(15,27,51,.78) !important;
+  color: white !important;
+  backdrop-filter: blur(4px) !important;
+  border-radius: 6px !important;
+  font-size: .68rem !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: .06em !important;
+  padding: .25rem .6rem !important;
+}
+
+/* 3 ── Hero: consistent height for all hero sections */
+.lhero { min-height: 86vh !important; }
+
+/* 4 ── Cases photos: taller */
+.caso-img, .caso-img img {
+  height: 500px !important;
+  object-fit: cover !important;
+  width: 100% !important;
+}
+
+/* 5 ── Card link centered */
+.srv-link {
+  justify-content: center !important;
+  display: flex !important;
+  align-items: center !important;
+  text-align: center !important;
+  width: 100% !important;
+}
+
+/* 6 ── Blog post hero: more vertical space */
+.blog-post-hero {
+  padding: 8rem 0 4rem !important;
+  min-height: 40vh !important;
+}
+
+/* 7 ── Megamenu cols: equal 3-col grid */
+.megamenu-cols {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 1.5rem !important;
+}
+
 </style></head><body><div class="subheader">
   <div class="subheader-inner">
     <a href="mailto:info@serdoc.es?subject=Formulario%20de%20contacto%20Serdoc" class="sh-desktop"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1.5" y="3" width="11" height="8" rx="1.5"/><path d="M1.5 3l5.5 4 5.5-4"/></svg> info@serdoc.es</a>
@@ -778,12 +848,18 @@ a:hover .arrow-r{transform:translateX(3px)}
   <div class="section-label">Características</div>
   <h2 class="section-h2">Todo lo que ACCEDE<br><span class="h2-light">hace por tu institución</span></h2>
   <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem;margin-top:2.5rem">
-    <div style="background:white;border-radius:12px;padding:1.5rem;box-shadow:0 2px 16px rgba(15,27,51,.07)"><h4 style="font-family:'Outfit',sans-serif;color:var(--navy);margin-bottom:.5rem">Reserva web y app</h4><p style="color:var(--g600);font-size:.9rem">Interfaz adaptada a móvil y app iOS/Android para reservas, cancelaciones y extensiones desde cualquier dispositivo.</p></div>
-    <div style="background:white;border-radius:12px;padding:1.5rem;box-shadow:0 2px 16px rgba(15,27,51,.07)"><h4 style="font-family:'Outfit',sans-serif;color:var(--navy);margin-bottom:.5rem">Compatible con SIGB</h4><p style="color:var(--g600);font-size:.9rem">Integración nativa con Absysnet, Sierra, Koha vía SIP2. El carnet de biblioteca como credencial de acceso.</p></div>
-    <div style="background:white;border-radius:12px;padding:1.5rem;box-shadow:0 2px 16px rgba(15,27,51,.07)"><h4 style="font-family:'Outfit',sans-serif;color:var(--navy);margin-bottom:.5rem">Control de aforo</h4><p style="color:var(--g600);font-size:.9rem">Registro de entradas y salidas en tiempo real. Alertas automáticas al alcanzar el límite de capacidad.</p></div>
-    <div style="background:white;border-radius:12px;padding:1.5rem;box-shadow:0 2px 16px rgba(15,27,51,.07)"><h4 style="font-family:'Outfit',sans-serif;color:var(--navy);margin-bottom:.5rem">Informes y estadísticas</h4><p style="color:var(--g600);font-size:.9rem">Informes de ocupación, franjas horarias de mayor demanda y espacios infrautilizados para optimizar la gestión.</p></div>
-    <div style="background:white;border-radius:12px;padding:1.5rem;box-shadow:0 2px 16px rgba(15,27,51,.07)"><h4 style="font-family:'Outfit',sans-serif;color:var(--navy);margin-bottom:.5rem">Marca corporativa</h4><p style="color:var(--g600);font-size:.9rem">Interfaz personalizable con colores, logo y tipografía de la institución. Experiencia coherente con la identidad visual.</p></div>
-    <div style="background:white;border-radius:12px;padding:1.5rem;box-shadow:0 2px 16px rgba(15,27,51,.07)"><h4 style="font-family:'Outfit',sans-serif;color:var(--navy);margin-bottom:.5rem">Cualquier tipo de espacio</h4><p style="color:var(--g600);font-size:.9rem">Ordenadores, puestos de lectura, salas de grupo, salas de reuniones, consultas, laboratorios, parkings, taquillas…</p></div>
+    <div style="background:white;border-radius:12px;padding:1.5rem;box-shadow:0 2px 16px rgba(15,27,51,.07)"><div style="width:52px;height:52px;background:rgba(8,145,178,.1);border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:1rem"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M9 7h6M9 11h6M9 15h4"/></svg></div>
+<h4 style="font-family:'Outfit',sans-serif;color:var(--navy);margin-bottom:.5rem">Reserva web y app</h4><p style="color:var(--g600);font-size:.9rem">Interfaz adaptada a móvil y app iOS/Android para reservas, cancelaciones y extensiones desde cualquier dispositivo.</p></div>
+    <div style="background:white;border-radius:12px;padding:1.5rem;box-shadow:0 2px 16px rgba(15,27,51,.07)"><div style="width:52px;height:52px;background:rgba(8,145,178,.1);border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:1rem"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></div>
+<h4 style="font-family:'Outfit',sans-serif;color:var(--navy);margin-bottom:.5rem">Compatible con SIGB</h4><p style="color:var(--g600);font-size:.9rem">Integración nativa con Absysnet, Sierra, Koha vía SIP2. El carnet de biblioteca como credencial de acceso.</p></div>
+    <div style="background:white;border-radius:12px;padding:1.5rem;box-shadow:0 2px 16px rgba(15,27,51,.07)"><div style="width:52px;height:52px;background:rgba(8,145,178,.1);border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:1rem"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+<h4 style="font-family:'Outfit',sans-serif;color:var(--navy);margin-bottom:.5rem">Control de aforo</h4><p style="color:var(--g600);font-size:.9rem">Registro de entradas y salidas en tiempo real. Alertas automáticas al alcanzar el límite de capacidad.</p></div>
+    <div style="background:white;border-radius:12px;padding:1.5rem;box-shadow:0 2px 16px rgba(15,27,51,.07)"><div style="width:52px;height:52px;background:rgba(8,145,178,.1);border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:1rem"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+<h4 style="font-family:'Outfit',sans-serif;color:var(--navy);margin-bottom:.5rem">Informes y estadísticas</h4><p style="color:var(--g600);font-size:.9rem">Informes de ocupación, franjas horarias de mayor demanda y espacios infrautilizados para optimizar la gestión.</p></div>
+    <div style="background:white;border-radius:12px;padding:1.5rem;box-shadow:0 2px 16px rgba(15,27,51,.07)"><div style="width:52px;height:52px;background:rgba(8,145,178,.1);border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:1rem"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+<h4 style="font-family:'Outfit',sans-serif;color:var(--navy);margin-bottom:.5rem">Marca corporativa</h4><p style="color:var(--g600);font-size:.9rem">Interfaz personalizable con colores, logo y tipografía de la institución. Experiencia coherente con la identidad visual.</p></div>
+    <div style="background:white;border-radius:12px;padding:1.5rem;box-shadow:0 2px 16px rgba(15,27,51,.07)"><div style="width:52px;height:52px;background:rgba(8,145,178,.1);border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:1rem"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="7" height="7" rx="1"/><rect x="15" y="3" width="7" height="7" rx="1"/><rect x="2" y="14" width="7" height="7" rx="1"/><rect x="15" y="14" width="7" height="7" rx="1"/></svg></div>
+<h4 style="font-family:'Outfit',sans-serif;color:var(--navy);margin-bottom:.5rem">Cualquier tipo de espacio</h4><p style="color:var(--g600);font-size:.9rem">Ordenadores, puestos de lectura, salas de grupo, salas de reuniones, consultas, laboratorios, parkings, taquillas…</p></div>
   </div>
 </div></section>
 <!-- FAQ -->

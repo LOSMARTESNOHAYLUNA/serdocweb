@@ -721,6 +721,76 @@ a:hover .arrow-r{transform:translateX(3px)}
   pointer-events: auto;
 }
 
+
+/* ═══ PATCH v5 ═══ */
+
+/* 1 ── Megamenu: auto-width, no full-width stretch */
+.mega-parent { position: relative !important; }
+/* RFID megamenu — 3 cols, centered under trigger */
+.megamenu {
+  position: absolute !important;
+  top: calc(100% + 6px) !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  width: auto !important;
+  min-width: 660px !important;
+  max-width: 780px !important;
+  right: auto !important;
+  border-radius: 14px !important;
+}
+/* Simple dropdowns stay compact and left-aligned */
+.megamenu.megamenu-simple {
+  left: 0 !important;
+  transform: none !important;
+  min-width: 240px !important;
+  max-width: 320px !important;
+}
+
+/* 2 ── Blog card badges: dark overlay (matches home project badges) */
+.blog-card-cat {
+  background: rgba(15,27,51,.78) !important;
+  color: white !important;
+  backdrop-filter: blur(4px) !important;
+  border-radius: 6px !important;
+  font-size: .68rem !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: .06em !important;
+  padding: .25rem .6rem !important;
+}
+
+/* 3 ── Hero: consistent height for all hero sections */
+.lhero { min-height: 86vh !important; }
+
+/* 4 ── Cases photos: taller */
+.caso-img, .caso-img img {
+  height: 500px !important;
+  object-fit: cover !important;
+  width: 100% !important;
+}
+
+/* 5 ── Card link centered */
+.srv-link {
+  justify-content: center !important;
+  display: flex !important;
+  align-items: center !important;
+  text-align: center !important;
+  width: 100% !important;
+}
+
+/* 6 ── Blog post hero: more vertical space */
+.blog-post-hero {
+  padding: 8rem 0 4rem !important;
+  min-height: 40vh !important;
+}
+
+/* 7 ── Megamenu cols: equal 3-col grid */
+.megamenu-cols {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 1.5rem !important;
+}
+
 </style>
 </head><body>
 <div class="subheader">
@@ -801,7 +871,7 @@ a:hover .arrow-r{transform:translateX(3px)}
         <div class="srv-img"><img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=600&q=75" alt="RFID para retail y tiendas — Serdoc Madrid" loading="lazy" width="600" height="180">
           <span class="srv-img-badge">Solución Serdoc</span></div>
         <div class="srv-body"><h3>RFID para retail y tiendas</h3><p>Inventario automático y autopago para punto de venta.</p><span class="srv-link">Ver solución <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7h8m-3-3 3 3-3 3"/></svg></span></div></a><a href="/rfid-joyerias/" class="srv-card">
-        <div class="srv-img"><img src="https://images.unsplash.com/photo-1617038260897-41a1f14a8ca0?w=600&q=75" alt="RFID para joyerías — Serdoc Madrid" loading="lazy" width="600" height="180">
+        <div class="srv-img"><img src="https://images.unsplash.com/photo-1573408301185-9519f94814df?w=600&q=75" alt="RFID para joyerías — Serdoc Madrid" loading="lazy" width="600" height="180">
           <span class="srv-img-badge">Solución Serdoc</span></div>
         <div class="srv-body"><h3>RFID para joyerías</h3><p>Antihurto de alta seguridad para artículos de gran valor.</p><span class="srv-link">Ver solución <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7h8m-3-3 3 3-3 3"/></svg></span></div></a></div>
     <div class="srv-more"><a href="/soluciones-rfid/" class="btn-cta-outline">Ver todas las soluciones Serdoc ›</a></div>

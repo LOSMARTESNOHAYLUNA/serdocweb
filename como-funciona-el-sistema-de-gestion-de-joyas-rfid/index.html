@@ -5,9 +5,9 @@
 <link rel="canonical" href="https://www.serdoc.es/como-funciona-el-sistema-de-gestion-de-joyas-rfid/"><meta name="robots" content="index,follow">
 <meta property="og:type" content="article"><meta property="og:url" content="https://www.serdoc.es/como-funciona-el-sistema-de-gestion-de-joyas-rfid/">
 <meta property="og:title" content="Sistema de gestión de joyas con RFID | Serdoc"><meta property="og:description" content="Cómo funciona el RFID para joyerías: inventario pieza a pieza, antihurto de alta seguridad y trazabilidad de joyas de alto valor. Guía de Serdoc.">
-<meta property="og:image" content="https://images.unsplash.com/photo-1617038260897-41a1f14a8ca0?w=1200&q=80"><meta name="twitter:card" content="summary_large_image">
+<meta property="og:image" content="https://images.unsplash.com/photo-1573408301185-9519f94814df?w=1200&q=80"><meta name="twitter:card" content="summary_large_image">
 <meta name="google-site-verification" content="OIjTbV3rH7Xazv0qjQYDeix4W-D63KeJp04xwGasD8M">
-<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":RFID para joyerías: inventario pieza a pieza y antihurto de alta seguridad,"description":Cómo funciona el RFID para joyerías: inventario pieza a pieza, antihurto de alta seguridad y trazabilidad de joyas de alto valor. Guía de Serdoc.,"datePublished":"2025-04-08","author":{"@type":"Organization","name":"Serdoc Informática S.L."},"publisher":{"@type":"Organization","name":"Serdoc Informática S.L.","url":"https://www.serdoc.es"},"url":"https://www.serdoc.es/como-funciona-el-sistema-de-gestion-de-joyas-rfid/","image":https://images.unsplash.com/photo-1617038260897-41a1f14a8ca0?w=1920&amp;q=80},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://www.serdoc.es/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://www.serdoc.es/blog/"},{"@type":"ListItem","position":3,"name":RFID para joyerías: inventario pieza a pieza y antihurto de alta seguridad,"item":"https://www.serdoc.es/como-funciona-el-sistema-de-gestion-de-joyas-rfid/"}]}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":RFID para joyerías: inventario pieza a pieza y antihurto de alta seguridad,"description":Cómo funciona el RFID para joyerías: inventario pieza a pieza, antihurto de alta seguridad y trazabilidad de joyas de alto valor. Guía de Serdoc.,"datePublished":"2025-04-08","author":{"@type":"Organization","name":"Serdoc Informática S.L."},"publisher":{"@type":"Organization","name":"Serdoc Informática S.L.","url":"https://www.serdoc.es"},"url":"https://www.serdoc.es/como-funciona-el-sistema-de-gestion-de-joyas-rfid/","image":https://images.unsplash.com/photo-1573408301185-9519f94814df?w=1920&amp;q=80},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://www.serdoc.es/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://www.serdoc.es/blog/"},{"@type":"ListItem","position":3,"name":RFID para joyerías: inventario pieza a pieza y antihurto de alta seguridad,"item":"https://www.serdoc.es/como-funciona-el-sistema-de-gestion-de-joyas-rfid/"}]}]}</script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZXXNMZ7DNZ"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-ZXXNMZ7DNZ');</script>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -715,6 +715,76 @@ a:hover .arrow-r{transform:translateX(3px)}
   pointer-events: auto;
 }
 
+
+/* ═══ PATCH v5 ═══ */
+
+/* 1 ── Megamenu: auto-width, no full-width stretch */
+.mega-parent { position: relative !important; }
+/* RFID megamenu — 3 cols, centered under trigger */
+.megamenu {
+  position: absolute !important;
+  top: calc(100% + 6px) !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  width: auto !important;
+  min-width: 660px !important;
+  max-width: 780px !important;
+  right: auto !important;
+  border-radius: 14px !important;
+}
+/* Simple dropdowns stay compact and left-aligned */
+.megamenu.megamenu-simple {
+  left: 0 !important;
+  transform: none !important;
+  min-width: 240px !important;
+  max-width: 320px !important;
+}
+
+/* 2 ── Blog card badges: dark overlay (matches home project badges) */
+.blog-card-cat {
+  background: rgba(15,27,51,.78) !important;
+  color: white !important;
+  backdrop-filter: blur(4px) !important;
+  border-radius: 6px !important;
+  font-size: .68rem !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: .06em !important;
+  padding: .25rem .6rem !important;
+}
+
+/* 3 ── Hero: consistent height for all hero sections */
+.lhero { min-height: 86vh !important; }
+
+/* 4 ── Cases photos: taller */
+.caso-img, .caso-img img {
+  height: 500px !important;
+  object-fit: cover !important;
+  width: 100% !important;
+}
+
+/* 5 ── Card link centered */
+.srv-link {
+  justify-content: center !important;
+  display: flex !important;
+  align-items: center !important;
+  text-align: center !important;
+  width: 100% !important;
+}
+
+/* 6 ── Blog post hero: more vertical space */
+.blog-post-hero {
+  padding: 8rem 0 4rem !important;
+  min-height: 40vh !important;
+}
+
+/* 7 ── Megamenu cols: equal 3-col grid */
+.megamenu-cols {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 1.5rem !important;
+}
+
 </style></head><body><div class="subheader">
   <div class="subheader-inner">
     <a href="mailto:info@serdoc.es?subject=Formulario%20de%20contacto%20Serdoc" class="sh-desktop"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1.5" y="3" width="11" height="8" rx="1.5"/><path d="M1.5 3l5.5 4 5.5-4"/></svg> info@serdoc.es</a>
@@ -753,7 +823,7 @@ a:hover .arrow-r{transform:translateX(3px)}
     <button class="menu-toggle" id="menuToggle" aria-label="Menú" aria-expanded="false"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h16M3 11h16M3 16h16"/></svg></button>
   </div>
 </header>
-<section style="padding:3rem 0 1rem;background:var(--navy-deep)">
+<section class="blog-post-hero" style="padding:8rem 0 4rem;background:var(--navy-deep)">
   <div style="max-width:900px;margin:0 auto;padding:0 2rem">
     <div class="hero-breadcrumb" style="margin-bottom:1rem"><a href="/" style="color:rgba(255,255,255,.7)">Inicio</a><span class="bc-sep">›</span><a href="/blog/" style="color:rgba(255,255,255,.7)">Blog</a><span class="bc-sep">›</span><span style="color:white">RFID para joyerías: inventario pieza a pieza y antihurto de ...</span></div>
     <h1 style="font-family:'Outfit',sans-serif;color:white;font-size:clamp(1.6rem,3.5vw,2.4rem);margin-bottom:.75rem">RFID para joyerías: inventario pieza a pieza y antihurto de alta seguridad</h1>
@@ -763,7 +833,7 @@ a:hover .arrow-r{transform:translateX(3px)}
 <div style="background:var(--bg)">
   <div class="article-grid">
     <article>
-      <img src="https://images.unsplash.com/photo-1617038260897-41a1f14a8ca0?w=900&q=80" alt="RFID para joyerías: inventario pieza a pieza y antihurto de alta seguridad" style="width:100%;border-radius:12px;object-fit:cover;height:320px;margin-bottom:2rem" loading="eager">
+      <img src="https://images.unsplash.com/photo-1573408301185-9519f94814df?w=900&q=80" alt="RFID para joyerías: inventario pieza a pieza y antihurto de alta seguridad" style="width:100%;border-radius:12px;object-fit:cover;height:320px;margin-bottom:2rem" loading="eager">
       <p style="font-size:1.1rem;color:var(--g700);line-height:1.85;font-weight:500;margin-bottom:1.5rem">Una joyería puede tener miles de piezas de gran valor en vitrinas y almacén. El inventario manual tarda días. Las diferencias de inventario pueden representar pérdidas enormes. El RFID permite hacer el inventario de una joyería en horas y controlar cada pieza en tiempo real.</p>
       <h2 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.3rem;margin:2rem 0 .75rem">El reto del inventario en joyerías</h2><p style="color:var(--g700);line-height:1.9;margin-bottom:1rem">Inventariar una joyería mediana (3.000-10.000 referencias) con método manual requiere dos o tres días de trabajo intensivo, cerrando la tienda. Con RFID HF o UHF on-metal (según el tipo de joya y la vitrina), el inventario se puede hacer en horas, con la tienda abierta, pasando el lector por cada vitrina.</p><h2 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.3rem;margin:2rem 0 .75rem">RFID en vitrinas: lectura a través del cristal</h2><p style="color:var(--g700);line-height:1.9;margin-bottom:1rem">Las etiquetas HF (13,56 MHz) pueden leerse a través del cristal de las vitrinas sin abrir cada una. Un lector portátil pasado por el exterior de la vitrina lee todas las piezas en segundos. Esto permite hacer inventarios frecuentes (diarios incluso) sin interrumpir la atención al cliente.</p><h2 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.3rem;margin:2rem 0 .75rem">Antihurto integrado en el inventario</h2><p style="color:var(--g700);line-height:1.9;margin-bottom:1rem">El RFID permite que la misma etiqueta que identifica la pieza también active el sistema antihurto. Si una pieza es retirada de la vitrina sin desactivar su etiqueta, el sistema alerta inmediatamente. Esto es especialmente valioso en joyerías de lujo donde las piezas de alto valor solo se sacan para mostrar al cliente.</p><h2 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.3rem;margin:2rem 0 .75rem">Trazabilidad de préstamos y exposiciones</h2><p style="color:var(--g700);line-height:1.9;margin-bottom:1rem">Cuando una joyería presta piezas a clientes para prueba, a otras tiendas de la cadena o para exposiciones, el RFID registra automáticamente el movimiento: qué pieza, a quién, cuándo y por cuánto tiempo. Esto reduce significativamente las pérdidas por piezas prestadas que &quot;desaparecen&quot; sin seguimiento formal.</p>
       <div style="margin-top:3rem;padding:1.5rem;background:rgba(8,145,178,.06);border-radius:12px;border-left:4px solid var(--teal)">

@@ -711,6 +711,76 @@ a:hover .arrow-r{transform:translateX(3px)}
   pointer-events: auto;
 }
 
+
+/* ═══ PATCH v5 ═══ */
+
+/* 1 ── Megamenu: auto-width, no full-width stretch */
+.mega-parent { position: relative !important; }
+/* RFID megamenu — 3 cols, centered under trigger */
+.megamenu {
+  position: absolute !important;
+  top: calc(100% + 6px) !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  width: auto !important;
+  min-width: 660px !important;
+  max-width: 780px !important;
+  right: auto !important;
+  border-radius: 14px !important;
+}
+/* Simple dropdowns stay compact and left-aligned */
+.megamenu.megamenu-simple {
+  left: 0 !important;
+  transform: none !important;
+  min-width: 240px !important;
+  max-width: 320px !important;
+}
+
+/* 2 ── Blog card badges: dark overlay (matches home project badges) */
+.blog-card-cat {
+  background: rgba(15,27,51,.78) !important;
+  color: white !important;
+  backdrop-filter: blur(4px) !important;
+  border-radius: 6px !important;
+  font-size: .68rem !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: .06em !important;
+  padding: .25rem .6rem !important;
+}
+
+/* 3 ── Hero: consistent height for all hero sections */
+.lhero { min-height: 86vh !important; }
+
+/* 4 ── Cases photos: taller */
+.caso-img, .caso-img img {
+  height: 500px !important;
+  object-fit: cover !important;
+  width: 100% !important;
+}
+
+/* 5 ── Card link centered */
+.srv-link {
+  justify-content: center !important;
+  display: flex !important;
+  align-items: center !important;
+  text-align: center !important;
+  width: 100% !important;
+}
+
+/* 6 ── Blog post hero: more vertical space */
+.blog-post-hero {
+  padding: 8rem 0 4rem !important;
+  min-height: 40vh !important;
+}
+
+/* 7 ── Megamenu cols: equal 3-col grid */
+.megamenu-cols {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 1.5rem !important;
+}
+
 </style></head><body><div class="subheader">
   <div class="subheader-inner">
     <a href="mailto:info@serdoc.es?subject=Formulario%20de%20contacto%20Serdoc" class="sh-desktop"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1.5" y="3" width="11" height="8" rx="1.5"/><path d="M1.5 3l5.5 4 5.5-4"/></svg> info@serdoc.es</a>
@@ -787,11 +857,11 @@ a:hover .arrow-r{transform:translateX(3px)}
       <span class="srv-img-badge">Sanidad</span></div>
     <div class="srv-body"><h3>RFID para residencias de mayores</h3><p>Control de errantes, localización de residentes y seguridad perimetral en centros de mayores.</p><span class="srv-link">Ver solución <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7h8m-3-3 3 3-3 3"/></svg></span></div>
   </a><a href="/rfid-lavanderias/" class="srv-card">
-    <div class="srv-img"><img src="https://images.unsplash.com/photo-1582735689369-4fe89db7114c?w=600&q=75" alt="RFID para lavanderías — Serdoc" loading="lazy" width="600" height="180">
+    <div class="srv-img"><img src="https://images.unsplash.com/photo-1604335399105-a0c585fd81a1?w=600&q=75" alt="RFID para lavanderías — Serdoc" loading="lazy" width="600" height="180">
       <span class="srv-img-badge">Lavanderías</span></div>
     <div class="srv-body"><h3>RFID para lavanderías</h3><p>Trazabilidad de prendas por cliente, control de ciclos de lavado y reducción de pérdidas.</p><span class="srv-link">Ver solución <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7h8m-3-3 3 3-3 3"/></svg></span></div>
   </a><a href="/rfid-joyerias/" class="srv-card">
-    <div class="srv-img"><img src="https://images.unsplash.com/photo-1617038260897-41a1f14a8ca0?w=600&q=75" alt="RFID para joyerías — Serdoc" loading="lazy" width="600" height="180">
+    <div class="srv-img"><img src="https://images.unsplash.com/photo-1573408301185-9519f94814df?w=600&q=75" alt="RFID para joyerías — Serdoc" loading="lazy" width="600" height="180">
       <span class="srv-img-badge">Joyería</span></div>
     <div class="srv-body"><h3>RFID para joyerías</h3><p>Control pieza a pieza, antihurto de alta seguridad e inventario automatizado para joyerías.</p><span class="srv-link">Ver solución <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7h8m-3-3 3 3-3 3"/></svg></span></div>
   </a><a href="/rfid-hosteleria/" class="srv-card">
@@ -799,11 +869,11 @@ a:hover .arrow-r{transform:translateX(3px)}
       <span class="srv-img-badge">Hostelería</span></div>
     <div class="srv-body"><h3>RFID para hostelería</h3><p>Gestión de inventario de lencería, uniformes y equipación en hoteles y restaurantes.</p><span class="srv-link">Ver solución <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7h8m-3-3 3 3-3 3"/></svg></span></div>
   </a><a href="/rfid-eventos/" class="srv-card">
-    <div class="srv-img"><img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=600&q=75" alt="RFID para eventos — Serdoc" loading="lazy" width="600" height="180">
+    <div class="srv-img"><img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&q=75" alt="RFID para eventos — Serdoc" loading="lazy" width="600" height="180">
       <span class="srv-img-badge">Eventos</span></div>
     <div class="srv-body"><h3>RFID para eventos</h3><p>Control de accesos, acreditaciones y análisis de flujo de visitantes en eventos y ferias.</p><span class="srv-link">Ver solución <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7h8m-3-3 3 3-3 3"/></svg></span></div>
   </a><a href="/rfid-control-accesos/" class="srv-card">
-    <div class="srv-img"><img src="https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=600&q=75" alt="RFID para control de accesos — Serdoc" loading="lazy" width="600" height="180">
+    <div class="srv-img"><img src="https://images.unsplash.com/photo-1560179707-f14e90ef3623?w=600&q=75" alt="RFID para control de accesos — Serdoc" loading="lazy" width="600" height="180">
       <span class="srv-img-badge">Accesos</span></div>
     <div class="srv-body"><h3>RFID para control de accesos</h3><p>Acceso a zonas restringidas, parkings y tornos con registro automático y gestión centralizada.</p><span class="srv-link">Ver solución <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7h8m-3-3 3 3-3 3"/></svg></span></div>
   </a><a href="/rfid-gestion-herramientas/" class="srv-card">
