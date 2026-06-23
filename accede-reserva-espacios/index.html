@@ -1,5 +1,6 @@
 <!DOCTYPE html><html lang="es"><head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="UTF-8">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>ACCEDE: reserva de espacios, salas y control de aforo | Serdoc</title><meta name="description" content="Software ACCEDE para reserva de ordenadores, salas, puestos de consulta y control de aforo. Para bibliotecas, universidades, ayuntamientos y centros sanitarios.">
 <link rel="canonical" href="https://www.serdoc.es/accede-reserva-espacios/"><meta name="robots" content="index,follow">
 <meta property="og:type" content="website"><meta property="og:url" content="https://www.serdoc.es/accede-reserva-espacios/">
@@ -601,6 +602,115 @@ a:hover .arrow-r{transform:translateX(3px)}
   display: none !important;
 }
 
+
+/* ═══ PATCH v4 ═══ */
+
+/* 1 ── All buttons: border-radius matches orange hero button (var(--radius) = 10px) */
+/* Override previous 50px — restore to var(--radius) */
+.btn,
+.btn-ghost,
+.btn-cta-outline,
+.btn-secondary-pill,
+.btn-navy,
+.btn-accede {
+  border-radius: var(--radius) !important;
+}
+.btn-ghost:hover,
+.btn-cta-outline:hover,
+.btn-secondary-pill:hover {
+  border-radius: var(--radius) !important;
+}
+
+/* 2 ── External links outside cards: style matches "Ver todos los servicios" */
+/* Exact match of .sectors-toggle from the home */
+.btn-ghost,
+.btn-cta-outline,
+.btn-secondary-pill {
+  background: var(--white) !important;
+  border: 1.5px solid var(--g200) !important;
+  color: var(--navy-deep) !important;
+  font-weight: 700 !important;
+  padding: .85rem 2rem !important;
+  font-size: .95rem !important;
+  box-shadow: 0 2px 12px rgba(15,27,51,.07) !important;
+  transition: all .2s !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: .5rem !important;
+  cursor: pointer !important;
+  text-decoration: none !important;
+}
+.btn-ghost:hover,
+.btn-cta-outline:hover,
+.btn-secondary-pill:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 10px 32px rgba(15,27,51,.13) !important;
+  border-color: var(--g300) !important;
+  color: var(--navy-deep) !important;
+  background: var(--white) !important;
+}
+
+/* Also apply to .srv-more a (standalone "Ver más" links) */
+.srv-more a {
+  background: var(--white) !important;
+  border: 1.5px solid var(--g200) !important;
+  border-radius: var(--radius) !important;
+  color: var(--navy-deep) !important;
+  font-weight: 700 !important;
+  padding: .85rem 2rem !important;
+  box-shadow: 0 2px 12px rgba(15,27,51,.07) !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: .5rem !important;
+  text-decoration: none !important;
+  transition: all .2s !important;
+}
+.srv-more a:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 10px 32px rgba(15,27,51,.13) !important;
+  border-color: var(--g300) !important;
+}
+
+/* 3 ── Badges: dark semi-transparent overlay (always visible on any image) */
+.srv-img-badge {
+  background: rgba(15,27,51,.75) !important;
+  color: white !important;
+  border: none !important;
+  backdrop-filter: blur(4px) !important;
+  -webkit-backdrop-filter: blur(4px) !important;
+}
+
+/* 4 ── Form section: all text white */
+.cta-form-section { color: #fff; }
+.cta-form-section h2,
+.cta-form-section p,
+.cta-form-section label,
+.cta-form-section span,
+.cta-form-side h2,
+.cta-form-side p,
+.cta-form-side label,
+.cta-form-side span,
+.cta-form-side .cta-form-sub { color: #fff !important; }
+.cta-form-section .h2-light,
+.cta-form-side .h2-light { color: rgba(255,255,255,.6) !important; }
+/* Exception: inputs, buttons, selects keep their own colors */
+.cta-form-section select { color: var(--navy) !important; }
+
+/* 5 ── Megamenu: 3 equal columns (no photo col) */
+.megamenu-cols {
+  grid-template-columns: repeat(3, 1fr) !important;
+}
+
+/* 6 ── Megamenu gap bridge fix */
+.mega-parent > a.nav-item::after {
+  content: '';
+  position: absolute;
+  height: 12px;
+  left: 0; right: 0; bottom: -12px;
+  z-index: 101;
+  pointer-events: auto;
+}
+
 </style></head><body><div class="subheader">
   <div class="subheader-inner">
     <a href="mailto:info@serdoc.es?subject=Formulario%20de%20contacto%20Serdoc" class="sh-desktop"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1.5" y="3" width="11" height="8" rx="1.5"/><path d="M1.5 3l5.5 4 5.5-4"/></svg> info@serdoc.es</a>
@@ -621,12 +731,7 @@ a:hover .arrow-r{transform:translateX(3px)}
           <div class="megamenu-cols">
             <div class="megamenu-col"><h4>Industria</h4><a href="/rfid-logistica-almacenes/"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="5" width="12" height="9" rx="1"/><path d="M4 5V3.5A1.5 1.5 0 0 1 5.5 2h5A1.5 1.5 0 0 1 12 3.5V5"/></svg>Logística y almacenes</a><a href="/rfid-lavanderias/"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="2" width="10" height="12" rx="1.5"/><circle cx="8" cy="9.5" r="2.5"/><path d="M5 4.5h6"/></svg>Lavanderías industriales</a><a href="/rfid-gestion-herramientas/"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M10 2l4 4-5 5-4-4z"/><path d="M2 14l4-4"/></svg>Gestión de herramientas</a><a href="/rfid-control-accesos/"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="10" height="10" rx="2"/><circle cx="8" cy="7" r="1.5"/><path d="M8 8.5v2.5"/></svg>Control de accesos</a><a href="/rfid-farmacias/"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="10" height="10" rx="2"/><path d="M6.5 5.5v5M4 8h5"/></svg>Farmacias</a></div>
             <div class="megamenu-col"><h4>Retail y comercio</h4><a href="/rfid-retail-tiendas/"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2.5 7l2-5h7l2 5"/><rect x="2" y="7" width="12" height="7" rx="1"/></svg>Retail y tiendas</a><a href="/sistemas-antihurto-rfid/"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M8 2C5 2 3 4.5 3 7v4l-1 2h12l-1-2V7c0-2.5-2-5-5-5z"/><path d="M6 13a2 2 0 0 0 4 0"/></svg>Sistemas antihurto</a><a href="/etiquetas-rfid/"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 4l5-2 7 6-5 6-7-6z"/><circle cx="6" cy="6" r="1"/></svg>Etiquetas RFID</a><a href="/dispositivos-rfid/"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="1" width="8" height="14" rx="1.5"/><circle cx="8" cy="12" r="1"/></svg>Dispositivos RFID</a><a href="/rfid-joyerias/"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 3h8l-4 5z"/><path d="M4 3L2 6l6 8 6-8-2-3"/></svg>Joyerías</a></div>
-            <div class="megamenu-col"><h4>Salud y servicios</h4><a href="/rfid-hospitales/"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="2" width="12" height="12" rx="2"/><path d="M6.5 5v6M3.5 8h6"/></svg>Hospitales</a><a href="/rfid-residencias/"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 14h12"/><path d="M4 14V6l4-3 4 3v8"/><path d="M6.5 14v-3h3v3"/></svg>Residencias de mayores</a><a href="/rfid-hosteleria/"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8.5h10"/><path d="M4.5 8.5V6a3.5 3.5 0 0 1 7 0v2.5"/><path d="M3 8.5v3.5a1.5 1.5 0 0 0 1.5 1.5h7a1.5 1.5 0 0 0 1.5-1.5V8.5"/></svg>Hostelería</a><a href="/rfid-eventos/"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="3" width="12" height="11" rx="1.5"/><path d="M5 1.5v3M11 1.5v3M2 7.5h12"/></svg>Eventos</a></div>
-            <div class="megamenu-photo">
-              <img src="https://images.unsplash.com/photo-1553413077-190dd305871c?w=300&q=70" alt="Soluciones RFID empresa Madrid Serdoc" loading="lazy" width="300" height="100">
-              <a href="/soluciones-rfid/" class="megamenu-photo-cta">Ver todas las soluciones <svg class="arrow-r" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 6h8m-3-3 3 3-3 3"/></svg></a>
-            </div>
-          </div>
+            <div class="megamenu-col"><h4>Salud y servicios</h4><a href="/rfid-hospitales/"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="2" width="12" height="12" rx="2"/><path d="M6.5 5v6M3.5 8h6"/></svg>Hospitales</a><a href="/rfid-residencias/"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 14h12"/><path d="M4 14V6l4-3 4 3v8"/><path d="M6.5 14v-3h3v3"/></svg>Residencias de mayores</a><a href="/rfid-hosteleria/"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8.5h10"/><path d="M4.5 8.5V6a3.5 3.5 0 0 1 7 0v2.5"/><path d="M3 8.5v3.5a1.5 1.5 0 0 0 1.5 1.5h7a1.5 1.5 0 0 0 1.5-1.5V8.5"/></svg>Hostelería</a><a href="/rfid-eventos/"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="3" width="12" height="11" rx="1.5"/><path d="M5 1.5v3M11 1.5v3M2 7.5h12"/></svg>Eventos</a></div></div>
         </div>
       </div>
       <div class="mega-parent">
@@ -740,7 +845,7 @@ a:hover .arrow-r{transform:translateX(3px)}
       <p style="margin-top:1rem;font-size:.82rem;color:rgba(255,255,255,.3)">Calle del Cobre 11<br>28914 Leganés, Madrid</p>
     </div>
   </div>
-  <div class="footer-bottom"><span>© 2026 Serdoc Informática S.L.</span><span><a href="/aviso-legal/">Aviso legal</a> · <a href="/politica-de-cookies/">Política de cookies</a> · <a href="/politica-de-privacidad/">Política de privacidad</a></span></div>
+  <div class="footer-bottom"><span>© 2026 Serdoc Informática S.L.</span><span><a href="/aviso-legal/">Aviso legal</a> · <a href="/politica-de-cookies/">Política de cookies</a> · <a href="/politica-de-privacidad/">Política de privacidad</a> · <a href="/politica-de-gestion/" target="_blank">Política de gestión</a></span></div>
 </footer>
 <!-- FLOATING BUTTONS -->
 <div class="float-btns">
