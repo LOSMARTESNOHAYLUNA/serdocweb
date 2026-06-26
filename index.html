@@ -568,7 +568,8 @@ a:hover .arrow-r,button:hover .arrow-r{transform:translateX(3px)}
       </div>
       <a href="/casos-de-exito/" class="nav-item">Casos de éxito</a>
       <a href="/blog/" class="nav-item">Blog</a>
-      <div style="display:flex;align-items:center;gap:.6rem"><a href="/contacto/" class="nav-item nav-cta">Solicitar consulta gratuita</a><a href="/accede-reserva-espacios/" style="display:inline-flex;align-items:center;background:#0891B2;color:white;padding:.72rem 1.3rem;border-radius:8px;font-size:.88rem;font-weight:700;font-family:'Outfit',sans-serif;text-decoration:none;white-space:nowrap;transition:all .2s">ACCEDE</a></div>
+      <a href="/accede-reserva-espacios/" class="nav-item">ACCEDE</a>
+      <a href="/contacto/" class="nav-item nav-cta">Solicitar consulta gratuita</a>
     </nav>
     <button class="menu-toggle" id="menuToggle" aria-label="Menú" aria-expanded="false"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h16M3 11h16M3 16h16"/></svg></button>
   </div>
@@ -779,13 +780,34 @@ a:hover .arrow-r,button:hover .arrow-r{transform:translateX(3px)}
     <div class="cta-form-side">
       <h2>¿Tu empresa necesita RFID?</h2>
       <p class="cta-form-sub">Cuéntanos tu caso. Te respondemos en menos de 24 horas.</p>
-      <form class="cta-form" action="https://api.web3forms.com/submit" method="POST">
+      <form class="cta-form" action="https://api.web3forms.com/submit" method="POST" novalidate>
         <input type="hidden" name="access_key" value="993c9b26-1def-4f5f-9cad-aeadf8873252">
-        <input type="hidden" name="subject" value="Nuevo lead Serdoc">
-        <input type="hidden" name="redirect" value="https://serdoc.es/gracias/">
-        <div class="cta-form-row"><input type="text" name="nombre" placeholder="Nombre y empresa" required><input type="text" name="contacto" placeholder="Teléfono o email" required></div>
+        <input type="hidden" name="subject" value="Nuevo lead Serdoc — Home">
+        <input type="hidden" name="redirect" value="https://serdocweb.vercel.app/gracias/">
+        <input type="hidden" name="servicio" value="Consulta general">
+        <div class="cta-form-field" style="position:relative">
+          <input type="text" name="nombre" placeholder="Nombre completo" required minlength="2">
+          <span class="form-error"></span>
+        </div>
+        <div class="cta-form-field" style="position:relative">
+          <input type="text" name="empresa" placeholder="Empresa" required minlength="2">
+          <span class="form-error"></span>
+        </div>
+        <div class="cta-form-row">
+          <div class="cta-form-field" style="position:relative">
+            <input type="tel" name="telefono" placeholder="Teléfono o móvil" required>
+            <span class="form-error"></span>
+          </div>
+          <div class="cta-form-field" style="position:relative">
+            <input type="email" name="email" placeholder="Correo electrónico" required>
+            <span class="form-error"></span>
+          </div>
+        </div>
         <textarea name="mensaje" placeholder="Cuéntanos brevemente tu caso (opcional)" rows="2"></textarea>
-        <div class="cta-form-check"><input type="checkbox" id="privacidad-home" name="privacidad" required><label for="privacidad-home">He leído y acepto la <a href="/politica-de-privacidad/">política de privacidad</a></label></div>
+        <div class="cta-form-check">
+          <input type="checkbox" id="privacidad-home" name="privacidad" required>
+          <label for="privacidad-home">He leído y acepto la <a href="/politica-de-privacidad/">política de privacidad</a></label>
+        </div>
         <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;background:#f57a14;border:none">Enviar consulta <svg class="arrow-r" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 8h10m-4-4 4 4-4 4"/></svg></button>
       </form>
     </div>
@@ -944,6 +966,53 @@ CC.init();
   } else { init(); }
 })();
 
+</script>
+<script>
+/* Form validation — home */
+(function(){
+  document.querySelectorAll('.cta-form').forEach(function(form){
+    var btn=form.querySelector('[type="submit"]');
+    function showErr(inp,msg){
+      var el=inp.parentElement.querySelector('.form-error');
+      if(el){el.textContent=msg;el.style.cssText='display:block;color:#f87171;font-size:.75rem;margin-top:.2rem';}
+      inp.style.borderColor='#f87171';
+    }
+    function clearErr(inp){
+      var el=inp.parentElement.querySelector('.form-error');
+      if(el){el.textContent='';el.style.display='none';}
+      inp.style.borderColor='';
+    }
+    function validate(){
+      var ok=true;
+      var n=form.querySelector('[name="nombre"]');
+      var emp=form.querySelector('[name="empresa"]');
+      var t=form.querySelector('[name="telefono"]');
+      var em=form.querySelector('[name="email"]');
+      if(n){if(n.value.trim().length<2){showErr(n,'Mínimo 2 caracteres');ok=false;}else clearErr(n);}
+      if(emp){if(emp.value.trim().length<2){showErr(emp,'Mínimo 2 caracteres');ok=false;}else clearErr(emp);}
+      if(t){
+        var d=t.value.replace(/[\s\-\+\.]/g,'');
+        if(!t.value.trim()){showErr(t,'El teléfono es obligatorio');ok=false;}
+        else if(!/^\d{9,}$/.test(d)){showErr(t,'Mínimo 9 dígitos');ok=false;}
+        else clearErr(t);
+      }
+      if(em){
+        if(!em.value.trim()){showErr(em,'El email es obligatorio');ok=false;}
+        else if(!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(em.value)){showErr(em,'Email no válido');ok=false;}
+        else clearErr(em);
+      }
+      return ok;
+    }
+    ['nombre','empresa','telefono','email'].forEach(function(nm){
+      var inp=form.querySelector('[name="'+nm+'"]');
+      if(inp) inp.addEventListener('blur',validate);
+    });
+    form.addEventListener('submit',function(ev){
+      if(!validate()){ev.preventDefault();return;}
+      if(btn){btn.disabled=true;btn.textContent='Enviando…';}
+    });
+  });
+})();
 </script>
 </body>
 </html>
