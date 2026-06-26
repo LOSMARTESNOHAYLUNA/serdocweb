@@ -820,7 +820,8 @@ a:hover .arrow-r{transform:translateX(3px)}
       </div>
       <a href="/casos-de-exito/" class="nav-item">Casos de éxito</a>
       <a href="/blog/" class="nav-item">Blog</a>
-      <div class="header-ctas"><a href="/contacto/" class="nav-item nav-cta">Solicitar consulta gratuita</a><a href="/accede-reserva-espacios/" class="btn-accede">ACCEDE</a></div>
+      <a href="/accede-reserva-espacios/" class="nav-item">ACCEDE</a>
+      <a href="/contacto/" class="nav-item nav-cta">Solicitar consulta gratuita</a>
     </nav>
     <button class="menu-toggle" id="menuToggle" aria-label="Menú" aria-expanded="false"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h16M3 11h16M3 16h16"/></svg></button>
   </div>
@@ -838,35 +839,57 @@ a:hover .arrow-r{transform:translateX(3px)}
   <div style="max-width:1100px;margin:0 auto;padding:0 2rem;display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start">
     <div>
       <h2 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.5rem;margin-bottom:1.5rem">Solicita una consulta gratuita</h2>
-      <form class="cta-form" action="https://api.web3forms.com/submit" method="POST">
-        <input type="hidden" name="access_key" value="993c9b26-1def-4f5f-9cad-aeadf8873252">
-        <input type="hidden" name="subject" value="Contacto directo — serdoc.es/contacto/">
-        <input type="hidden" name="redirect" value="https://serdoc.es/gracias/">
-        <div class="cta-form-row">
-          <input type="text" name="nombre" placeholder="Nombre" required>
-          <input type="text" name="empresa" placeholder="Empresa">
-        </div>
-        <div class="cta-form-row">
-          <input type="email" name="email" placeholder="Email" required>
-          <input type="tel" name="telefono" placeholder="Teléfono">
-        </div>
-        <select name="servicio" style="width:100%;padding:.85rem 1rem;border:1.5px solid var(--g200);border-radius:var(--radius);font-family:'Outfit',sans-serif;font-size:.95rem;color:var(--g700);background:white;margin-bottom:1rem">
-          <option value="">¿Qué solución te interesa?</option>
-          <option>RFID para logística y almacenes</option>
-          <option>RFID para retail y tiendas</option>
-          <option>Sistemas antihurto RFID</option>
-          <option>RFID para hospitales o residencias</option>
-          <option>RFID para bibliotecas</option>
-          <option>Gestión documental y BPO</option>
-          <option>Otra consulta</option>
-        </select>
-        <textarea name="mensaje" placeholder="Cuéntanos tu proyecto o necesidad..." rows="4"></textarea>
-        <div class="cta-form-check">
-          <input type="checkbox" id="priv-ct" name="privacidad" required>
-          <label for="priv-ct">He leído y acepto la <a href="/politica-de-privacidad/">política de privacidad</a></label>
-        </div>
-        <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;background:#f57a14;border:none">Enviar solicitud →</button>
-      </form>
+      <form action="https://api.web3forms.com/submit" method="POST" novalidate>
+  <input type="hidden" name="access_key" value="0f3d792f-3621-4955-8c24-7f551c8f5e19">
+  <input type="hidden" name="subject" value="Consulta desde página de contacto">
+  <input type="hidden" name="redirect" value="https://serdocweb.vercel.app/gracias/">
+  <div class="cta-form-field" style="position:relative">
+    <input type="text" name="nombre" placeholder="Nombre completo" required minlength="2">
+    <span class="form-error"></span>
+  </div>
+  <input type="text" name="empresa" placeholder="Empresa (opcional)" style="margin-bottom:.75rem">
+  <div class="cta-form-field" style="position:relative">
+    <input type="tel" name="telefono" placeholder="Teléfono o móvil" required>
+    <span class="form-error"></span>
+  </div>
+  <div class="cta-form-field" style="position:relative">
+    <input type="email" name="email" placeholder="Correo electrónico" required>
+    <span class="form-error"></span>
+  </div>
+  <select name="servicio" required>
+    <option value="">¿Qué solución te interesa?</option>
+    <option>RFID para logística y almacenes</option>
+    <option>RFID para retail y tiendas</option>
+    <option>Etiquetas RFID</option>
+    <option>Dispositivos RFID</option>
+    <option>Sistemas antihurto RFID</option>
+    <option>RFID para hospitales</option>
+    <option>RFID para residencias</option>
+    <option>RFID para joyerías</option>
+    <option>RFID para eventos</option>
+    <option>RFID para hostelería</option>
+    <option>RFID para lavanderías</option>
+    <option>RFID para control de accesos</option>
+    <option>RFID para gestión de herramientas</option>
+    <option>RFID para farmacias</option>
+    <option>Autopréstamo de libros RFID</option>
+    <option>Autolibro</option>
+    <option>Bibliobús RFID</option>
+    <option>Autopréstamo de portátiles</option>
+    <option>Reserva de ordenadores</option>
+    <option>Buzón de devolución inteligente</option>
+    <option>Digitalización de documentos</option>
+    <option>Business Process Outsourcing</option>
+    <option>ACCEDE: reserva de espacios y salas</option>
+    <option>Otra</option>
+  </select>
+  <textarea name="mensaje" placeholder="Mensaje (opcional)" rows="4"></textarea>
+  <div class="form-check" style="display:flex;align-items:center;gap:.5rem;font-size:.83rem;color:rgba(255,255,255,.6);cursor:pointer">
+    <input type="checkbox" id="privacidad" name="privacidad" required style="flex-shrink:0;width:15px;height:15px;margin:0;accent-color:var(--teal)">
+    <label for="privacidad" style="cursor:pointer;line-height:1.3">He leído y acepto la <a href="/politica-de-privacidad/" style="color:rgba(255,255,255,.7);text-decoration:underline">política de privacidad</a></label>
+  </div>
+  <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;background:#f57a14;border:none;margin-top:.75rem">Enviar consulta →</button>
+</form>
     </div>
     <div>
       <h2 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.5rem;margin-bottom:1.5rem">Datos de contacto</h2>
@@ -1084,6 +1107,51 @@ CC.init();
     p.addEventListener('mouseleave', close);
     menu.addEventListener('mouseenter', open);
     menu.addEventListener('mouseleave', close);
+  });
+})();
+</script>
+<script>
+(function(){
+  document.querySelectorAll('form').forEach(function(form){
+    if(!form.querySelector('[name="access_key"]'))return;
+    var btn=form.querySelector('[type="submit"]');
+    function showErr(inp,msg){
+      var el=inp.parentElement.querySelector('.form-error');
+      if(el){el.textContent=msg;el.style.cssText='display:block;color:#e53e3e;font-size:.78rem;margin-top:.25rem';}
+      inp.style.borderColor='#e53e3e';
+    }
+    function clearErr(inp){
+      var el=inp.parentElement.querySelector('.form-error');
+      if(el){el.textContent='';el.style.display='none';}
+      inp.style.borderColor='';
+    }
+    function validate(){
+      var ok=true;
+      var n=form.querySelector('[name="nombre"]');
+      var t=form.querySelector('[name="telefono"]');
+      var em=form.querySelector('[name="email"]');
+      if(n){if(n.value.trim().length<2){showErr(n,'Mínimo 2 caracteres');ok=false;}else clearErr(n);}
+      if(t){
+        var d=t.value.replace(/[\s\-\+\.]/g,'');
+        if(t.required&&!t.value.trim()){showErr(t,'El teléfono es obligatorio');ok=false;}
+        else if(t.value.trim()&&(!/^\d+$/.test(d)||d.length<9)){showErr(t,'Introduce un teléfono válido (mínimo 9 dígitos)');ok=false;}
+        else clearErr(t);
+      }
+      if(em){
+        if(em.required&&!em.value.trim()){showErr(em,'El email es obligatorio');ok=false;}
+        else if(em.value.trim()&&!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(em.value)){showErr(em,'Introduce un email válido');ok=false;}
+        else clearErr(em);
+      }
+      return ok;
+    }
+    ['nombre','telefono','email'].forEach(function(nm){
+      var inp=form.querySelector('[name="'+nm+'"]');
+      if(inp)inp.addEventListener('blur',validate);
+    });
+    form.addEventListener('submit',function(ev){
+      if(!validate()){ev.preventDefault();return;}
+      if(btn){btn.disabled=true;btn.textContent='Enviando…';}
+    });
   });
 })();
 </script>

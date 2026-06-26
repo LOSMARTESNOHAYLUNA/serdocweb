@@ -832,7 +832,8 @@ a:hover .arrow-r{transform:translateX(3px)}
       </div>
       <a href="/casos-de-exito/" class="nav-item">Casos de éxito</a>
       <a href="/blog/" class="nav-item">Blog</a>
-      <div class="header-ctas"><a href="/contacto/" class="nav-item nav-cta">Solicitar consulta gratuita</a><a href="/accede-reserva-espacios/" class="btn-accede">ACCEDE</a></div>
+      <a href="/accede-reserva-espacios/" class="nav-item">ACCEDE</a>
+      <a href="/contacto/" class="nav-item nav-cta">Solicitar consulta gratuita</a>
     </nav>
     <button class="menu-toggle" id="menuToggle" aria-label="Menú" aria-expanded="false"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h16M3 11h16M3 16h16"/></svg></button>
   </div>
@@ -932,20 +933,32 @@ a:hover .arrow-r{transform:translateX(3px)}
     <div class="cta-form-side">
       <h2>¿Tu empresa necesita esta solución?<br><span class="h2-light">Cuéntanos tu caso.</span></h2>
       <p class="cta-form-sub">Te respondemos en menos de 24 horas hábiles.</p>
-      <form class="cta-form" action="https://api.web3forms.com/submit" method="POST">
+      <form class="cta-form" action="https://api.web3forms.com/submit" method="POST" novalidate>
         <input type="hidden" name="access_key" value="993c9b26-1def-4f5f-9cad-aeadf8873252">
         <input type="hidden" name="subject" value="Nuevo lead Serdoc — Autolibro">
-        <input type="hidden" name="redirect" value="https://serdoc.es/gracias/">
+        <input type="hidden" name="redirect" value="https://serdocweb.vercel.app/gracias/">
+        <input type="hidden" name="servicio" value="Autolibro">
+        <div class="cta-form-field" style="position:relative">
+          <input type="text" name="nombre" placeholder="Nombre completo" required minlength="2">
+          <span class="form-error"></span>
+        </div>
+        <input type="text" name="empresa" placeholder="Empresa (opcional)" style="margin-bottom:.75rem">
         <div class="cta-form-row">
-          <input type="text" name="nombre" placeholder="Nombre y empresa" required>
-          <input type="text" name="contacto" placeholder="Teléfono o email" required>
+          <div class="cta-form-field" style="position:relative">
+            <input type="tel" name="telefono" placeholder="Teléfono o móvil" required>
+            <span class="form-error"></span>
+          </div>
+          <div class="cta-form-field" style="position:relative">
+            <input type="email" name="email" placeholder="Correo electrónico" required>
+            <span class="form-error"></span>
+          </div>
         </div>
-        <textarea name="mensaje" placeholder="Cuéntanos brevemente tu caso (opcional)" rows="2"></textarea>
+        <textarea name="mensaje" placeholder="Cuéntanos tu caso (opcional)" rows="2"></textarea>
         <div class="cta-form-check">
-          <input type="checkbox" id="privacidad-land" name="privacidad" required>
-          <label for="privacidad-land">He leído y acepto la <a href="/politica-de-privacidad/">política de privacidad</a></label>
+          <input type="checkbox" id="priv-autolibr" name="privacidad" required>
+          <label for="priv-autolibr">He leído y acepto la <a href="/politica-de-privacidad/">política de privacidad</a></label>
         </div>
-        <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;background:#f57a14;border:none">Enviar consulta <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7h8m-3-3 3 3-3 3"/></svg></button>
+        <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;background:#f57a14;border:none">Enviar consulta →</button>
       </form>
     </div>
     <div class="cta-map-side"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3041.6164286044977!2d-3.7741914999999993!3d40.32866959999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd418a27fdd41851%3A0x6017c9e180f5d23f!2sSerdoc%20Inform%C3%A1tica%20Gesti%C3%B3n%20documental%20y%20Sistema%20RFID!5e0!3m2!1ses!2ses!4v1781779229481!5m2!1ses!2ses" width="100%" height="100%" style="border:0" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Serdoc — Leganés Madrid"></iframe></div>
@@ -1139,6 +1152,51 @@ CC.init();
     p.addEventListener('mouseleave', close);
     menu.addEventListener('mouseenter', open);
     menu.addEventListener('mouseleave', close);
+  });
+})();
+</script>
+<script>
+/* ─ Form validation ─ */
+(function(){
+  document.querySelectorAll('.cta-form').forEach(function(form){
+    var btn=form.querySelector('[type="submit"]');
+    function showErr(inp,msg){
+      var el=inp.parentElement.querySelector('.form-error');
+      if(el){el.textContent=msg;el.style.cssText='display:block;color:#e53e3e;font-size:.78rem;margin-top:.25rem;font-family:inherit';}
+      inp.style.borderColor='#e53e3e';
+    }
+    function clearErr(inp){
+      var el=inp.parentElement.querySelector('.form-error');
+      if(el){el.textContent='';el.style.display='none';}
+      inp.style.borderColor='';
+    }
+    function validate(){
+      var ok=true;
+      var n=form.querySelector('[name="nombre"]');
+      var t=form.querySelector('[name="telefono"]');
+      var e=form.querySelector('[name="email"]');
+      if(n){if(n.value.trim().length<2){showErr(n,'Mínimo 2 caracteres');ok=false;}else clearErr(n);}
+      if(t){
+        var d=t.value.replace(/[\s\-\+\.]/g,'');
+        if(t.required&&!t.value.trim()){showErr(t,'El teléfono es obligatorio');ok=false;}
+        else if(t.value.trim()&&(!/^\d+$/.test(d)||d.length<9)){showErr(t,'Introduce un teléfono válido (mínimo 9 dígitos)');ok=false;}
+        else clearErr(t);
+      }
+      if(e){
+        if(e.required&&!e.value.trim()){showErr(e,'El email es obligatorio');ok=false;}
+        else if(e.value.trim()&&!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e.value)){showErr(e,'Introduce un email válido');ok=false;}
+        else clearErr(e);
+      }
+      return ok;
+    }
+    ['nombre','telefono','email'].forEach(function(nm){
+      var inp=form.querySelector('[name="'+nm+'"]');
+      if(inp)inp.addEventListener('blur',validate);
+    });
+    form.addEventListener('submit',function(ev){
+      if(!validate()){ev.preventDefault();return;}
+      if(btn){btn.disabled=true;btn.textContent='Enviando…';}
+    });
   });
 })();
 </script>
