@@ -839,57 +839,235 @@ a:hover .arrow-r{transform:translateX(3px)}
   <div style="max-width:1100px;margin:0 auto;padding:0 2rem;display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start">
     <div>
       <h2 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.5rem;margin-bottom:1.5rem">Solicita una consulta gratuita</h2>
-      <form action="https://api.web3forms.com/submit" method="POST" novalidate>
-  <input type="hidden" name="access_key" value="0f3d792f-3621-4955-8c24-7f551c8f5e19">
-  <input type="hidden" name="subject" value="Consulta desde página de contacto">
-  <input type="hidden" name="redirect" value="https://serdocweb.vercel.app/gracias/">
-  <div class="cta-form-field" style="position:relative">
-    <input type="text" name="nombre" placeholder="Nombre completo" required minlength="2">
-    <span class="form-error"></span>
-  </div>
-  <input type="text" name="empresa" placeholder="Empresa (opcional)" style="margin-bottom:.75rem">
-  <div class="cta-form-field" style="position:relative">
-    <input type="tel" name="telefono" placeholder="Teléfono o móvil" required>
-    <span class="form-error"></span>
-  </div>
-  <div class="cta-form-field" style="position:relative">
-    <input type="email" name="email" placeholder="Correo electrónico" required>
-    <span class="form-error"></span>
-  </div>
-  <select name="servicio" required>
-    <option value="">¿Qué solución te interesa?</option>
-    <option>RFID para logística y almacenes</option>
-    <option>RFID para retail y tiendas</option>
-    <option>Etiquetas RFID</option>
-    <option>Dispositivos RFID</option>
-    <option>Sistemas antihurto RFID</option>
-    <option>RFID para hospitales</option>
-    <option>RFID para residencias</option>
-    <option>RFID para joyerías</option>
-    <option>RFID para eventos</option>
-    <option>RFID para hostelería</option>
-    <option>RFID para lavanderías</option>
-    <option>RFID para control de accesos</option>
-    <option>RFID para gestión de herramientas</option>
-    <option>RFID para farmacias</option>
-    <option>Autopréstamo de libros RFID</option>
-    <option>Autolibro</option>
-    <option>Bibliobús RFID</option>
-    <option>Autopréstamo de portátiles</option>
-    <option>Reserva de ordenadores</option>
-    <option>Buzón de devolución inteligente</option>
-    <option>Digitalización de documentos</option>
-    <option>Business Process Outsourcing</option>
-    <option>ACCEDE: reserva de espacios y salas</option>
-    <option>Otra</option>
-  </select>
-  <textarea name="mensaje" placeholder="Mensaje (opcional)" rows="4"></textarea>
-  <div class="form-check" style="display:flex;align-items:center;gap:.5rem;font-size:.83rem;color:rgba(255,255,255,.6);cursor:pointer">
-    <input type="checkbox" id="privacidad" name="privacidad" required style="flex-shrink:0;width:15px;height:15px;margin:0;accent-color:var(--teal)">
-    <label for="privacidad" style="cursor:pointer;line-height:1.3">He leído y acepto la <a href="/politica-de-privacidad/" style="color:rgba(255,255,255,.7);text-decoration:underline">política de privacidad</a></label>
-  </div>
-  <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;background:#f57a14;border:none;margin-top:.75rem">Enviar consulta →</button>
-</form>
+      <form id="contactForm" action="https://api.web3forms.com/submit" method="POST" novalidate>
+        <input type="hidden" name="access_key" value="0f3d792f-3621-4955-8c24-7f551c8f5e19">
+        <input type="hidden" name="subject" value="Consulta desde página de contacto — serdoc.es">
+        <input type="hidden" name="redirect" value="https://serdocweb.vercel.app/gracias/">
+
+        <div class="cf-field">
+          <label for="cf-nombre">Nombre completo <span aria-hidden="true">*</span></label>
+          <input type="text" id="cf-nombre" name="nombre" placeholder="Tu nombre completo" required autocomplete="name">
+          <span class="cf-error" id="err-nombre"></span>
+        </div>
+
+        <div class="cf-field">
+          <label for="cf-empresa">Empresa <span class="cf-opt">(opcional)</span></label>
+          <input type="text" id="cf-empresa" name="empresa" placeholder="Nombre de tu empresa" autocomplete="organization">
+        </div>
+
+        <div class="cf-row">
+          <div class="cf-field">
+            <label for="cf-tel">Teléfono o móvil <span aria-hidden="true">*</span></label>
+            <input type="tel" id="cf-tel" name="telefono" placeholder="+34 600 000 000" required autocomplete="tel">
+            <span class="cf-error" id="err-tel"></span>
+          </div>
+          <div class="cf-field">
+            <label for="cf-email">Correo electrónico <span aria-hidden="true">*</span></label>
+            <input type="email" id="cf-email" name="email" placeholder="tu@empresa.com" required autocomplete="email">
+            <span class="cf-error" id="err-email"></span>
+          </div>
+        </div>
+
+        <div class="cf-field">
+          <label for="cf-servicio">¿Qué solución te interesa? <span aria-hidden="true">*</span></label>
+          <select id="cf-servicio" name="servicio" required>
+            <option value="">Selecciona una opción</option>
+            <option value="RFID para logística y almacenes">RFID para logística y almacenes</option>
+            <option value="RFID para retail y tiendas">RFID para retail y tiendas</option>
+            <option value="Etiquetas RFID">Etiquetas RFID</option>
+            <option value="Dispositivos RFID">Dispositivos RFID</option>
+            <option value="Sistemas antihurto RFID">Sistemas antihurto RFID</option>
+            <option value="RFID para hospitales">RFID para hospitales</option>
+            <option value="RFID para residencias de mayores">RFID para residencias de mayores</option>
+            <option value="RFID para joyerías">RFID para joyerías</option>
+            <option value="RFID para eventos">RFID para eventos</option>
+            <option value="RFID para hostelería">RFID para hostelería</option>
+            <option value="RFID para lavanderías industriales">RFID para lavanderías industriales</option>
+            <option value="RFID para control de accesos">RFID para control de accesos</option>
+            <option value="RFID para gestión de herramientas">RFID para gestión de herramientas</option>
+            <option value="RFID para farmacias">RFID para farmacias</option>
+            <option value="Autopréstamo de libros RFID">Autopréstamo de libros RFID</option>
+            <option value="Autolibro">Autolibro</option>
+            <option value="Bibliobús RFID">Bibliobús RFID</option>
+            <option value="Autopréstamo de portátiles">Autopréstamo de portátiles</option>
+            <option value="Reserva automática de ordenadores">Reserva automática de ordenadores</option>
+            <option value="Buzón de devolución inteligente">Buzón de devolución inteligente</option>
+            <option value="Digitalización de documentos">Digitalización de documentos</option>
+            <option value="Business Process Outsourcing (BPO)">Business Process Outsourcing (BPO)</option>
+            <option value="ACCEDE: reserva de espacios y salas">ACCEDE: reserva de espacios y salas</option>
+            <option value="Otra">Otra</option>
+          </select>
+          <span class="cf-error" id="err-servicio"></span>
+        </div>
+
+        <div class="cf-field" id="cf-otra-wrap" style="display:none">
+          <label for="cf-otra">¿Cuál? <span aria-hidden="true">*</span></label>
+          <input type="text" id="cf-otra" name="otra_consulta" placeholder="Describe brevemente tu consulta">
+          <span class="cf-error" id="err-otra"></span>
+        </div>
+
+        <div class="cf-field">
+          <label for="cf-mensaje">Mensaje <span class="cf-opt">(opcional)</span></label>
+          <textarea id="cf-mensaje" name="mensaje" placeholder="Cuéntanos más sobre tu proyecto o necesidad..." rows="4"></textarea>
+        </div>
+
+        <div class="cf-check">
+          <input type="checkbox" id="cf-priv" name="privacidad" required>
+          <label for="cf-priv">He leído y acepto la <a href="/politica-de-privacidad/" target="_blank">política de privacidad</a></label>
+          <span class="cf-error" id="err-priv" style="display:block"></span>
+        </div>
+
+        <button type="submit" id="cf-submit">Enviar consulta →</button>
+      </form>
+
+      <style>
+        #contactForm { display:flex; flex-direction:column; gap:1.1rem; }
+        .cf-field { display:flex; flex-direction:column; gap:.35rem; }
+        .cf-row { display:grid; grid-template-columns:1fr 1fr; gap:.9rem; }
+        @media(max-width:580px){ .cf-row { grid-template-columns:1fr; } }
+        .cf-field label { font-size:.82rem; font-weight:600; color:rgba(255,255,255,.75); font-family:'Outfit',sans-serif; letter-spacing:.02em; }
+        .cf-opt { font-weight:400; opacity:.65; }
+        #contactForm input:not([type="checkbox"]),
+        #contactForm select,
+        #contactForm textarea {
+          width:100%; padding:.82rem 1rem; border-radius:var(--radius);
+          border:1.5px solid rgba(255,255,255,.12);
+          background:rgba(255,255,255,.07); color:white;
+          font-size:.95rem; font-family:inherit;
+          transition:border-color .18s;
+          box-sizing:border-box;
+        }
+        #contactForm input::placeholder,
+        #contactForm textarea::placeholder { color:rgba(255,255,255,.35); }
+        #contactForm input:focus,
+        #contactForm select:focus,
+        #contactForm textarea:focus {
+          outline:none; border-color:var(--teal);
+        }
+        #contactForm input.cf-invalid,
+        #contactForm select.cf-invalid,
+        #contactForm textarea.cf-invalid { border-color:#f87171; }
+        #contactForm select { appearance:none; -webkit-appearance:none;
+          background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none' stroke='rgba(255,255,255,.5)' stroke-width='2'%3E%3Cpath d='M1 1l5 5 5-5'/%3E%3C/svg%3E");
+          background-repeat:no-repeat; background-position:right 1rem center;
+          padding-right:2.5rem; cursor:pointer; }
+        #contactForm select option { background:#1B2A4A; color:white; }
+        .cf-error { font-size:.75rem; color:#f87171; min-height:.9rem; }
+        .cf-check { display:flex; flex-wrap:wrap; align-items:flex-start; gap:.5rem; font-size:.82rem; color:rgba(255,255,255,.6); }
+        .cf-check input { flex-shrink:0; width:16px; height:16px; margin-top:.1rem; accent-color:var(--teal); cursor:pointer; }
+        .cf-check label { cursor:pointer; line-height:1.4; flex:1; }
+        .cf-check a { color:rgba(255,255,255,.8); text-decoration:underline; }
+        #cf-submit {
+          padding:.9rem 1.8rem; background:#f57a14; color:white;
+          border:none; border-radius:var(--radius); font-size:1rem;
+          font-weight:700; font-family:'Outfit',sans-serif;
+          cursor:pointer; transition:all .2s; align-self:flex-start; width:100%;
+        }
+        #cf-submit:hover { background:#d4620f; transform:translateY(-1px); }
+        #cf-submit:disabled { opacity:.65; cursor:not-allowed; transform:none; }
+      </style>
+
+      <script>
+      (function(){
+        var form = document.getElementById('contactForm');
+        if(!form) return;
+        var sel = document.getElementById('cf-servicio');
+        var otraWrap = document.getElementById('cf-otra-wrap');
+        var otraInp  = document.getElementById('cf-otra');
+
+        // Show/hide "Otra" field
+        sel.addEventListener('change', function(){
+          if(this.value === 'Otra'){
+            otraWrap.style.display = 'flex';
+            otraInp.required = true;
+          } else {
+            otraWrap.style.display = 'none';
+            otraInp.required = false;
+            otraInp.value = '';
+            clearErr(otraInp, 'err-otra');
+          }
+        });
+
+        function showErr(id, msg){
+          var el = document.getElementById(id);
+          if(el) el.textContent = msg;
+        }
+        function clearErr(inp, errId){
+          inp.classList.remove('cf-invalid');
+          showErr(errId, '');
+        }
+        function markErr(inp, errId, msg){
+          inp.classList.add('cf-invalid');
+          showErr(errId, msg);
+        }
+
+        function validateField(inp, errId, rules){
+          var v = inp.value.trim();
+          for(var i=0; i<rules.length; i++){
+            var r = rules[i];
+            if(r.test && !r.test(v)){ markErr(inp, errId, r.msg); return false; }
+            if(r.fn   && !r.fn(v)){  markErr(inp, errId, r.msg); return false; }
+          }
+          clearErr(inp, errId);
+          return true;
+        }
+
+        var fields = [
+          { el:'cf-nombre',  err:'err-nombre',  rules:[
+              {fn:function(v){return v.length>=2;}, msg:'Mínimo 2 caracteres'}
+            ]},
+          { el:'cf-tel',     err:'err-tel',     rules:[
+              {fn:function(v){return v.length>0;},  msg:'El teléfono es obligatorio'},
+              {fn:function(v){return /^\+?[\d\s\-\.]{9,}$/.test(v);}, msg:'Introduce un teléfono válido (mínimo 9 dígitos)'}
+            ]},
+          { el:'cf-email',   err:'err-email',   rules:[
+              {fn:function(v){return v.length>0;},  msg:'El correo es obligatorio'},
+              {fn:function(v){return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v);}, msg:'Introduce un correo válido'}
+            ]},
+          { el:'cf-servicio',err:'err-servicio',rules:[
+              {fn:function(v){return v!=='';}, msg:'Selecciona una opción'}
+            ]},
+        ];
+
+        // Live blur validation
+        fields.forEach(function(f){
+          var el = document.getElementById(f.el);
+          if(el) el.addEventListener('blur', function(){
+            validateField(el, f.err, f.rules);
+          });
+        });
+
+        form.addEventListener('submit', function(ev){
+          var ok = true;
+          fields.forEach(function(f){
+            var el = document.getElementById(f.el);
+            if(el && !validateField(el, f.err, f.rules)) ok = false;
+          });
+
+          // Validate "Otra" if visible
+          if(otraWrap.style.display !== 'none'){
+            var ov = otraInp.value.trim();
+            if(!ov){ markErr(otraInp,'err-otra','Describe tu consulta'); ok = false; }
+            else    { clearErr(otraInp,'err-otra'); }
+          }
+
+          // Checkbox
+          var chk = document.getElementById('cf-priv');
+          if(chk && !chk.checked){
+            showErr('err-priv','Debes aceptar la política de privacidad');
+            ok = false;
+          } else if(chk){
+            showErr('err-priv','');
+          }
+
+          if(!ok){ ev.preventDefault(); return; }
+
+          var btn = document.getElementById('cf-submit');
+          btn.disabled = true;
+          btn.textContent = 'Enviando…';
+        });
+      })();
+      </script>
     </div>
     <div>
       <h2 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.5rem;margin-bottom:1.5rem">Datos de contacto</h2>
