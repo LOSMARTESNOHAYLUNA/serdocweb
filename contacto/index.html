@@ -845,33 +845,28 @@ a:hover .arrow-r{transform:translateX(3px)}
         <input type="hidden" name="redirect" value="https://serdocweb.vercel.app/gracias/">
 
         <div class="cf-field">
-          <label for="cf-nombre">Nombre completo <span aria-hidden="true">*</span></label>
-          <input type="text" id="cf-nombre" name="nombre" placeholder="Tu nombre completo" required autocomplete="name">
+          <input type="text" id="cf-nombre" name="nombre" placeholder="Nombre completo *" required autocomplete="name">
           <span class="cf-error" id="err-nombre"></span>
         </div>
 
         <div class="cf-field">
-          <label for="cf-empresa">Empresa <span class="cf-opt">(opcional)</span></label>
-          <input type="text" id="cf-empresa" name="empresa" placeholder="Nombre de tu empresa" autocomplete="organization">
+          <input type="text" id="cf-empresa" name="empresa" placeholder="Empresa (opcional)" autocomplete="organization">
         </div>
 
         <div class="cf-row">
           <div class="cf-field">
-            <label for="cf-tel">Teléfono o móvil <span aria-hidden="true">*</span></label>
-            <input type="tel" id="cf-tel" name="telefono" placeholder="+34 600 000 000" required autocomplete="tel">
+            <input type="tel" id="cf-tel" name="telefono" placeholder="Teléfono o móvil *" required autocomplete="tel">
             <span class="cf-error" id="err-tel"></span>
           </div>
           <div class="cf-field">
-            <label for="cf-email">Correo electrónico <span aria-hidden="true">*</span></label>
-            <input type="email" id="cf-email" name="email" placeholder="tu@empresa.com" required autocomplete="email">
+            <input type="email" id="cf-email" name="email" placeholder="Correo electrónico *" required autocomplete="email">
             <span class="cf-error" id="err-email"></span>
           </div>
         </div>
 
         <div class="cf-field">
-          <label for="cf-servicio">¿Qué solución te interesa? <span aria-hidden="true">*</span></label>
           <select id="cf-servicio" name="servicio" required>
-            <option value="">Selecciona una opción</option>
+            <option value="" disabled selected>¿Qué solución te interesa? *</option>
             <option value="RFID para logística y almacenes">RFID para logística y almacenes</option>
             <option value="RFID para retail y tiendas">RFID para retail y tiendas</option>
             <option value="Etiquetas RFID">Etiquetas RFID</option>
@@ -901,14 +896,12 @@ a:hover .arrow-r{transform:translateX(3px)}
         </div>
 
         <div class="cf-field" id="cf-otra-wrap" style="display:none">
-          <label for="cf-otra">¿Cuál? <span aria-hidden="true">*</span></label>
-          <input type="text" id="cf-otra" name="otra_consulta" placeholder="Describe brevemente tu consulta">
+          <input type="text" id="cf-otra" name="otra_consulta" placeholder="¿Cuál es tu consulta? *">
           <span class="cf-error" id="err-otra"></span>
         </div>
 
         <div class="cf-field">
-          <label for="cf-mensaje">Mensaje <span class="cf-opt">(opcional)</span></label>
-          <textarea id="cf-mensaje" name="mensaje" placeholder="Cuéntanos más sobre tu proyecto o necesidad..." rows="4"></textarea>
+          <textarea id="cf-mensaje" name="mensaje" placeholder="Mensaje (opcional)" rows="4"></textarea>
         </div>
 
         <div class="cf-check">
@@ -921,16 +914,14 @@ a:hover .arrow-r{transform:translateX(3px)}
       </form>
 
       <style>
-        #contactForm { display:flex; flex-direction:column; gap:1.1rem; }
+        #contactForm { display:flex; flex-direction:column; gap:.65rem; }
         .cf-field { display:flex; flex-direction:column; gap:.35rem; }
-        .cf-row { display:grid; grid-template-columns:1fr 1fr; gap:.9rem; }
+        .cf-row { display:grid; grid-template-columns:1fr 1fr; gap:.65rem; }
         @media(max-width:580px){ .cf-row { grid-template-columns:1fr; } }
-        .cf-field label { font-size:.82rem; font-weight:600; color:var(--navy); font-family:'Outfit',sans-serif; letter-spacing:.02em; }
-        .cf-opt { font-weight:400; opacity:.65; }
         #contactForm input:not([type="checkbox"]),
         #contactForm select,
         #contactForm textarea {
-          width:100%; padding:.82rem 1rem; border-radius:var(--radius);
+          width:100%; padding:.7rem 1rem; border-radius:var(--radius);
           border:1.5px solid var(--g200);
           background:#fff; color:var(--navy-deep);
           font-size:.95rem; font-family:inherit;
