@@ -845,26 +845,32 @@ a:hover .arrow-r{transform:translateX(3px)}
         <input type="hidden" name="redirect" value="https://serdocweb.vercel.app/gracias/">
 
         <div class="cf-field">
+          <label for="cf-nombre">Nombre completo</label>
           <input type="text" id="cf-nombre" name="nombre" placeholder="Nombre completo *" required autocomplete="name">
           <span class="cf-error" id="err-nombre"></span>
         </div>
 
         <div class="cf-field">
-          <input type="text" id="cf-empresa" name="empresa" placeholder="Empresa (opcional)" autocomplete="organization">
+          <label for="cf-empresa">Empresa</label>
+          <input type="text" id="cf-empresa" name="empresa" placeholder="Empresa *" required autocomplete="organization">
+          <span class="cf-error" id="err-empresa"></span>
         </div>
 
         <div class="cf-row">
           <div class="cf-field">
-            <input type="tel" id="cf-tel" name="telefono" placeholder="Teléfono o móvil *" required autocomplete="tel">
+            <label for="cf-tel">Teléfono o móvil</label>
+          <input type="tel" id="cf-tel" name="telefono" placeholder="Teléfono o móvil *" required autocomplete="tel">
             <span class="cf-error" id="err-tel"></span>
           </div>
           <div class="cf-field">
-            <input type="email" id="cf-email" name="email" placeholder="Correo electrónico *" required autocomplete="email">
+            <label for="cf-email">Correo electrónico</label>
+          <input type="email" id="cf-email" name="email" placeholder="Correo electrónico *" required autocomplete="email">
             <span class="cf-error" id="err-email"></span>
           </div>
         </div>
 
         <div class="cf-field">
+          <label for="cf-servicio">¿Qué solución te interesa?</label>
           <select id="cf-servicio" name="servicio" required>
             <option value="" disabled selected>¿Qué solución te interesa? *</option>
             <option value="RFID para logística y almacenes">RFID para logística y almacenes</option>
@@ -896,12 +902,15 @@ a:hover .arrow-r{transform:translateX(3px)}
         </div>
 
         <div class="cf-field" id="cf-otra-wrap" style="display:none">
+          <label for="cf-otra">¿Cuál?</label>
           <input type="text" id="cf-otra" name="otra_consulta" placeholder="¿Cuál es tu consulta? *">
           <span class="cf-error" id="err-otra"></span>
         </div>
 
         <div class="cf-field">
-          <textarea id="cf-mensaje" name="mensaje" placeholder="Mensaje (opcional)" rows="4"></textarea>
+          <label for="cf-mensaje">Mensaje</label>
+          <textarea id="cf-mensaje" name="mensaje" placeholder="Mensaje *" rows="4" required></textarea>
+          <span class="cf-error" id="err-mensaje"></span>
         </div>
 
         <div class="cf-check">
@@ -914,6 +923,16 @@ a:hover .arrow-r{transform:translateX(3px)}
       </form>
 
       <style>
+        
+        .cf-field label {
+          display:block;
+          font-size:.82rem;
+          font-weight:600;
+          color:var(--navy);
+          font-family:'Outfit',sans-serif;
+          letter-spacing:.02em;
+          margin-bottom:.2rem;
+        }
         #contactForm { display:flex; flex-direction:column; gap:.65rem; }
         .cf-field { display:flex; flex-direction:column; gap:.35rem; }
         .cf-row { display:grid; grid-template-columns:1fr 1fr; gap:.65rem; }
@@ -1017,6 +1036,12 @@ a:hover .arrow-r{transform:translateX(3px)}
             ]},
           { el:'cf-servicio',err:'err-servicio',rules:[
               {fn:function(v){return v!=='';}, msg:'Selecciona una opción'}
+            ]},
+          { el:'cf-empresa', err:'err-empresa', rules:[
+              {fn:function(v){return v.trim().length>=2;}, msg:'Mínimo 2 caracteres'}
+            ]},
+          { el:'cf-mensaje', err:'err-mensaje', rules:[
+              {fn:function(v){return v.trim().length>=5;}, msg:'Escribe al menos un mensaje breve'}
             ]},
         ];
 
