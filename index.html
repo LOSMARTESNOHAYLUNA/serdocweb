@@ -519,6 +519,12 @@ a:hover .arrow-r,button:hover .arrow-r{transform:translateX(3px)}
   .fade-in{opacity:0;transform:translateY(20px);transition:opacity .5s ease,transform .5s ease}
   .fade-in.visible{opacity:1;transform:translateY(0)}
 }
+
+/* cta-form spacing override */
+.cta-form-row{margin-bottom:1rem!important;gap:.75rem}
+.cta-form textarea{margin-bottom:1rem}
+.cta-form-field{display:flex;flex-direction:column}
+.form-error{display:none;color:#f87171;font-size:.75rem;margin-top:.2rem}
 </style>
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZXXNMZ7DNZ"></script>
@@ -785,17 +791,19 @@ a:hover .arrow-r,button:hover .arrow-r{transform:translateX(3px)}
         <input type="hidden" name="subject" value="Nuevo lead Serdoc — Home">
         <input type="hidden" name="redirect" value="https://serdocweb.vercel.app/gracias/">
         <input type="hidden" name="servicio" value="Consulta general">
-        <div class="cta-form-field" style="position:relative">
-          <input type="text" name="nombre" placeholder="Nombre completo" required minlength="2">
-          <span class="form-error"></span>
-        </div>
-        <div class="cta-form-field" style="position:relative">
-          <input type="text" name="empresa" placeholder="Empresa" required minlength="2">
-          <span class="form-error"></span>
+        <div class="cta-form-row">
+          <div class="cta-form-field" style="position:relative">
+            <input type="text" name="nombre" placeholder="Nombre completo" required minlength="2">
+            <span class="form-error"></span>
+          </div>
+          <div class="cta-form-field" style="position:relative">
+            <input type="tel" name="telefono" placeholder="Teléfono o móvil" required>
+            <span class="form-error"></span>
+          </div>
         </div>
         <div class="cta-form-row">
           <div class="cta-form-field" style="position:relative">
-            <input type="tel" name="telefono" placeholder="Teléfono o móvil" required>
+            <input type="text" name="empresa" placeholder="Empresa" required minlength="2">
             <span class="form-error"></span>
           </div>
           <div class="cta-form-field" style="position:relative">
