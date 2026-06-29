@@ -11,13 +11,13 @@
 <meta property="og:url" content="https://www.serdoc.es/business-process-outsourcing/">
 <meta property="og:title" content="Business Process Outsourcing documental: BPO | Serdoc Madrid">
 <meta property="og:description" content="Servicio BPO documental: externalización de procesos de captura, grabación e indexación de datos. Certificado ISO 9001. Madrid y toda España.">
-<meta property="og:image" content="/images/office-bpo.jpg">
+<meta property="og:image" content="https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&w=1200">
 <meta property="og:locale" content="es_ES">
 <meta property="og:site_name" content="Serdoc Informática">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Business Process Outsourcing documental: BPO | Serdoc Madrid">
 <meta name="twitter:description" content="Servicio BPO documental: externalización de procesos de captura, grabación e indexación de datos. Certificado ISO 9001. Madrid y toda España.">
-<meta name="twitter:image" content="/images/office-bpo.jpg">
+<meta name="twitter:image" content="https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&w=1200">
 <meta name="google-site-verification" content="OIjTbV3rH7Xazv0qjQYDeix4W-D63KeJp04xwGasD8M">
 <script type="application/ld+json">
 {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "¿Cómo se garantiza la confidencialidad?", "acceptedAnswer": {"@type": "Answer", "text": "Acuerdo de confidencialidad, credenciales individuales y documentación de la cadena de custodia."}}, {"@type": "Question", "name": "¿El servicio se puede escalar ante picos de trabajo?", "acceptedAnswer": {"@type": "Answer", "text": "Sí. Capacidad ajustable al volumen del cliente sin comprometer el plazo de entrega."}}, {"@type": "Question", "name": "¿En qué formato se entregan los datos?", "acceptedAnswer": {"@type": "Answer", "text": "CSV, XML, base de datos, API o integración directa con el ERP o CRM del cliente."}}, {"@type": "Question", "name": "¿Podéis gestionar datos personales bajo RGPD?", "acceptedAnswer": {"@type": "Answer", "text": "Sí. Operamos como encargado del tratamiento bajo el RGPD con las medidas técnicas y organizativas requeridas."}}]}
@@ -143,7 +143,7 @@ a:hover .arrow-r{transform:translateX(3px)}
 
 /* BENEFICIOS */
 .benefits{padding:5rem 1.5rem;position:relative;overflow:hidden}
-.benefits-bg{position:absolute;inset:-10%;background:url('/images/office-bpo.jpg') center/cover no-repeat center/cover no-repeat;z-index:0;will-change:transform}
+.benefits-bg{position:absolute;inset:-10%;background:url('https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&w=1200') center/cover no-repeat;z-index:0;will-change:transform}
 .benefits-overlay{position:absolute;inset:0;background:rgba(10,20,45,.85);z-index:1}
 .benefits-inner{max-width:1200px;margin:0 auto;position:relative;z-index:2;text-align:center}
 .benefits h2{font-size:clamp(1.7rem,3vw,2.4rem);font-weight:800;color:white;margin-bottom:2.5rem;line-height:1.2}
@@ -386,6 +386,25 @@ a:hover .arrow-r{transform:translateX(3px)}
   .cp-header,.cp-body,.cp-footer{padding-left:1.25rem;padding-right:1.25rem}
   .cp-footer{flex-wrap:wrap}
   .cp-footer .cb-btn{flex:1;text-align:center}
+  /* ── SERVICE PAGE RESPONSIVE ── */
+  /* El reto */
+  .problem-grid{grid-template-columns:1fr!important}
+  /* Beneficios / Resultados medibles */
+  .benefits-grid{grid-template-columns:1fr!important}
+  .benefits-inner h2{text-align:center}
+  /* ROI timeline */
+  .roi-timeline{flex-direction:column!important;align-items:center!important}
+  .roi-phase{width:100%!important;max-width:420px!important;margin:0 auto!important}
+  .roi-conn{display:none!important}
+  /* Soporte 4 cards */
+  .soporte-cards-grid{grid-template-columns:1fr!important}
+  /* 24h/48h SLA strip */
+  .sla-strip{flex-direction:column!important;align-items:center!important;gap:1.5rem!important}
+  .sla-divider{display:none!important}
+  .sla-strip>div{text-align:center!important}
+  /* CTA band especialista */
+  .cta-band-inner{flex-direction:column!important;text-align:center!important;align-items:center!important}
+  .cta-band-text{text-align:center!important}
 }
 
 
@@ -843,7 +862,7 @@ a:hover .arrow-r{transform:translateX(3px)}
 
 <!-- HERO -->
 <section class="lhero">
-  <div class="lhero-bg"><img src="/images/office-bpo.jpg" alt="Business Process Outsourcing documental — Serdoc Madrid" width="1920" height="800" loading="eager" fetchpriority="high"></div>
+  <div class="lhero-bg"><img src="https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Business Process Outsourcing documental — Serdoc Madrid" width="1920" height="800" loading="eager" fetchpriority="high"></div>
   <div class="lhero-overlay"></div><div class="lhero-overlay-b"></div>
   <div class="lhero-inner">
     <div class="hero-breadcrumb"><a href="/">Inicio</a><span class="bc-sep">›</span><a href="/sistema-de-gestion-documental/">Gestión Documental</a><span class="bc-sep">›</span><span>BPO Documental</span></div>
@@ -904,15 +923,15 @@ a:hover .arrow-r{transform:translateX(3px)}
     <div class="section-label">Servicios relacionados</div>
     <h2 class="section-h2">Otras soluciones<br><span class="h2-light">de Serdoc para tu sector</span></h2>
     <div class="srv-carousel"><a href="/digitalizacion-documentos/" class="srv-card">
-        <div class="srv-img"><img src="/images/office-documents.jpg" alt="Digitalización de documentos — Serdoc" loading="lazy" width="600" height="180">
+        <div class="srv-img"><img src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1920" alt="Digitalización de documentos — Serdoc" loading="lazy" width="600" height="180">
           <span class="srv-img-badge">Gestión Documental</span></div>
         <div class="srv-body"><h3>Digitalización de documentos</h3><p>Conversión de papel a digital con OCR e indexación automática.</p><span class="srv-link">Ver solución <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7h8m-3-3 3 3-3 3"/></svg></span></div>
       </a><a href="/sistema-de-gestion-documental/" class="srv-card">
-        <div class="srv-img"><img src="/images/books-reading.jpg" alt="Sistema de Gestión Documental — Serdoc" loading="lazy" width="600" height="180">
+        <div class="srv-img"><img src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1920" alt="Sistema de Gestión Documental — Serdoc" loading="lazy" width="600" height="180">
           <span class="srv-img-badge">Gestión Documental</span></div>
         <div class="srv-body"><h3>Sistema de Gestión Documental</h3><p>Solución integral para el ciclo de vida documental.</p><span class="srv-link">Ver solución <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7h8m-3-3 3 3-3 3"/></svg></span></div>
       </a><a href="/rfid-logistica-almacenes/" class="srv-card">
-        <div class="srv-img"><img src="/images/logistics-shipping.jpg" alt="Trazabilidad RFID — Serdoc" loading="lazy" width="600" height="180">
+        <div class="srv-img"><img src="/images/rfid-logistica.webp" alt="Trazabilidad RFID — Serdoc" loading="lazy" width="600" height="180">
           <span class="srv-img-badge">Industria</span></div>
         <div class="srv-body"><h3>Trazabilidad RFID</h3><p>Complementa el BPO con trazabilidad física de activos.</p><span class="srv-link">Ver solución <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7h8m-3-3 3 3-3 3"/></svg></span></div>
       </a></div>
@@ -962,8 +981,8 @@ a:hover .arrow-r{transform:translateX(3px)}
         </div>
         <textarea name="mensaje" placeholder="Cuéntanos brevemente tu caso (opcional)" rows="2"></textarea>
         <div class="cta-form-check">
-          <input type="checkbox" id="privacidad-businessp" name="privacidad" required>
-          <label for="privacidad-businessp">He leído y acepto la <a href="/politica-de-privacidad/">política de privacidad</a></label>
+          <input type="checkbox" id="priv-businesspro" name="privacidad" required>
+          <label for="priv-businesspro">He leído y acepto la <a href="/politica-de-privacidad/">política de privacidad</a></label>
         </div>
         <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;background:#f57a14;border:none">Enviar consulta <svg class="arrow-r" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 8h10m-4-4 4 4-4 4"/></svg></button>
       </form>
@@ -1007,7 +1026,7 @@ a:hover .arrow-r{transform:translateX(3px)}
       <p style="margin-top:1rem;font-size:.82rem;color:rgba(255,255,255,.3)">Calle del Cobre 11<br>28914 Leganés, Madrid</p>
     </div>
   </div>
-  <div class="footer-bottom"><span>© 2026 Serdoc Informática S.L.</span><span><a href="/aviso-legal/">Aviso legal</a> · <a href="/politica-de-cookies/">Política de cookies</a> · <a href="/politica-de-privacidad/">Política de privacidad</a> · <a href="/politica-de-gestion/" target="_blank">Política de gestión</a></span></div>
+  <div class="footer-bottom"><span>© 2026 Serdoc Informática S.L.</span><span><a href="/aviso-legal/">Aviso legal</a> · <a href="/politica-de-cookies/">Política de cookies</a> · <a href="/politica-de-privacidad/">Política de privacidad</a> · <a href="/docs/politica-de-gestion-serdoc.pdf" target="_blank">Política de gestión</a></span></div>
 </footer>
 <!-- FLOATING BUTTONS -->
 <div class="float-btns">
