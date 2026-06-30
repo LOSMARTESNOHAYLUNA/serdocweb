@@ -17,7 +17,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="RFID para gestión de herramientas de alto valor | Serdoc Madrid">
 <meta name="twitter:description" content="Localiza y controla herramientas de alto valor con RFID. Check-in/check-out automático, alertas de extravío e historial completo. Madrid y toda España.">
-<meta name="twitter:image" content="https://images.pexels.com/photos/5591664/pexels-photo-5591664.jpeg?auto=compress&cs=tinysrgb&w=1200">
+<meta name="twitter:image" content="/images/rfid-gestion-herramientas.webp">
 <meta name="google-site-verification" content="OIjTbV3rH7Xazv0qjQYDeix4W-D63KeJp04xwGasD8M">
 <script type="application/ld+json">
 {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "¿Los tags resisten el ambiente de taller?", "acceptedAnswer": {"@type": "Answer", "text": "Clasificación IP68, de -40°C a +85°C. Probados en las condiciones reales del taller."}}, {"@type": "Question", "name": "¿Se integra con GMAO?", "acceptedAnswer": {"@type": "Answer", "text": "Sí. Exporta datos a los principales GMAO del mercado y ERP con módulos de activos."}}, {"@type": "Question", "name": "¿Funciona para herramientas entre varias obras?", "acceptedAnswer": {"@type": "Answer", "text": "Sí. Sistema multi-ubicación: controla qué obra tiene qué herramienta."}}, {"@type": "Question", "name": "¿Cuánto tarda el tagado de 500 herramientas?", "acceptedAnswer": {"@type": "Answer", "text": "Proceso completo de 2-3 semanas en paralelo a la actividad normal."}}]}
@@ -341,6 +341,14 @@ a:hover .arrow-r{transform:translateX(3px)}
 
 /* ── RESPONSIVE ── */
 
+
+@media(max-width:1024px){
+  .sla-strip{flex-direction:column!important;align-items:center!important;gap:1.5rem!important;padding:2rem 1.5rem!important;text-align:center}
+  .sla-divider{display:none!important}
+  .sla-strip>div{text-align:center!important;flex:none!important;width:100%!important}
+  .sla-strip p{text-align:center!important;max-width:none!important}
+  .sla-strip>p{text-align:center!important;flex:none!important}
+}
 @media(max-width:768px){
   .nav{display:none}
   .menu-toggle{display:block}

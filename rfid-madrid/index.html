@@ -335,6 +335,14 @@ a:hover .arrow-r{transform:translateX(3px)}
 
 /* ── RESPONSIVE ── */
 
+
+@media(max-width:1024px){
+  .sla-strip{flex-direction:column!important;align-items:center!important;gap:1.5rem!important;padding:2rem 1.5rem!important;text-align:center}
+  .sla-divider{display:none!important}
+  .sla-strip>div{text-align:center!important;flex:none!important;width:100%!important}
+  .sla-strip p{text-align:center!important;max-width:none!important}
+  .sla-strip>p{text-align:center!important;flex:none!important}
+}
 @media(max-width:768px){
   .nav{display:none}
   .menu-toggle{display:block}

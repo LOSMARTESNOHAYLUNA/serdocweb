@@ -17,7 +17,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="RFID para control de accesos: parkings, tornos y puertas | Serdoc">
 <meta name="twitter:description" content="Sistema RFID para control de accesos. Sin llaves, con registro automático. Parkings, tornos, puertas y zonas restringidas. Madrid y toda España.">
-<meta name="twitter:image" content="https://images.pexels.com/photos/442576/pexels-photo-442576.jpeg?auto=compress&cs=tinysrgb&w=1200">
+<meta name="twitter:image" content="/images/rfid-control-accesos.webp">
 <meta name="google-site-verification" content="OIjTbV3rH7Xazv0qjQYDeix4W-D63KeJp04xwGasD8M">
 <script type="application/ld+json">
 {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "¿Puedo configurar horarios distintos por persona o zona?", "acceptedAnswer": {"@type": "Answer", "text": "Sí. Permisos granulares: zona, días y horas específicas para cada usuario."}}, {"@type": "Question", "name": "¿Funciona con tornos, parkings y barreras?", "acceptedAnswer": {"@type": "Answer", "text": "Sí. Integración con tornos peatonales, barreras de parking y puertas automáticas."}}, {"@type": "Question", "name": "¿Es compatible con sistemas de control horario?", "acceptedAnswer": {"@type": "Answer", "text": "Sí. Los datos de entrada/salida se exportan a los principales sistemas de nóminas."}}, {"@type": "Question", "name": "¿Qué ocurre si hay un corte de luz?", "acceptedAnswer": {"@type": "Answer", "text": "Los lectores tienen batería de respaldo. Las puertas se configuran para apertura o cierre en fallo de alimentación."}}]}
@@ -341,6 +341,14 @@ a:hover .arrow-r{transform:translateX(3px)}
 
 /* ── RESPONSIVE ── */
 
+
+@media(max-width:1024px){
+  .sla-strip{flex-direction:column!important;align-items:center!important;gap:1.5rem!important;padding:2rem 1.5rem!important;text-align:center}
+  .sla-divider{display:none!important}
+  .sla-strip>div{text-align:center!important;flex:none!important;width:100%!important}
+  .sla-strip p{text-align:center!important;max-width:none!important}
+  .sla-strip>p{text-align:center!important;flex:none!important}
+}
 @media(max-width:768px){
   .nav{display:none}
   .menu-toggle{display:block}
