@@ -835,8 +835,89 @@ a:hover .arrow-r{transform:translateX(3px)}
   <div class="article-grid">
     <article>
       <img src="/images/cuales-son-los-estandares-de-etiquetas-rfid.webp" alt="Estándares de etiquetas RFID: EPC Gen2, ISO 18000 y más" style="width:100%;border-radius:12px;object-fit:cover;height:320px;margin-bottom:2rem" loading="eager">
-      <p style="font-size:1.1rem;color:var(--g700);line-height:1.85;font-weight:500;margin-bottom:1.5rem">Los estándares RFID determinan cómo se codifican y comunican los datos entre etiquetas y lectores. Elegir el estándar correcto garantiza la interoperabilidad entre sistemas y proveedores. Estos son los más importantes y cuándo aplica cada uno.</p>
-      <h2 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.3rem;margin:2rem 0 .75rem">EPC Gen2 (ISO 18000-63): el estándar de facto en logística y retail</h2><p style="color:var(--g700);line-height:1.9;margin-bottom:1rem">EPC (Electronic Product Code) Gen2, ratificado como ISO 18000-63, es el protocolo dominante para RFID UHF en logística, retail e inventario. Define cómo se codifica un identificador único de 96 bits en la etiqueta y cómo se leen múltiples etiquetas simultáneamente. Casi todos los lectores UHF del mercado son compatibles con EPC Gen2. Si tu proyecto es de logística, retail o inventario masivo, este será tu estándar.</p><h2 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.3rem;margin:2rem 0 .75rem">ISO 15693: RFID HF para bibliotecas y documentación</h2><p style="color:var(--g700);line-height:1.9;margin-bottom:1rem">ISO 15693 es el estándar principal para RFID HF (13,56 MHz) utilizado en bibliotecas, documentación y control de accesos de media distancia. Define etiquetas con alcance de hasta 1 metro. Los terminales de autopréstamo de Serdoc son compatibles con ISO 15693. El estándar SIP2 (comunicación entre terminales y SIGB) se apoya en este protocolo de identificación.</p><h2 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.3rem;margin:2rem 0 .75rem">ISO 14443: para NFC y tarjetas contactless</h2><p style="color:var(--g700);line-height:1.9;margin-bottom:1rem">ISO 14443 define la comunicación para tarjetas de proximidad (hasta 10 cm): tarjetas de crédito contactless, DNI electrónico, abonos de transporte y la mayoría de tarjetas NFC. Tiene dos variantes (Tipo A y Tipo B). Es el que usa tu tarjeta bancaria cuando pagas sin contacto.</p><h2 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.3rem;margin:2rem 0 .75rem">¿Cómo afectan los estándares a tu proyecto?</h2><p style="color:var(--g700);line-height:1.9;margin-bottom:1rem">Para proyectos de inventario, logística o retail: EPC Gen2 / ISO 18000-63. Para bibliotecas: ISO 15693 + SIP2. Para control de accesos con tarjetas: ISO 14443 (NFC). Para proyectos con necesidades específicas (temperatura, metal, farmacéutico): consultar los estándares ISO 18000-2 (LF), ISO 11784/11785 (animales). En la evaluación técnica de Serdoc validamos siempre la compatibilidad de estándares antes de seleccionar el hardware.</p>
+      <h2 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.3rem;margin:2rem 0 .75rem">La importancia de los estándares en RFID</h2>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">Cuando hablamos de estándares de etiquetas RFID, no es un simple capricho técnico. Es como cuando vas a una reunión y todos hablan el mismo idioma: fluye la comunicación, se evitan malentendidos y nadie se queda fuera. En RFID ocurre lo mismo: los estándares garantizan que las etiquetas, lectores y sistemas funcionen en armonía.</p>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">Un detalle importante: cumplir con la normativa ISO RFID o con especificaciones globales como EPC Gen2 no es solo para "quedar bien". Es una necesidad para que tu cadena de suministro funcione sin tropiezos, se reduzcan costos y, lo más importante, se eviten sanciones por incumplimiento legal.</p>
+      <h3 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.1rem;margin:1.5rem 0 .6rem">Qué son los estándares y por qué existen</h3>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">Los estándares RFID son reglas técnicas acordadas globalmente que aseguran la interoperabilidad. Gracias a ellos, una etiqueta producida en Japón puede funcionar perfectamente en un centro logístico en España o en una fábrica en México.</p>
+      <h3 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.1rem;margin:1.5rem 0 .6rem">Ventajas de usar etiquetas certificadas</h3>
+      <ul style="color:var(--g700);line-height:1.8;margin:0 0 1rem 1.25rem">
+        <li><strong>Interoperabilidad:</strong> sin importar el fabricante, las etiquetas cumplen con las mismas reglas.</li>
+        <li><strong>Seguridad:</strong> normativas que regulan la protección de datos y el uso correcto de frecuencias.</li>
+        <li><strong>Escalabilidad:</strong> permite crecer sin tener que rediseñar toda tu infraestructura tecnológica.</li>
+      </ul>
+
+      <h2 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.3rem;margin:2rem 0 .75rem">1. Estándares ISO: El lenguaje universal RFID</h2>
+      <h3 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.1rem;margin:1.5rem 0 .6rem">ISO 14443: Para tarjetas de proximidad (HF)</h3>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">Usado en sistemas de transporte público o accesos a edificios. Si alguna vez has pasado una tarjeta sin contacto para entrar al metro, estabas usando un estándar ISO RFID.</p>
+      <h3 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.1rem;margin:1.5rem 0 .6rem">ISO 15693: Etiquetas de alta memoria</h3>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">Muy comunes en bibliotecas y hospitales. Su ventaja es que pueden almacenar gran cantidad de datos, como el historial de un paciente o la trazabilidad de un libro.</p>
+      <h3 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.1rem;margin:1.5rem 0 .6rem">ISO 18000: Serie para frecuencias UHF y NFC</h3>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">Este conjunto de normas define cómo deben operar las etiquetas según la frecuencia. Aquí es donde nacen los debates técnicos, como EPC Gen2 vs ISO 18000-6C, que básicamente hablan del mismo idioma pero con acentos distintos.</p>
+
+      <h2 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.3rem;margin:2rem 0 .75rem">2. Normativa EPCglobal: El estándar de la cadena de suministro</h2>
+      <h3 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.1rem;margin:1.5rem 0 .6rem">EPC Gen2 (ISO 18000-6C): Logística y retail</h3>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">El "rey" del retail. Con este estándar, gigantes como Zara o Decathlon controlan inventarios en tiempo real.</p>
+      <h3 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.1rem;margin:1.5rem 0 .6rem">Cómo funciona la codificación EPC</h3>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">Cada etiqueta lleva un código único que identifica no solo el producto, sino también su lote, origen y hasta ubicación. Es como el DNI del objeto.</p>
+      <h3 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.1rem;margin:1.5rem 0 .6rem">Ventajas en inventarios y trazabilidad</h3>
+      <ul style="color:var(--g700);line-height:1.8;margin:0 0 1rem 1.25rem">
+        <li>Reducción de errores humanos.</li>
+        <li>Mayor visibilidad en la cadena.</li>
+        <li>Capacidad de reaccionar más rápido ante pérdidas o caducidades.</li>
+      </ul>
+
+      <h2 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.3rem;margin:2rem 0 .75rem">3. Estándares por frecuencia de operación</h2>
+      <h3 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.1rem;margin:1.5rem 0 .6rem">LF (125-134 kHz): Identificación animal y acceso</h3>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">Sí, hasta el microchip de tu mascota cumple con un estándar RFID.</p>
+      <h3 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.1rem;margin:1.5rem 0 .6rem">HF (13.56 MHz): Pagos, bibliotecas, NFC</h3>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">Es la frecuencia de las tarjetas bancarias sin contacto. Fiable y de corto alcance.</p>
+      <h3 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.1rem;margin:1.5rem 0 .6rem">UHF (860-960 MHz): Retail, logística, industriales</h3>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">La más usada en etiquetas UHF estándar, perfecta para controlar cajas en un almacén o ropa en una tienda.</p>
+
+      <h2 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.3rem;margin:2rem 0 .75rem">4. Normativas regionales y legales</h2>
+      <h3 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.1rem;margin:1.5rem 0 .6rem">FCC (EEUU), CE (Europa), ARIB (Japón)</h3>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">Cada región establece las frecuencias RFID permitidas. Si instalas etiquetas no homologadas, podrías terminar con multas.</p>
+      <h3 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.1rem;margin:1.5rem 0 .6rem">Límites de potencia y canales por país</h3>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">Un lector en Europa no puede emitir con la misma potencia que en EEUU. Esto garantiza que no interfiera con otros sistemas.</p>
+      <h3 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.1rem;margin:1.5rem 0 .6rem">Etiquetado ecológico y reciclaje</h3>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">Normas como RoHS y REACH aseguran que las etiquetas no contengan materiales tóxicos. Sí, hasta en RFID hay compromiso con la sostenibilidad.</p>
+
+      <h2 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.3rem;margin:2rem 0 .75rem">5. Estándares de seguridad y privacidad</h2>
+      <h3 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.1rem;margin:1.5rem 0 .6rem">Criptografía en etiquetas (ISO 29167)</h3>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">Algunas etiquetas permiten cifrado para que la información solo sea accesible a quienes deben leerla.</p>
+      <h3 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.1rem;margin:1.5rem 0 .6rem">Protección de datos (GDPR, CCPA)</h3>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">En retail, no puedes almacenar datos personales sin cumplir con normativas de privacidad.</p>
+      <h3 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.1rem;margin:1.5rem 0 .6rem">Etiquetas con kill password o bloqueo</h3>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">Una vez vendido el producto, la etiqueta puede desactivarse. Así, el cliente no siente que lo "espían" después de salir de la tienda.</p>
+
+      <h2 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.3rem;margin:2rem 0 .75rem">6. Casos de uso por estándar</h2>
+      <h3 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.1rem;margin:1.5rem 0 .6rem">Retail: EPC Gen2 para apparel</h3>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">Las cadenas de moda gestionan millones de prendas en segundos gracias a UHF.</p>
+      <h3 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.1rem;margin:1.5rem 0 .6rem">Salud: ISO 15693 para muestras médicas</h3>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">Permite seguir una muestra desde el laboratorio hasta el hospital sin errores.</p>
+      <h3 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.1rem;margin:1.5rem 0 .6rem">Automotriz: IATA RFID para aeronáutica</h3>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">Control de equipaje y piezas críticas de aviones. Aquí no hay margen de error.</p>
+
+      <h2 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.3rem;margin:2rem 0 .75rem">7. Cómo elegir la etiqueta correcta</h2>
+      <h3 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.1rem;margin:1.5rem 0 .6rem">Checklist: Material, memoria, resistencia</h3>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">No es lo mismo etiquetar una prenda de algodón que una caja metálica.</p>
+      <h3 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.1rem;margin:1.5rem 0 .6rem">Pruebas de rendimiento</h3>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">Factores como alcance de lectura o interferencias pueden variar según el entorno.</p>
+      <h3 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.1rem;margin:1.5rem 0 .6rem">Certificaciones obligatorias por sector</h3>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">Cada industria tiene sus propias exigencias de certificación en etiquetas RFID.</p>
+
+      <h2 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.3rem;margin:2rem 0 .75rem">8. Futuro de los estándares RFID</h2>
+      <h3 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.1rem;margin:1.5rem 0 .6rem">RAIN RFID (UHF pasiva) y sensores</h3>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">Cada vez más integrados con IoT y big data.</p>
+      <h3 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.1rem;margin:1.5rem 0 .6rem">IoT y estandarización de datos</h3>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">Permitirán una trazabilidad completa, desde la fábrica hasta el cliente final.</p>
+      <h3 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.1rem;margin:1.5rem 0 .6rem">Sostenibilidad y estándares verdes</h3>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">El futuro apunta a etiquetas reciclables y con menor impacto ambiental.</p>
+
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">Los estándares de etiquetas RFID son la base para que las soluciones funcionen de forma segura, interoperable y legal en cualquier parte del mundo. No seguirlos es como intentar enchufar un aparato europeo en un enchufe americano: al final, no funciona o puedes tener un problema mayor.</p>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">Desde EPC Gen2 vs ISO 18000-6C, hasta las diferencias entre HF y UHF RFID, cada normativa tiene su razón de ser y su aplicación práctica. Conocerlas no solo optimiza tu operación, también protege tu negocio frente a sanciones y riesgos de seguridad. Nuestro equipo analiza la compatibilidad de estándares antes de seleccionar el hardware.</p>
+
       <div style="margin-top:3rem;padding:1.5rem;background:rgba(8,145,178,.06);border-radius:12px;border-left:4px solid var(--teal)">
         <p style="font-weight:700;color:var(--navy);font-family:'Outfit',sans-serif;margin-bottom:.5rem">¿Quieres implantar esta solución en tu empresa?</p>
         <p style="color:var(--g600);margin-bottom:1rem">El equipo técnico de Serdoc lleva más de 25 años implantando proyectos RFID. Evaluación gratuita sin compromiso.</p>

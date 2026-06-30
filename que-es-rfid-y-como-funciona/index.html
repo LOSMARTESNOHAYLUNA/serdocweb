@@ -835,8 +835,85 @@ a:hover .arrow-r{transform:translateX(3px)}
   <div class="article-grid">
     <article>
       <img src="/images/que-es-rfid-y-como-funciona.webp" alt="¿Qué es RFID y cómo funciona?" style="width:100%;border-radius:12px;object-fit:cover;height:320px;margin-bottom:2rem" loading="eager">
-      <p style="font-size:1.1rem;color:var(--g700);line-height:1.85;font-weight:500;margin-bottom:1.5rem">RFID (Radio Frequency Identification) es una tecnología de identificación automática que utiliza ondas de radio para comunicar datos entre una etiqueta y un lector, sin necesidad de contacto físico ni línea de visión directa. Es la base de algunos de los sistemas logísticos, de control de inventario y de seguridad más eficientes del mundo.</p>
-      <h2 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.3rem;margin:2rem 0 .75rem">¿Cómo funciona el RFID?</h2><p style="color:var(--g700);line-height:1.9;margin-bottom:1rem">Un sistema RFID se compone de tres elementos: la etiqueta (tag), el lector (reader) y el software de gestión (middleware). La etiqueta contiene un circuito integrado y una antena que almacena datos y los transmite al lector cuando éste genera un campo electromagnético. El lector captura esos datos y los envía al software de gestión, que los procesa y los integra con los sistemas de la empresa. En las etiquetas pasivas, la propia energía del campo del lector alimenta el chip: no necesitan batería.</p><h2 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.3rem;margin:2rem 0 .75rem">Tipos de frecuencia RFID</h2><p style="color:var(--g700);line-height:1.9;margin-bottom:1rem">La frecuencia determina el alcance, la velocidad y las aplicaciones. LF (125-134 kHz): alcance muy corto (hasta 30 cm), funciona bien con metal y líquidos. Se usa en control de accesos y trazabilidad animal. HF (13,56 MHz): alcance medio (hasta 1 metro). Estándar en bibliotecas, pagos contactless y documentación. UHF (860-960 MHz): alcance largo (hasta 10 metros en condiciones ideales). El más utilizado en logística, retail e inventario masivo. Es el que más ha crecido en los últimos años por su precio y versatilidad.</p><h2 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.3rem;margin:2rem 0 .75rem">RFID frente al código de barras</h2><p style="color:var(--g700);line-height:1.9;margin-bottom:1rem">El código de barras requiere línea de visión directa y solo lee un artículo a la vez. El RFID lee cientos de etiquetas simultáneamente sin alinear ningún escáner, funciona aunque la etiqueta esté tapada, sucia o en un ángulo complicado, y los chips pueden reescribirse. Esto hace que el inventario con RFID sea radicalmente más rápido: una tienda que tardaba 3 días en contar su stock puede hacerlo en 2 horas con el lector en la mano.</p><h2 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.3rem;margin:2rem 0 .75rem">¿Para qué se usa el RFID?</h2><p style="color:var(--g700);line-height:1.9;margin-bottom:1rem">Las aplicaciones son amplísimas: logística (inventario de almacén, trazabilidad de palés), retail (antihurto integrado, autopago), bibliotecas (autopréstamo, inventario del fondo), hospitales (localización de equipos médicos), residencias de mayores (control de errantes), lavanderías (trazabilidad de prendas), joyerías (inventario pieza a pieza) y control de accesos. Si algo se mueve y necesita ser identificado, el RFID puede ayudar.</p>
+      <p style="font-size:1.1rem;color:var(--g700);line-height:1.85;font-weight:500;margin-bottom:1.5rem">La tecnología RFID (Identificación por Radiofrecuencia) está en todas partes, desde los pagos sin contacto hasta el rastreo de productos en grandes almacenes. Es una tecnología que, aunque pueda pasar desapercibida, está revolucionando sectores como la logística, el retail, el control de acceso y muchos más. En este artículo, exploraremos qué es RFID, cómo funciona y en qué ámbitos de nuestra vida cotidiana se aplica, tanto en el presente como en el futuro.</p>
+
+      <h2 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.3rem;margin:2rem 0 .75rem">¿Qué es RFID?</h2>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">RFID, o Identificación por Radiofrecuencia, es una tecnología de identificación y rastreo que utiliza ondas de radio para transmitir y recibir datos. A diferencia de los códigos de barras que requieren una línea de visión directa, los sistemas RFID permiten la identificación de objetos sin contacto directo, haciendo el proceso mucho más rápido y eficiente.</p>
+
+      <h3 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.1rem;margin:1.5rem 0 .6rem">Importancia del RFID en la actualidad</h3>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">La tecnología RFID ha ganado popularidad debido a su capacidad para mejorar la eficiencia y precisión en diversas aplicaciones. Desde controlar el inventario en un almacén hasta facilitar el pago sin contacto en tiendas, RFID está presente en nuestras vidas de formas que facilitan y optimizan múltiples procesos.</p>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">En este artículo, analizaremos cómo funciona la tecnología RFID, sus componentes, ventajas y desventajas, y sus aplicaciones en diversos sectores. Además, exploraremos las diferencias entre RFID y NFC, la seguridad en los sistemas RFID y su posible evolución en el futuro.</p>
+
+      <h2 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.3rem;margin:2rem 0 .75rem">¿Cómo funciona la tecnología RFID?</h2>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">Para entender el funcionamiento de RFID, es necesario conocer sus componentes y el proceso de transmisión de datos.</p>
+
+      <h3 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.1rem;margin:1.5rem 0 .6rem">Componentes básicos del sistema RFID</h3>
+      <ul style="color:var(--g700);line-height:1.8;margin:0 0 1rem 1.25rem">
+        <li><strong>Etiqueta RFID:</strong> Es el componente que contiene la información sobre el objeto. Puede ser pasiva (sin batería) o activa (con batería), y contiene un chip y una antena.</li>
+        <li><strong>Lector RFID:</strong> El dispositivo que emite las ondas de radio y recibe la información transmitida por la etiqueta.</li>
+        <li><strong>Antena:</strong> Permite la comunicación entre la etiqueta y el lector, enviando y recibiendo ondas de radio.</li>
+      </ul>
+
+      <h3 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.1rem;margin:1.5rem 0 .6rem">Proceso de lectura y escritura de datos</h3>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">El lector envía señales de radio que activan la etiqueta RFID, la cual responde transmitiendo la información almacenada en su chip. Este proceso ocurre en milisegundos, lo que hace que RFID sea ideal para entornos de alta velocidad, como líneas de producción o puntos de venta.</p>
+
+      <h3 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.1rem;margin:1.5rem 0 .6rem">Frecuencias utilizadas en RFID</h3>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">RFID utiliza diferentes frecuencias según la aplicación: baja frecuencia (LF), alta frecuencia (HF), y ultra-alta frecuencia (UHF). Cada frecuencia tiene un alcance y una velocidad de transmisión específicos, adaptándose a diferentes tipos de entornos y necesidades.</p>
+
+      <h2 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.3rem;margin:2rem 0 .75rem">Ventajas y desventajas del RFID</h2>
+      <h3 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.1rem;margin:1.5rem 0 .6rem">Ventajas</h3>
+      <ul style="color:var(--g700);line-height:1.8;margin:0 0 1rem 1.25rem">
+        <li><strong>Automatización:</strong> Permite el rastreo y control automático de inventarios.</li>
+        <li><strong>Eficiencia:</strong> Elimina la necesidad de escanear cada producto manualmente.</li>
+        <li><strong>Precisión:</strong> Disminuye los errores en la identificación y rastreo de objetos.</li>
+      </ul>
+      <h3 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.1rem;margin:1.5rem 0 .6rem">Desventajas</h3>
+      <ul style="color:var(--g700);line-height:1.8;margin:0 0 1rem 1.25rem">
+        <li><strong>Costo:</strong> Las etiquetas RFID son más costosas que otros métodos de identificación como los códigos de barras.</li>
+        <li><strong>Seguridad:</strong> Existen riesgos de interceptación de datos.</li>
+        <li><strong>Alcance limitado:</strong> Dependiendo de la frecuencia, el alcance puede ser limitado.</li>
+      </ul>
+
+      <h2 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.3rem;margin:2rem 0 .75rem">Aplicaciones del RFID</h2>
+      <h3 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.1rem;margin:1.5rem 0 .6rem">Logística y cadena de suministro</h3>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">El RFID permite rastrear el inventario en tiempo real, optimizando procesos de almacenamiento y distribución.</p>
+      <h3 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.1rem;margin:1.5rem 0 .6rem">Retail y comercio</h3>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">En tiendas, las etiquetas RFID agilizan el control de stock y facilitan el pago sin contacto.</p>
+      <h3 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.1rem;margin:1.5rem 0 .6rem">Control de acceso</h3>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">Las tarjetas de identificación con RFID se usan en oficinas y eventos para gestionar el acceso de personas.</p>
+      <h3 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.1rem;margin:1.5rem 0 .6rem">Identificación de animales</h3>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">Se usa en la identificación de mascotas y ganado, permitiendo llevar un control sanitario y de ubicación.</p>
+      <h3 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.1rem;margin:1.5rem 0 .6rem">Sector sanitario</h3>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">Ayuda en el rastreo de equipos médicos, medicamentos y registros de pacientes.</p>
+      <h3 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.1rem;margin:1.5rem 0 .6rem">Pago sin contacto</h3>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">Las tarjetas bancarias y dispositivos móviles utilizan RFID para realizar pagos rápidos y seguros.</p>
+
+      <h2 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.3rem;margin:2rem 0 .75rem">RFID vs NFC: ¿Cuál es la diferencia?</h2>
+      <h3 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.1rem;margin:1.5rem 0 .6rem">Comparación de las tecnologías RFID y NFC en términos de alcance, frecuencia y aplicaciones</h3>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">Mientras que RFID es ideal para distancias cortas y medias en aplicaciones industriales, NFC (Near Field Communication) es una forma de RFID que se usa principalmente en dispositivos móviles para transferencias seguras a distancias muy cortas, como pagos o autenticación de identidad.</p>
+
+      <h2 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.3rem;margin:2rem 0 .75rem">Seguridad en los sistemas RFID</h2>
+      <h3 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.1rem;margin:1.5rem 0 .6rem">Amenazas y riesgos</h3>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">La tecnología RFID puede ser vulnerable a riesgos como la clonación de etiquetas y el robo de información.</p>
+      <h3 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.1rem;margin:1.5rem 0 .6rem">Medidas de seguridad para proteger los datos</h3>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">Para proteger la información transmitida, se emplean sistemas de encriptación y autenticación. Además, existen cubiertas especiales para bloquear la lectura de datos.</p>
+
+      <h2 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.3rem;margin:2rem 0 .75rem">Ejemplos prácticos de uso del RFID en la vida cotidiana</h2>
+      <h3 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.1rem;margin:1.5rem 0 .6rem">Tarjetas de transporte público</h3>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">Las tarjetas de transporte con RFID facilitan el acceso rápido y seguro a medios de transporte.</p>
+      <h3 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.1rem;margin:1.5rem 0 .6rem">Etiquetas de productos en tiendas</h3>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">En retail, las etiquetas RFID permiten monitorear el inventario y rastrear productos en tiendas.</p>
+      <h3 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.1rem;margin:1.5rem 0 .6rem">Rastreo de paquetes</h3>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">Las empresas de mensajería utilizan RFID para rastrear envíos en tiempo real y mejorar la eficiencia en la entrega.</p>
+      <h3 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.1rem;margin:1.5rem 0 .6rem">Llaves electrónicas</h3>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">Muchas llaves de hoteles y oficinas utilizan RFID para autorizar la entrada de forma segura.</p>
+
+      <h2 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.3rem;margin:2rem 0 .75rem">El futuro del RFID</h2>
+      <h3 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.1rem;margin:1.5rem 0 .6rem">Tendencias y posibles aplicaciones futuras</h3>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">La tecnología RFID sigue evolucionando, con tendencias hacia etiquetas más económicas y un uso ampliado en aplicaciones de IoT, ciudades inteligentes, y seguridad. Se espera que el RFID forme parte de la infraestructura de identificación en el futuro.</p>
+
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">La tecnología RFID ha transformado sectores como la logística, el retail y el control de acceso, y continuará siendo fundamental en un mundo que busca eficiencia y precisión. Desde mejorar la gestión del inventario hasta facilitar los pagos sin contacto, el RFID es una tecnología que seguirá desarrollándose y adaptándose a nuevas aplicaciones.</p>
+
       <div style="margin-top:3rem;padding:1.5rem;background:rgba(8,145,178,.06);border-radius:12px;border-left:4px solid var(--teal)">
         <p style="font-weight:700;color:var(--navy);font-family:'Outfit',sans-serif;margin-bottom:.5rem">¿Quieres implantar esta solución en tu empresa?</p>
         <p style="color:var(--g600);margin-bottom:1rem">El equipo técnico de Serdoc lleva más de 25 años implantando proyectos RFID. Evaluación gratuita sin compromiso.</p>

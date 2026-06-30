@@ -835,8 +835,124 @@ a:hover .arrow-r{transform:translateX(3px)}
   <div class="article-grid">
     <article>
       <img src="/images/cuales-son-las-aplicaciones-mas-comunes-del-sistema-rfid.webp" alt="Aplicaciones más comunes del RFID por sector" style="width:100%;border-radius:12px;object-fit:cover;height:320px;margin-bottom:2rem" loading="eager">
-      <p style="font-size:1.1rem;color:var(--g700);line-height:1.85;font-weight:500;margin-bottom:1.5rem">La tecnología RFID lleva décadas en uso, pero en los últimos años su precio ha caído hasta hacerla accesible para cualquier empresa. Estas son las aplicaciones más frecuentes en los sectores donde Serdoc tiene mayor experiencia.</p>
-      <h2 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.3rem;margin:2rem 0 .75rem">Logística y almacenes</h2><p style="color:var(--g700);line-height:1.9;margin-bottom:1rem">El inventario es la aplicación más implantada. Con RFID, contar el stock de un almacén entero pasa de ser un proceso de días a ser cuestión de horas. Los sistemas de entrada/salida en muelles con lectores fijos eliminan el conteo manual de cajas. El seguimiento de palés en tiempo real reduce pérdidas y mejora la exactitud de las expediciones. Retorno de inversión típico: 12-24 meses.</p><h2 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.3rem;margin:2rem 0 .75rem">Retail y moda</h2><p style="color:var(--g700);line-height:1.9;margin-bottom:1rem">Las cadenas de moda fueron las primeras en adoptar RFID a escala global (Zara, H&amp;M, C&amp;A). Las ventajas son: antihurto integrado (sin portales adicionales), inventario diario en minutos (no en días), disponibilidad de talla/color en tiempo real y autopago sin colas. Las cadenas con RFID reducen sus pérdidas desconocidas en un 50-80%.</p><h2 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.3rem;margin:2rem 0 .75rem">Bibliotecas</h2><p style="color:var(--g700);line-height:1.9;margin-bottom:1rem">El autopréstamo y la devolución automatizada liberan al personal de las tareas más repetitivas. El inventario del fondo, que antes requería días cerrar la biblioteca, se hace en horas con un lector portátil pasando por las estanterías. Serdoc lleva más de 25 años implantando sistemas RFID en redes de bibliotecas municipales y universitarias.</p><h2 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.3rem;margin:2rem 0 .75rem">Sanidad: hospitales y residencias</h2><p style="color:var(--g700);line-height:1.9;margin-bottom:1rem">En hospitales, RFID permite localizar equipos médicos (sillas de ruedas, bombas de infusión) sin llamadas telefónicas. En quirófanos, controla que todo el instrumental ha entrado y salido. En residencias de mayores, detecta automáticamente cuando un residente se acerca a una salida no autorizada. En lavanderías de hospitales, controla el ciclo de cada prenda de ropa.</p>
+      <h2 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.3rem;margin:2rem 0 .75rem">Introducción al sistema RFID</h2>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">Vivimos en una era en la que la automatización y la precisión marcan la diferencia entre un negocio eficiente y otro que simplemente sobrevive. Y en este contexto, el sistema RFID ha pasado de ser una curiosidad tecnológica a convertirse en una herramienta fundamental en múltiples sectores.</p>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">Desde centros logísticos gigantes hasta bibliotecas de barrio, pasando por hospitales, tiendas de ropa y granjas, la tecnología RFID (Identificación por Radiofrecuencia) está transformando la forma en que gestionamos objetos, controlamos inventarios y optimizamos procesos. Su gran ventaja es que permite la identificación y seguimiento automático de elementos sin contacto físico directo, lo que reduce errores humanos, mejora la trazabilidad y multiplica la eficiencia operativa.</p>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">En este artículo te contamos, con ejemplos reales y aplicaciones prácticas, dónde y cómo se utiliza el sistema RFID en la vida diaria, en la industria y en sectores que quizás no imaginabas.</p>
+
+      <h2 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.3rem;margin:2rem 0 .75rem">¿Qué es la tecnología RFID y cómo funciona?</h2>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">La RFID, o Identificación por Radiofrecuencia, es una tecnología de comunicación inalámbrica que permite identificar, localizar y gestionar objetos a través de ondas de radio. Suena complejo, pero en realidad es muy sencillo: cada objeto lleva una etiqueta (como si fuera un DNI electrónico), y un lector es capaz de captarla sin necesidad de contacto directo, incluso sin estar en línea de visión.</p>
+      <h3 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.1rem;margin:1.5rem 0 .6rem">¿Cómo funciona el proceso?</h3>
+      <ol style="color:var(--g700);line-height:1.8;margin:0 0 1rem 1.25rem">
+        <li>La etiqueta RFID contiene un microchip con información y una antena.</li>
+        <li>El lector RFID emite una señal de radio que activa la etiqueta.</li>
+        <li>La etiqueta responde enviando sus datos al lector.</li>
+        <li>El software recoge la información, la procesa y la integra con tus sistemas de gestión.</li>
+      </ol>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">A diferencia de los códigos de barras, que requieren ser leídos de uno en uno y con visibilidad directa, el RFID permite leer cientos de objetos a la vez, incluso a través de cajas, ropa o paredes. Imagina el salto de productividad que supone eso en un almacén o en una línea de producción.</p>
+
+      <h2 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.3rem;margin:2rem 0 .75rem">Componentes básicos de un sistema RFID</h2>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">Un sistema RFID bien diseñado está compuesto por varios elementos que trabajan juntos como un equipo perfectamente coordinado. Vamos a verlos:</p>
+      <ul style="color:var(--g700);line-height:1.8;margin:0 0 1rem 1.25rem">
+        <li><strong>Etiquetas RFID (Tags):</strong> pueden ser pasivas (sin batería), activas (con batería propia) o semipasivas (con batería pero solo para el chip). Estas etiquetas pueden tener distintos formatos: adhesivos, tarjetas, llaveros, brazaletes, discos, etc.</li>
+        <li><strong>Lectores RFID:</strong> son los dispositivos encargados de emitir la señal y leer los datos de las etiquetas. Pueden ser fijos (colocados en puertas, estanterías o líneas de producción) o portátiles (tipo PDA o móviles industriales).</li>
+        <li><strong>Antenas:</strong> son los elementos que amplifican la señal del lector, permitiendo llegar más lejos o cubrir más superficie.</li>
+        <li><strong>Software de gestión RFID:</strong> es el "cerebro" del sistema, donde se integran y analizan los datos en tiempo real, se generan alertas, se automatizan tareas y se conectan con ERPs o CRMs.</li>
+      </ul>
+
+      <h2 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.3rem;margin:2rem 0 .75rem">1. Aplicaciones en logística y cadena de suministro</h2>
+      <h3 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.1rem;margin:1.5rem 0 .6rem">Gestión de inventarios en tiempo real</h3>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">La logística moderna no puede depender de contar palés a mano o revisar albaranes en papel. El RFID permite hacer inventarios en cuestión de minutos, con una precisión cercana al 100% y sin necesidad de mover ni abrir cajas. Además, puedes saber qué hay, dónde está y en qué estado se encuentra cada producto.</p>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">Ejemplo: una empresa de distribución que antes tardaba dos semanas en hacer inventario físico, ahora lo hace en una mañana y sin cerrar la operativa.</p>
+      <h3 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.1rem;margin:1.5rem 0 .6rem">Rastreo de envíos y paquetería</h3>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">Con el RFID, cada paquete o palé puede ser rastreado en tiempo real durante todo su recorrido logístico. Si hay una desviación, un retraso o un extravío, se detecta al momento. Esto mejora la trazabilidad, reduce reclamaciones y aumenta la confianza del cliente final.</p>
+      <h3 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.1rem;margin:1.5rem 0 .6rem">Automatización de almacenes</h3>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">Los almacenes inteligentes combinan RFID con robots, cintas transportadoras y sistemas de picking automatizados. El resultado es un flujo de trabajo sin interrupciones, con control total de entradas y salidas, y sin errores humanos.</p>
+
+      <h2 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.3rem;margin:2rem 0 .75rem">2. Usos en el sector minorista (retail)</h2>
+      <h3 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.1rem;margin:1.5rem 0 .6rem">Control antirobo en tiendas</h3>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">Las etiquetas RFID actúan como sistemas de seguridad avanzados. Al estar integradas con las puertas de acceso, pueden detectar cualquier intento de sustracción, incluso si el producto está escondido o no visible. Además, como cada etiqueta tiene un código único, se puede saber exactamente qué producto ha intentado salir sin pasar por caja.</p>
+      <h3 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.1rem;margin:1.5rem 0 .6rem">Gestión inteligente de stock</h3>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">¿Te ha pasado ir a una tienda, ver el estante vacío y que te digan "debe haber en el almacén"? Con RFID eso se acabó. El sistema sabe al momento qué productos están disponibles, cuántos hay y dónde están ubicados. Esto mejora la reposición, evita roturas de stock y permite ofrecer una mejor experiencia de cliente, con sistemas como el "click & collect" o el probador inteligente.</p>
+      <h3 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.1rem;margin:1.5rem 0 .6rem">Experiencias de compra innovadoras</h3>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">El RFID también está cambiando la experiencia de compra. Desde probadores que muestran sugerencias en pantalla hasta sistemas de pago que detectan automáticamente los artículos al salir, sin pasar por caja. Ejemplo real: tiendas como Zara o Decathlon han reducido drásticamente el tiempo en caja y han mejorado la satisfacción del cliente.</p>
+
+      <h2 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.3rem;margin:2rem 0 .75rem">3. Aplicaciones en el sector salud</h2>
+      <h3 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.1rem;margin:1.5rem 0 .6rem">Identificación de pacientes y medicamentos</h3>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">El uso de RFID en hospitales permite asociar cada paciente con su historial, medicación, alergias y tratamientos, evitando errores médicos. También se utilizan etiquetas RFID en las pulseras hospitalarias, mejorando la seguridad del paciente y agilizando la atención.</p>
+      <h3 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.1rem;margin:1.5rem 0 .6rem">Rastreo de equipos médicos</h3>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">Equipos como desfibriladores, ecógrafos o respiradores pueden ser localizados en tiempo real dentro del hospital, evitando pérdidas o retrasos en situaciones críticas. Dato interesante: un hospital medio puede perder más de 1.000 horas al año buscando equipamiento sin RFID.</p>
+      <h3 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.1rem;margin:1.5rem 0 .6rem">Gestión de muestras biológicas</h3>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">Cada muestra de sangre, tejido o análisis puede ir etiquetada, permitiendo un seguimiento completo desde la extracción hasta el laboratorio. Esto evita errores de identificación y asegura la trazabilidad clínica.</p>
+
+      <h2 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.3rem;margin:2rem 0 .75rem">4. Implementaciones en control de acceso</h2>
+      <h3 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.1rem;margin:1.5rem 0 .6rem">Tarjetas de identificación corporativas</h3>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">Muchas empresas ya usan tarjetas con chip RFID para controlar quién entra, a qué hora y en qué áreas del edificio. Esto permite tener un control de presencia, aumentar la seguridad y facilitar auditorías.</p>
+      <h3 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.1rem;margin:1.5rem 0 .6rem">Sistemas de pago sin contacto</h3>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">Desde máquinas de vending hasta comedores o impresoras compartidas, el RFID permite asociar una cuenta a cada usuario, sin necesidad de monedas ni tarjetas bancarias.</p>
+      <h3 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.1rem;margin:1.5rem 0 .6rem">Control de accesos en eventos masivos</h3>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">Festivales de música, congresos, ferias… RFID agiliza el acceso, evita colas y permite controlar el aforo. Además, puede integrarse con apps móviles para mejorar la experiencia del asistente.</p>
+
+      <h2 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.3rem;margin:2rem 0 .75rem">5. Usos en la industria manufacturera</h2>
+      <h3 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.1rem;margin:1.5rem 0 .6rem">Seguimiento de componentes en líneas de producción</h3>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">En fábricas con procesos complejos, cada componente puede llevar una etiqueta RFID para saber en qué fase está, si ha pasado por los controles de calidad y cuándo estará listo el producto final. Ejemplo: una planta automotriz puede rastrear cada pieza de un coche hasta el ensamblaje final.</p>
+      <h3 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.1rem;margin:1.5rem 0 .6rem">Gestión de herramientas y equipos</h3>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">En sectores donde las herramientas son costosas o especializadas, RFID permite saber quién ha usado qué herramienta, durante cuánto tiempo y en qué parte del proceso. Esto mejora el control, reduce pérdidas y facilita el mantenimiento.</p>
+      <h3 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.1rem;margin:1.5rem 0 .6rem">Control de calidad automatizado</h3>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">Si un producto no ha pasado por todos los puntos obligatorios del proceso, el sistema puede detectarlo y apartarlo automáticamente. Así se evitan errores antes de que lleguen al cliente.</p>
+
+      <h2 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.3rem;margin:2rem 0 .75rem">6. Aplicaciones en agricultura y ganadería</h2>
+      <h3 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.1rem;margin:1.5rem 0 .6rem">Identificación y trazabilidad animal</h3>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">Cada animal puede llevar una etiqueta RFID (interna o externa) con su historial veterinario, alimentación, movimientos y tratamientos. Esto garantiza la trazabilidad alimentaria, mejora la salud del rebaño y facilita auditorías sanitarias. Ejemplo real: explotaciones ganaderas que controlan más de 5.000 cabezas con sistemas RFID y reciben alertas si un animal cambia su comportamiento o ubicación.</p>
+      <h3 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.1rem;margin:1.5rem 0 .6rem">Gestión de cultivos y cosechas</h3>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">Las etiquetas RFID pueden marcar zonas de cultivo, asociando datos como fechas de siembra, tratamientos fitosanitarios, cantidad de agua utilizada o previsión de cosecha. Esto permite una agricultura más precisa, sostenible y rentable.</p>
+      <h3 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.1rem;margin:1.5rem 0 .6rem">Monitoreo de maquinaria agrícola</h3>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">Los tractores, sembradoras o sistemas de riego pueden ser gestionados mediante RFID, registrando sus usos, mantenimiento y rendimiento.</p>
+
+      <h2 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.3rem;margin:2rem 0 .75rem">7. Implementaciones en bibliotecas y archivos</h2>
+      <h3 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.1rem;margin:1.5rem 0 .6rem">Sistema de préstamos automatizados</h3>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">Con RFID, el usuario puede hacer préstamos y devoluciones sin necesidad de ayuda del personal. Basta con pasar los libros por un lector y el sistema lo hace todo. Esto reduce colas, mejora la experiencia del usuario y permite al personal centrarse en tareas de mayor valor.</p>
+      <h3 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.1rem;margin:1.5rem 0 .6rem">Organización de colecciones</h3>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">Buscar un libro perdido en una biblioteca puede ser como encontrar una aguja en un pajar… salvo que ese "pajar" tenga etiquetas RFID. Con un lector portátil, se puede localizar un ejemplar en segundos.</p>
+      <h3 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.1rem;margin:1.5rem 0 .6rem">Protección contra robos</h3>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">Las salidas están equipadas con detectores que alertan si un libro sale sin ser registrado. Al igual que en tiendas, pero adaptado al entorno cultural.</p>
+
+      <h2 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.3rem;margin:2rem 0 .75rem">8. Usos en la gestión documental</h2>
+      <h3 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.1rem;margin:1.5rem 0 .6rem">Archivo y recuperación de documentos</h3>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">Cada carpeta puede llevar una etiqueta RFID con su código, responsable, fecha y estado. Así, encontrar un documento específico no depende de la memoria de una sola persona.</p>
+      <h3 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.1rem;margin:1.5rem 0 .6rem">Seguimiento de expedientes</h3>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">En bufetes de abogados, notarías o clínicas, los expedientes se mueven entre departamentos. El RFID permite saber quién tiene qué y desde cuándo, evitando extravíos.</p>
+      <h3 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.1rem;margin:1.5rem 0 .6rem">Digitalización de procesos</h3>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">Al combinar RFID con escáneres y sistemas documentales, se puede hacer un seguimiento completo tanto del papel físico como de su versión digital.</p>
+
+      <h2 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.3rem;margin:2rem 0 .75rem">9. Aplicaciones emergentes y futuras</h2>
+      <h3 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.1rem;margin:1.5rem 0 .6rem">Ciudades inteligentes</h3>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">RFID se está integrando en farolas, semáforos, contenedores y vehículos municipales para crear entornos urbanos conectados. Esto permite optimizar el tráfico, reducir residuos o mejorar la seguridad ciudadana.</p>
+      <h3 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.1rem;margin:1.5rem 0 .6rem">Internet de las cosas (IoT)</h3>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">RFID es un pilar fundamental del IoT, donde cada objeto está conectado, envía datos y puede tomar decisiones. Desde neveras que avisan cuando falta leche hasta estanterías que reponen productos solas.</p>
+      <h3 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.1rem;margin:1.5rem 0 .6rem">Innovaciones en wearables</h3>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">Pulseras que miden actividad física, controlan accesos, permiten pagos o incluso monitorizan signos vitales… todo eso es posible gracias a la tecnología RFID integrada en dispositivos portables.</p>
+
+      <h2 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.3rem;margin:2rem 0 .75rem">Cómo elegir el sistema RFID adecuado</h2>
+      <h3 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.1rem;margin:1.5rem 0 .6rem">Factores clave</h3>
+      <ul style="color:var(--g700);line-height:1.8;margin:0 0 1rem 1.25rem">
+        <li><strong>Entorno:</strong> no es lo mismo una granja que una joyería.</li>
+        <li><strong>Distancia de lectura:</strong> ¿necesitas leer a 1 metro o a 20?</li>
+        <li><strong>Volumen de datos y velocidad requerida.</strong></li>
+        <li><strong>Materiales:</strong> el metal y el agua pueden afectar la señal.</li>
+      </ul>
+      <h3 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.1rem;margin:1.5rem 0 .6rem">Tipos de etiquetas</h3>
+      <ul style="color:var(--g700);line-height:1.8;margin:0 0 1rem 1.25rem">
+        <li><strong>Pasivas:</strong> baratas y eficientes para grandes volúmenes.</li>
+        <li><strong>Activas:</strong> más caras, pero con largo alcance.</li>
+        <li><strong>Semipasivas:</strong> el punto medio.</li>
+      </ul>
+      <h3 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.1rem;margin:1.5rem 0 .6rem">Coste vs beneficio</h3>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">Aunque la inversión inicial puede parecer alta, los beneficios en eficiencia, control, trazabilidad y reducción de errores lo compensan rápidamente. Y en muchos casos, el ROI se alcanza en menos de un año.</p>
+
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">El RFID ya no es solo una tecnología para grandes corporaciones. Es una herramienta versátil, adaptable y extremadamente útil para mejorar procesos en todo tipo de sectores. Desde un agricultor que quiere controlar su producción, hasta una empresa que gestiona millones de productos en todo el mundo.</p>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">¿La mejor parte? Estamos solo al principio. Las aplicaciones de RFID seguirán creciendo con la automatización, la inteligencia artificial y el internet de las cosas. Desde almacenes hasta hospitales, controla el ciclo de cada prenda de ropa.</p>
+
       <div style="margin-top:3rem;padding:1.5rem;background:rgba(8,145,178,.06);border-radius:12px;border-left:4px solid var(--teal)">
         <p style="font-weight:700;color:var(--navy);font-family:'Outfit',sans-serif;margin-bottom:.5rem">¿Quieres implantar esta solución en tu empresa?</p>
         <p style="color:var(--g600);margin-bottom:1rem">El equipo técnico de Serdoc lleva más de 25 años implantando proyectos RFID. Evaluación gratuita sin compromiso.</p>

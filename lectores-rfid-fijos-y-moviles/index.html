@@ -835,8 +835,83 @@ a:hover .arrow-r{transform:translateX(3px)}
   <div class="article-grid">
     <article>
       <img src="/images/lectores-rfid-fijos-y-moviles.webp" alt="Lectores RFID fijos y móviles: diferencias, ventajas y casos de uso" style="width:100%;border-radius:12px;object-fit:cover;height:320px;margin-bottom:2rem" loading="eager">
-      <p style="font-size:1.1rem;color:var(--g700);line-height:1.85;font-weight:500;margin-bottom:1.5rem">El lector (reader) es el cerebro del sistema RFID: genera el campo electromagnético, lee las etiquetas y envía los datos al middleware. Existen dos grandes categorías: lectores fijos (siempre activos, sin intervención humana) y lectores móviles (portátiles, usados por el operario). La combinación correcta depende de la operativa.</p>
-      <h2 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.3rem;margin:2rem 0 .75rem">Lectores fijos: automatización total</h2><p style="color:var(--g700);line-height:1.9;margin-bottom:1rem">Los lectores fijos se instalan en puntos concretos (portales de almacén, puertas de tienda, cintas de producción) y leen todas las etiquetas que pasan por su campo sin intervención humana. Son la base de los sistemas de control automático de stock en almacén y del antihurto RFID en retail. Una puerta de muelle con lector fijo puede registrar la entrada de un palé con 500 artículos en menos de 1 segundo.</p><h2 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.3rem;margin:2rem 0 .75rem">Terminales portátiles: flexibilidad en la operativa</h2><p style="color:var(--g700);line-height:1.9;margin-bottom:1rem">El terminal portátil (o PDA con lector RFID integrado) lo usa el operario para hacer inventario por zonas, localizar artículos concretos o confirmar cargas manualmente. Es la herramienta habitual para el inventario de tienda, la comprobación de expediciones y la trazabilidad en zonas donde no hay lectores fijos. Los modelos modernos tienen pantalla táctil, WiFi, 4G, Bluetooth y batería para un turno completo.</p><h2 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.3rem;margin:2rem 0 .75rem">Antenas: la variable clave en lectores fijos</h2><p style="color:var(--g700);line-height:1.9;margin-bottom:1rem">El lector fijo en sí es solo la &quot;inteligencia&quot;. Las antenas son los elementos que irradian el campo de radio. Una instalación real puede tener 1 lector con 4-8 antenas cubriendo una zona. La forma de la antena (circular, lineal, de parche), su ganancia y su orientación determinan el patrón de cobertura. Diseñar correctamente la disposición de antenas es crítico para evitar lecturas indeseadas y garantizar cobertura completa.</p><h2 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.3rem;margin:2rem 0 .75rem">¿Fijo, móvil o ambos?</h2><p style="color:var(--g700);line-height:1.9;margin-bottom:1rem">La respuesta habitual es: ambos. Los lectores fijos en los puntos críticos (muelles, cajas, accesos) y los terminales portátiles para el trabajo de campo. El sistema de Serdoc integra ambos tipos en el mismo middleware y proporciona una visión unificada del stock en tiempo real.</p>
+      <h2 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.3rem;margin:2rem 0 .75rem">El dilema de la conectividad RFID</h2>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">Elegir entre lectores RFID fijos vs móviles puede parecer tan complicado como decidir si conviene comprar un coche o alquilar un patinete eléctrico. Ambos te llevan al destino, pero las condiciones del camino y tus necesidades marcan la diferencia.</p>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">En logística, retail e industria, la selección del lector adecuado es más que una cuestión técnica: determina la velocidad de tus procesos, el nivel de automatización y hasta la rentabilidad de la inversión.</p>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">En este artículo veremos qué ofrecen los sistemas fijos, qué ventajas dan los dispositivos móviles RFID y, sobre todo, cómo decidir qué lector es el adecuado para tu operación.</p>
+
+      <h2 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.3rem;margin:2rem 0 .75rem">1. Lectores fijos: Automatización industrial</h2>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">Los lectores RFID fijos son como tener una "puerta inteligente" que detecta todo lo que pasa por delante sin que nadie tenga que sostener un escáner. Se instalan en zonas estratégicas como cintas transportadoras, portales de almacén o entradas de muelles de carga.</p>
+      <h3 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.1rem;margin:1.5rem 0 .6rem">Instalación en cintas transportadoras y portales</h3>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">Un ejemplo práctico: en un centro logístico, cada palé que cruza un portal RFID queda automáticamente registrado en el ERP, sin intervención humana. Esto permite gestionar miles de unidades por hora sin margen de error.</p>
+      <h3 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.1rem;margin:1.5rem 0 .6rem">Casos de uso ideales: almacenes y puntos de control</h3>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">Funcionan muy bien en almacenes con alto volumen de tags por segundo o en puntos donde es vital registrar todos los movimientos (entrada, salida, devoluciones).</p>
+
+      <h2 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.3rem;margin:2rem 0 .75rem">2. Ventajas clave de los lectores fijos</h2>
+      <ul style="color:var(--g700);line-height:1.8;margin:0 0 1rem 1.25rem">
+        <li><strong>Lectura continua sin intervención humana:</strong> automatización total de flujos de mercancía.</li>
+        <li><strong>Integración con sistemas de gestión (ERP, WMS):</strong> los datos se actualizan en tiempo real.</li>
+        <li><strong>Capacidad de procesar alto volumen:</strong> pueden leer cientos de etiquetas simultáneamente, incluso en movimiento.</li>
+      </ul>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">En resumen, son como tener un cajero automático que nunca se equivoca… siempre que esté bien configurado.</p>
+
+      <h2 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.3rem;margin:2rem 0 .75rem">3. Limitaciones de los sistemas fijos</h2>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">Claro, no todo es perfecto.</p>
+      <ul style="color:var(--g700);line-height:1.8;margin:0 0 1rem 1.25rem">
+        <li><strong>Inversión inicial elevada:</strong> requieren infraestructura, instalación profesional y hardware especializado.</li>
+        <li><strong>Reconfiguración limitada:</strong> mover un portal RFID no es tan fácil como cambiar un lector portátil de mano.</li>
+        <li><strong>Mantenimiento especializado:</strong> necesitan revisiones periódicas para garantizar el rendimiento.</li>
+      </ul>
+
+      <h2 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.3rem;margin:2rem 0 .75rem">4. Lectores móviles: Versatilidad en movimiento</h2>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">Los dispositivos móviles RFID (pistolas lectoras, tablets con antenas integradas, incluso wearables) son el equivalente tecnológico a llevar una linterna: puedes iluminar justo donde necesitas, cuando lo necesitas.</p>
+      <h3 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.1rem;margin:1.5rem 0 .6rem">Tablets RFID y pistolas escáner</h3>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">Con una pistola RFID portátil, un operario puede recorrer los pasillos del almacén y hacer inventario en minutos. En retail, basta con pasar cerca de las prendas para que el sistema detecte el stock.</p>
+      <h3 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.1rem;margin:1.5rem 0 .6rem">Aplicaciones en inventarios y retail</h3>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">Son ideales para inventarios rápidos en tienda, conteo en almacenes medianos, verificación de devoluciones o localizar un producto perdido en cuestión de segundos.</p>
+
+      <h2 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.3rem;margin:2rem 0 .75rem">5. Fortalezas de los lectores móviles</h2>
+      <ul style="color:var(--g700);line-height:1.8;margin:0 0 1rem 1.25rem">
+        <li><strong>Flexibilidad total:</strong> puedes moverlos de un punto a otro según la operación.</li>
+        <li><strong>Ideales para operaciones estacionales:</strong> por ejemplo, ventas de Black Friday o campañas de verano.</li>
+        <li><strong>Reducción de errores humanos:</strong> permiten verificar inventarios con mayor precisión que un conteo manual.</li>
+      </ul>
+
+      <h2 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.3rem;margin:2rem 0 .75rem">6. Desventajas de la solución móvil</h2>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">Aunque versátiles, tienen límites:</p>
+      <ul style="color:var(--g700);line-height:1.8;margin:0 0 1rem 1.25rem">
+        <li><strong>Dependencia de batería y conectividad:</strong> si se queda sin carga, el inventario se interrumpe.</li>
+        <li><strong>Velocidad menor de lectura</strong> frente a sistemas fijos.</li>
+        <li><strong>Entornos extremos</strong> (altas temperaturas, polvo, humedad) pueden afectar su durabilidad.</li>
+      </ul>
+
+      <h2 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.3rem;margin:2rem 0 .75rem">7. Factores decisivos para elegir</h2>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">La comparativa de lectores RFID fijos vs móviles debe hacerse con base en:</p>
+      <ul style="color:var(--g700);line-height:1.8;margin:0 0 1rem 1.25rem">
+        <li><strong>Volumen de lecturas:</strong> miles de tags por hora = fijos; inventarios periódicos = móviles.</li>
+        <li><strong>Tipo de producto y tag:</strong> materiales metálicos o líquidos pueden requerir configuraciones específicas.</li>
+        <li><strong>Presupuesto y ROI:</strong> inversión inicial más alta en fijos, pero con retorno rápido en operaciones masivas.</li>
+      </ul>
+
+      <h2 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.3rem;margin:2rem 0 .75rem">8. Integración híbrida: Lo mejor de ambos mundos</h2>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">En muchos casos, la mejor solución no es elegir, sino combinar.</p>
+      <ul style="color:var(--g700);line-height:1.8;margin:0 0 1rem 1.25rem">
+        <li><strong>Lectores fijos</strong> en zonas críticas como entradas de almacén.</li>
+        <li><strong>Lectores portátiles RFID</strong> para picking, inventarios y control flexible.</li>
+      </ul>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">La sincronización en tiempo real con ERP y WMS permite tener un control absoluto del flujo de mercancías.</p>
+
+      <h2 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.3rem;margin:2rem 0 .75rem">9. Tendencias futuras y recomendaciones</h2>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">La industria ya trabaja en lectores más inteligentes:</p>
+      <ul style="color:var(--g700);line-height:1.8;margin:0 0 1rem 1.25rem">
+        <li><strong>IA para filtrado automático de datos:</strong> menos ruido, más información útil.</li>
+        <li><strong>Gestión remota en la nube:</strong> monitorizar y configurar equipos desde cualquier lugar.</li>
+        <li><strong>Escalabilidad flexible:</strong> sistemas que crecen con tu negocio, no al revés.</li>
+      </ul>
+
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">Elegir entre lectores RFID fijos o móviles no es una cuestión de blanco o negro: depende de la operación, el volumen y el presupuesto. Los fijos ofrecen automatización total y alta velocidad; los móviles, flexibilidad y eficiencia en inventarios.</p>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">Lo más interesante es que ambos pueden convivir en un mismo entorno, complementándose para dar lo mejor de sí. En definitiva, se trata de alinear la tecnología con tus objetivos de negocio y apostar por una solución que garantice productividad, trazabilidad y ROI real. Nuestro equipo proporciona una visión unificada del stock en tiempo real.</p>
+
       <div style="margin-top:3rem;padding:1.5rem;background:rgba(8,145,178,.06);border-radius:12px;border-left:4px solid var(--teal)">
         <p style="font-weight:700;color:var(--navy);font-family:'Outfit',sans-serif;margin-bottom:.5rem">¿Quieres implantar esta solución en tu empresa?</p>
         <p style="color:var(--g600);margin-bottom:1rem">El equipo técnico de Serdoc lleva más de 25 años implantando proyectos RFID. Evaluación gratuita sin compromiso.</p>
