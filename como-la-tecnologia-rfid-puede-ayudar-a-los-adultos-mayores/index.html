@@ -1,13 +1,13 @@
 <!DOCTYPE html><html lang="es"><head>
 <meta charset="UTF-8">
-<li style="display:flex;align-items:flex-start;gap:.5rem;margin-bottom:.5rem"><span style="color:var(--amber);font-weight:700;flex-shrink:0;margin-top:.15rem">✓</span><span style="color:var(--g700);line-height:1.8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Cómo el RFID puede ayudar a los adultos mayores | Serdoc</title><meta name="description" content="Aplicaciones del RFID para mejorar la seguridad y autonomía de adultos mayores: control de errantes, dispensación de medicamentos y asistencia en el hogar.">
-<link rel="canonical" href="https://www.serdoc.es/como-la-tecnologia-rfid-puede-ayudar-a-los-adultos-mayores/"><meta name="robots" content="index,follow">
-<meta property="og:type" content="article"><meta property="og:url" content="https://www.serdoc.es/como-la-tecnologia-rfid-puede-ayudar-a-los-adultos-mayores/">
-<meta property="og:title" content="Cómo el RFID puede ayudar a los adultos mayores | Serdoc"><meta property="og:description" content="Aplicaciones del RFID para mejorar la seguridad y autonomía de adultos mayores: control de errantes, dispensación de medicamentos y asistencia en el hogar.">
-<meta property="og:image" content="/images/como-la-tecnologia-rfid-puede-ayudar-a-los-adultos-mayores.webp"><meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Cómo el RFID puede ayudar a los adultos mayores | Serdoc</title><meta name="description" content="Software ACCEDE para reserva de ordenadores, salas, puestos de consulta y control de aforo. Para bibliotecas, universidades, ayuntamientos y centros sanitarios.">
+<link rel="canonical" href="https://www.serdoc.es/rfid-ganaderia-trazabilidad-animal-espana/"><meta name="robots" content="index,follow">
+<meta property="og:type" content="article"><meta property="og:url" content="https://www.serdoc.es/rfid-ganaderia-trazabilidad-animal-espana/">
+<meta property="og:title" content="RFID en ganadería y trazabilidad animal en España | Serdoc"><meta property="og:description" content="RFID en ganadería española: identificación de bovinos, porcinos y équidos, cumplimiento normativo y sistemas de trazabilidad animal. Guía de Serdoc.">
+<meta property="og:image" content="/images/rfid-ganaderia-trazabilidad-animal-espana.webp"><meta name="twitter:card" content="summary_large_image">
 <meta name="google-site-verification" content="OIjTbV3rH7Xazv0qjQYDeix4W-D63KeJp04xwGasD8M">
-<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":Cómo la tecnología RFID puede ayudar a los adultos mayores,"description":Aplicaciones del RFID para mejorar la seguridad y autonomía de adultos mayores: control de errantes, dispensación de medicamentos y asistencia en el hogar.,"datePublished":"2025-04-01","author":{"@type":"Organization","name":"Serdoc Informática S.L."},"publisher":{"@type":"Organization","name":"Serdoc Informática S.L.","url":"https://www.serdoc.es"},"url":"https://www.serdoc.es/como-la-tecnologia-rfid-puede-ayudar-a-los-adultos-mayores/","image":"/images/como-la-tecnologia-rfid-puede-ayudar-a-los-adultos-mayores.webp""@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://www.serdoc.es/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://www.serdoc.es/blog/"},{"@type":"ListItem","position":3,"name":Cómo la tecnología RFID puede ayudar a los adultos mayores,"item":"https://www.serdoc.es/como-la-tecnologia-rfid-puede-ayudar-a-los-adultos-mayores/"}]}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":RFID en ganadería: trazabilidad animal y cumplimiento normativo en España,"description":RFID en ganadería española: identificación de bovinos, porcinos y équidos, cumplimiento normativo y sistemas de trazabilidad animal. Guía de Serdoc.,"datePublished":"2025-06-10","author":{"@type":"Organization","name":"Serdoc Informática S.L."},"publisher":{"@type":"Organization","name":"Serdoc Informática S.L.","url":"https://www.serdoc.es"},"url":"https://www.serdoc.es/rfid-ganaderia-trazabilidad-animal-espana/","image":"/images/rfid-ganaderia-trazabilidad-animal-espana.webp""@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://www.serdoc.es/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://www.serdoc.es/blog/"},{"@type":"ListItem","position":3,"name":RFID en ganadería: trazabilidad animal y cumplimiento normativo en España,"item":"https://www.serdoc.es/rfid-ganaderia-trazabilidad-animal-espana/"}]}]}</script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZXXNMZ7DNZ"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-ZXXNMZ7DNZ');</script>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -608,6 +608,115 @@ a:hover .arrow-r{transform:translateX(3px)}
 }
 
 
+/* ═══ PATCH v4 ═══ */
+
+/* 1 ── All buttons: border-radius matches orange hero button (var(--radius) = 10px) */
+/* Override previous 50px — restore to var(--radius) */
+.btn,
+.btn-ghost,
+.btn-cta-outline,
+.btn-secondary-pill,
+.btn-navy,
+.btn-accede {
+  border-radius: var(--radius) !important;
+}
+.btn-ghost:hover,
+.btn-cta-outline:hover,
+.btn-secondary-pill:hover {
+  border-radius: var(--radius) !important;
+}
+
+/* 2 ── External links outside cards: style matches "Ver todos los servicios" */
+/* Exact match of .sectors-toggle from the home */
+.btn-ghost,
+.btn-cta-outline,
+.btn-secondary-pill {
+  background: var(--white) !important;
+  border: 1.5px solid var(--g200) !important;
+  color: var(--navy-deep) !important;
+  font-weight: 700 !important;
+  padding: .85rem 2rem !important;
+  font-size: .95rem !important;
+  box-shadow: 0 2px 12px rgba(15,27,51,.07) !important;
+  transition: all .2s !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: .5rem !important;
+  cursor: pointer !important;
+  text-decoration: none !important;
+}
+.btn-ghost:hover,
+.btn-cta-outline:hover,
+.btn-secondary-pill:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 10px 32px rgba(15,27,51,.13) !important;
+  border-color: var(--g300) !important;
+  color: var(--navy-deep) !important;
+  background: var(--white) !important;
+}
+
+/* Also apply to .srv-more a (standalone "Ver más" links) */
+.srv-more a {
+  background: var(--white) !important;
+  border: 1.5px solid var(--g200) !important;
+  border-radius: var(--radius) !important;
+  color: var(--navy-deep) !important;
+  font-weight: 700 !important;
+  padding: .85rem 2rem !important;
+  box-shadow: 0 2px 12px rgba(15,27,51,.07) !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: .5rem !important;
+  text-decoration: none !important;
+  transition: all .2s !important;
+}
+.srv-more a:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 10px 32px rgba(15,27,51,.13) !important;
+  border-color: var(--g300) !important;
+}
+
+/* 3 ── Badges: dark semi-transparent overlay (always visible on any image) */
+.srv-img-badge {
+  background: rgba(15,27,51,.75) !important;
+  color: white !important;
+  border: none !important;
+  backdrop-filter: blur(4px) !important;
+  -webkit-backdrop-filter: blur(4px) !important;
+}
+
+/* 4 ── Form section: all text white */
+.cta-form-section { color: #fff; }
+.cta-form-section h2,
+.cta-form-section p,
+.cta-form-section label,
+.cta-form-section span,
+.cta-form-side h2,
+.cta-form-side p,
+.cta-form-side label,
+.cta-form-side span,
+.cta-form-side .cta-form-sub { color: #fff !important; }
+.cta-form-section .h2-light,
+.cta-form-side .h2-light { color: rgba(255,255,255,.6) !important; }
+/* Exception: inputs, buttons, selects keep their own colors */
+.cta-form-section select { color: var(--navy) !important; }
+
+/* 5 ── Megamenu: 3 equal columns (no photo col) */
+.megamenu-cols {
+  grid-template-columns: repeat(3, 1fr) !important;
+}
+
+/* 6 ── Megamenu gap bridge fix */
+.mega-parent > a.nav-item::after {
+  content: '';
+  position: absolute;
+  height: 12px;
+  left: 0; right: 0; bottom: -12px;
+  z-index: 101;
+  pointer-events: auto;
+}
+
+
 /* ═══ PATCH v5 ═══ */
 
 /* 1 ── Megamenu: auto-width, no full-width stretch */
@@ -716,16 +825,18 @@ a:hover .arrow-r{transform:translateX(3px)}
     <button class="menu-toggle" id="menuToggle" aria-label="Menú" aria-expanded="false"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h16M3 11h16M3 16h16"/></svg></button>
   </div>
 </header>
-<section class="blog-post-hero" style="width:100%;min-height:60vh;display:flex;align-items:center;background:var(--navy-deep);padding-top:6rem;box-sizing:border-box">
-  <div style="max-width:900px;width:100%;margin:0 auto;padding:0 2rem;text-align:center">
-    <div class="hero-breadcrumb" style="margin-bottom:1rem;display:flex;justify-content:center;flex-wrap:wrap"><a href="/" style="color:rgba(255,255,255,.7)">Inicio</a><span class="bc-sep">›</span><a href="/blog/" style="color:rgba(255,255,255,.7)">Blog</a><span class="bc-sep">›</span><span style="color:white">Cómo la tecnología RFID puede ayudar a los adultos mayores</span></div>
+<section class="blog-post-hero" style="padding:15rem 0 4rem;background:var(--navy-deep)">
+  <div style="max-width:900px;margin:0 auto;padding:0 2rem">
+    <div class="hero-breadcrumb" style="margin-bottom:1rem"><a href="/" style="color:rgba(255,255,255,.7)">Inicio</a><span class="bc-sep">›</span><a href="/blog/" style="color:rgba(255,255,255,.7)">Blog</a><span class="bc-sep">›</span><span style="color:white">Cómo la tecnología RFID puede ayudar a los adultos mayo…</span></div>
     <h1 style="font-family:'Outfit',sans-serif;color:white;font-size:clamp(1.6rem,3.5vw,2.4rem);margin-bottom:.75rem;text-align:center">Cómo la tecnología RFID puede ayudar a los adultos mayores</h1>
   </div>
 </section>
+
 <div style="background:var(--bg)">
   <div class="article-grid">
     <article>
-      <nav aria-label="Tabla de contenidos" style="background:var(--g100,#f5f7fa);border-radius:10px;padding:1.5rem 1.75rem;margin-bottom:2rem;border:1px solid var(--g200,#e2e8f0)">
+      <img src="/images/como-la-tecnologia-rfid-puede-ayudar-a-los-adultos-mayores.webp" alt="Cómo la tecnología RFID puede ayudar a los adultos mayores" style="width:100%;border-radius:12px;display:block;margin-bottom:2rem" loading="eager">
+<nav aria-label="Tabla de contenidos" style="background:var(--g100,#f5f7fa);border-radius:10px;padding:1.5rem 1.75rem;margin-bottom:2rem;border:1px solid var(--g200,#e2e8f0)">
         <p style="font-family:'Outfit',sans-serif;font-weight:700;color:var(--navy);margin-bottom:.85rem;font-size:1rem">Tabla de contenidos</p>
         <ol style="margin:0;padding-left:1.25rem;color:var(--g700);font-size:.95rem;line-height:1.6">
         <li style="margin-bottom:.5rem"><a href="#que-es-el-sistema-rfid-y-como-funciona" style="color:var(--teal);text-decoration:none;border-bottom:1px solid transparent" onmouseover="this.style.borderBottomColor='var(--teal)'" onmouseout="this.style.borderBottomColor='transparent'">¿Qué es el sistema RFID y cómo funciona?</a></span></li>
@@ -795,7 +906,7 @@ a:hover .arrow-r{transform:translateX(3px)}
     </script>
     </article>
     <aside style="align-self:start;position:sticky;top:100px">
-      <div style="background:white;border-radius:12px;box-shadow:0 2px 16px rgba(15,27,51,.08);padding:1.5rem;margin-bottom:1.5rem">
+<div style="background:white;border-radius:12px;box-shadow:0 2px 16px rgba(15,27,51,.08);padding:1.5rem;margin-bottom:1.5rem">
         <h3 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:.85rem;text-transform:uppercase;letter-spacing:.06em;margin-bottom:1rem">Artículos relacionados</h3>
         <a href="/rfid-residencias/" style="display:block;padding:.75rem 1rem;background:var(--teal-bg);border-radius:8px;color:var(--teal);font-weight:600;font-family:'Outfit',sans-serif;text-decoration:none;font-size:.9rem;margin-bottom:.5rem"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7h8m-3-3 3 3-3 3"/></svg> RFID para residencias</a><a href="/que-es-el-control-de-errantes-en-residencias/" style="display:block;padding:.75rem 1rem;background:var(--teal-bg);border-radius:8px;color:var(--teal);font-weight:600;font-family:'Outfit',sans-serif;text-decoration:none;font-size:.9rem;margin-bottom:.5rem"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7h8m-3-3 3 3-3 3"/></svg> Control de errantes</a><a href="/rfid-hospitales/" style="display:block;padding:.75rem 1rem;background:var(--teal-bg);border-radius:8px;color:var(--teal);font-weight:600;font-family:'Outfit',sans-serif;text-decoration:none;font-size:.9rem;margin-bottom:.5rem"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7h8m-3-3 3 3-3 3"/></svg> RFID hospitales</a>
       </div>
@@ -807,6 +918,7 @@ a:hover .arrow-r{transform:translateX(3px)}
     </aside>
   </div>
 </div>
+
 <footer class="footer">
   <div class="footer-inner">
     <div class="footer-brand">
@@ -816,22 +928,22 @@ a:hover .arrow-r{transform:translateX(3px)}
     <div>
       <h5>Soluciones</h5>
       <ul>
-        <li style="display:flex;align-items:flex-start;gap:.5rem;margin-bottom:.5rem"><span style="color:var(--amber);font-weight:700;flex-shrink:0;margin-top:.15rem">✓</span><span style="color:var(--g700);line-height:1.8"><a href="/soluciones-rfid/">→ Soluciones RFID</a></span></li>
-        <li style="display:flex;align-items:flex-start;gap:.5rem;margin-bottom:.5rem"><span style="color:var(--amber);font-weight:700;flex-shrink:0;margin-top:.15rem">✓</span><span style="color:var(--g700);line-height:1.8"><a href="/soluciones-rfid-para-bibliotecas/">→ Bibliotecas</a></span></li>
-        <li style="display:flex;align-items:flex-start;gap:.5rem;margin-bottom:.5rem"><span style="color:var(--amber);font-weight:700;flex-shrink:0;margin-top:.15rem">✓</span><span style="color:var(--g700);line-height:1.8"><a href="/accede-reserva-espacios/">→ ACCEDE</a></span></li>
-        <li style="display:flex;align-items:flex-start;gap:.5rem;margin-bottom:.5rem"><span style="color:var(--amber);font-weight:700;flex-shrink:0;margin-top:.15rem">✓</span><span style="color:var(--g700);line-height:1.8"><a href="/sistema-de-gestion-documental/">→ Gestión Documental</a></span></li>
-        <li style="display:flex;align-items:flex-start;gap:.5rem;margin-bottom:.5rem"><span style="color:var(--amber);font-weight:700;flex-shrink:0;margin-top:.15rem">✓</span><span style="color:var(--g700);line-height:1.8"><a href="/casos-de-exito/">→ Casos de éxito</a></span></li>
-        <li style="display:flex;align-items:flex-start;gap:.5rem;margin-bottom:.5rem"><span style="color:var(--amber);font-weight:700;flex-shrink:0;margin-top:.15rem">✓</span><span style="color:var(--g700);line-height:1.8"><a href="/blog/">→ Blog</a></span></li>
+        <li><a href="/soluciones-rfid/">→ Soluciones RFID</a></li>
+        <li><a href="/soluciones-rfid-para-bibliotecas/">→ Bibliotecas</a></li>
+        <li><a href="/accede-reserva-espacios/">→ ACCEDE</a></li>
+        <li><a href="/sistema-de-gestion-documental/">→ Gestión Documental</a></li>
+        <li><a href="/casos-de-exito/">→ Casos de éxito</a></li>
+        <li><a href="/blog/">→ Blog</a></li>
       </ul>
     </div>
     <div>
       <h5>Recursos</h5>
       <ul>
-        <li style="display:flex;align-items:flex-start;gap:.5rem;margin-bottom:.5rem"><span style="color:var(--amber);font-weight:700;flex-shrink:0;margin-top:.15rem">✓</span><span style="color:var(--g700);line-height:1.8"><a href="/guia-rfid/">→ Guía completa RFID</a></span></li>
-        <li style="display:flex;align-items:flex-start;gap:.5rem;margin-bottom:.5rem"><span style="color:var(--amber);font-weight:700;flex-shrink:0;margin-top:.15rem">✓</span><span style="color:var(--g700);line-height:1.8"><a href="/preguntas-frecuentes-rfid/">→ Preguntas frecuentes</a></span></li>
-        <li style="display:flex;align-items:flex-start;gap:.5rem;margin-bottom:.5rem"><span style="color:var(--amber);font-weight:700;flex-shrink:0;margin-top:.15rem">✓</span><span style="color:var(--g700);line-height:1.8"><a href="/rfid-madrid/">→ RFID Madrid</a></span></li>
-        <li style="display:flex;align-items:flex-start;gap:.5rem;margin-bottom:.5rem"><span style="color:var(--amber);font-weight:700;flex-shrink:0;margin-top:.15rem">✓</span><span style="color:var(--g700);line-height:1.8"><a href="/quienes-somos/">→ Quiénes somos</a></span></li>
-        <li style="display:flex;align-items:flex-start;gap:.5rem;margin-bottom:.5rem"><span style="color:var(--amber);font-weight:700;flex-shrink:0;margin-top:.15rem">✓</span><span style="color:var(--g700);line-height:1.8"><a href="/linked-open-data/">→ Linked Open Data</a></span></li>
+        <li><a href="/guia-rfid/">→ Guía completa RFID</a></li>
+        <li><a href="/preguntas-frecuentes-rfid/">→ Preguntas frecuentes</a></li>
+        <li><a href="/rfid-madrid/">→ RFID Madrid</a></li>
+        <li><a href="/quienes-somos/">→ Quiénes somos</a></li>
+        <li><a href="/linked-open-data/">→ Linked Open Data</a></li>
       </ul>
     </div>
     <div class="footer-contact">
@@ -844,7 +956,7 @@ a:hover .arrow-r{transform:translateX(3px)}
       <p style="margin-top:1rem;font-size:.82rem;color:rgba(255,255,255,.3)">Calle del Cobre 11<br>28915 Leganés, Madrid</p>
     </div>
   </div>
-  <div class="footer-bottom"><span>© 2026 Serdoc Informática S.L.</span><span><a href="/aviso-legal/">Aviso legal</a> · <a href="/politica-de-cookies/">Política de cookies</a> · <a href="/politica-de-privacidad/">Política de privacidad</a></span></div>
+  <div class="footer-bottom"><span>© 2026 Serdoc Informática S.L.</span><span><a href="/aviso-legal/">Aviso legal</a> · <a href="/politica-de-cookies/">Política de cookies</a> · <a href="/politica-de-privacidad/">Política de privacidad</a> · <a href="/docs/politica-de-gestion-serdoc.pdf" target="_blank">Política de gestión</a></span></div>
 </footer>
 <!-- FLOATING BUTTONS -->
 <div class="float-btns">
@@ -999,4 +1111,5 @@ CC.init();
   });
 })();
 </script>
+</body></html>
 </body></html>
