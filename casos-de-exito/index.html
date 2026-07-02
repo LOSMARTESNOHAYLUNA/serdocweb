@@ -805,6 +805,46 @@ a:hover .arrow-r{transform:translateX(3px)}
   margin: 0 auto;
   text-align: center;
 }
+
+/* ── CASOS DE ÉXITO — RESPONSIVE MOBILE ── */
+@media (max-width: 768px) {
+
+  /* Grid → single column */
+  .caso-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+  }
+
+  /* Push foto to bottom (after text) when it's first in DOM */
+  .caso-foto {
+    order: 2;
+  }
+
+  /* Reduce photo height on mobile */
+  .caso-foto img {
+    height: 260px !important;
+  }
+
+  /* Stats → full width, stacked vertically */
+  .caso-stats {
+    flex-direction: column !important;
+    gap: .75rem !important;
+  }
+  .caso-stats > div {
+    width: 100% !important;
+    text-align: left !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 1rem !important;
+    padding: .75rem 1.25rem !important;
+    box-sizing: border-box !important;
+  }
+  .caso-stats > div > div:first-child {
+    min-width: 60px !important;
+    font-size: 1.3rem !important;
+  }
+
+}
 </style></head><body><div class="subheader">
   <div class="subheader-inner">
     <a href="mailto:info@serdoc.es?subject=Formulario%20de%20contacto%20Serdoc" class="sh-desktop"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1.5" y="3" width="11" height="8" rx="1.5"/><path d="M1.5 3l5.5 4 5.5-4"/></svg> info@serdoc.es</a>
@@ -869,13 +909,13 @@ a:hover .arrow-r{transform:translateX(3px)}
 <!-- CASO 1 -->
 <section style="padding:5rem 0;background:var(--bg)"><div style="max-width:1100px;margin:0 auto;padding:0 2rem">
   <div class="section-label">Caso de éxito 01</div>
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;margin-top:1.5rem">
-    <div><img src="/images/caso-aseguradora.webp" alt="Aseguradora médica digitalización BPO — Serdoc" style="width:100%;border-radius:16px;object-fit:cover;height:500px"></div>
+  <div class="caso-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;margin-top:1.5rem">
+    <div class="caso-foto"><img src="/images/caso-aseguradora.webp" alt="Aseguradora médica digitalización BPO — Serdoc" style="width:100%;border-radius:16px;object-fit:cover;height:500px"></div>
     <div>
       <h2 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.7rem;margin-bottom:1rem">Aseguradora médica: de meses a días en el ciclo documental</h2>
       <p style="color:var(--g600);margin-bottom:1.25rem">Una aseguradora médica de ámbito nacional tenía su backoffice de facturación completamente en papel. El proceso de revisión de cada expediente tardaba semanas, los errores de facturación eran frecuentes y la detección de fraude era prácticamente imposible en ese volumen.</p>
       <p style="color:var(--g600);margin-bottom:1.5rem">Serdoc implantó un proceso BPO completo: digitalización masiva del archivo histórico, indexación y clasificación automática, y flujo de revisión digital con validación a dos niveles. El equipo de Serdoc gestiona ahora 50.000 expedientes al mes.</p>
-      <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:1.5rem">
+      <div class="caso-stats" style="display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:1.5rem">
         <div style="text-align:center;padding:.75rem 1.25rem;background:var(--teal-bg);border-radius:8px"><div style="font-size:1.4rem;font-weight:800;color:var(--teal);font-family:'Outfit',sans-serif">50K</div><div style="font-size:.8rem;color:var(--g600)">expedientes/mes</div></div>
         <div style="text-align:center;padding:.75rem 1.25rem;background:var(--teal-bg);border-radius:8px"><div style="font-size:1.4rem;font-weight:800;color:var(--teal);font-family:'Outfit',sans-serif">0 papel</div><div style="font-size:.8rem;color:var(--g600)">eliminado</div></div>
         <div style="text-align:center;padding:.75rem 1.25rem;background:var(--teal-bg);border-radius:8px"><div style="font-size:1.4rem;font-weight:800;color:var(--teal);font-family:'Outfit',sans-serif">−85%</div><div style="font-size:.8rem;color:var(--g600)">tiempo de proceso</div></div>
@@ -887,26 +927,26 @@ a:hover .arrow-r{transform:translateX(3px)}
 <!-- CASO 2 -->
 <section style="padding:5rem 0;background:white"><div style="max-width:1100px;margin:0 auto;padding:0 2rem">
   <div class="section-label">Caso de éxito 02</div>
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;margin-top:1.5rem">
+  <div class="caso-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;margin-top:1.5rem">
     <div>
       <h2 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.7rem;margin-bottom:1rem">UPM: el primer autopréstamo de portátiles 24/7 de España</h2>
       <p style="color:var(--g600);margin-bottom:1.25rem">La Universidad Politécnica de Madrid necesitaba ofrecer a sus estudiantes acceso a portátiles fuera del horario de atención, sin incrementar la plantilla de personal. Los préstamos manuales generaban colas, errores de registro y pérdidas de material.</p>
       <p style="color:var(--g600);margin-bottom:1.25rem">Serdoc implantó el primer sistema de autopréstamo de portátiles de España: los estudiantes usan su carnet universitario en el terminal para retirar y devolver ordenadores de forma autónoma, las 24 horas del día, con control RFID completo de cada movimiento.</p>
-      <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:1.5rem">
+      <div class="caso-stats" style="display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:1.5rem">
         <div style="text-align:center;padding:.75rem 1.25rem;background:var(--teal-bg);border-radius:8px"><div style="font-size:1.4rem;font-weight:800;color:var(--teal);font-family:'Outfit',sans-serif">24/7</div><div style="font-size:.8rem;color:var(--g600)">disponibilidad</div></div>
         <div style="text-align:center;padding:.75rem 1.25rem;background:var(--teal-bg);border-radius:8px"><div style="font-size:1.4rem;font-weight:800;color:var(--teal);font-family:'Outfit',sans-serif">0 colas</div><div style="font-size:.8rem;color:var(--g600)">en mostrador</div></div>
         <div style="text-align:center;padding:.75rem 1.25rem;background:var(--teal-bg);border-radius:8px"><div style="font-size:1.4rem;font-weight:800;color:var(--teal);font-family:'Outfit',sans-serif">1º en ES</div><div style="font-size:.8rem;color:var(--g600)">proyecto pionero</div></div>
       </div>
       <a href="/autoprestamo-de-portatiles/" class="btn-cta-outline">Ver solución autopréstamo ›</a>
     </div>
-    <div><img src="/images/caso-upm-portatiles.webp" alt="Autopréstamo portátiles UPM — Serdoc" style="width:100%;border-radius:16px;object-fit:cover;height:500px"></div>
+    <div class="caso-foto"><img src="/images/caso-upm-portatiles.webp" alt="Autopréstamo portátiles UPM — Serdoc" style="width:100%;border-radius:16px;object-fit:cover;height:500px"></div>
   </div>
 </div></section>
 <!-- CASO 3 -->
 <section style="padding:5rem 0;background:var(--bg)"><div style="max-width:1100px;margin:0 auto;padding:0 2rem">
   <div class="section-label">Caso de éxito 03</div>
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;margin-top:1.5rem">
-    <div><img src="/images/caso-reina-sofia.webp" alt="Museo Reina Sofía RFID UHF — Serdoc" style="width:100%;border-radius:16px;object-fit:cover;height:500px"></div>
+  <div class="caso-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;margin-top:1.5rem">
+    <div class="caso-foto"><img src="/images/caso-reina-sofia.webp" alt="Museo Reina Sofía RFID UHF — Serdoc" style="width:100%;border-radius:16px;object-fit:cover;height:500px"></div>
     <div>
       <h2 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.7rem;margin-bottom:1rem">Museo Reina Sofía: RFID UHF completo para colecciones de arte</h2>
       <p style="color:var(--g600);margin-bottom:1.25rem">El Museo Nacional Centro de Arte Reina Sofía requería un sistema de trazabilidad para su colección permanente: localización de obras durante su movimiento interno, inventarios periódicos fiables y accesos controlados a zonas de almacén sin interferir en la experiencia del visitante.
@@ -917,7 +957,7 @@ a:hover .arrow-r{transform:translateX(3px)}
           <strong>Relación continuada:</strong> El Museo Reina Sofía mantiene un contrato de mantenimiento anual con Serdoc, garantizando la continuidad y actualización del sistema. Un ejemplo del tipo de relación a largo plazo que construimos con nuestros clientes.
         </p>
       </div>
-      <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:1.5rem">
+      <div class="caso-stats" style="display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:1.5rem">
         <div style="text-align:center;padding:.75rem 1.25rem;background:var(--teal-bg);border-radius:8px"><div style="font-size:1.4rem;font-weight:800;color:var(--teal);font-family:'Outfit',sans-serif">100%</div><div style="font-size:.8rem;color:var(--g600)">inventarios viables</div></div>
         <div style="text-align:center;padding:.75rem 1.25rem;background:var(--teal-bg);border-radius:8px"><div style="font-size:1.4rem;font-weight:800;color:var(--teal);font-family:'Outfit',sans-serif">real-time</div><div style="font-size:.8rem;color:var(--g600)">localización</div></div>
         <div style="text-align:center;padding:.75rem 1.25rem;background:var(--teal-bg);border-radius:8px"><div style="font-size:1.4rem;font-weight:800;color:var(--teal);font-family:'Outfit',sans-serif">0 portales</div><div style="font-size:.8rem;color:var(--g600)">accesos diáfanos</div></div>
