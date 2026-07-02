@@ -1,7 +1,7 @@
 <!DOCTYPE html><html lang="es"><head>
 <meta charset="UTF-8">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Diferencias entre RFID pasivo, activo y semipasivo | Serdoc</title><meta name="description" content="Comparativa completa de RFID pasivo, activo y semipasivo: alcance, batería, coste y aplicaciones de cada tipo. Guía técnica de Serdoc.">
+<title>Diferencias entre RFID pasivo, activo y semipasivo | Serdoc</title><meta name="description" content="Software ACCEDE para reserva de ordenadores, salas, puestos de consulta y control de aforo. Para bibliotecas, universidades, ayuntamientos y centros sanitarios.">
 <link rel="canonical" href="https://www.serdoc.es/rfid-ganaderia-trazabilidad-animal-espana/"><meta name="robots" content="index,follow">
 <meta property="og:type" content="article"><meta property="og:url" content="https://www.serdoc.es/rfid-ganaderia-trazabilidad-animal-espana/">
 <meta property="og:title" content="RFID en ganadería y trazabilidad animal en España | Serdoc"><meta property="og:description" content="RFID en ganadería española: identificación de bovinos, porcinos y équidos, cumplimiento normativo y sistemas de trazabilidad animal. Guía de Serdoc.">
@@ -831,40 +831,120 @@ a:hover .arrow-r{transform:translateX(3px)}
     <h1 style="font-family:'Outfit',sans-serif;color:white;font-size:clamp(1.6rem,3.5vw,2.4rem);margin-bottom:.75rem;text-align:center">Diferencias entre RFID pasivo, activo y semipasivo: cuándo usar cada uno</h1>
   </div>
 </section>
+
 <div style="background:var(--bg)">
   <div class="article-grid">
     <article>
       <img src="/images/diferencias-entre-rfid-pasivo-activo-y-semipasivo.webp" alt="Diferencias entre RFID pasivo, activo y semipasivo: cuándo usar cada uno" style="width:100%;border-radius:12px;display:block;margin-bottom:2rem" loading="eager">
-<p style="font-size:1.1rem;color:var(--g700);line-height:1.85;font-weight:500;margin-bottom:1.5rem">No todas las etiquetas RFID son iguales. La distinción entre pasivo, activo y semipasivo determina el alcance, el coste, la duración y, sobre todo, la aplicación adecuada para cada proyecto. Entender esta diferencia es el primer paso para diseñar un sistema RFID correcto.</p>
-      <h2 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.3rem;margin:2rem 0 .75rem">RFID pasivo: sin batería, sin mantenimiento</h2><p style="color:var(--g700);line-height:1.9;margin-bottom:1rem">Las etiquetas pasivas no tienen fuente de alimentación propia. Se alimentan de la energía del campo electromagnético que genera el lector cuando se acerca. Son las más baratas (desde 0,05€/unidad en UHF), las más pequeñas y las más duraderas (sin batería que caducar). Su alcance es de centímetros a 10 metros según la frecuencia. Son la opción estándar para retail, logística, bibliotecas y prácticamente cualquier aplicación de inventario.</p><h2 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.3rem;margin:2rem 0 .75rem">RFID activo: batería propia, mayor alcance</h2><p style="color:var(--g700);line-height:1.9;margin-bottom:1rem">Las etiquetas activas incorporan una batería que alimenta continuamente el chip, permitiéndoles emitir señales de forma autónoma sin necesidad de campo externo. Su alcance puede superar los 100 metros y su velocidad de lectura es mucho mayor. El precio es entre 5 y 50€ por unidad, y requieren mantenimiento (cambio de batería cada 3-5 años). Se usan para localización en tiempo real (RTLS) en hospitales, almacenes grandes y flotas de vehículos.</p><h2 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.3rem;margin:2rem 0 .75rem">RFID semipasivo (o semi-activo): lo mejor de ambos mundos</h2><p style="color:var(--g700);line-height:1.9;margin-bottom:1rem">Las etiquetas semipasivas tienen batería para alimentar el chip, pero siguen dependiendo del campo del lector para comunicar. Esto les da mayor sensibilidad y capacidad de incluir sensores (temperatura, humedad, impacto) sin el coste ni el alcance del RFID activo. Son habituales en cadena de frío y transporte de material sensible.</p><h2 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.3rem;margin:2rem 0 .75rem">¿Cuál elegir para tu proyecto?</h2><p style="color:var(--g700);line-height:1.9;margin-bottom:1rem">Para inventario masivo, retail, logística y bibliotecas: RFID pasivo UHF. Para localización en tiempo real en entornos grandes: RFID activo. Para cadena de frío o monitorización con sensores: RFID semipasivo. En la evaluación gratuita de Serdoc analizamos tu caso y recomendamos la tecnología más adecuada.</p>
-      <div style="margin-top:3rem;padding:1.5rem;background:rgba(8,145,178,.06);border-radius:12px;border-left:4px solid var(--teal)">
-        <p style="font-weight:700;color:var(--navy);font-family:'Outfit',sans-serif;margin-bottom:.5rem">¿Quieres implantar esta solución en tu empresa?</p>
-        <p style="color:var(--g600);margin-bottom:1rem">El equipo técnico de Serdoc lleva más de 25 años implantando proyectos RFID. Evaluación gratuita sin compromiso.</p>
-        <a href="/contacto/" class="btn btn-primary">Solicitar evaluación gratuita</a>
+<nav aria-label="Tabla de contenidos" style="background:var(--g100,#f5f7fa);border-radius:10px;padding:1.5rem 1.75rem;margin-bottom:2rem;border:1px solid var(--g200,#e2e8f0)">
+        <p style="font-family:'Outfit',sans-serif;font-weight:700;color:var(--navy);margin-bottom:.85rem;font-size:1rem">Tabla de contenidos</p>
+        <ol style="margin:0;padding-left:1.25rem;color:var(--g700);font-size:.95rem;line-height:1.6">
+        <li style="margin-bottom:.5rem"><a href="#1-rfid-pasivo-el-mas-comun-y-economico" style="color:var(--teal);text-decoration:none;border-bottom:1px solid transparent" onmouseover="this.style.borderBottomColor='var(--teal)'" onmouseout="this.style.borderBottomColor='transparent'">1. RFID Pasivo: el más común y económico</a></span></li>
+        <li style="margin-bottom:.5rem"><a href="#2-rfid-activo-para-seguimiento-en-tiempo-real" style="color:var(--teal);text-decoration:none;border-bottom:1px solid transparent" onmouseover="this.style.borderBottomColor='var(--teal)'" onmouseout="this.style.borderBottomColor='transparent'">2. RFID Activo: para seguimiento en tiempo real</a></li>
+        <li style="margin-bottom:.5rem"><a href="#3-rfid-semipasivo-o-bap-battery-assisted-passive-lo-mejor-de-ambos" style="color:var(--teal);text-decoration:none;border-bottom:1px solid transparent" onmouseover="this.style.borderBottomColor='var(--teal)'" onmouseout="this.style.borderBottomColor='transparent'">3. RFID Semipasivo (o BAP – Battery Assisted Passive): lo mejor de ambos</a></li>
+        <li style="margin-bottom:.5rem"><a href="#4-guia-rapida-cual-elegir" style="color:var(--teal);text-decoration:none;border-bottom:1px solid transparent" onmouseover="this.style.borderBottomColor='var(--teal)'" onmouseout="this.style.borderBottomColor='transparent'">4. Guía rápida: ¿cuál elegir?</a></li>
+        </ol>
+      </nav>
+
+      <p style="font-size:1.1rem;color:var(--g700);line-height:1.85;font-weight:500;margin-bottom:1.5rem">Antes de iniciar un proyecto RFID, una de las preguntas más habituales —y también más delicadas— es qué tipo de tecnología utilizar. RFID no es una solución única y cerrada, sino un conjunto de tecnologías con comportamientos, costes y alcances muy diferentes. Elegir entre RFID pasivo, activo o semipasivo puede marcar la diferencia entre un sistema que encaja perfectamente en la operación y otro que se queda corto… o sobredimensionado (y el presupuesto no suele perdonar eso).</p>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">En términos sencillos, cada tipo de RFID responde a una necesidad distinta. Algunos proyectos buscan identificar miles de productos de forma rápida y económica; otros necesitan saber dónde está un activo en todo momento, incluso en áreas muy extensas. Y entre ambos extremos aparecen escenarios intermedios donde, además de identificar, es necesario registrar variables como temperatura o humedad. No todo es "leer etiquetas", aunque a veces lo parezca desde fuera.</p>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">En este artículo analizamos de forma clara y práctica los tipos de RFID pasivo, activo y semipasivo, explicando cómo funcionan, en qué se diferencian y cuándo tiene sentido usar cada uno. Con ejemplos reales y comparaciones directas, el objetivo es ayudarte a entender qué tecnología encaja mejor con tu proyecto.</p>
+
+
+      <a href="/" style="display:block;margin:1.5rem 0">
+        <img src="/images/banner-blogs-serdoc.webp" alt="Banner Serdoc" style="width:100%;border-radius:12px;display:block" loading="lazy">
+      </a>
+      <h2 id="1-rfid-pasivo-el-mas-comun-y-economico" style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.3rem;margin:2rem 0 .75rem">1. RFID Pasivo: el más común y económico</h2>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">Cuando alguien habla de RFID por primera vez, casi siempre se está refiriendo al RFID pasivo, aunque no lo diga explícitamente. Es el más extendido, el más económico y el que probablemente ya uses sin darte cuenta, por ejemplo, en controles de acceso o etiquetas logísticas.</p>
+      <h3 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.1rem;margin:1.5rem 0 .6rem">¿Cómo funciona? Se activa con la energía de la onda del lector</h3>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">Las etiquetas RFID pasivas no tienen batería. Permanecen "dormidas" hasta que un lector RFID emite una señal de radiofrecuencia. Esa energía es suficiente para activar el chip, que responde enviando su identificador. Es un funcionamiento sencillo y fiable, casi como si el lector "despertara" a la etiqueta cuando pasa cerca.</p>
+      <h3 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.1rem;margin:1.5rem 0 .6rem">Ventaja principal: bajo coste, tamaño mini y vida útil ilimitada</h3>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">Al no llevar batería, el coste de las etiquetas RFID pasivas es muy bajo en comparación con otros tipos. Además, su tamaño puede ser extremadamente reducido y su vida útil es prácticamente ilimitada. No hay mantenimiento ni reemplazos periódicos, algo que en proyectos con miles o millones de unidades marca una diferencia clara en el presupuesto.</p>
+      <h3 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.1rem;margin:1.5rem 0 .6rem">Usos típicos: control de inventario, etiquetado de productos, control de acceso y logística</h3>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">Este tipo de RFID es ideal cuando necesitas identificar objetos a corta o media distancia. Se utiliza de forma habitual en lectores RFID para almacén, sistemas de control de acceso, retail, trazabilidad logística o gestión de activos básicos. Si el objetivo es saber "qué es" un objeto y no "dónde está en todo momento", el RFID pasivo suele ser suficiente.</p>
+
+      <h2 id="2-rfid-activo-para-seguimiento-en-tiempo-real" style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.3rem;margin:2rem 0 .75rem">2. RFID Activo: para seguimiento en tiempo real</h2>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">El RFID activo juega en otra liga. Aquí ya no hablamos solo de identificación, sino de seguimiento continuo de activos, incluso en espacios muy amplios.</p>
+      <h3 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.1rem;margin:1.5rem 0 .6rem">¿Cómo funciona? Lleva su propia batería para emitir señal</h3>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">Las etiquetas RFID activas incorporan una batería que les permite emitir señal de forma periódica sin depender del lector. Esto cambia por completo el enfoque del sistema: el tag "habla" constantemente y los lectores escuchan. Es una diferencia importante frente al RFID pasivo, donde siempre manda el lector.</p>
+      <h3 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.1rem;margin:1.5rem 0 .6rem">Ventaja principal: largo alcance y mayor capacidad de datos</h3>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">El alcance RFID activo vs pasivo es una de las diferencias más claras. Mientras el pasivo suele moverse en metros, el RFID activo puede alcanzar decenas o incluso más de 100 metros en entornos controlados. Además, permite almacenar y transmitir más información, lo que resulta útil en sistemas de seguimiento complejos.</p>
+      <h3 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.1rem;margin:1.5rem 0 .6rem">Usos típicos: localización de equipos en hospitales, seguimiento de contenedores y gestión de flotas</h3>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">Este tipo de tecnología se utiliza en proyectos donde saber la ubicación en tiempo casi real es clave. Hospitales que necesitan localizar equipamiento crítico, puertos que controlan contenedores o empresas que gestionan flotas de alto valor suelen apostar por seguimiento de activos RFID activo, asumiendo un mayor coste a cambio de visibilidad constante.</p>
+
+
+      <img src="/images/Que-tipo-de-RFID-necesita-tu-proyecto.webp" alt="Qué tipo de RFID necesita tu proyecto" style="width:100%;border-radius:12px;object-fit:cover;height:280px;margin:1.5rem 0" loading="lazy">
+      <h2 id="3-rfid-semipasivo-o-bap-battery-assisted-passive-lo-mejor-de-ambos" style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.3rem;margin:2rem 0 .75rem">3. RFID Semipasivo (o BAP – Battery Assisted Passive): lo mejor de ambos</h2>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">El RFID semipasivo, también conocido como RFID BAP (Battery Assisted Passive), suele generar dudas, pero es una solución muy interesante cuando el proyecto necesita algo más que identificación básica.</p>
+      <h3 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.1rem;margin:1.5rem 0 .6rem">¿Cómo funciona? Tiene batería para el chip, pero no para emitir señal</h3>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">A diferencia del RFID activo, el semipasivo no emite señal por sí mismo. La batería alimenta el chip y los sensores, pero la comunicación sigue activándose mediante el lector. Esto mejora la estabilidad de lectura sin disparar el consumo energético.</p>
+      <h3 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.1rem;margin:1.5rem 0 .6rem">Ventaja principal: mayor fiabilidad y alcance que el pasivo, con sensores integrados</h3>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">Una de las grandes ventajas de los sensores RFID semipasivo es la posibilidad de integrar mediciones como temperatura, humedad o impactos. Esto lo convierte en una opción muy valiosa para sectores donde las condiciones ambientales importan tanto como la identificación.</p>
+      <h3 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.1rem;margin:1.5rem 0 .6rem">Usos típicos: cadena de frío farmacéutica y monitorización de mercancías sensibles</h3>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">En proyectos de RFID cadena suministro relacionados con medicamentos, alimentos o productos químicos, este tipo de etiqueta permite responder preguntas clave como: "¿se rompió la cadena de frío?" o "¿en qué condiciones viajó este producto?". No es magia, es tecnología bien aplicada.</p>
+
+      <h2 id="4-guia-rapida-cual-elegir" style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.3rem;margin:2rem 0 .75rem">4. Guía rápida: ¿cuál elegir?</h2>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">Elegir el tipo de RFID adecuado no va de modas ni de "el más avanzado", sino de encajar tecnología y necesidad real.</p>
+      <div style="overflow-x:auto;margin:1.5rem 0">
+        <table style="width:100%;border-collapse:collapse;font-size:.92rem">
+          <thead><tr style="background:var(--g100)">
+            <th style="text-align:left;padding:.6rem .75rem;border:1px solid var(--g200)">Característica</th>
+            <th style="text-align:left;padding:.6rem .75rem;border:1px solid var(--g200)">RFID Pasivo</th>
+            <th style="text-align:left;padding:.6rem .75rem;border:1px solid var(--g200)">RFID Semipasivo (BAP)</th>
+            <th style="text-align:left;padding:.6rem .75rem;border:1px solid var(--g200)">RFID Activo</th>
+          </tr></thead>
+          <tbody>
+            <tr><td style="padding:.6rem .75rem;border:1px solid var(--g200)">Fuente de energía</td><td style="padding:.6rem .75rem;border:1px solid var(--g200)">Energía del lector</td><td style="padding:.6rem .75rem;border:1px solid var(--g200)">Batería para el chip</td><td style="padding:.6rem .75rem;border:1px solid var(--g200)">Batería propia</td></tr>
+            <tr><td style="padding:.6rem .75rem;border:1px solid var(--g200)">Alcance típico</td><td style="padding:.6rem .75rem;border:1px solid var(--g200)">Corto (cm–metros)</td><td style="padding:.6rem .75rem;border:1px solid var(--g200)">Medio</td><td style="padding:.6rem .75rem;border:1px solid var(--g200)">Largo (decenas de metros)</td></tr>
+            <tr><td style="padding:.6rem .75rem;border:1px solid var(--g200)">Sensores integrados</td><td style="padding:.6rem .75rem;border:1px solid var(--g200)">No</td><td style="padding:.6rem .75rem;border:1px solid var(--g200)">Sí (temp., humedad)</td><td style="padding:.6rem .75rem;border:1px solid var(--g200)">Opcional</td></tr>
+            <tr><td style="padding:.6rem .75rem;border:1px solid var(--g200)">Coste de etiqueta</td><td style="padding:.6rem .75rem;border:1px solid var(--g200)">Bajo</td><td style="padding:.6rem .75rem;border:1px solid var(--g200)">Medio</td><td style="padding:.6rem .75rem;border:1px solid var(--g200)">Alto</td></tr>
+            <tr><td style="padding:.6rem .75rem;border:1px solid var(--g200)">Mantenimiento</td><td style="padding:.6rem .75rem;border:1px solid var(--g200)">Ninguno</td><td style="padding:.6rem .75rem;border:1px solid var(--g200)">Cambio de batería</td><td style="padding:.6rem .75rem;border:1px solid var(--g200)">Cambio de batería</td></tr>
+            <tr><td style="padding:.6rem .75rem;border:1px solid var(--g200)">Casos de uso</td><td style="padding:.6rem .75rem;border:1px solid var(--g200)">Inventario, retail</td><td style="padding:.6rem .75rem;border:1px solid var(--g200)">Cadena de frío</td><td style="padding:.6rem .75rem;border:1px solid var(--g200)">Seguimiento de activos</td></tr>
+          </tbody>
+        </table>
       </div>
-    
-    <!-- CONTACTO FINAL -->
-    <div style="border-top:1px solid var(--g200);margin-top:2.5rem;padding-top:2rem;display:flex;flex-wrap:wrap;gap:1.5rem;align-items:center">
-      <div style="display:flex;align-items:center;gap:.6rem;color:var(--navy)">
-        <svg width="18" height="18" fill="none" stroke="var(--teal)" stroke-width="1.5" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-        <span style="font-size:.95rem">Envíanos un correo: <a href="mailto:info@serdoc.es" style="color:var(--teal);font-weight:600">info@serdoc.es</a></span>
-      </div>
-      <div style="display:flex;align-items:center;gap:.6rem;color:var(--navy)">
-        <svg width="18" height="18" fill="none" stroke="var(--teal)" stroke-width="1.5" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.29 12 19.79 19.79 0 0 1 1.22 3.33 2 2 0 0 1 3.22 1.22h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-        <span style="font-size:.95rem">Llámanos: <a href="tel:+34615266979" style="color:var(--teal);font-weight:600">615 26 69 79</a> y <a href="tel:+34916896573" style="color:var(--teal);font-weight:600">91 689 65 73</a></span>
+
+      <h3 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.1rem;margin:1.5rem 0 .6rem">Elige PASIVO si</h3>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">Tu prioridad es el coste, necesitas identificar objetos a distancias cortas o medias y no requieres sensores. Es ideal para inventarios, control de acceso y proyectos con gran volumen de etiquetas RFID pasivas.</p>
+      <h3 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.1rem;margin:1.5rem 0 .6rem">Elige ACTIVO si</h3>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">Necesitas localización en tiempo real, en áreas amplias, y trabajas con activos de alto valor. Aquí el mayor coste de etiquetas RFID se justifica por la visibilidad constante y la mejora operativa.</p>
+      <h3 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.1rem;margin:1.5rem 0 .6rem">Elige SEMIPASIVO si</h3>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">Tu proyecto requiere registrar condiciones ambientales y mejorar la fiabilidad de lectura sin llegar al coste del RFID activo. Es una opción equilibrada para proyectos sensibles donde los datos importan tanto como la identificación.</p>
+
+
+      <a href="/" style="display:block;margin:1.5rem 0">
+        <img src="/images/banner-blogs-serdoc.webp" alt="Banner Serdoc" style="width:100%;border-radius:12px;display:block" loading="lazy">
+      </a>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">No existe un único tipo de RFID válido para todos los proyectos. Entender las diferencias entre RFID activo y pasivo, así como el papel intermedio del semipasivo, es el primer paso para diseñar una solución eficiente y sostenible en el tiempo. Cada tecnología responde a necesidades concretas de alcance, coste, mantenimiento y funcionalidad.</p>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">Antes de decidir qué tipo de RFID elegir para tu proyecto, conviene analizar el entorno, los procesos y los objetivos reales. A veces, la solución más sencilla es la más adecuada; otras, invertir un poco más permite ganar control, trazabilidad y datos valiosos para la operación diaria. Nuestro equipo técnico analiza tu caso y recomendamos la tecnología más adecuada.</p>
+
+      <!-- COMPARTIR -->
+    <div style="border-top:1px solid var(--g200);margin-top:2rem;padding-top:1.5rem">
+      <p style="font-family:'Outfit',sans-serif;font-weight:700;color:var(--navy);margin-bottom:1rem;font-size:.95rem">¿Te ha resultado útil? Comparte el artículo</p>
+      <div style="display:flex;flex-wrap:wrap;gap:.65rem" id="shareButtons">
+        <a id="shareWA" href="#" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:.45rem;padding:.6rem 1.1rem;border-radius:var(--radius);background:#25D366;color:white;font-size:.88rem;font-weight:700;font-family:'Outfit',sans-serif;text-decoration:none"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12.004 2C6.477 2 2 6.477 2 12.004c0 1.77.459 3.427 1.26 4.865L2 22l5.27-1.234A9.953 9.953 0 0 0 12.004 22C17.527 22 22 17.523 22 12.004 22 6.477 17.527 2 12.004 2z" fill-rule="evenodd" clip-rule="evenodd"/></svg>WhatsApp</a>
+        <a id="shareLI" href="#" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:.45rem;padding:.6rem 1.1rem;border-radius:var(--radius);background:#0077B5;color:white;font-size:.88rem;font-weight:700;font-family:'Outfit',sans-serif;text-decoration:none"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>LinkedIn</a>
+        <a id="shareX" href="#" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:.45rem;padding:.6rem 1.1rem;border-radius:var(--radius);background:#000;color:white;font-size:.88rem;font-weight:700;font-family:'Outfit',sans-serif;text-decoration:none"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.737-8.858L1.254 2.25H8.08l4.26 5.633zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>X</a>
+        <a id="shareFB" href="#" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:.45rem;padding:.6rem 1.1rem;border-radius:var(--radius);background:#1877F2;color:white;font-size:.88rem;font-weight:700;font-family:'Outfit',sans-serif;text-decoration:none"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>Facebook</a>
+        <button id="shareCopy" onclick="copyLink(this)" style="display:inline-flex;align-items:center;gap:.45rem;padding:.6rem 1.1rem;border-radius:var(--radius);background:var(--g100);color:var(--navy);font-size:.88rem;font-weight:700;font-family:'Outfit',sans-serif;cursor:pointer;border:1.5px solid var(--g200)"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar enlace</button>
       </div>
     </div>
-<!-- COMPARTIR -->
-      <div style="border-top:1px solid var(--g200);margin-top:2rem;padding-top:1.5rem">
-        <p style="font-family:'Outfit',sans-serif;font-weight:700;color:var(--navy);margin-bottom:1rem;font-size:.95rem">¿Te ha ayudado a elegir tu tecnología RFID? Compártelo</p>
-        <div style="display:flex;flex-wrap:wrap;gap:.6rem">
-          <a href="https://twitter.com/intent/tweet?url=https://serdoc.es/diferencias-entre-rfid-pasivo-activo-y-semipasivo/" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:.4rem;padding:.5rem 1rem;border-radius:8px;background:#000;color:white;font-size:.85rem;font-weight:600;text-decoration:none;font-family:'Outfit',sans-serif"><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg> X</a>
-          <a href="https://www.linkedin.com/shareArticle?url=https://serdoc.es/diferencias-entre-rfid-pasivo-activo-y-semipasivo/" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:.4rem;padding:.5rem 1rem;border-radius:8px;background:#0A66C2;color:white;font-size:.85rem;font-weight:600;text-decoration:none;font-family:'Outfit',sans-serif"><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452z"/></svg> LinkedIn</a>
-          <a href="https://wa.me/?text=https://serdoc.es/diferencias-entre-rfid-pasivo-activo-y-semipasivo/" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:.4rem;padding:.5rem 1rem;border-radius:8px;background:#25D366;color:white;font-size:.85rem;font-weight:600;text-decoration:none;font-family:'Outfit',sans-serif"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a9 9 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg> WhatsApp</a>
-          <a href="https://www.facebook.com/sharer/sharer.php?u=https://serdoc.es/diferencias-entre-rfid-pasivo-activo-y-semipasivo/" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:.4rem;padding:.5rem 1rem;border-radius:8px;background:#1877F2;color:white;font-size:.85rem;font-weight:600;text-decoration:none;font-family:'Outfit',sans-serif"><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg> Facebook</a>
-          <button onclick="navigator.clipboard.writeText('https://serdoc.es/diferencias-entre-rfid-pasivo-activo-y-semipasivo/').then(()=>{this.textContent='✓ Copiado';this.style.background='#059669';setTimeout(()=>{this.textContent='Copiar enlace';this.style.background='var(--g700)'},2000)})" style="display:inline-flex;align-items:center;gap:.4rem;padding:.5rem 1rem;border-radius:8px;background:var(--g700);color:white;font-size:.85rem;font-weight:600;border:none;cursor:pointer;font-family:'Outfit',sans-serif">Copiar enlace</button>
-        </div>
-      </div>
+    <script>
+    (function(){
+      var url=encodeURIComponent(window.location.href);
+      var title=encodeURIComponent(document.title);
+      document.getElementById('shareWA').href='https://api.whatsapp.com/send?text='+title+'%20'+url;
+      document.getElementById('shareLI').href='https://www.linkedin.com/sharing/share-offsite/?url='+url;
+      document.getElementById('shareX').href='https://twitter.com/intent/tweet?url='+url+'&text='+title;
+      document.getElementById('shareFB').href='https://www.facebook.com/sharer/sharer.php?u='+url;
+    })();
+    function copyLink(btn){
+      navigator.clipboard.writeText(window.location.href).then(function(){
+        var o=btn.innerHTML;btn.innerHTML='✓ Copiado';
+        setTimeout(function(){btn.innerHTML=o;},2000);
+      });
+    }
+    </script>
     </article>
     <aside style="align-self:start;position:sticky;top:100px">
 <div style="background:white;border-radius:12px;box-shadow:0 2px 16px rgba(15,27,51,.08);padding:1.5rem;margin-bottom:1.5rem">
@@ -879,6 +959,7 @@ a:hover .arrow-r{transform:translateX(3px)}
     </aside>
   </div>
 </div>
+
 <footer class="footer">
   <div class="footer-inner">
     <div class="footer-brand">

@@ -1,7 +1,7 @@
 <!DOCTYPE html><html lang="es"><head>
 <meta charset="UTF-8">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Estándares de etiquetas RFID: EPC, ISO 18000, ISO 15693 | Serdoc</title><meta name="description" content="Guía de estándares RFID: EPC Gen2, ISO 18000-63, ISO 15693, ISO 14443 y DSFID. Cuándo aplica cada uno y qué significa para tu proyecto.">
+<title>Estándares de etiquetas RFID: EPC, ISO 18000, ISO 15693 | Serdoc</title><meta name="description" content="Software ACCEDE para reserva de ordenadores, salas, puestos de consulta y control de aforo. Para bibliotecas, universidades, ayuntamientos y centros sanitarios.">
 <link rel="canonical" href="https://www.serdoc.es/rfid-ganaderia-trazabilidad-animal-espana/"><meta name="robots" content="index,follow">
 <meta property="og:type" content="article"><meta property="og:url" content="https://www.serdoc.es/rfid-ganaderia-trazabilidad-animal-espana/">
 <meta property="og:title" content="RFID en ganadería y trazabilidad animal en España | Serdoc"><meta property="og:description" content="RFID en ganadería española: identificación de bovinos, porcinos y équidos, cumplimiento normativo y sistemas de trazabilidad animal. Guía de Serdoc.">
@@ -831,40 +831,148 @@ a:hover .arrow-r{transform:translateX(3px)}
     <h1 style="font-family:'Outfit',sans-serif;color:white;font-size:clamp(1.6rem,3.5vw,2.4rem);margin-bottom:.75rem;text-align:center">Estándares de etiquetas RFID: EPC Gen2, ISO 18000 y más</h1>
   </div>
 </section>
+
 <div style="background:var(--bg)">
   <div class="article-grid">
     <article>
       <img src="/images/cuales-son-los-estandares-de-etiquetas-rfid.webp" alt="Estándares de etiquetas RFID: EPC Gen2, ISO 18000 y más" style="width:100%;border-radius:12px;display:block;margin-bottom:2rem" loading="eager">
-<p style="font-size:1.1rem;color:var(--g700);line-height:1.85;font-weight:500;margin-bottom:1.5rem">Los estándares RFID determinan cómo se codifican y comunican los datos entre etiquetas y lectores. Elegir el estándar correcto garantiza la interoperabilidad entre sistemas y proveedores. Estos son los más importantes y cuándo aplica cada uno.</p>
-      <h2 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.3rem;margin:2rem 0 .75rem">EPC Gen2 (ISO 18000-63): el estándar de facto en logística y retail</h2><p style="color:var(--g700);line-height:1.9;margin-bottom:1rem">EPC (Electronic Product Code) Gen2, ratificado como ISO 18000-63, es el protocolo dominante para RFID UHF en logística, retail e inventario. Define cómo se codifica un identificador único de 96 bits en la etiqueta y cómo se leen múltiples etiquetas simultáneamente. Casi todos los lectores UHF del mercado son compatibles con EPC Gen2. Si tu proyecto es de logística, retail o inventario masivo, este será tu estándar.</p><h2 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.3rem;margin:2rem 0 .75rem">ISO 15693: RFID HF para bibliotecas y documentación</h2><p style="color:var(--g700);line-height:1.9;margin-bottom:1rem">ISO 15693 es el estándar principal para RFID HF (13,56 MHz) utilizado en bibliotecas, documentación y control de accesos de media distancia. Define etiquetas con alcance de hasta 1 metro. Los terminales de autopréstamo de Serdoc son compatibles con ISO 15693. El estándar SIP2 (comunicación entre terminales y SIGB) se apoya en este protocolo de identificación.</p><h2 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.3rem;margin:2rem 0 .75rem">ISO 14443: para NFC y tarjetas contactless</h2><p style="color:var(--g700);line-height:1.9;margin-bottom:1rem">ISO 14443 define la comunicación para tarjetas de proximidad (hasta 10 cm): tarjetas de crédito contactless, DNI electrónico, abonos de transporte y la mayoría de tarjetas NFC. Tiene dos variantes (Tipo A y Tipo B). Es el que usa tu tarjeta bancaria cuando pagas sin contacto.</p><h2 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.3rem;margin:2rem 0 .75rem">¿Cómo afectan los estándares a tu proyecto?</h2><p style="color:var(--g700);line-height:1.9;margin-bottom:1rem">Para proyectos de inventario, logística o retail: EPC Gen2 / ISO 18000-63. Para bibliotecas: ISO 15693 + SIP2. Para control de accesos con tarjetas: ISO 14443 (NFC). Para proyectos con necesidades específicas (temperatura, metal, farmacéutico): consultar los estándares ISO 18000-2 (LF), ISO 11784/11785 (animales). En la evaluación técnica de Serdoc validamos siempre la compatibilidad de estándares antes de seleccionar el hardware.</p>
-      <div style="margin-top:3rem;padding:1.5rem;background:rgba(8,145,178,.06);border-radius:12px;border-left:4px solid var(--teal)">
-        <p style="font-weight:700;color:var(--navy);font-family:'Outfit',sans-serif;margin-bottom:.5rem">¿Quieres implantar esta solución en tu empresa?</p>
-        <p style="color:var(--g600);margin-bottom:1rem">El equipo técnico de Serdoc lleva más de 25 años implantando proyectos RFID. Evaluación gratuita sin compromiso.</p>
-        <a href="/contacto/" class="btn btn-primary">Solicitar evaluación gratuita</a>
-      </div>
-    
-    <!-- CONTACTO FINAL -->
-    <div style="border-top:1px solid var(--g200);margin-top:2.5rem;padding-top:2rem;display:flex;flex-wrap:wrap;gap:1.5rem;align-items:center">
-      <div style="display:flex;align-items:center;gap:.6rem;color:var(--navy)">
-        <svg width="18" height="18" fill="none" stroke="var(--teal)" stroke-width="1.5" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-        <span style="font-size:.95rem">Envíanos un correo: <a href="mailto:info@serdoc.es" style="color:var(--teal);font-weight:600">info@serdoc.es</a></span>
-      </div>
-      <div style="display:flex;align-items:center;gap:.6rem;color:var(--navy)">
-        <svg width="18" height="18" fill="none" stroke="var(--teal)" stroke-width="1.5" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.29 12 19.79 19.79 0 0 1 1.22 3.33 2 2 0 0 1 3.22 1.22h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-        <span style="font-size:.95rem">Llámanos: <a href="tel:+34615266979" style="color:var(--teal);font-weight:600">615 26 69 79</a> y <a href="tel:+34916896573" style="color:var(--teal);font-weight:600">91 689 65 73</a></span>
+<nav aria-label="Tabla de contenidos" style="background:var(--g100,#f5f7fa);border-radius:10px;padding:1.5rem 1.75rem;margin-bottom:2rem;border:1px solid var(--g200,#e2e8f0)">
+        <p style="font-family:'Outfit',sans-serif;font-weight:700;color:var(--navy);margin-bottom:.85rem;font-size:1rem">Tabla de contenidos</p>
+        <ol style="margin:0;padding-left:1.25rem;color:var(--g700);font-size:.95rem;line-height:1.6">
+        <li style="margin-bottom:.5rem"><a href="#la-importancia-de-los-estandares-en-rfid" style="color:var(--teal);text-decoration:none;border-bottom:1px solid transparent" onmouseover="this.style.borderBottomColor='var(--teal)'" onmouseout="this.style.borderBottomColor='transparent'">La importancia de los estándares en RFID</a></span></li>
+        <li style="margin-bottom:.5rem"><a href="#1-estandares-iso-el-lenguaje-universal-rfid" style="color:var(--teal);text-decoration:none;border-bottom:1px solid transparent" onmouseover="this.style.borderBottomColor='var(--teal)'" onmouseout="this.style.borderBottomColor='transparent'">1. Estándares ISO: El lenguaje universal RFID</a></li>
+        <li style="margin-bottom:.5rem"><a href="#2-normativa-epcglobal-el-estandar-de-la-cadena-de-suministro" style="color:var(--teal);text-decoration:none;border-bottom:1px solid transparent" onmouseover="this.style.borderBottomColor='var(--teal)'" onmouseout="this.style.borderBottomColor='transparent'">2. Normativa EPCglobal: El estándar de la cadena de suministro</a></li>
+        <li style="margin-bottom:.5rem"><a href="#3-estandares-por-frecuencia-de-operacion" style="color:var(--teal);text-decoration:none;border-bottom:1px solid transparent" onmouseover="this.style.borderBottomColor='var(--teal)'" onmouseout="this.style.borderBottomColor='transparent'">3. Estándares por frecuencia de operación</a></li>
+        <li style="margin-bottom:.5rem"><a href="#4-normativas-regionales-y-legales" style="color:var(--teal);text-decoration:none;border-bottom:1px solid transparent" onmouseover="this.style.borderBottomColor='var(--teal)'" onmouseout="this.style.borderBottomColor='transparent'">4. Normativas regionales y legales</a></li>
+        <li style="margin-bottom:.5rem"><a href="#5-estandares-de-seguridad-y-privacidad" style="color:var(--teal);text-decoration:none;border-bottom:1px solid transparent" onmouseover="this.style.borderBottomColor='var(--teal)'" onmouseout="this.style.borderBottomColor='transparent'">5. Estándares de seguridad y privacidad</a></li>
+        <li style="margin-bottom:.5rem"><a href="#6-casos-de-uso-por-estandar" style="color:var(--teal);text-decoration:none;border-bottom:1px solid transparent" onmouseover="this.style.borderBottomColor='var(--teal)'" onmouseout="this.style.borderBottomColor='transparent'">6. Casos de uso por estándar</a></li>
+        <li style="margin-bottom:.5rem"><a href="#7-como-elegir-la-etiqueta-correcta" style="color:var(--teal);text-decoration:none;border-bottom:1px solid transparent" onmouseover="this.style.borderBottomColor='var(--teal)'" onmouseout="this.style.borderBottomColor='transparent'">7. Cómo elegir la etiqueta correcta</a></li>
+        <li style="margin-bottom:.5rem"><a href="#8-futuro-de-los-estandares-rfid" style="color:var(--teal);text-decoration:none;border-bottom:1px solid transparent" onmouseover="this.style.borderBottomColor='var(--teal)'" onmouseout="this.style.borderBottomColor='transparent'">8. Futuro de los estándares RFID</a></li>
+        </ol>
+      </nav>
+
+      <h2 id="la-importancia-de-los-estandares-en-rfid" style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.3rem;margin:2rem 0 .75rem">La importancia de los estándares en RFID</h2>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">Cuando hablamos de estándares de etiquetas RFID, no es un simple capricho técnico. Es como cuando vas a una reunión y todos hablan el mismo idioma: fluye la comunicación, se evitan malentendidos y nadie se queda fuera. En RFID ocurre lo mismo: los estándares garantizan que las etiquetas, lectores y sistemas funcionen en armonía.</p>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">Un detalle importante: cumplir con la normativa ISO RFID o con especificaciones globales como EPC Gen2 no es solo para "quedar bien". Es una necesidad para que tu cadena de suministro funcione sin tropiezos, se reduzcan costos y, lo más importante, se eviten sanciones por incumplimiento legal.</p>
+      <h3 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.1rem;margin:1.5rem 0 .6rem">Qué son los estándares y por qué existen</h3>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">Los estándares RFID son reglas técnicas acordadas globalmente que aseguran la interoperabilidad. Gracias a ellos, una etiqueta producida en Japón puede funcionar perfectamente en un centro logístico en España o en una fábrica en México.</p>
+      <h3 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.1rem;margin:1.5rem 0 .6rem">Ventajas de usar etiquetas certificadas</h3>
+      <ul style="list-style:none;padding:0;margin:0 0 1rem 0">
+        <li style="display:flex;align-items:flex-start;gap:.5rem;margin-bottom:.5rem"><span style="color:var(--amber);font-weight:700;flex-shrink:0;margin-top:.15rem">✓</span><span style="color:var(--g700);line-height:1.8"><strong>Interoperabilidad:</strong> sin importar el fabricante, las etiquetas cumplen con las mismas reglas.</span></li>
+        <li style="display:flex;align-items:flex-start;gap:.5rem;margin-bottom:.5rem"><span style="color:var(--amber);font-weight:700;flex-shrink:0;margin-top:.15rem">✓</span><span style="color:var(--g700);line-height:1.8"><strong>Seguridad:</strong> normativas que regulan la protección de datos y el uso correcto de frecuencias.</span></li>
+        <li style="display:flex;align-items:flex-start;gap:.5rem;margin-bottom:.5rem"><span style="color:var(--amber);font-weight:700;flex-shrink:0;margin-top:.15rem">✓</span><span style="color:var(--g700);line-height:1.8"><strong>Escalabilidad:</strong> permite crecer sin tener que rediseñar toda tu infraestructura tecnológica.</span></li>
+      </ul>
+
+
+      <a href="/" style="display:block;margin:1.5rem 0">
+        <img src="/images/banner-blogs-serdoc.webp" alt="Banner Serdoc" style="width:100%;border-radius:12px;display:block" loading="lazy">
+      </a>
+      <h2 id="1-estandares-iso-el-lenguaje-universal-rfid" style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.3rem;margin:2rem 0 .75rem">1. Estándares ISO: El lenguaje universal RFID</h2>
+      <h3 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.1rem;margin:1.5rem 0 .6rem">ISO 14443: Para tarjetas de proximidad (HF)</h3>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">Usado en sistemas de transporte público o accesos a edificios. Si alguna vez has pasado una tarjeta sin contacto para entrar al metro, estabas usando un estándar ISO RFID.</p>
+      <h3 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.1rem;margin:1.5rem 0 .6rem">ISO 15693: Etiquetas de alta memoria</h3>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">Muy comunes en bibliotecas y hospitales. Su ventaja es que pueden almacenar gran cantidad de datos, como el historial de un paciente o la trazabilidad de un libro.</p>
+      <h3 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.1rem;margin:1.5rem 0 .6rem">ISO 18000: Serie para frecuencias UHF y NFC</h3>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">Este conjunto de normas define cómo deben operar las etiquetas según la frecuencia. Aquí es donde nacen los debates técnicos, como EPC Gen2 vs ISO 18000-6C, que básicamente hablan del mismo idioma pero con acentos distintos.</p>
+
+      <h2 id="2-normativa-epcglobal-el-estandar-de-la-cadena-de-suministro" style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.3rem;margin:2rem 0 .75rem">2. Normativa EPCglobal: El estándar de la cadena de suministro</h2>
+      <h3 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.1rem;margin:1.5rem 0 .6rem">EPC Gen2 (ISO 18000-6C): Logística y retail</h3>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">El "rey" del retail. Con este estándar, gigantes como Zara o Decathlon controlan inventarios en tiempo real.</p>
+      <h3 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.1rem;margin:1.5rem 0 .6rem">Cómo funciona la codificación EPC</h3>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">Cada etiqueta lleva un código único que identifica no solo el producto, sino también su lote, origen y hasta ubicación. Es como el DNI del objeto.</p>
+      <h3 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.1rem;margin:1.5rem 0 .6rem">Ventajas en inventarios y trazabilidad</h3>
+      <ul style="list-style:none;padding:0;margin:0 0 1rem 0">
+        <li style="display:flex;align-items:flex-start;gap:.5rem;margin-bottom:.5rem"><span style="color:var(--amber);font-weight:700;flex-shrink:0;margin-top:.15rem">✓</span><span style="color:var(--g700);line-height:1.8">Reducción de errores humanos.</span></li>
+        <li style="display:flex;align-items:flex-start;gap:.5rem;margin-bottom:.5rem"><span style="color:var(--amber);font-weight:700;flex-shrink:0;margin-top:.15rem">✓</span><span style="color:var(--g700);line-height:1.8">Mayor visibilidad en la cadena.</span></li>
+        <li style="display:flex;align-items:flex-start;gap:.5rem;margin-bottom:.5rem"><span style="color:var(--amber);font-weight:700;flex-shrink:0;margin-top:.15rem">✓</span><span style="color:var(--g700);line-height:1.8">Capacidad de reaccionar más rápido ante pérdidas o caducidades.</span></li>
+      </ul>
+
+
+      <img src="/images/Que-es-NFC-Y-Que-es-RFID.webp" alt="Qué es NFC y qué es RFID" style="width:100%;border-radius:12px;object-fit:cover;height:280px;margin:1.5rem 0" loading="lazy">
+      <h2 id="3-estandares-por-frecuencia-de-operacion" style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.3rem;margin:2rem 0 .75rem">3. Estándares por frecuencia de operación</h2>
+      <h3 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.1rem;margin:1.5rem 0 .6rem">LF (125-134 kHz): Identificación animal y acceso</h3>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">Sí, hasta el microchip de tu mascota cumple con un estándar RFID.</p>
+      <h3 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.1rem;margin:1.5rem 0 .6rem">HF (13.56 MHz): Pagos, bibliotecas, NFC</h3>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">Es la frecuencia de las tarjetas bancarias sin contacto. Fiable y de corto alcance.</p>
+      <h3 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.1rem;margin:1.5rem 0 .6rem">UHF (860-960 MHz): Retail, logística, industriales</h3>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">La más usada en etiquetas UHF estándar, perfecta para controlar cajas en un almacén o ropa en una tienda.</p>
+
+      <h2 id="4-normativas-regionales-y-legales" style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.3rem;margin:2rem 0 .75rem">4. Normativas regionales y legales</h2>
+      <h3 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.1rem;margin:1.5rem 0 .6rem">FCC (EEUU), CE (Europa), ARIB (Japón)</h3>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">Cada región establece las frecuencias RFID permitidas. Si instalas etiquetas no homologadas, podrías terminar con multas.</p>
+      <h3 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.1rem;margin:1.5rem 0 .6rem">Límites de potencia y canales por país</h3>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">Un lector en Europa no puede emitir con la misma potencia que en EEUU. Esto garantiza que no interfiera con otros sistemas.</p>
+      <h3 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.1rem;margin:1.5rem 0 .6rem">Etiquetado ecológico y reciclaje</h3>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">Normas como RoHS y REACH aseguran que las etiquetas no contengan materiales tóxicos. Sí, hasta en RFID hay compromiso con la sostenibilidad.</p>
+
+      <h2 id="5-estandares-de-seguridad-y-privacidad" style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.3rem;margin:2rem 0 .75rem">5. Estándares de seguridad y privacidad</h2>
+      <h3 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.1rem;margin:1.5rem 0 .6rem">Criptografía en etiquetas (ISO 29167)</h3>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">Algunas etiquetas permiten cifrado para que la información solo sea accesible a quienes deben leerla.</p>
+      <h3 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.1rem;margin:1.5rem 0 .6rem">Protección de datos (GDPR, CCPA)</h3>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">En retail, no puedes almacenar datos personales sin cumplir con normativas de privacidad.</p>
+      <h3 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.1rem;margin:1.5rem 0 .6rem">Etiquetas con kill password o bloqueo</h3>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">Una vez vendido el producto, la etiqueta puede desactivarse. Así, el cliente no siente que lo "espían" después de salir de la tienda.</p>
+
+
+      <img src="/images/Estandares-ISO-El-lenguaje-universal-RFID.webp" alt="Estándares ISO El lenguaje universal RFID" style="width:100%;border-radius:12px;object-fit:cover;height:280px;margin:1.5rem 0" loading="lazy">
+      <h2 id="6-casos-de-uso-por-estandar" style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.3rem;margin:2rem 0 .75rem">6. Casos de uso por estándar</h2>
+      <h3 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.1rem;margin:1.5rem 0 .6rem">Retail: EPC Gen2 para apparel</h3>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">Las cadenas de moda gestionan millones de prendas en segundos gracias a UHF.</p>
+      <h3 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.1rem;margin:1.5rem 0 .6rem">Salud: ISO 15693 para muestras médicas</h3>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">Permite seguir una muestra desde el laboratorio hasta el hospital sin errores.</p>
+      <h3 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.1rem;margin:1.5rem 0 .6rem">Automotriz: IATA RFID para aeronáutica</h3>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">Control de equipaje y piezas críticas de aviones. Aquí no hay margen de error.</p>
+
+      <h2 id="7-como-elegir-la-etiqueta-correcta" style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.3rem;margin:2rem 0 .75rem">7. Cómo elegir la etiqueta correcta</h2>
+      <h3 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.1rem;margin:1.5rem 0 .6rem">Checklist: Material, memoria, resistencia</h3>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">No es lo mismo etiquetar una prenda de algodón que una caja metálica.</p>
+      <h3 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.1rem;margin:1.5rem 0 .6rem">Pruebas de rendimiento</h3>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">Factores como alcance de lectura o interferencias pueden variar según el entorno.</p>
+      <h3 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.1rem;margin:1.5rem 0 .6rem">Certificaciones obligatorias por sector</h3>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">Cada industria tiene sus propias exigencias de certificación en etiquetas RFID.</p>
+
+
+      <a href="/" style="display:block;margin:1.5rem 0">
+        <img src="/images/banner-blogs-serdoc.webp" alt="Banner Serdoc" style="width:100%;border-radius:12px;display:block" loading="lazy">
+      </a>
+      <h2 id="8-futuro-de-los-estandares-rfid" style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.3rem;margin:2rem 0 .75rem">8. Futuro de los estándares RFID</h2>
+      <h3 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.1rem;margin:1.5rem 0 .6rem">RAIN RFID (UHF pasiva) y sensores</h3>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">Cada vez más integrados con IoT y big data.</p>
+      <h3 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.1rem;margin:1.5rem 0 .6rem">IoT y estandarización de datos</h3>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">Permitirán una trazabilidad completa, desde la fábrica hasta el cliente final.</p>
+      <h3 style="font-family:'Outfit',sans-serif;color:var(--navy);font-size:1.1rem;margin:1.5rem 0 .6rem">Sostenibilidad y estándares verdes</h3>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">El futuro apunta a etiquetas reciclables y con menor impacto ambiental.</p>
+
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">Los estándares de etiquetas RFID son la base para que las soluciones funcionen de forma segura, interoperable y legal en cualquier parte del mundo. No seguirlos es como intentar enchufar un aparato europeo en un enchufe americano: al final, no funciona o puedes tener un problema mayor.</p>
+      <p style="color:var(--g700);line-height:1.8;margin-bottom:1rem">Desde EPC Gen2 vs ISO 18000-6C, hasta las diferencias entre HF y UHF RFID, cada normativa tiene su razón de ser y su aplicación práctica. Conocerlas no solo optimiza tu operación, también protege tu negocio frente a sanciones y riesgos de seguridad. Nuestro equipo analiza la compatibilidad de estándares antes de seleccionar el hardware.</p>
+
+      <!-- COMPARTIR -->
+    <div style="border-top:1px solid var(--g200);margin-top:2rem;padding-top:1.5rem">
+      <p style="font-family:'Outfit',sans-serif;font-weight:700;color:var(--navy);margin-bottom:1rem;font-size:.95rem">¿Te ha resultado útil? Comparte el artículo</p>
+      <div style="display:flex;flex-wrap:wrap;gap:.65rem" id="shareButtons">
+        <a id="shareWA" href="#" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:.45rem;padding:.6rem 1.1rem;border-radius:var(--radius);background:#25D366;color:white;font-size:.88rem;font-weight:700;font-family:'Outfit',sans-serif;text-decoration:none"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12.004 2C6.477 2 2 6.477 2 12.004c0 1.77.459 3.427 1.26 4.865L2 22l5.27-1.234A9.953 9.953 0 0 0 12.004 22C17.527 22 22 17.523 22 12.004 22 6.477 17.527 2 12.004 2z" fill-rule="evenodd" clip-rule="evenodd"/></svg>WhatsApp</a>
+        <a id="shareLI" href="#" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:.45rem;padding:.6rem 1.1rem;border-radius:var(--radius);background:#0077B5;color:white;font-size:.88rem;font-weight:700;font-family:'Outfit',sans-serif;text-decoration:none"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>LinkedIn</a>
+        <a id="shareX" href="#" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:.45rem;padding:.6rem 1.1rem;border-radius:var(--radius);background:#000;color:white;font-size:.88rem;font-weight:700;font-family:'Outfit',sans-serif;text-decoration:none"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.737-8.858L1.254 2.25H8.08l4.26 5.633zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>X</a>
+        <a id="shareFB" href="#" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:.45rem;padding:.6rem 1.1rem;border-radius:var(--radius);background:#1877F2;color:white;font-size:.88rem;font-weight:700;font-family:'Outfit',sans-serif;text-decoration:none"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>Facebook</a>
+        <button id="shareCopy" onclick="copyLink(this)" style="display:inline-flex;align-items:center;gap:.45rem;padding:.6rem 1.1rem;border-radius:var(--radius);background:var(--g100);color:var(--navy);font-size:.88rem;font-weight:700;font-family:'Outfit',sans-serif;cursor:pointer;border:1.5px solid var(--g200)"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar enlace</button>
       </div>
     </div>
-<!-- COMPARTIR -->
-      <div style="border-top:1px solid var(--g200);margin-top:2rem;padding-top:1.5rem">
-        <p style="font-family:'Outfit',sans-serif;font-weight:700;color:var(--navy);margin-bottom:1rem;font-size:.95rem">¿Tu equipo trabaja con RFID? Comparte este artículo</p>
-        <div style="display:flex;flex-wrap:wrap;gap:.6rem">
-          <a href="https://twitter.com/intent/tweet?url=https://serdoc.es/cuales-son-los-estandares-de-etiquetas-rfid/" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:.4rem;padding:.5rem 1rem;border-radius:8px;background:#000;color:white;font-size:.85rem;font-weight:600;text-decoration:none;font-family:'Outfit',sans-serif"><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg> X</a>
-          <a href="https://www.linkedin.com/shareArticle?url=https://serdoc.es/cuales-son-los-estandares-de-etiquetas-rfid/" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:.4rem;padding:.5rem 1rem;border-radius:8px;background:#0A66C2;color:white;font-size:.85rem;font-weight:600;text-decoration:none;font-family:'Outfit',sans-serif"><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452z"/></svg> LinkedIn</a>
-          <a href="https://wa.me/?text=https://serdoc.es/cuales-son-los-estandares-de-etiquetas-rfid/" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:.4rem;padding:.5rem 1rem;border-radius:8px;background:#25D366;color:white;font-size:.85rem;font-weight:600;text-decoration:none;font-family:'Outfit',sans-serif"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a9 9 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg> WhatsApp</a>
-          <a href="https://www.facebook.com/sharer/sharer.php?u=https://serdoc.es/cuales-son-los-estandares-de-etiquetas-rfid/" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:.4rem;padding:.5rem 1rem;border-radius:8px;background:#1877F2;color:white;font-size:.85rem;font-weight:600;text-decoration:none;font-family:'Outfit',sans-serif"><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg> Facebook</a>
-          <button onclick="navigator.clipboard.writeText('https://serdoc.es/cuales-son-los-estandares-de-etiquetas-rfid/').then(()=>{this.textContent='✓ Copiado';this.style.background='#059669';setTimeout(()=>{this.textContent='Copiar enlace';this.style.background='var(--g700)'},2000)})" style="display:inline-flex;align-items:center;gap:.4rem;padding:.5rem 1rem;border-radius:8px;background:var(--g700);color:white;font-size:.85rem;font-weight:600;border:none;cursor:pointer;font-family:'Outfit',sans-serif">Copiar enlace</button>
-        </div>
-      </div>
+    <script>
+    (function(){
+      var url=encodeURIComponent(window.location.href);
+      var title=encodeURIComponent(document.title);
+      document.getElementById('shareWA').href='https://api.whatsapp.com/send?text='+title+'%20'+url;
+      document.getElementById('shareLI').href='https://www.linkedin.com/sharing/share-offsite/?url='+url;
+      document.getElementById('shareX').href='https://twitter.com/intent/tweet?url='+url+'&text='+title;
+      document.getElementById('shareFB').href='https://www.facebook.com/sharer/sharer.php?u='+url;
+    })();
+    function copyLink(btn){
+      navigator.clipboard.writeText(window.location.href).then(function(){
+        var o=btn.innerHTML;btn.innerHTML='✓ Copiado';
+        setTimeout(function(){btn.innerHTML=o;},2000);
+      });
+    }
+    </script>
     </article>
     <aside style="align-self:start;position:sticky;top:100px">
 <div style="background:white;border-radius:12px;box-shadow:0 2px 16px rgba(15,27,51,.08);padding:1.5rem;margin-bottom:1.5rem">
@@ -879,6 +987,7 @@ a:hover .arrow-r{transform:translateX(3px)}
     </aside>
   </div>
 </div>
+
 <footer class="footer">
   <div class="footer-inner">
     <div class="footer-brand">
