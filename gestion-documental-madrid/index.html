@@ -896,15 +896,21 @@ a:hover .arrow-r{transform:translateX(3px)}
   </div>
 </div></section>
 
+<style>
+@media (max-width: 768px) {
+  .sla-div-gd { display: none; }
+  .sla-item-gd { justify-content: center; flex: none; width: 100%; min-width: 0; }
+}
+</style>
 <section style="padding:2.5rem 1.5rem;background:var(--bg-warm)">
   <div style="max-width:1100px;margin:0 auto">
     <div style="background:var(--teal);border-radius:16px;padding:2rem 2.5rem;display:flex;align-items:center;gap:2.5rem;flex-wrap:wrap">
-      <div style="display:flex;align-items:center;gap:.85rem;flex:1;min-width:220px">
+      <div class="sla-item-gd" style="display:flex;align-items:center;gap:.85rem;flex:1;min-width:220px">
         <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.29 12 19.79 19.79 0 0 1 1.22 3.33 2 2 0 0 1 3.22 1.22h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
         <span style="font-family:'Outfit',sans-serif;font-size:1.05rem;font-weight:700;color:white;line-height:1.3">Asistencia remota y presencial</span>
       </div>
-      <div style="width:1px;height:44px;background:rgba(255,255,255,.25);flex-shrink:0"></div>
-      <div style="display:flex;align-items:center;gap:.85rem;flex:1;min-width:220px">
+      <div class="sla-div-gd" style="width:1px;height:44px;background:rgba(255,255,255,.25);flex-shrink:0"></div>
+      <div class="sla-item-gd" style="display:flex;align-items:center;gap:.85rem;flex:1;min-width:220px">
         <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
         <span style="font-family:'Outfit',sans-serif;font-size:1.05rem;font-weight:700;color:white;line-height:1.3">Tiempo de respuesta garantizado: 24h crítico · 48h no crítico</span>
       </div>
