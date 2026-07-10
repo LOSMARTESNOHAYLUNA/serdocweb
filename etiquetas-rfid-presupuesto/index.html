@@ -558,7 +558,7 @@ document.getElementById('rfidForm').addEventListener('submit',async function(e){
     var d=await r.json();
     if(d.success){
       if(typeof gtag!=='undefined')gtag('event','generate_lead',{event_category:'ads',event_label:'etiquetas_rfid_presupuesto'});
-      window.location.href='/gracias-ads/';
+      window.location.href='/gracias/';
     }else throw new Error(d.message||'Error');
   }catch(err){
     msg.textContent='Hubo un error al enviar. Por favor inténtalo de nuevo o llámanos al +34 916 896 573.';
