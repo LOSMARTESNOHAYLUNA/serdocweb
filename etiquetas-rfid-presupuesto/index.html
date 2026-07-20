@@ -325,7 +325,7 @@ section{padding:5rem 1.5rem}
   </div>
   <div class="lhero-inner">
     <div class="lhero-badge">+25 años implantando RFID en empresas españolas</div>
-    <h1>Etiquetas <span style="color:var(--amber)">RFID</span> para empresas en Madrid con <span style="color:var(--amber)">+25 años</span>: <span style="color:var(--amber)">soluciones a medida</span> y presupuesto gratuito</h1>
+    <h1>¿Tu equipo sigue <span style="color:var(--amber)">perdiendo horas</span> en <span style="color:var(--amber)">inventarios manuales</span>?</h1>
     <p class="lhero-sub">Las etiquetas RFID de Serdoc leen cientos de artículos simultáneamente, sin escanear uno a uno, sin errores de transcripción. Lo que ahora tarda un turno, con RFID tarda 40 minutos.</p>
     <div class="lhero-checks">
       <span class="lhero-check"><svg width="14" height="14" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Todos los tipos y formatos de etiqueta RFID</span>
@@ -353,17 +353,17 @@ section{padding:5rem 1.5rem}
   <div class="stats-grid">
     <div class="stat-item">
       <div class="stat-icon"><svg width="28" height="28" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
-      <div class="stat-num">+25</div>
+      <div class="stat-num" data-target="25" data-prefix="+" data-suffix="">+25</div>
       <p class="stat-label">años de experiencia RFID en España</p>
     </div>
     <div class="stat-item">
       <div class="stat-icon"><svg width="28" height="28" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
-      <div class="stat-num">99,9%</div>
+      <div class="stat-num" data-target="99.9" data-prefix="" data-suffix="%" data-decimals="1" data-decimal-sep=",">99,9%</div>
       <p class="stat-label">de precisión en inventario RFID</p>
     </div>
     <div class="stat-item">
       <div class="stat-icon"><svg width="28" height="28" viewBox="0 0 24 24"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg></div>
-      <div class="stat-num">-70%</div>
+      <div class="stat-num" data-target="70" data-prefix="-" data-suffix="%">-70%</div>
       <p class="stat-label">de reducción en tiempo de inventario</p>
     </div>
   </div>
@@ -626,5 +626,57 @@ document.getElementById('rfidForm').addEventListener('submit',async function(e){
   }
 });
 </script>
+
+<script>
+(function(){
+  var counters = document.querySelectorAll('.stat-num[data-target]');
+  var started = false;
+
+  function animateCounter(el) {
+    var target    = parseFloat(el.dataset.target);
+    var prefix    = el.dataset.prefix    || '';
+    var suffix    = el.dataset.suffix    || '';
+    var decimals  = parseInt(el.dataset.decimals || '0');
+    var decSep    = el.dataset.decimalSep || '.';
+    var duration  = 1800;
+    var start     = null;
+
+    function step(timestamp) {
+      if (!start) start = timestamp;
+      var progress = Math.min((timestamp - start) / duration, 1);
+      // easeOutQuart
+      var ease = 1 - Math.pow(1 - progress, 4);
+      var current = ease * target;
+      var display = decimals > 0
+        ? current.toFixed(decimals).replace('.', decSep)
+        : Math.floor(current).toString();
+      el.textContent = prefix + display + suffix;
+      if (progress < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+
+  function runCounters() {
+    if (started) return;
+    started = true;
+    counters.forEach(function(el) { animateCounter(el); });
+  }
+
+  // IntersectionObserver: arranca cuando la sección entra en pantalla
+  if ('IntersectionObserver' in window) {
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) { runCounters(); observer.disconnect(); }
+      });
+    }, { threshold: 0.3 });
+    var statsSection = document.querySelector('.stats-section');
+    if (statsSection) observer.observe(statsSection);
+  } else {
+    // Fallback para navegadores sin soporte
+    runCounters();
+  }
+})();
+</script>
+
 </body>
 </html>
