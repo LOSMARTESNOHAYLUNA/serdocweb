@@ -76,11 +76,11 @@ button{font-family:inherit;cursor:pointer}
 .lhero-bg{position:absolute;inset:0;z-index:0}
 .lhero-bg img{width:100%;height:100%;object-fit:cover;display:block;animation:kenburns 18s ease-in-out infinite alternate}
 .lhero-overlay{position:absolute;inset:0;z-index:1;background:linear-gradient(135deg,rgba(15,27,51,.82) 0%,rgba(15,27,51,.6) 100%)}
-.lhero-inner{max-width:760px;position:relative;z-index:2;text-align:left}
+.lhero-inner{max-width:760px;margin:0 auto;text-align:center;position:relative;z-index:2}
 .lhero-badge{display:inline-flex;align-items:center;gap:.4rem;background:rgba(8,145,178,.15);border:1px solid rgba(8,145,178,.3);border-radius:999px;padding:.3rem .85rem;font-size:.75rem;font-weight:700;color:#22D3EE;font-family:'Outfit',sans-serif;text-transform:uppercase;letter-spacing:.06em;margin-bottom:1.25rem}
-.lhero h1{font-size:clamp(2.4rem,5.5vw,4rem);font-weight:800;color:white;line-height:1.08;margin-bottom:1.2rem;letter-spacing:-.03em}
-.lhero-sub{font-size:17px;color:rgba(255,255,255,.8);line-height:26.35px;margin-bottom:2rem;max-width:580px}
-.lhero-checks{display:flex;flex-wrap:wrap;gap:.5rem .75rem;justify-content:flex-start;margin-bottom:2.25rem}
+.lhero h1{font-size:clamp(2.2rem,4.5vw,3.6rem);font-weight:800;color:white;line-height:1.12;margin-bottom:1.2rem;letter-spacing:-.02em}
+.lhero-sub{font-size:1.1rem;color:rgba(255,255,255,.8);line-height:1.7;margin-bottom:2.25rem;max-width:580px;margin-left:auto;margin-right:auto}
+.lhero-checks{display:flex;flex-wrap:wrap;gap:.5rem .75rem;justify-content:center;margin-bottom:2.25rem}
 .lhero-check{display:inline-flex;align-items:center;gap:.45rem;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:20px;padding:.3rem .85rem;color:rgba(255,255,255,.9);font-size:17px;font-weight:600}
 .lhero-check svg{color:var(--teal-light);flex-shrink:0;fill:none;stroke:currentColor;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
 .btn-primary{display:inline-flex;align-items:center;gap:.5rem;background:var(--amber);color:white;font-family:'Outfit',sans-serif;font-weight:700;font-size:17px;padding:.9rem 2rem;border-radius:var(--radius);border:none;cursor:pointer;transition:background .2s,transform .15s;text-decoration:none}
@@ -286,10 +286,10 @@ section{padding:5rem 1.5rem}
   /* Topbar: ocultar texto del teléfono */
   .lp-btn-tel .btn-tel-txt{display:none}
   /* Hero checks: columna */
-  .lhero-checks{flex-direction:column;align-items:flex-start}
+  .lhero-checks{flex-direction:column;align-items:center}
 }
 @media(max-width:500px){
-  .lhero h1{font-size:2rem}
+  .lhero h1{font-size:1.9rem}
   .form-box{padding:1.5rem}
   }
 @media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
