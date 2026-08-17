@@ -55,8 +55,8 @@ button{font-family:inherit;cursor:pointer}
 /* ── TOPBAR con logo completo + botones de contacto ── */
 .lp-topbar{
   position:absolute;top:0;left:0;right:0;z-index:10;
-  padding:.85rem 2rem;
-  display:flex;align-items:center;justify-content:space-between;
+  padding:1.1rem 2rem 1rem;
+  display:flex;flex-direction:column;align-items:center;gap:.75rem;
   background:rgba(15,27,51,.55);backdrop-filter:blur(8px);
   border-bottom:1px solid rgba(255,255,255,.07)
 }
@@ -72,15 +72,15 @@ button{font-family:inherit;cursor:pointer}
 
 /* ── HERO ── */
 @keyframes kenburns{from{transform:scale(1)}to{transform:scale(1.06)}}
-.lhero{position:relative;overflow:hidden;min-height:92vh;display:flex;align-items:center;padding:8rem 1.5rem 5rem}
+.lhero{position:relative;overflow:hidden;min-height:92vh;display:flex;align-items:center;padding:10rem 1.5rem 5rem}
 .lhero-bg{position:absolute;inset:0;z-index:0}
 .lhero-bg img{width:100%;height:100%;object-fit:cover;display:block;animation:kenburns 18s ease-in-out infinite alternate}
 .lhero-overlay{position:absolute;inset:0;z-index:1;background:linear-gradient(135deg,rgba(15,27,51,.82) 0%,rgba(15,27,51,.6) 100%)}
-.lhero-inner{max-width:760px;margin:0 auto;text-align:center;position:relative;z-index:2}
+.lhero-inner{max-width:700px;text-align:left;position:relative;z-index:2}
 .lhero-badge{display:inline-flex;align-items:center;gap:.4rem;background:rgba(8,145,178,.15);border:1px solid rgba(8,145,178,.3);border-radius:999px;padding:.3rem .85rem;font-size:.75rem;font-weight:700;color:#22D3EE;font-family:'Outfit',sans-serif;text-transform:uppercase;letter-spacing:.06em;margin-bottom:1.25rem}
-.lhero h1{font-size:clamp(2.2rem,4.5vw,3.6rem);font-weight:800;color:white;line-height:1.12;margin-bottom:1.2rem;letter-spacing:-.02em}
-.lhero-sub{font-size:1.1rem;color:rgba(255,255,255,.8);line-height:1.7;margin-bottom:2.25rem;max-width:580px;margin-left:auto;margin-right:auto}
-.lhero-checks{display:flex;flex-wrap:wrap;gap:.5rem .75rem;justify-content:center;margin-bottom:2.25rem}
+.lhero h1{font-size:clamp(2.8rem,6vw,5.2rem);font-weight:800;color:white;line-height:1.08;margin-bottom:1.25rem;letter-spacing:-.03em}
+.lhero-sub{font-size:1.1rem;color:rgba(255,255,255,.8);line-height:1.7;margin-bottom:2.25rem;max-width:560px}
+.lhero-checks{display:flex;flex-wrap:wrap;gap:.5rem .75rem;justify-content:flex-start;margin-bottom:2.25rem}
 .lhero-check{display:inline-flex;align-items:center;gap:.45rem;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:20px;padding:.3rem .85rem;color:rgba(255,255,255,.9);font-size:17px;font-weight:600}
 .lhero-check svg{color:var(--teal-light);flex-shrink:0;fill:none;stroke:currentColor;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
 .btn-primary{display:inline-flex;align-items:center;gap:.5rem;background:var(--amber);color:white;font-family:'Outfit',sans-serif;font-weight:700;font-size:17px;padding:.9rem 2rem;border-radius:var(--radius);border:none;cursor:pointer;transition:background .2s,transform .15s;text-decoration:none}
@@ -131,7 +131,12 @@ section{padding:5rem 1.5rem}
 .s5 .section-label{color:var(--teal-light)}
 .s5 .section-h2{color:white}
 .cases-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-bottom:2rem}
-.case-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:var(--radius-lg);padding:1.75rem}
+/* ── CASE CARDS CON IMAGEN ── */
+.case-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:var(--radius-lg);overflow:hidden;display:flex;flex-direction:column}
+.case-card-img{height:180px;overflow:hidden;flex-shrink:0}
+.case-card-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s ease}
+.case-card:hover .case-card-img img{transform:scale(1.05)}
+.case-card-body{padding:1.75rem;flex:1;display:flex;flex-direction:column}
 .case-badge{display:inline-block;background:var(--teal);color:white;font-family:'Outfit',sans-serif;font-size:.7rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:.25rem .65rem;border-radius:20px;margin-bottom:.85rem}
 .case-card h3{font-family:'Outfit',sans-serif;font-weight:700;font-size:1.05rem;line-height:21.84px;color:white;margin-bottom:1rem}
 .case-card ul{display:flex;flex-direction:column;gap:.6rem}
@@ -270,7 +275,7 @@ section{padding:5rem 1.5rem}
   section{padding:3.5rem 1.25rem}
   .obj-section{padding:3.5rem 1.25rem}
   /* Grids a 1 columna */
-  .lp-topbar{flex-direction:column;gap:.65rem;text-align:center;padding:.85rem 1rem}
+  .lp-topbar{padding:.85rem 1rem}
   .lp-actions{justify-content:center}
   .problem-grid,.tags-grid,.reviews-grid{grid-template-columns:1fr}
   /* Sectores: 1 columna, iconos y texto centrados */
@@ -286,10 +291,10 @@ section{padding:5rem 1.5rem}
   /* Topbar: ocultar texto del teléfono */
   .lp-btn-tel .btn-tel-txt{display:none}
   /* Hero checks: columna */
-  .lhero-checks{flex-direction:column;align-items:center}
+  .lhero-checks{flex-direction:column;align-items:flex-start}
 }
 @media(max-width:500px){
-  .lhero h1{font-size:1.9rem}
+  .lhero h1{font-size:2.4rem}
   .form-box{padding:1.5rem}
   }
 @media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
@@ -424,9 +429,9 @@ section{padding:5rem 1.5rem}
     <p class="section-label">Casos reales</p>
     <h2 class="section-h2" style="margin-bottom:2.5rem">Resultados reales de clientes<br>que ya usan etiquetas RFID de Serdoc</h2>
     <div class="cases-grid">
-      <div class="case-card"><span class="case-badge">Bibliotecas</span><h3>Museo Nacional Centro de Arte Reina Sofía, Madrid</h3><ul><li>Inventario completo de cientos de miles de ejemplares por primera vez en la historia del museo</li><li>Préstamo simultáneo de varios libros en menos de 3 segundos</li><li>Eliminación de arcos antihurto — antenas de techo invisibles</li></ul></div>
-      <div class="case-card"><span class="case-badge">Universidad</span><h3>Universidad Politécnica de Madrid</h3><ul><li>Primer sistema de autopréstamo de portátiles en España — 24/7 sin personal</li><li>Amortización del sistema en menos de 2 años</li><li>Nº 1 en España en instalaciones de autopréstamo de portátiles con RFID</li></ul></div>
-      <div class="case-card"><span class="case-badge">Gestión documental</span><h3>Gran aseguradora médica española</h3><ul><li>Reducción de plazos de gestión documental de meses a pocos días</li><li>Eliminación total del papel en revisión de facturación médica</li><li>Reducción de errores y detección de fraude en pagos</li></ul></div>
+      <div class="case-card"><div class="case-card-img"><img src="/images/caso-reina-sofia.webp" alt="Caso Museo Reina Sofía RFID" loading="lazy" width="400" height="180"></div><div class="case-card-body"><span class="case-badge">Bibliotecas</span><h3>Museo Nacional Centro de Arte Reina Sofía, Madrid</h3><ul><li>Inventario completo de cientos de miles de ejemplares por primera vez en la historia del museo</li><li>Préstamo simultáneo de varios libros en menos de 3 segundos</li><li>Eliminación de arcos antihurto — antenas de techo invisibles</li></ul></div></div>
+      <div class="case-card"><div class="case-card-img"><img src="/images/caso-upm-portatiles.webp" alt="Caso UPM autopréstamo RFID" loading="lazy" width="400" height="180"></div><div class="case-card-body"><span class="case-badge">Universidad</span><h3>Universidad Politécnica de Madrid</h3><ul><li>Primer sistema de autopréstamo de portátiles en España — 24/7 sin personal</li><li>Amortización del sistema en menos de 2 años</li><li>Nº 1 en España en instalaciones de autopréstamo de portátiles con RFID</li></ul></div></div>
+      <div class="case-card"><div class="case-card-img"><img src="/images/caso-aseguradora.webp" alt="Caso aseguradora gestión documental RFID" loading="lazy" width="400" height="180"></div><div class="case-card-body"><span class="case-badge">Gestión documental</span><h3>Gran aseguradora médica española</h3><ul><li>Reducción de plazos de gestión documental de meses a pocos días</li><li>Eliminación total del papel en revisión de facturación médica</li><li>Reducción de errores y detección de fraude en pagos</li></ul></div></div>
     </div>
     <p class="s5-close">Llevamos más de 25 años implantando soluciones RFID en España. Tu empresa podría ser el próximo caso de éxito.</p>
   </div>
@@ -558,15 +563,6 @@ section{padding:5rem 1.5rem}
                 <option>Etiquetas RFID para joyería o lujo</option>
                 <option>Etiquetas RFID para ganadería o trazabilidad animal</option>
                 <option>Etiquetas RFID para otro uso (especificar abajo)</option>
-              </select>
-            </div>
-            <div class="fr full"><label for="cantidad">Cantidad aproximada</label>
-              <select id="cantidad" name="cantidad">
-                <option>No lo sé todavía</option>
-                <option>Menos de 1.000 unidades</option>
-                <option>Entre 1.000 y 10.000 unidades</option>
-                <option>Entre 10.000 y 50.000 unidades</option>
-                <option>Más de 50.000 unidades</option>
               </select>
             </div>
             <div class="fr full"><label for="mensaje">Más detalles</label><textarea id="mensaje" name="mensaje" rows="3" placeholder="Describe brevemente tu necesidad o el problema que quieres resolver."></textarea></div>
