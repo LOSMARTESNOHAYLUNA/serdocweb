@@ -53,14 +53,9 @@ ul{list-style:none}
 button{font-family:inherit;cursor:pointer}
 
 /* ── TOPBAR con logo completo + botones de contacto ── */
-.lp-topbar{
-  position:absolute;top:0;left:0;right:0;z-index:10;
-  padding:1.1rem 2rem 1rem;
-  display:flex;flex-direction:column;align-items:center;gap:.75rem;
-  background:rgba(15,27,51,.55);backdrop-filter:blur(8px);
-  border-bottom:1px solid rgba(255,255,255,.07)
-}
 
+
+.lp-topbar{position:absolute;top:0;left:0;right:0;z-index:10;padding:.9rem 2rem;display:flex;flex-direction:row;align-items:center;justify-content:space-between;background:rgba(15,27,51,.55);backdrop-filter:blur(8px);border-bottom:1px solid rgba(255,255,255,.07)}
 .lp-actions{display:flex;align-items:center;gap:.6rem}
 .lp-btn{display:inline-flex;align-items:center;gap:.4rem;font-family:'Outfit',sans-serif;font-weight:700;font-size:.82rem;padding:.45rem 1rem;border-radius:var(--radius);border:none;cursor:pointer;text-decoration:none;transition:all .2s;white-space:nowrap}
 .lp-btn-wa{background:#25D366;color:white}
@@ -262,8 +257,7 @@ section{padding:5rem 1.5rem}
    ════════════════════════════════ */
 
 @media(max-width:768px){
-    .lp-actions{justify-content:center}
-}
+    }
 @media(max-width:768px){.trust-bar-inner{gap:.5rem 1.25rem}.trust-item{font-size:.8rem}.stats-grid{grid-template-columns:1fr;gap:2.5rem}}
 @media(max-width:900px){
   .sectors-grid{grid-template-columns:repeat(2,1fr)}
@@ -275,9 +269,8 @@ section{padding:5rem 1.5rem}
   section{padding:3.5rem 1.25rem}
   .obj-section{padding:3.5rem 1.25rem}
   /* Grids a 1 columna */
-  .lp-topbar{padding:.85rem 1rem}
-  .lp-actions{justify-content:center}
-  .problem-grid,.tags-grid,.reviews-grid{grid-template-columns:1fr}
+  
+    .problem-grid,.tags-grid,.reviews-grid{grid-template-columns:1fr}
   /* Sectores: 1 columna, iconos y texto centrados */
   .sectors-grid{grid-template-columns:1fr}
   .sector-body{text-align:center}
@@ -289,8 +282,7 @@ section{padding:5rem 1.5rem}
   .wa-btns{flex-direction:column;gap:.75rem}
   .btn-wa,.btn-phone{width:100%;justify-content:center}
   /* Topbar: ocultar texto del teléfono */
-  .lp-btn-tel .btn-tel-txt{display:none}
-  /* Hero checks: columna */
+    /* Hero checks: columna */
   .lhero-checks{flex-direction:column;align-items:flex-start}
 }
 @media(max-width:500px){
