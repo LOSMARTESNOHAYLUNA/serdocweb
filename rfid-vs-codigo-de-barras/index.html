@@ -1249,5 +1249,81 @@ CC.init();
   });
 })();
 </script>
+
+<script>
+// ── Serdoc DataLayer Events ──────────────────────────────────
+
+// 1. Scroll depth (25 / 50 / 75 / 90 %)
+(function(){
+  var marks = {25:false,50:false,75:false,90:false};
+  function getScrollPct(){
+    var el = document.documentElement;
+    return Math.round((el.scrollTop||document.body.scrollTop)/
+      (el.scrollHeight-el.clientHeight)*100);
+  }
+  window.addEventListener('scroll',function(){
+    var pct = getScrollPct();
+    [25,50,75,90].forEach(function(m){
+      if(!marks[m] && pct>=m){
+        marks[m]=true;
+        dataLayer.push({event:'scroll_depth',scroll_depth_threshold:m,
+          page_path:window.location.pathname});
+      }
+    });
+  },{passive:true});
+})();
+
+// 2. Clicks en WhatsApp (cualquier enlace wa.me)
+document.querySelectorAll('a[href*="wa.me"]').forEach(function(el){
+  el.addEventListener('click',function(){
+    dataLayer.push({event:'whatsapp_click',link_url:el.href,
+      page_path:window.location.pathname});
+  });
+});
+
+// 3. Clicks en teléfono (tel:)
+document.querySelectorAll('a[href^="tel:"]').forEach(function(el){
+  el.addEventListener('click',function(){
+    dataLayer.push({event:'phone_call',phone_number:el.href.replace('tel:',''),
+      page_path:window.location.pathname});
+  });
+});
+
+// 4. Clicks en CTAs principales (botones amber / nav-cta)
+document.querySelectorAll('.btn-primary,.btn-cta,.nav-cta,.btn-wa,.btn-phone').forEach(function(el){
+  el.addEventListener('click',function(){
+    dataLayer.push({event:'cta_click',cta_text:(el.innerText||'').trim().slice(0,60),
+      cta_url:el.href||'',page_path:window.location.pathname});
+  });
+});
+
+// 5. Envío de formularios (Web3Forms + contacto)
+document.querySelectorAll('form').forEach(function(form){
+  form.addEventListener('submit',function(){
+    var id = form.id || form.action || 'form';
+    dataLayer.push({event:'form_submit',form_id:id,
+      page_path:window.location.pathname});
+  });
+});
+
+// 6. Clicks en enlaces externos (outbound)
+document.querySelectorAll('a[href^="http"]').forEach(function(el){
+  if(el.hostname !== window.location.hostname){
+    el.addEventListener('click',function(){
+      dataLayer.push({event:'outbound_click',link_url:el.href,
+        link_domain:el.hostname,page_path:window.location.pathname});
+    });
+  }
+});
+
+// 7. Clicks en "Ver solución" / cards de servicio
+document.querySelectorAll('.sector-link,.service-link,[class*="sector-card"],[class*="srv-card"]').forEach(function(el){
+  el.addEventListener('click',function(){
+    dataLayer.push({event:'service_card_click',
+      card_text:(el.querySelector('h3,h2')||el).innerText.trim().slice(0,60),
+      card_url:el.href||'',page_path:window.location.pathname});
+  });
+});
+</script>
 </body></html>
 </body></html>
