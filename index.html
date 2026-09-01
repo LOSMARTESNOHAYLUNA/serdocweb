@@ -58,7 +58,7 @@ button{font-family:inherit;cursor:pointer}
 .header-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:.7rem 1.5rem}
 .logo svg{height:44px;width:auto}
 .nav{display:flex;align-items:center;gap:.15rem}
-.nav-item{color:rgba(255,255,255,.7);font-size:15px;font-weight:500;padding:.45rem .7rem;border-radius:6px;transition:all .2s;font-family:'Outfit',sans-serif;background:none;border:none;display:inline-flex;align-items:center;gap:3px}
+.nav-item{color:rgba(255,255,255,.7);font-size:13.5px;font-weight:500;padding:.45rem .5rem;border-radius:6px;transition:all .2s;font-family:'Outfit',sans-serif;background:none;border:none;display:inline-flex;align-items:center;gap:3px;white-space:nowrap}
 .nav-item:hover{color:var(--white);background:rgba(255,255,255,.07)}
 .nav-cta{background:var(--amber)!important;color:var(--navy-deep)!important;font-weight:700!important;border-radius:8px!important;padding:.5rem 1rem!important}
 .nav-cta:hover{background:var(--amber-hover)!important}
@@ -728,11 +728,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <!-- Columna imagen — placeholder para las capturas del software -->
     <div style="position:relative">
-      <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:16px;overflow:hidden;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center">
-        <!-- Imagen principal del software — sustituir src cuando estén las capturas -->
-        <div style="text-align:center;color:rgba(255,255,255,.25);font-family:'Outfit',sans-serif">
-          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" style="margin:0 auto 1rem"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
-          <p style="font-size:.85rem;margin:0">Imagen del software ACCEDE<br><span style="font-size:.75rem;opacity:.6">(pendiente de captura)</span></p>
+      <div style="display:flex;flex-direction:column;gap:1rem">
+        <div style="border-radius:12px;overflow:hidden;box-shadow:0 8px 32px rgba(0,0,0,.3)">
+          <img src="/images/accede-software1.webp" alt="ACCEDE software de reserva de espacios — panel principal" width="600" height="400" loading="lazy" style="width:100%;height:auto;display:block">
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem">
+          <div style="border-radius:10px;overflow:hidden;box-shadow:0 4px 16px rgba(0,0,0,.25)">
+            <img src="/images/accede-software2.webp" alt="ACCEDE reserva de salas y puestos" width="290" height="180" loading="lazy" style="width:100%;height:auto;display:block">
+          </div>
+          <div style="border-radius:10px;overflow:hidden;box-shadow:0 4px 16px rgba(0,0,0,.25)">
+            <img src="/images/accede-software3.webp" alt="ACCEDE control de aforo" width="290" height="180" loading="lazy" style="width:100%;height:auto;display:block">
+          </div>
         </div>
       </div>
       <!-- Decoración: badge flotante -->
@@ -942,7 +948,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <ul>
         <li><a href="/soluciones-rfid/">→ Soluciones RFID</a></li>
         <li><a href="/soluciones-rfid-para-bibliotecas/">→ Bibliotecas</a></li>
-        <li><a href="/accede-reserva-espacios/">→ ACCEDE</a></li>
+        <li><a href="/accede-reserva-espacios/">→ ACCEDE · Reserva de espacios</a></li>
         <li><a href="/sistema-de-gestion-documental/">→ Gestión Documental</a></li>
         <li><a href="/casos-de-exito/">→ Casos de éxito</a></li>
         <li><a href="/blog/">→ Blog</a></li>
