@@ -990,56 +990,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </section>
 
 <!-- CAPTURAS DEL SOFTWARE -->
-<section style="padding:4rem 1.5rem;background:var(--navy-deep);overflow:hidden">
+<section style="padding:4rem 1.5rem;background:var(--navy-deep)">
   <div style="max-width:1100px;margin:0 auto">
     <p style="font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--teal-light);font-family:'Outfit',sans-serif;text-align:center;margin-bottom:.4rem">Así funciona</p>
     <h2 style="font-family:'Outfit',sans-serif;font-size:clamp(1.5rem,2.5vw,2rem);font-weight:800;color:white;text-align:center;margin-bottom:2.5rem;line-height:1.2">El software ACCEDE en acción</h2>
-
-    <!-- Carrusel -->
-    <div style="position:relative;max-width:900px;margin:0 auto">
-      <div id="accedePageCarousel" style="border-radius:16px;overflow:hidden;box-shadow:0 16px 48px rgba(0,0,0,.4);background:#0a1628">
-        <div id="accedePageSlides" style="display:flex;transition:transform .55s cubic-bezier(.4,0,.2,1)">
-          <div style="min-width:100%;flex-shrink:0">
-            <img src="/images/serdoc-acceso1.webp" alt="ACCEDE software — panel de reserva de espacios y puestos" width="900" height="560" loading="lazy" style="width:100%;height:auto;display:block">
-          </div>
-          <div style="min-width:100%;flex-shrink:0">
-            <img src="/images/serdoc-acceso2.webp" alt="ACCEDE software — control de aforo y gestión de salas" width="900" height="560" loading="lazy" style="width:100%;height:auto;display:block">
-          </div>
-        </div>
-      </div>
-      <!-- Controles -->
-      <button onclick="accedePageGo(accedePageCur-1)" style="position:absolute;left:-1.25rem;top:50%;transform:translateY(-50%);width:40px;height:40px;border-radius:50%;background:white;border:none;cursor:pointer;box-shadow:0 4px 12px rgba(0,0,0,.2);display:flex;align-items:center;justify-content:center;z-index:2">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1B2A4A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
-      </button>
-      <button onclick="accedePageGo(accedePageCur+1)" style="position:absolute;right:-1.25rem;top:50%;transform:translateY(-50%);width:40px;height:40px;border-radius:50%;background:white;border:none;cursor:pointer;box-shadow:0 4px 12px rgba(0,0,0,.2);display:flex;align-items:center;justify-content:center;z-index:2">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1B2A4A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
-      </button>
-      <!-- Dots -->
-      <div style="display:flex;justify-content:center;gap:.5rem;margin-top:1.25rem">
-        <button id="apDot0" onclick="accedePageGo(0)" style="width:9px;height:9px;border-radius:50%;border:none;cursor:pointer;padding:0;background:rgba(255,255,255,.9);transform:scale(1.25);transition:all .3s"></button>
-        <button id="apDot1" onclick="accedePageGo(1)" style="width:9px;height:9px;border-radius:50%;border:none;cursor:pointer;padding:0;background:rgba(255,255,255,.3);transition:all .3s"></button>
-      </div>
+    <div style="display:flex;flex-direction:column;gap:2rem;align-items:center">
+      <img src="/images/serdoc-acceso1.webp" alt="ACCEDE — panel de reserva de espacios y puestos" loading="lazy" style="max-width:100%;height:auto;display:block;border-radius:12px;box-shadow:0 8px 32px rgba(0,0,0,.3)">
+      <img src="/images/serdoc-acceso2.webp" alt="ACCEDE — control de aforo y gestión de salas" loading="lazy" style="max-width:100%;height:auto;display:block;border-radius:12px;box-shadow:0 8px 32px rgba(0,0,0,.3)">
     </div>
   </div>
-  <script>
-  (function(){
-    var accedePageCur=0, apTotal=2, apTimer;
-    function accedePageGo(n){
-      accedePageCur=((n%apTotal)+apTotal)%apTotal;
-      document.getElementById('accedePageSlides').style.transform='translateX(-'+accedePageCur*100+'%)';
-      [0,1].forEach(function(i){
-        var d=document.getElementById('apDot'+i);
-        d.style.background=i===accedePageCur?'rgba(255,255,255,.95)':'rgba(255,255,255,.3)';
-        d.style.transform=i===accedePageCur?'scale(1.25)':'scale(1)';
-      });
-      clearInterval(apTimer);
-      apTimer=setInterval(function(){accedePageGo(accedePageCur+1);},4500);
-    }
-    window.accedePageCur=accedePageCur;
-    window.accedePageGo=accedePageGo;
-    apTimer=setInterval(function(){accedePageGo(accedePageCur+1);},4500);
-  })();
-  </script>
 </section>
 
 <!-- FAQ -->

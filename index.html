@@ -728,41 +728,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <!-- Columna imagen — placeholder para las capturas del software -->
     <div style="position:relative">
-      <div style="position:relative">
-        <!-- Carrusel ACCEDE -->
-        <div id="accedeCarousel" style="border-radius:14px;overflow:hidden;box-shadow:0 12px 40px rgba(0,0,0,.35);position:relative;background:#0a1628">
-          <div id="accedeSlides" style="display:flex;transition:transform .55s cubic-bezier(.4,0,.2,1)">
-            <div style="min-width:100%;flex-shrink:0">
-              <img src="/images/serdoc-acceso1.webp" alt="ACCEDE — panel de reserva de espacios" width="600" height="420" loading="lazy" style="width:100%;height:auto;display:block">
-            </div>
-            <div style="min-width:100%;flex-shrink:0">
-              <img src="/images/serdoc-acceso2.webp" alt="ACCEDE — control de aforo y gestión de salas" width="600" height="420" loading="lazy" style="width:100%;height:auto;display:block">
-            </div>
-          </div>
-          <!-- Dots -->
-          <div style="position:absolute;bottom:.85rem;left:50%;transform:translateX(-50%);display:flex;gap:.45rem;z-index:2">
-            <button id="accDot0" onclick="accedeGo(0)" style="width:8px;height:8px;border-radius:50%;border:none;cursor:pointer;padding:0;background:rgba(255,255,255,.9);transition:all .3s"></button>
-            <button id="accDot1" onclick="accedeGo(1)" style="width:8px;height:8px;border-radius:50%;border:none;cursor:pointer;padding:0;background:rgba(255,255,255,.35);transition:all .3s"></button>
-          </div>
-        </div>
-        <script>
-        (function(){
-          var cur=0, total=2, timer;
-          function accedeGo(n){
-            cur=n;
-            document.getElementById('accedeSlides').style.transform='translateX(-'+cur*100+'%)';
-            [0,1].forEach(function(i){
-              var d=document.getElementById('accDot'+i);
-              d.style.background=i===cur?'rgba(255,255,255,.95)':'rgba(255,255,255,.35)';
-              d.style.transform=i===cur?'scale(1.25)':'scale(1)';
-            });
-            clearInterval(timer);
-            timer=setInterval(function(){accedeGo((cur+1)%total);},4000);
-          }
-          window.accedeGo=accedeGo;
-          timer=setInterval(function(){accedeGo((cur+1)%total);},4000);
-        })();
-        </script>
+      <div style="border-radius:14px;overflow:hidden;box-shadow:0 12px 40px rgba(0,0,0,.35)">
+        <img src="/images/serdoc-acceso1.webp" alt="ACCEDE — software de reserva de espacios y control de aforo" width="600" height="420" loading="lazy" style="width:100%;height:auto;display:block">
       </div>
       <!-- Decoración: badge flotante -->
       <div style="position:absolute;bottom:-1rem;left:-1rem;background:var(--teal);color:white;font-family:'Outfit',sans-serif;font-weight:700;font-size:.8rem;padding:.5rem 1rem;border-radius:8px;box-shadow:0 4px 16px rgba(8,145,178,.4)">
