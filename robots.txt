@@ -5,4 +5,4 @@ Disallow: /aviso-legal/
 Disallow: /politica-de-privacidad/
 Disallow: /politica-de-cookies/
 
-Sitemap: https://www.serdoc.es/sitemap.xml
+Sitemap: https://serdoc.es/sitemap.xml

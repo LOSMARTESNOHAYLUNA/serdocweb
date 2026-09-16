@@ -2,207 +2,207 @@
 <?xml-stylesheet type="text/xsl" href="/sitemap.xsl"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://www.serdoc.es/</loc>
+    <loc>https://serdoc.es/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.serdoc.es/soluciones-rfid/</loc>
+    <loc>https://serdoc.es/soluciones-rfid/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.serdoc.es/soluciones-rfid-para-bibliotecas/</loc>
+    <loc>https://serdoc.es/soluciones-rfid-para-bibliotecas/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.serdoc.es/rfid-logistica-almacenes/</loc>
+    <loc>https://serdoc.es/rfid-logistica-almacenes/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.serdoc.es/rfid-retail-tiendas/</loc>
+    <loc>https://serdoc.es/rfid-retail-tiendas/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.serdoc.es/etiquetas-rfid/</loc>
+    <loc>https://serdoc.es/etiquetas-rfid/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.serdoc.es/dispositivos-rfid/</loc>
+    <loc>https://serdoc.es/dispositivos-rfid/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.serdoc.es/sistemas-antihurto-rfid/</loc>
+    <loc>https://serdoc.es/sistemas-antihurto-rfid/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.serdoc.es/rfid-hospitales/</loc>
+    <loc>https://serdoc.es/rfid-hospitales/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.serdoc.es/rfid-residencias/</loc>
+    <loc>https://serdoc.es/rfid-residencias/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.serdoc.es/rfid-joyerias/</loc>
+    <loc>https://serdoc.es/rfid-joyerias/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.serdoc.es/rfid-eventos/</loc>
+    <loc>https://serdoc.es/rfid-eventos/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.serdoc.es/rfid-hosteleria/</loc>
+    <loc>https://serdoc.es/rfid-hosteleria/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.serdoc.es/rfid-lavanderias/</loc>
+    <loc>https://serdoc.es/rfid-lavanderias/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.serdoc.es/rfid-control-accesos/</loc>
+    <loc>https://serdoc.es/rfid-control-accesos/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.serdoc.es/rfid-gestion-herramientas/</loc>
+    <loc>https://serdoc.es/rfid-gestion-herramientas/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.serdoc.es/rfid-farmacias/</loc>
+    <loc>https://serdoc.es/rfid-farmacias/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.serdoc.es/autoprestamo-libros-rfid/</loc>
+    <loc>https://serdoc.es/autoprestamo-libros-rfid/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.serdoc.es/autolibro/</loc>
+    <loc>https://serdoc.es/autolibro/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.serdoc.es/rfid-bibliobus/</loc>
+    <loc>https://serdoc.es/rfid-bibliobus/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.serdoc.es/autoprestamo-de-portatiles/</loc>
+    <loc>https://serdoc.es/autoprestamo-de-portatiles/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.serdoc.es/reserva-automatica-ordenadores/</loc>
+    <loc>https://serdoc.es/reserva-automatica-ordenadores/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.serdoc.es/buzon-de-devolucion-inteligente/</loc>
+    <loc>https://serdoc.es/buzon-de-devolucion-inteligente/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.serdoc.es/sistema-de-gestion-documental/</loc>
+    <loc>https://serdoc.es/sistema-de-gestion-documental/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.serdoc.es/digitalizacion-documentos/</loc>
+    <loc>https://serdoc.es/digitalizacion-documentos/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.serdoc.es/business-process-outsourcing/</loc>
+    <loc>https://serdoc.es/business-process-outsourcing/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.serdoc.es/accede-reserva-espacios/</loc>
+    <loc>https://serdoc.es/accede-reserva-espacios/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.serdoc.es/linked-open-data/</loc>
+    <loc>https://serdoc.es/linked-open-data/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.serdoc.es/rfid-madrid/</loc>
+    <loc>https://serdoc.es/rfid-madrid/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.serdoc.es/rfid-logistica-madrid/</loc>
+    <loc>https://serdoc.es/rfid-logistica-madrid/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.serdoc.es/rfid-tiendas-madrid/</loc>
+    <loc>https://serdoc.es/rfid-tiendas-madrid/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.serdoc.es/rfid-bibliotecas-madrid/</loc>
+    <loc>https://serdoc.es/rfid-bibliotecas-madrid/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.serdoc.es/sistemas-antihurto-madrid/</loc>
+    <loc>https://serdoc.es/sistemas-antihurto-madrid/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.serdoc.es/gestion-documental-madrid/</loc>
+    <loc>https://serdoc.es/gestion-documental-madrid/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.serdoc.es/blog/</loc>
+    <loc>https://serdoc.es/blog/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.serdoc.es/quienes-somos/</loc>
+    <loc>https://serdoc.es/quienes-somos/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.serdoc.es/contacto/</loc>
+    <loc>https://serdoc.es/contacto/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.serdoc.es/casos-de-exito/</loc>
+    <loc>https://serdoc.es/casos-de-exito/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.serdoc.es/precio-sistema-rfid/</loc>
+    <loc>https://serdoc.es/precio-sistema-rfid/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.serdoc.es/preguntas-frecuentes-rfid/</loc>
+    <loc>https://serdoc.es/preguntas-frecuentes-rfid/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.serdoc.es/guia-rfid/</loc>
+    <loc>https://serdoc.es/guia-rfid/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

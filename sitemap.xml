@@ -2,11 +2,11 @@
 <?xml-stylesheet type="text/xsl" href="/sitemap.xsl"?>
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <sitemap>
-    <loc>https://www.serdoc.es/sitemap-pages.xml</loc>
+    <loc>https://serdoc.es/sitemap-pages.xml</loc>
     <lastmod>2026-09-16</lastmod>
   </sitemap>
   <sitemap>
-    <loc>https://www.serdoc.es/sitemap-posts.xml</loc>
+    <loc>https://serdoc.es/sitemap-posts.xml</loc>
     <lastmod>2026-09-16</lastmod>
   </sitemap>
 </sitemapindex>
