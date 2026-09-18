@@ -790,7 +790,21 @@ a:hover .arrow-r{transform:translateX(3px)}
   gap: 1.5rem !important;
 }
 
-</style><!-- Google Tag Manager -->
+</style><!-- Google Consent Mode v2 — default denied (debe cargar ANTES de GTM) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent','default',{
+    analytics_storage: 'denied',
+    ad_storage: 'denied',
+    ad_user_data: 'denied',
+    ad_personalization: 'denied',
+    functionality_storage: 'granted',
+    personalization_storage: 'denied',
+    wait_for_update: 500
+  });
+</script>
+<!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
@@ -1112,8 +1126,41 @@ const CC={
   accept(){this.save({f:1,a:1,m:1,p:1})},
   reject(){document.getElementById('tA').checked=false;document.getElementById('tM').checked=false;document.getElementById('tP').checked=false;this.save({f:1,a:0,m:0,p:0})},
   savePrefs(){this.save({f:1,a:document.getElementById('tA').checked?1:0,m:document.getElementById('tM').checked?1:0,p:document.getElementById('tP').checked?1:0})},
-  save(c){localStorage.setItem('serdoc_cc',JSON.stringify(c));this.hide();document.getElementById('cookiePrefs').classList.remove('active');document.getElementById('cookieOverlay').classList.remove('active');document.getElementById('cookieReopen').classList.add('visible');if(typeof gtag==='function')gtag('consent','update',{analytics_storage:c.a?'granted':'denied',ad_storage:c.m?'granted':'denied'})},
-  init(){const s=localStorage.getItem('serdoc_cc');if(s){const c=JSON.parse(s);document.getElementById('tA').checked=!!c.a;document.getElementById('tM').checked=!!c.m;document.getElementById('tP').checked=!!c.p;document.getElementById('cookieReopen').classList.add('visible')}else setTimeout(()=>this.show(),800)}
+  save(c){
+  localStorage.setItem('serdoc_cc', JSON.stringify(c));
+  this.hide();
+  document.getElementById('cookiePrefs').classList.remove('active');
+  document.getElementById('cookieOverlay').classList.remove('active');
+  document.getElementById('cookieReopen').classList.add('visible');
+  if(typeof gtag === 'function'){
+    gtag('consent','update',{
+      analytics_storage: c.a ? 'granted' : 'denied',
+      ad_storage: c.m ? 'granted' : 'denied',
+      ad_user_data: c.m ? 'granted' : 'denied',
+      ad_personalization: c.m ? 'granted' : 'denied',
+      functionality_storage: 'granted',
+      personalization_storage: c.p ? 'granted' : 'denied'
+    });
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      event: 'consent_update',
+      analytics_consent: c.a ? 'granted' : 'denied',
+      marketing_consent: c.m ? 'granted' : 'denied'
+    });
+  }
+},
+  init(){const s=localStorage.getItem('serdoc_cc');if(s){const c=JSON.parse(s);document.getElementById('tA').checked=!!c.a;document.getElementById('tM').checked=!!c.m;document.getElementById('tP').checked=!!c.p;
+if(typeof gtag === 'function'){
+  gtag('consent','update',{
+    analytics_storage: c.a ? 'granted' : 'denied',
+    ad_storage: c.m ? 'granted' : 'denied',
+    ad_user_data: c.m ? 'granted' : 'denied',
+    ad_personalization: c.m ? 'granted' : 'denied',
+    functionality_storage: 'granted',
+    personalization_storage: c.p ? 'granted' : 'denied'
+  });
+}
+document.getElementById('cookieReopen').classList.add('visible')}else setTimeout(()=>this.show(),800)}
 };
 document.getElementById('cookieOverlay').addEventListener('click',()=>CC.closePrefs());
 document.addEventListener('keydown',e=>{if(e.key==='Escape'&&document.getElementById('cookiePrefs').classList.contains('active'))CC.closePrefs()});
