@@ -6,5 +6,11 @@
         { "key": "Content-Type", "value": "text/xsl; charset=utf-8" }
       ]
     }
+  ],
+  "rewrites": [
+    {
+      "source": "/web/:path*",
+      "destination": "http://94.76.228.71/web/:path*"
+    }
   ]
 }
