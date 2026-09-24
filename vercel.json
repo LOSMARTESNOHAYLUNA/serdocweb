@@ -10,7 +10,7 @@
   "rewrites": [
     {
       "source": "/web/:path*",
-      "destination": "http://94.76.228.71/web/:path*"
+      "destination": "https://origen.serdoc.es/web/:path*"
     }
   ]
 }
