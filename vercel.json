@@ -7,6 +7,14 @@
       ]
     }
   ],
+  "redirects": [
+    {
+      "source": "/((?!web/).*)",
+      "has": [{ "type": "host", "value": "www.serdoc.es" }],
+      "destination": "https://serdoc.es/$1",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     {
       "source": "/web/:path*",
